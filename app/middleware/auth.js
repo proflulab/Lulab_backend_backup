@@ -68,26 +68,6 @@ module.exports = options => {
           ctx.request.body.variables.postInput.authorType = ACTION_ACTOR_TYPE.USER;
         }
         return next();
-      case 'addExamRecordResult':
-      case 'updateExamRecordResult':
-        operatorId = ctx.request.body.variables.examRecordResultInput.user;
-        var result = await ctx.service.auth.check(operatorId);
-        if(!result) return;
-        if(!operatorId) {
-          ctx.request.body.variables.examRecordResultInput.user = result._id;
-          ctx.request.body.variables.examRecordResultInput.authorType = ACTION_ACTOR_TYPE.USER;
-        }
-        return next();
-      case 'addSurveyResult':
-      case 'updateSurveyResult':
-        operatorId = ctx.request.body.variables.surveyResultInput.user;
-        var result = await ctx.service.auth.check(operatorId);
-        if(!result) return;
-        if(!operatorId) {
-          ctx.request.body.variables.surveyResultInput.user = result._id;
-          ctx.request.body.variables.surveyResultInput.authorType = ACTION_ACTOR_TYPE.USER;
-        }
-        return next();
 
       case 'updateNotification':
         operatorId = ctx.request.body.variables.notificationInput.user;
@@ -99,8 +79,6 @@ module.exports = options => {
         return next();
       
       case 'viewNotificationsBySelf':
-      case 'examRecordsBySelf':
-      case 'surveyResultsBySelf':
       case 'collectsBySelf':
       case 'commentsBySelf':
       case 'commentsByArticle':
@@ -131,17 +109,6 @@ module.exports = options => {
       case 'addOrganization':
       case 'updateOrganization':
       case 'deleteOrganization':
-      case 'surveyResultsAdmin':
-      case 'surveyResultAdmin':
-      case 'addSurveyAdmin':
-      case 'updateSurveyAdmin':
-      case 'deleteSurveyAdmin':
-      case 'addDoctor':
-      case 'updateDoctor':
-      case 'deleteDoctor':
-      case 'addExpertAdmin':
-      case 'updateExpertAdmin':
-      case 'deleteExpertAdmin':
       case 'addTopictAdmin':
       case 'updateTopicAdmin':
       case 'deleteTopicAdmin':
@@ -151,11 +118,6 @@ module.exports = options => {
       case 'addArticle':
       case 'updateArticle':
       case 'deleteArticle':
-      case 'examRecordResultAdmin':
-      case 'examRecordResultsAdmin':
-      case 'addExamRecordAdmin':
-      case 'updateExamRecordAdmin':
-      case 'deleteExamRecordAdmin':
       case 'adminUsers':
       case 'adminUser':
       case 'usersAdmin':

@@ -16,9 +16,6 @@ module.exports = options => {
     switch (ctx.request.body.operationName) {
       case 'article':
       case 'articleRich':
-      case 'doctor':
-        input.instance = ctx.request.body.variables.id;
-        break;
       case 'articlesByAnyTags':
       case 'articlesByAnyTags':
         input.instance = ctx.request.body.variables.tags;

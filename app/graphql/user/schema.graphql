@@ -35,8 +35,6 @@ type User {
 	postCommentCount: Int
 	collectCount: Int
 	notificationCount: Int
-	surveyResultCount: Int 
-	examRecordResultCount: Int
 	onboardingStatus: OnboardingStatus
 	# credential: [UserCredential]
 }

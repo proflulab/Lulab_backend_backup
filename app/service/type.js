@@ -21,9 +21,6 @@ class TypeService extends Service {
     let modelName;
     switch (actorType) {
       case ACTION_ACTOR_TYPE.USER: modelName = MODEL_NAMES.USER; break;
-      case ACTION_ACTOR_TYPE.DOCTOR: modelName = MODEL_NAMES.DOCTOR; break;
-      case ACTION_ACTOR_TYPE.OFFICIAL_USER: modelName = MODEL_NAMES.OFFICIAL_USER; break;
-      case ACTION_ACTOR_TYPE.EXPERT: modelName = MODEL_NAMES.EXPERT; break;
       default: break;
     }
     return modelName;

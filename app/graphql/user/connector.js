@@ -28,10 +28,8 @@ class UserConnector extends BasicConnector {
     let postCommentCount = getCount(MODEL_NAMES.POST_COMMENT, basicQuery);
     let collectCount = getCount(MODEL_NAMES.COLLECT, { actor: id, value: true });
     let notificationCount = getCount(MODEL_NAMES.NOTIFICATION, { ...basicQuery, status: NOTIFICATION_STATUS.INIT });
-    let surveyResultCount = getCount(MODEL_NAMES.SURVEY_RESULT, basicQuery);
-    let examRecordResultCount = getCount(MODEL_NAMES.EXAM_RECORD_RESULT, basicQuery);
 
-    await Promise.all([user, postCount, commentCount, postCommentCount, collectCount, notificationCount, surveyResultCount, examRecordResultCount]);
+    await Promise.all([user, postCount, commentCount, postCommentCount, collectCount, notificationCount]);
 
     // 将promise转化成值，mongoose配合promise.all所需的特殊操作
     user = await user;
@@ -40,11 +38,9 @@ class UserConnector extends BasicConnector {
     postCommentCount = await postCommentCount;
     collectCount = await collectCount;
     notificationCount = await notificationCount;
-    surveyResultCount = await surveyResultCount;
-    examRecordResultCount = await examRecordResultCount;
 
     if(user) {
-      return { ...user._doc, postCount, commentCount, postCommentCount, collectCount, notificationCount, surveyResultCount, examRecordResultCount };
+      return { ...user._doc, postCount, commentCount, postCommentCount, collectCount, notificationCount };
     }
   }
 
