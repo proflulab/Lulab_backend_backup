@@ -1,0 +1,78 @@
+scalar Date
+scalar JSON
+
+type Context {
+  pageType: String
+  subPageType: String
+}
+
+# Used to present the current actor's interaction status with a specific target.
+# For example, this could be included into the Article type to indicate that the current user has visited this article.
+type Self { 
+  visit: Visit
+  thumb: Thumb
+  collect: Collect
+}
+
+enum ActorType {
+	User
+}
+
+type Actor {
+	user: User
+}
+
+enum AuthorType {
+	User
+}
+
+enum TargetType {
+  User
+  Organization	
+  Article
+  Comment
+  Circle
+  Home
+  Mine
+  APP
+  Post
+  PostPublish
+  PostComment
+  About
+}
+
+type Target {
+	user: User
+  organization: Organization
+  article: Article
+  comment: Comment
+  post: Post
+  postComment: PostComment
+}
+
+type SubDepartment {
+	name: String
+}
+
+type Department {
+	name: String
+	location: String
+	subDepartments: [SubDepartment]
+}
+
+enum SecurityCheckStatus {
+	CHECKING
+	PASSED
+	FAILED
+}
+
+enum MediaType {
+	VIDEO
+	TEXT
+	IMAGE_TEXT
+	DEFAULT
+}
+
+type Summary {
+  count: Int
+}
