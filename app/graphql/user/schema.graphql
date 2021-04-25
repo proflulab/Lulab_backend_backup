@@ -20,10 +20,11 @@ type User {
 	updatedAt: Date!
 	loginedAt: Date
 	nickname: String
+	name: String
 	gender: Int
 	province: String
 	city: String
-	birthYear: String
+	birth: String
 	country: String
 	language: String
 	email: String

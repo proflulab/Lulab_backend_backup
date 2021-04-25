@@ -3,7 +3,7 @@ module.exports = {
     USER: 'User',
   },
   USER_TYPE: {
-    DEFAULT: 'Default',
+    DEFAULT: 'DEFAULT',
   },
   ACTION_ACTOR_TYPE: {
     USER: 'User',
