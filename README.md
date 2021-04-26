@@ -10,7 +10,7 @@
    1. `makir /data && mkdir /data/mongodb`
    2. 启动 `mongod --auth --fork --dbpath /data/mongodb --logpath /var/log/mongodb/mongod.log`
 4. 安装node
-5. 安装nginx
+5. 安装nginx(本地部署不需要)
    1. 配置nginx
    2. 启动`nginx`
 
