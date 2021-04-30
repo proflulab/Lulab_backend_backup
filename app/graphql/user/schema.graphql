@@ -37,6 +37,11 @@ type User {
 	collectCount: Int
 	notificationCount: Int
 	onboardingStatus: OnboardingStatus
+
+	organization: Organization
+	otherTitles: [String]
+	departments: [Department]
+	
 	# credential: [UserCredential]
 }
 
