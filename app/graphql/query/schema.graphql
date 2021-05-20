@@ -49,7 +49,6 @@ type Query {
   userAdmin(id: ID!): User
   userLogin(userLoginPayload: UserLoginPayload!): User!
   userRich(id: ID!): User!
-  userByEmail(email: EMAIL!): User!
   # userByToken(clientType: String!, accessToken: String!): User!
 
   clickstreams(option: Option!, condition: Condition): [Clickstream]

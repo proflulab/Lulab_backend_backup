@@ -22,9 +22,6 @@ module.exports = {
     // async userByToken(root, { accessToken }, ctx) {
     //   return await ctx.connector[CONNECTOR_NAME].userByToken(accessToken);
     // },
-    async userByEmail(email, ctx) {
-      return await ctx.connector[CONNECTOR_NAME].userByEmail(email);
-    },
   },
   Mutation: {
     async onboardSelf(root, { id, userInput }, ctx) {

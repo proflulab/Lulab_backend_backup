@@ -118,12 +118,6 @@ class UserConnector extends BasicConnector {
   //   if (!user) throw new Error("User not found")
   //   return user
   // }
-
-  async userByEmail(data) {
-    let user = this.ctx.model[this.model].findOne({ email: data }).exec();
-    user = await user;
-    return user;
-  }
 }
 
 module.exports = UserConnector;
