@@ -87,6 +87,8 @@ module.exports = app => {
     // 用户更新时间
     updatedAt: { type: Date, default: Date.now },
     loginedAt: { type: Date, default: Date.now },
+    emailCode: {type:String},
+    expireAt: {type:Date},
   });
 
   UserSchema.index({ "credential.openId": 1, "credential.openId": 1 });

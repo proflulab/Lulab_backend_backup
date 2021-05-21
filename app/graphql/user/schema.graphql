@@ -42,8 +42,9 @@ type User {
 	otherTitles: [String]
 	departments: [Department]
 	isActive: Boolean
-	emailCode: Int
+	emailCode: String
 	expireAt: Date
+	password:String
 	# credential: [UserCredential]
 }
 
