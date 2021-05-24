@@ -124,6 +124,15 @@ class UserConnector extends BasicConnector {
     user = await user;
     return user;
   }
+
+  async onboardSelfByEmail(input) {
+    const result = await this.ctx.model[this.model].findByIdAndUpdate(
+      { email: input.email },
+      { ...input, onboardingStatus: ONBOARDING_STATUS.ONBOARDED, loginedAt: Date.now(), updatedAt: Date.now(), },
+      { upsert: false, new: true, setDefaultsOnInsert: true }
+    );
+    return result;
+  }
 }
 
 module.exports = UserConnector;

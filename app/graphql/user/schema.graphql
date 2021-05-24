@@ -41,10 +41,9 @@ type User {
 	organization: Organization
 	otherTitles: [String]
 	departments: [Department]
-	isActive: Boolean
-	emailCode: String
-	expireAt: Date
-	password:String
+	emailVerificationCode: String #TODO 还需要加密
+	emailVerificationCodeExpiredAt: Date #TODO 还需要加密
+	password: String
 	# credential: [UserCredential]
 }
 
