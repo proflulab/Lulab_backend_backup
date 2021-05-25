@@ -84,6 +84,12 @@ class UserService extends Service {
       stmpTransport.close();
     });
   }
+
+  async userByEmail(data) {
+    let user = this.ctx.model['User'].findOne({ email: data }).exec();
+    user = await user;
+    return user;
+  }
 }
 
 module.exports = UserService;

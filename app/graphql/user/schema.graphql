@@ -63,3 +63,9 @@ input UserInput {
 	phone: String
 	avatar: String
 }
+
+type emailCodeMessage {
+	code: Int
+	message: String
+	token: String
+}

@@ -31,10 +31,20 @@ module.exports = {
     // async userByToken(root, { accessToken }, ctx) {
     //   return await ctx.connector[CONNECTOR_NAME].userByToken(accessToken);
     // },
-    async userByEmail(root, {
+    async emailCode(root, {
       email
     }, ctx) {
-      return await ctx.connector[CONNECTOR_NAME].userByEmail(email);
+      return await ctx.connector[CONNECTOR_NAME].emailCode(email);
+    },
+    async emailRegister(root, {
+      email, activeKey
+    }, ctx) {
+      return await ctx.connector[CONNECTOR_NAME].emailRegister(email, activeKey);
+    },
+    async setPassword(root, {
+      email, password
+    }, ctx) {
+      return await ctx.connector[CONNECTOR_NAME].setPassword(email, password);
     },
   },
   Mutation: {
