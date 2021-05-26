@@ -119,26 +119,15 @@ class UserConnector extends BasicConnector {
   //   return user
   // }
 
-  async onboardSelfByEmail(input) {
-    const result = await this.ctx.model[this.model].findByIdAndUpdate(
-      { email: input.email },
-      { ...input, onboardingStatus: ONBOARDING_STATUS.ONBOARDED, loginedAt: Date.now(), updatedAt: Date.now(), },
-      { upsert: false, new: true, setDefaultsOnInsert: true }
-    );
-    return result;
-  }
-
-  async emailCode(email) {
+  async sendEmailCode(userInput) {
     const {
       ctx
     } = this;
+    var email = userInput.email
     var user = await ctx.service.user.userByEmail(email);
     if (user) {
       if (user.onboardingStatus == ONBOARDING_STATUS.ONBOARDED) {
-        return {
-          code: 1,
-          message: '该邮箱已注册，请直接登录',
-        }
+        return null;
       }
     } else {
       user = await ctx.model.User.create({
@@ -149,7 +138,7 @@ class UserConnector extends BasicConnector {
     console.log('user', user._id.toString());
     //  var token = sign(user._id.toString(),'wsd',{expiresIn: 24 * 60 * 60  /* 1 days */});
     const activeKey = Array.from(Array(6), () => parseInt((Math.random() * 10))).join('')
-    // ctx.service.user.sendEmail(activeKey, email);
+    ctx.service.user.sendEmail(activeKey, email);
     const result = await ctx.model.User.findByIdAndUpdate(
       user._id, {
         emailVerificationCode: activeKey,
@@ -159,70 +148,36 @@ class UserConnector extends BasicConnector {
       }
     );
     // console.log(result)
-    return {
-      code: 0,
-      // token:token,
-      message: '发送成功',
-      data: {
-        user: {
-          email: user.email,
-        },
-      },
-    };
+    return result;
   }
 
-  async emailRegister(email, activeKey) {
+  async verifyEmailCode(userInput) {
     const {
       ctx
     } = this;
+    const {email, emailVerificationCode} = userInput
     var user = await ctx.service.user.userByEmail(email);
-    if (user) {
-      if (user.onboardingStatus == ONBOARDING_STATUS.ONBOARDED) {
-        return {
-          code: 1,
-          message: '该邮箱已注册，请直接登录',
-        }
-      } else {
-        if (activeKey == user.emailVerificationCode) {
-          if (moment().toDate() > user.emailVerificationCodeExpiredAt) {
-            return {
-              code: 1,
-              message: '验证码已过期，请重新发送验证码',
-            };
-          } else {
-            const result = await ctx.model.User.findByIdAndUpdate(
-              user._id, {
-                onboardingStatus: ONBOARDING_STATUS.VERIFIED
-              }, {
-                new: true
-              }
-            );
-            return {
-              code: 0,
-              message: '验证码正常，可以跳转到输入密码界面',
-            };
-          }
-        } else {
-          return {
-            code: 1,
-            message: '验证码错误',
-          };
-        }
+    if (!user)  return null; //这里返回前端的消息还是不太一样的，比如用户不存在、已注册等等，null可能不能够表示清楚
+    if (user.onboardingStatus == ONBOARDING_STATUS.ONBOARDED) return null;
+    if (emailVerificationCode != user.emailVerificationCode) return null;
+    if (moment().toDate() > user.emailVerificationCodeExpiredAt) return null;
+    const result = await ctx.model.User.findByIdAndUpdate(
+      user._id, {
+        onboardingStatus: ONBOARDING_STATUS.EMAIL_VERIFIED
+      }, {
+        new: true
       }
-    } else {
-      return {
-        code: 1,
-        message: '验证码错误',
-      };
-    }
-  }
+    );
+    return result;
+    }  
 
-  async setPassword(email, password) {
+  async onboardSelfByEmail(userInput) {
     const {
       ctx
     } = this;
+    const {email, password} = userInput
     var user = await ctx.service.user.userByEmail(email); //这里不应该是按email查，而是应该按前面注册后储存的东西来查，但我不知咋写
-    if (user.onboardingStatus == ONBOARDING_STATUS.VERIFIED) {
+    if (user.onboardingStatus == ONBOARDING_STATUS.EMAIL_VERIFIED) {
       const result = await ctx.model.User.findByIdAndUpdate(
         user._id, {
           onboardingStatus: ONBOARDING_STATUS.ONBOARDED,
@@ -231,15 +186,9 @@ class UserConnector extends BasicConnector {
           new: true
         }
       );
-      return {
-        code: 0,
-        message: '注册成功',
-      };
+      return result;
     } else {
-      return {
-        code: 1,
-        message: '注册失败',
-      };
+      return null;
     }
   }
 }

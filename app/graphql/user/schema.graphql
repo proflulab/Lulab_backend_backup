@@ -62,10 +62,6 @@ input UserInput {
 	email: String
 	phone: String
 	avatar: String
-}
-
-type emailCodeMessage {
-	code: Int
-	message: String
-	token: String
+	emailVerificationCode: String
+	password: String
 }

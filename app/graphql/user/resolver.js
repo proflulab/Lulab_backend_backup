@@ -31,21 +31,6 @@ module.exports = {
     // async userByToken(root, { accessToken }, ctx) {
     //   return await ctx.connector[CONNECTOR_NAME].userByToken(accessToken);
     // },
-    async emailCode(root, {
-      email
-    }, ctx) {
-      return await ctx.connector[CONNECTOR_NAME].emailCode(email);
-    },
-    async emailRegister(root, {
-      email, activeKey
-    }, ctx) {
-      return await ctx.connector[CONNECTOR_NAME].emailRegister(email, activeKey);
-    },
-    async setPassword(root, {
-      email, password
-    }, ctx) {
-      return await ctx.connector[CONNECTOR_NAME].setPassword(email, password);
-    },
   },
   Mutation: {
     async onboardSelf(root, {
@@ -58,6 +43,15 @@ module.exports = {
       userInput
     }, ctx) {
       return ctx.connector[CONNECTOR_NAME].onboardSelfByEmail(userInput);
+    },
+    async verifyEmail(root, {
+      userInput
+    }, ctx) {
+      if (userInput.emailVerificationCode){
+        return await ctx.connector[CONNECTOR_NAME].verifyEmailCode(userInput);
+      } else{
+        return await ctx.connector[CONNECTOR_NAME].sendEmailCode(userInput);
+      }
     },
   }
 };
