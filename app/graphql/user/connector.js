@@ -191,6 +191,23 @@ class UserConnector extends BasicConnector {
       return null;
     }
   }
+
+  async userLoginByEmail(userInput) {
+    const {
+      ctx
+    } = this;
+    const {email, password} = userInput
+    var user = await ctx.service.user.userByEmail(email);
+    if (!user) return null;
+    if (user.onboardingStatus != ONBOARDING_STATUS.ONBOARDED) return null;
+    if (user.password != password) return null; //TODO 需要加密后再比较
+    const result = await this.ctx.model[this.model].findByIdAndUpdate(
+      { _id: user.id },
+      { loginedAt: Date.now(), updatedAt: Date.now() },
+      { upsert: false, new: true, setDefaultsOnInsert: true }
+    );
+    return result;
+  }
 }
 
 module.exports = UserConnector;

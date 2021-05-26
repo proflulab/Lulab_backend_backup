@@ -53,5 +53,10 @@ module.exports = {
         return await ctx.connector[CONNECTOR_NAME].sendEmailCode(userInput);
       }
     },
+    async userLoginByEmail(root, {
+      userInput
+    }, ctx) {
+      return ctx.connector[CONNECTOR_NAME].userLoginByEmail(userInput);
+    },
   }
 };
