@@ -44,6 +44,8 @@ type User {
 	emailVerificationCode: String #TODO 还需要加密
 	emailVerificationCodeExpiredAt: Date #TODO 还需要加密
 	password: String
+	salt1: String
+	salt2: String
 	# credential: [UserCredential]
 }
 

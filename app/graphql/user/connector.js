@@ -123,7 +123,8 @@ class UserConnector extends BasicConnector {
     const {
       ctx
     } = this;
-    var email = userInput.email
+    var tempEmail = userInput.email
+    var email = ctx.service.secret.reversibleEncrypt(tempEmail, true);
     var user = await ctx.service.user.userByEmail(email);
     if (user) {
       if (user.onboardingStatus == ONBOARDING_STATUS.ONBOARDED) {
@@ -138,7 +139,7 @@ class UserConnector extends BasicConnector {
     console.log('user', user._id.toString());
     //  var token = sign(user._id.toString(),'wsd',{expiresIn: 24 * 60 * 60  /* 1 days */});
     const activeKey = Array.from(Array(6), () => parseInt((Math.random() * 10))).join('')
-    ctx.service.user.sendEmail(activeKey, email);
+    // ctx.service.user.sendEmail(activeKey, tempEmail);
     const result = await ctx.model.User.findByIdAndUpdate(
       user._id, {
         emailVerificationCode: activeKey,
@@ -155,7 +156,8 @@ class UserConnector extends BasicConnector {
     const {
       ctx
     } = this;
-    const {email, emailVerificationCode} = userInput
+    var {email, emailVerificationCode} = userInput
+    email = ctx.service.secret.reversibleEncrypt(email, true);
     var user = await ctx.service.user.userByEmail(email);
     if (!user)  return null; //这里返回前端的消息还是不太一样的，比如用户不存在、已注册等等，null可能不能够表示清楚
     if (user.onboardingStatus == ONBOARDING_STATUS.ONBOARDED) return null;
@@ -175,13 +177,18 @@ class UserConnector extends BasicConnector {
     const {
       ctx
     } = this;
-    const {email, password} = userInput
+    var {email, password} = userInput
+    email = ctx.service.secret.reversibleEncrypt(email, true);
     var user = await ctx.service.user.userByEmail(email); //这里不应该是按email查，而是应该按前面注册后储存的东西来查，但我不知咋写
     if (user.onboardingStatus == ONBOARDING_STATUS.EMAIL_VERIFIED) {
+      var [salt1, salt2] = ctx.service.secret.generateSalt(11, 23);
+      password = ctx.service.secret.saltHash(password, salt1, salt2);
       const result = await ctx.model.User.findByIdAndUpdate(
         user._id, {
           onboardingStatus: ONBOARDING_STATUS.ONBOARDED,
-          password: password
+          password: password,
+          salt1: salt1,
+          salt2: salt2
         }, {
           new: true
         }
@@ -196,11 +203,12 @@ class UserConnector extends BasicConnector {
     const {
       ctx
     } = this;
-    const {email, password} = userInput
+    var {email, password} = userInput
+    email = ctx.service.secret.reversibleEncrypt(email, true);
     var user = await ctx.service.user.userByEmail(email);
     if (!user) return null;
     if (user.onboardingStatus != ONBOARDING_STATUS.ONBOARDED) return null;
-    if (user.password != password) return null; //TODO 需要加密后再比较
+    if (user.password != ctx.service.secret.saltHash(password, user.salt1, user.salt2)) return null; //TODO 需要加密后再比较
     const result = await this.ctx.model[this.model].findByIdAndUpdate(
       { _id: user.id },
       { loginedAt: Date.now(), updatedAt: Date.now() },

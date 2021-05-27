@@ -41,6 +41,10 @@ module.exports = app => {
     avatar: { type: String },
     // 用户密码
     password: { type: String },
+    // 用户密码所需盐1
+    salt1: { type: String },
+    // 用户密码所需盐2
+    salt2: { type: String },
     // 用户省份
     province: { type: String },
     // 用户城市
