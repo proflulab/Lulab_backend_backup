@@ -2,6 +2,7 @@ module.exports = {
   ONBOARDING_STATUS: {
     ONBOARDED: 'ONBOARDED',
     VERIFIED: 'VERIFIED',
+    EMAIL_VERIFIED: 'EMAIL_VERIFIED',
     DEFAULT: 'DEFAULT',
   },
 };

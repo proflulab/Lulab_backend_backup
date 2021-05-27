@@ -35,10 +35,16 @@ module.exports = app => {
     gender: { type: Number },
     // 用户邮箱
     email: { type: String },
+    // 邮箱验证码
+    emailVerificationCode: { type: String },
     // 用户头像
     avatar: { type: String },
     // 用户密码
     password: { type: String },
+    // 用户密码所需盐1
+    salt1: { type: String },
+    // 用户密码所需盐2
+    salt2: { type: String },
     // 用户省份
     province: { type: String },
     // 用户城市
@@ -87,6 +93,8 @@ module.exports = app => {
     // 用户更新时间
     updatedAt: { type: Date, default: Date.now },
     loginedAt: { type: Date, default: Date.now },
+    // 邮箱验证码过期时间
+    emailVerificationCodeExpiredAt: { type: Date },
   });
 
   UserSchema.index({ "credential.openId": 1, "credential.openId": 1 });

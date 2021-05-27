@@ -10,3 +10,5 @@ yarn.lock
 yarn-error.log
 .vscode
 package-lock.json
+.travis.yml
+appveyor.yml

@@ -47,4 +47,7 @@ type Mutation {
   adminUserLogout: ID
 
   onboardSelf(id: ID!, userInput: UserInput!): User!
+  onboardSelfByEmail(userInput: UserInput!): User
+  verifyEmail(userInput: UserInput!): User
+  userLoginByEmail(userInput: UserInput!): User
 }

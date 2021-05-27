@@ -41,7 +41,11 @@ type User {
 	organization: Organization
 	otherTitles: [String]
 	departments: [Department]
-	
+	emailVerificationCode: String #TODO 还需要加密
+	emailVerificationCodeExpiredAt: Date #TODO 还需要加密
+	password: String
+	salt1: String
+	salt2: String
 	# credential: [UserCredential]
 }
 
@@ -60,4 +64,6 @@ input UserInput {
 	email: String
 	phone: String
 	avatar: String
+	emailVerificationCode: String
+	password: String
 }
