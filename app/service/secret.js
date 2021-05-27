@@ -9,11 +9,13 @@ class SecretService extends Service {
     const {
       config
     } = this;
-    const cipher = crypto.createCipheriv('aes-128-cbc', config.crypto.key, config.crypto.iv);
+    var cipher;
     if (isEncrypt) {
+      cipher = crypto.createCipheriv('aes-128-cbc', config.crypto.key, config.crypto.iv);
       cipher.update(data, 'utf8', 'hex');
       return cipher.final('hex');
     } else {
+      cipher = crypto.createDecipheriv('aes-128-cbc', config.crypto.key, config.crypto.iv);
       cipher.update(data, 'hex', 'utf8')
       return cipher.final().toString();
     }
