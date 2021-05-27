@@ -1,11 +1,19 @@
 'use strict';
 
 const BasicConnector = require('../common/basicConnector');
-const { CLIENTS } = require("../../constant/constants");
+const {
+  CLIENTS
+} = require("../../constant/constants");
 const errorCode = require("../../error/errorCode");
-const { ONBOARDING_STATUS } = require("../../constant/user");
-const { MODEL_NAMES } = require("../../constant/models");
-const { NOTIFICATION_STATUS } = require("../../constant/notification");
+const {
+  ONBOARDING_STATUS
+} = require("../../constant/user");
+const {
+  MODEL_NAMES
+} = require("../../constant/models");
+const {
+  NOTIFICATION_STATUS
+} = require("../../constant/notification");
 const moment = require('moment');
 const MODEL_NAME = 'User';
 class UserConnector extends BasicConnector {
@@ -15,9 +23,15 @@ class UserConnector extends BasicConnector {
   }
 
   async userRich(id) {
-    let user = this.ctx.model[this.model].findOne({ _id: id }).exec();
+    let user = this.ctx.model[this.model].findOne({
+      _id: id
+    }).exec();
 
-    const basicQuery = { user: id, isDeleted: false, isBlocked: false };
+    const basicQuery = {
+      user: id,
+      isDeleted: false,
+      isBlocked: false
+    };
 
     const getCount = (model, query) => {
       return this.ctx.model[model].countDocuments(query).exec();
@@ -26,8 +40,14 @@ class UserConnector extends BasicConnector {
     let postCount = getCount(MODEL_NAMES.POST, basicQuery);
     let commentCount = getCount(MODEL_NAMES.COMMENT, basicQuery);
     let postCommentCount = getCount(MODEL_NAMES.POST_COMMENT, basicQuery);
-    let collectCount = getCount(MODEL_NAMES.COLLECT, { actor: id, value: true });
-    let notificationCount = getCount(MODEL_NAMES.NOTIFICATION, { ...basicQuery, status: NOTIFICATION_STATUS.INIT });
+    let collectCount = getCount(MODEL_NAMES.COLLECT, {
+      actor: id,
+      value: true
+    });
+    let notificationCount = getCount(MODEL_NAMES.NOTIFICATION, {
+      ...basicQuery,
+      status: NOTIFICATION_STATUS.INIT
+    });
 
     await Promise.all([user, postCount, commentCount, postCommentCount, collectCount, notificationCount]);
 
@@ -39,8 +59,15 @@ class UserConnector extends BasicConnector {
     collectCount = await collectCount;
     notificationCount = await notificationCount;
 
-    if(user) {
-      return { ...user._doc, postCount, commentCount, postCommentCount, collectCount, notificationCount };
+    if (user) {
+      return {
+        ...user._doc,
+        postCount,
+        commentCount,
+        postCommentCount,
+        collectCount,
+        notificationCount
+      };
     }
   }
 
@@ -49,7 +76,7 @@ class UserConnector extends BasicConnector {
     switch (clientType) {
       case CLIENTS.GUGU_WECHAT_MINI:
         return await this.userWechatMiniLogin(clientType, userLoginPayload);
-    
+
       default:
         return;
     }
@@ -59,8 +86,11 @@ class UserConnector extends BasicConnector {
 
     try {
 
-      const { jscode, grantType } = userLoginPayload;
-      
+      const {
+        jscode,
+        grantType
+      } = userLoginPayload;
+
       let result = await this.ctx.service.wechat.jsCode2Session(jscode, grantType);
 
       if (!result) return;
@@ -68,28 +98,42 @@ class UserConnector extends BasicConnector {
       const sessionKey = result['session_key'];
       const openId = result['openid'];
       // const unionId = result['unionid'];
-      if(!sessionKey || !openId) return;
+      if (!sessionKey || !openId) return;
 
-      const user = await this.ctx.model[this.model].findOneAndUpdate(
-        {
-          "credential": { 
-            $elemMatch: { clientType, openId } 
+      const user = await this.ctx.model[this.model].findOneAndUpdate({
+        "credential": {
+          $elemMatch: {
+            clientType,
+            openId
           }
-        }, 
-        {
-          loginedAt: Date.now(),
-          credential: { sessionKey, clientType, openId }
-          // unionId
-        },
-        { new: true, upsert: true, setDefaultsOnInsert: true }
-      );
+        }
+      }, {
+        loginedAt: Date.now(),
+        credential: {
+          sessionKey,
+          clientType,
+          openId
+        }
+        // unionId
+      }, {
+        new: true,
+        upsert: true,
+        setDefaultsOnInsert: true
+      });
 
-      const accessToken = await this.ctx.service.token.signJwt({ openId, sessionKey, clientType });
+      const accessToken = await this.ctx.service.token.signJwt({
+        openId,
+        sessionKey,
+        clientType
+      });
 
-      this.ctx.cookies.set('accessToken', accessToken, { signed: false, encrypt: true });
+      this.ctx.cookies.set('accessToken', accessToken, {
+        signed: false,
+        encrypt: true
+      });
 
       return user;
-    } catch(e) {
+    } catch (e) {
       console.error(e);
       this.ctx.response.body = {
         error: "Fail to login WeChat mini program user: " + e,
@@ -99,11 +143,18 @@ class UserConnector extends BasicConnector {
   }
 
   async onboardSelf(id, input) {
-    const result = await this.ctx.model[this.model].findByIdAndUpdate(
-      { _id: id },
-      { ...input, onboardingStatus: ONBOARDING_STATUS.ONBOARDED, loginedAt: Date.now(), updatedAt: Date.now(), },
-      { upsert: false, new: true, setDefaultsOnInsert: true }
-    );
+    const result = await this.ctx.model[this.model].findByIdAndUpdate({
+      _id: id
+    }, {
+      ...input,
+      onboardingStatus: ONBOARDING_STATUS.ONBOARDED,
+      loginedAt: Date.now(),
+      updatedAt: Date.now(),
+    }, {
+      upsert: false,
+      new: true,
+      setDefaultsOnInsert: true
+    });
     return result;
   }
 
@@ -139,7 +190,7 @@ class UserConnector extends BasicConnector {
     console.log('user', user._id.toString());
     //  var token = sign(user._id.toString(),'wsd',{expiresIn: 24 * 60 * 60  /* 1 days */});
     const activeKey = Array.from(Array(6), () => parseInt((Math.random() * 10))).join('')
-    // ctx.service.user.sendEmail(activeKey, tempEmail);
+    ctx.service.user.sendEmail(activeKey, tempEmail);
     const result = await ctx.model.User.findByIdAndUpdate(
       user._id, {
         emailVerificationCode: activeKey,
@@ -156,10 +207,13 @@ class UserConnector extends BasicConnector {
     const {
       ctx
     } = this;
-    var {email, emailVerificationCode} = userInput
+    var {
+      email,
+      emailVerificationCode
+    } = userInput
     email = ctx.service.secret.reversibleEncrypt(email, true);
     var user = await ctx.service.user.userByEmail(email);
-    if (!user)  return null; //这里返回前端的消息还是不太一样的，比如用户不存在、已注册等等，null可能不能够表示清楚
+    if (!user) return null; //这里返回前端的消息还是不太一样的，比如用户不存在、已注册等等，null可能不能够表示清楚
     if (user.onboardingStatus == ONBOARDING_STATUS.ONBOARDED) return null;
     if (emailVerificationCode != user.emailVerificationCode) return null;
     if (moment().toDate() > user.emailVerificationCodeExpiredAt) return null;
@@ -171,13 +225,16 @@ class UserConnector extends BasicConnector {
       }
     );
     return result;
-    }  
+  }
 
   async onboardSelfByEmail(userInput) {
     const {
       ctx
     } = this;
-    var {email, password} = userInput
+    var {
+      email,
+      password
+    } = userInput
     email = ctx.service.secret.reversibleEncrypt(email, true);
     var user = await ctx.service.user.userByEmail(email); //这里不应该是按email查，而是应该按前面注册后储存的东西来查，但我不知咋写
     if (user.onboardingStatus == ONBOARDING_STATUS.EMAIL_VERIFIED) {
@@ -203,17 +260,25 @@ class UserConnector extends BasicConnector {
     const {
       ctx
     } = this;
-    var {email, password} = userInput
+    var {
+      email,
+      password
+    } = userInput
     email = ctx.service.secret.reversibleEncrypt(email, true);
     var user = await ctx.service.user.userByEmail(email);
     if (!user) return null;
     if (user.onboardingStatus != ONBOARDING_STATUS.ONBOARDED) return null;
-    if (user.password != ctx.service.secret.saltHash(password, user.salt1, user.salt2)) return null; //TODO 需要加密后再比较
-    const result = await this.ctx.model[this.model].findByIdAndUpdate(
-      { _id: user.id },
-      { loginedAt: Date.now(), updatedAt: Date.now() },
-      { upsert: false, new: true, setDefaultsOnInsert: true }
-    );
+    if (!ctx.service.secret.safeEqualForString(user.password, ctx.service.secret.saltHash(password, user.salt1, user.salt2))) return null; //TODO 需要加密后再比较
+    const result = await this.ctx.model[this.model].findByIdAndUpdate({
+      _id: user.id
+    }, {
+      loginedAt: Date.now(),
+      updatedAt: Date.now()
+    }, {
+      upsert: false,
+      new: true,
+      setDefaultsOnInsert: true
+    });
     return result;
   }
 }

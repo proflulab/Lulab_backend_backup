@@ -37,6 +37,11 @@ class SecretService extends Service {
   generateSalt(saltRound1, saltRound2){
     return [bcrypt.genSaltSync(saltRound1), bcrypt.genSaltSync(saltRound2)];
   }
+
+  safeEqualForString(a, b){
+    if (a == null || b == null) return false;
+    return crypto.timingSafeEqual(Buffer.from(a),Buffer.from(b));
+  }
 }
 
 module.exports = SecretService;
