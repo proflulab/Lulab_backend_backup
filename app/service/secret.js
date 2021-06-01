@@ -39,7 +39,7 @@ class SecretService extends Service {
   }
 
   safeEqualForString(a, b){
-    if (a == null || b == null) return false;
+    if (a === null || b === null) return false;
     return crypto.timingSafeEqual(Buffer.from(a),Buffer.from(b));
   }
 }

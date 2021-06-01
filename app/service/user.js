@@ -6,11 +6,11 @@ const Service = require('egg').Service;
 class UserService extends Service {
   async sendEmail(key, email) {
     var stmpTransport = nodemailer.createTransport({
-      host: "smtp.163.com", //主机 qq邮箱，可修改
+      host: "smtp.163.com", //TODO: 主机 qq邮箱，需要修改
       secureConnection: true, //使用SSL
       port: 465,
       auth: {
-        user: "notmaimai@163.com", //你的邮箱帐号,
+        user: "notmaimai@163.com", //TODO: 你的邮箱帐号,需要修改
         pass: "ACRPOVNZJLCQXHZO" //你的邮箱授权码
       }
     });
@@ -74,8 +74,9 @@ class UserService extends Service {
   </table>
   </body>`
     };
-  
-    stmpTransport.sendMail(mailOptions, function (error, response) {
+    // TODO: 这里不能await/async吗？如果不能，你需要把这个方法转成支持await/async的模式。
+    // await, 然后把结果返回，而不是console.log
+    stmpTransport.sendMail(mailOptions, function (error, response) { 
       if (error) {
         console.log('error', error);
       } else {
@@ -85,8 +86,8 @@ class UserService extends Service {
     });
   }
 
-  async userByEmail(data) {
-    let user = this.ctx.model['User'].findOne({ email: data }).exec();
+  async userByEmail(email) {
+    let user = this.ctx.model['User'].findOne({ email }).exec();
     user = await user;
     return user;
   }
