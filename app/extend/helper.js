@@ -36,6 +36,7 @@ module.exports = {
       case ACTION_TARGET_TYPE.POST: key = 'post'; break;
       case ACTION_TARGET_TYPE.COMMENT: key = 'comment'; break;
       case ACTION_TARGET_TYPE.POST_COMMENT: key = 'postComment'; break;
+      case ACTION_TARGET_TYPE.LIKE: key = 'like'; break;
       default: break;
     }
 
