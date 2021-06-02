@@ -7,6 +7,7 @@ module.exports = {
     CIRCLE: 'Circle',
     TOPIC: 'Topic',
     VISIT: 'Visit',
+    LIKE: 'Like',
     THUMB: 'Thumb',
     COLLECT: 'Collect',
     USER: 'User',
