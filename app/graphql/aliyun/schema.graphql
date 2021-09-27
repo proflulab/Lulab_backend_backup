@@ -1,9 +1,0 @@
-type AliyunOutput {
-	signatureUrl: String
-	signature: JSON
-}
-
-input AliyunInput {
-	name: String
-}
-
