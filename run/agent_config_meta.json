@@ -197,6 +197,7 @@
       "egg-mongoose": "/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg/config/config.default.js",
       "egg-redis": "/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg/config/config.default.js",
       "egg-scripts": "/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg/config/config.default.js",
+      "nodemailer": "/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg/config/config.default.js",
       "redis": "/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {

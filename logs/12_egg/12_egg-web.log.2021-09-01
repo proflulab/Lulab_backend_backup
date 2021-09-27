@@ -1,0 +1,67 @@
+2021-08-21 21:14:38,205 WARN 13308 A client (::1:52363) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:20:13,758 WARN 13308 A client (::1:52475) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:20:18,014 WARN 13308 A client (::1:52478) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:20:19,082 WARN 13308 A client (::1:52480) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:20:19,614 WARN 13308 A client (::1:52482) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:20:20,003 WARN 13308 A client (::1:52484) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:20:20,424 WARN 13308 A client (::1:52486) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:25:44,289 WARN 13378 A client (::1:52697) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:25:54,172 WARN 13378 A client (::1:52705) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:25:54,176 WARN 13378 A client (::1:52705) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:25:54,176 WARN 13378 A client (::1:52706) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:25:54,181 WARN 13378 A client (::1:52706) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:03,682 WARN 13378 A client (::1:52713) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:03,684 WARN 13378 A client (::1:52713) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:03,685 WARN 13378 A client (::1:52714) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:03,688 WARN 13378 A client (::1:52714) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:07,801 WARN 13378 A client (::1:52717) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:07,802 WARN 13378 A client (::1:52718) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:07,806 WARN 13378 A client (::1:52717) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:26:07,806 WARN 13378 A client (::1:52718) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 21:37:08,687 WARN 13638 A client (::1:53121) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 22:02:26,137 WARN 13638 A client (::1:53903) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 22:03:18,318 WARN 13638 A client (::1:53934) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 22:06:27,685 WARN 13638 A client (::1:54045) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 22:20:02,384 WARN 13873 A client (::1:54497) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 22:31:16,041 WARN 13873 A client (::1:55192) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-08-21 22:31:22,458 WARN 13873 A client (::1:55194) error [HPE_INVALID_METHOD] occurred: Parse Error: Invalid method encountered
+2021-09-01 21:34:08,653 ERROR 80142 [-/127.0.0.1/-/0ms GET /] nodejs.ReferenceError: Schema is not defined
+    at module.exports (/Users/apple/Desktop/Nodejs/12_egg/app/model/command.js:5:23)
+    at getExports (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:220:15)
+    at FileLoader.parse (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:158:25)
+    at FileLoader.load (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:67:24)
+    at AppWorkerLoader.loadToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/egg_loader.js:388:25)
+    at loadModelToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:124:14)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:53:7
+    at Object.callFn (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/utils/index.js:44:42)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/lifecycle.js:256:13
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+
+pid: 80142
+hostname: bogon
+
+2021-09-01 21:47:56,517 ERROR 80330 [-/127.0.0.1/-/0ms GET /] nodejs.SyntaxError: [egg-core] load file: /Users/apple/Desktop/Nodejs/12_egg/app/model/article.js, error: Unexpected identifier
+    const ArticleSchema = new.Schema({
+                              ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at wrapSafe (internal/modules/cjs/loader.js:988:16)
+    at Module._compile (internal/modules/cjs/loader.js:1036:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.loadFile (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/utils/index.js:27:19)
+    at getExports (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:199:23)
+    at FileLoader.parse (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:158:25)
+    at FileLoader.load (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:67:24)
+    at AppWorkerLoader.loadToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/egg_loader.js:388:25)
+    at loadModelToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:124:14)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:53:7
+    at Object.callFn (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/utils/index.js:44:42)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/lifecycle.js:256:13
+
+pid: 80330
+hostname: bogon
+

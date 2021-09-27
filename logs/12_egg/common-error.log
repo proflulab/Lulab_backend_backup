@@ -1,0 +1,56 @@
+2021-09-27 05:28:54,007 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 06:01:15,019 ERROR 13238 nodejs.ClusterClientNoResponseError: client no response in 1900987ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13238
+hostname: bogon
+
+2021-09-27 06:01:15,009 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 09:18:02,007 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 09:18:02,012 ERROR 13238 nodejs.ClusterClientNoResponseError: client no response in 11767248ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13238
+hostname: bogon
+
+2021-09-27 09:41:19,009 ERROR 13238 nodejs.ClusterClientNoResponseError: client no response in 1217065ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13238
+hostname: bogon
+
+2021-09-27 09:41:19,005 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 12:21:00,007 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 12:21:00,009 ERROR 13238 nodejs.ClusterClientNoResponseError: client no response in 9540499ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13238
+hostname: bogon
+
+2021-09-27 13:56:05,007 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 14:11:13,010 ERROR 13238 nodejs.ClusterClientNoResponseError: client no response in 867588ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13238
+hostname: bogon
+
+2021-09-27 14:11:13,006 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 17:07:40,020 ERROR 15289 nodejs.ClusterClientNoResponseError: client no response in 1263242ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 15289
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-27 17:07:40,009 ERROR 15297 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected

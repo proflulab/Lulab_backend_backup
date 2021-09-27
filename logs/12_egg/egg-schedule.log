@@ -1,0 +1,33 @@
+2021-09-27 03:24:26,859 INFO 13242 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-09-27 03:24:26,859 INFO 13242 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-09-27 03:24:26,859 INFO 13242 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-09-27 03:24:28,062 INFO 13238 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 3931940ms at 2021-09-27 04:30:00.002
+2021-09-27 03:24:28,063 INFO 13238 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 74131938ms at 2021-09-28 00:00:00.001
+2021-09-27 03:24:28,063 INFO 13238 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 74132937ms at 2021-09-28 00:00:01.000
+2021-09-27 04:30:01,011 INFO 13238 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 86398993ms at 2021-09-28 04:30:00.004
+2021-09-27 04:30:01,013 INFO 13242 [Job#16326882010062170227819275341] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2021-09-27 04:30:01,025 INFO 13242 [Job#16326882010062170227819275341] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 10ms. 
+2021-09-27 14:14:07,095 INFO 14498 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-09-27 14:14:07,095 INFO 14498 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-09-27 14:14:07,095 INFO 14498 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-09-27 14:14:08,678 INFO 14491 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 51351326ms at 2021-09-28 04:30:00.003
+2021-09-27 14:14:08,678 INFO 14491 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 35151322ms at 2021-09-28 00:00:00.000
+2021-09-27 14:14:08,678 INFO 14491 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 35152322ms at 2021-09-28 00:00:01.000
+2021-09-27 14:19:26,660 INFO 14948 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-09-27 14:19:26,660 INFO 14948 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-09-27 14:19:26,660 INFO 14948 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-09-27 14:19:27,948 INFO 14941 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 51032055ms at 2021-09-28 04:30:00.003
+2021-09-27 14:19:27,948 INFO 14941 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 34832052ms at 2021-09-28 00:00:00.000
+2021-09-27 14:19:27,949 INFO 14941 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 34833052ms at 2021-09-28 00:00:01.001
+2021-09-27 14:26:12,784 INFO 15297 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-09-27 14:26:12,784 INFO 15297 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-09-27 14:26:12,784 INFO 15297 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-09-27 14:26:14,000 INFO 15289 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 50626002ms at 2021-09-28 04:30:00.002
+2021-09-27 14:26:14,001 INFO 15289 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 34426000ms at 2021-09-28 00:00:00.001
+2021-09-27 14:26:14,001 INFO 15289 [Timer] /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 34426999ms at 2021-09-28 00:00:01.000
+2021-09-27 18:19:12,926 INFO 16865 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-09-27 18:19:12,926 INFO 16865 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-09-27 18:19:12,926 INFO 16865 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-09-27 18:19:18,595 INFO 16883 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-09-27 18:19:18,595 INFO 16883 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-09-27 18:19:18,595 INFO 16883 [egg-schedule]: register schedule /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js

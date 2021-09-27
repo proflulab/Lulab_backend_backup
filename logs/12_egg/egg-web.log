@@ -1,0 +1,164 @@
+2021-09-27 03:20:23,067 INFO 11985 [egg-logrotator] app logger reload: got log-reload message
+2021-09-27 03:20:23,078 INFO 13064 [egg-logrotator] app logger reload: got log-reload message
+2021-09-27 03:20:33,275 INFO 11985 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 03:20:33,275 INFO 11985 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 03:20:33,288 INFO 13064 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 03:20:33,288 INFO 13064 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 03:24:26,837 INFO 13242 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-09-27 03:24:26,859 INFO 13242 [egg-multipart] stream mode enable
+2021-09-27 03:24:27,350 INFO 13242 [egg-mongoose] connecting mongodb://127.0.0.1:27017/egg-test-1
+2021-09-27 03:24:27,427 INFO 13242 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2021-09-27 03:24:27,973 INFO 13242 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/Nodejs/12_egg/app/public
+2021-09-27 03:24:27,976 INFO 13242 [egg-security] use methodnoallow middleware
+2021-09-27 03:24:27,977 INFO 13242 [egg-security] use noopen middleware
+2021-09-27 03:24:27,978 INFO 13242 [egg-security] use nosniff middleware
+2021-09-27 03:24:27,979 INFO 13242 [egg-security] use xssProtection middleware
+2021-09-27 03:24:27,980 INFO 13242 [egg-security] use xframe middleware
+2021-09-27 03:24:27,981 INFO 13242 [egg-security] use dta middleware
+2021-09-27 03:24:27,981 INFO 13242 [egg-security] compose 6 middlewares into one security middleware
+2021-09-27 03:24:27,995 INFO 13242 [egg:core] dump config after load, 4ms
+2021-09-27 03:24:27,997 INFO 13242 [egg-mongoose] starting...
+2021-09-27 03:24:28,029 INFO 13242 [egg-redis] client connect success
+2021-09-27 03:24:28,037 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 03:24:28,043 INFO 13242 [egg-mongoose] instance[0] start successfully
+2021-09-27 03:24:28,045 INFO 13242 [egg-redis] instance[0] status OK, client ready
+2021-09-27 03:24:28,047 INFO 13242 [egg-watcher:application] watcher start success
+2021-09-27 03:24:28,054 INFO 13242 [egg:core] dump config after ready, 5ms
+2021-09-27 04:30:01,017 INFO 13242 [-/127.0.0.1/-/1ms SCHEDULE /__schedule?path=/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/y3/ctk34xxd2jx_ky2fbpk_z6180000gn/T/egg-multipart-tmp/12_egg"
+2021-09-27 04:30:01,024 INFO 13242 [-/127.0.0.1/-/9ms SCHEDULE /__schedule?path=/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2021-09-27 05:28:54,008 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 05:29:04,023 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 05:29:04,023 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 06:01:15,009 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 06:01:15,010 WARN 13242 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-09-27 06:01:15,011 WARN 13242 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-09-27 06:01:24,748 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 06:01:24,748 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 09:18:02,013 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 09:18:02,016 WARN 13242 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-09-27 09:18:02,017 WARN 13242 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-09-27 09:18:11,858 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 09:18:11,858 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 09:41:19,005 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 09:41:19,005 WARN 13242 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-09-27 09:41:19,006 WARN 13242 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-09-27 09:41:29,491 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 09:41:29,491 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 12:21:00,007 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 12:21:00,007 WARN 13242 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-09-27 12:21:00,007 WARN 13242 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-09-27 12:21:10,929 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 12:21:10,929 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 13:56:05,007 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 13:56:15,420 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 13:56:15,420 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 14:11:13,006 ERROR 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 14:11:13,006 WARN 13242 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-09-27 14:11:13,006 WARN 13242 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-09-27 14:11:23,013 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 14:11:23,013 INFO 13242 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 14:14:07,042 INFO 14498 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-09-27 14:14:07,096 INFO 14498 [egg-multipart] stream mode enable
+2021-09-27 14:14:07,884 INFO 14498 [egg-mongoose] connecting mongodb://127.0.0.1:27017/egg-test-1
+2021-09-27 14:14:07,943 INFO 14498 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2021-09-27 14:14:08,577 INFO 14498 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/Nodejs/12_egg/app/public
+2021-09-27 14:14:08,580 INFO 14498 [egg-security] use methodnoallow middleware
+2021-09-27 14:14:08,581 INFO 14498 [egg-security] use noopen middleware
+2021-09-27 14:14:08,582 INFO 14498 [egg-security] use nosniff middleware
+2021-09-27 14:14:08,584 INFO 14498 [egg-security] use xssProtection middleware
+2021-09-27 14:14:08,585 INFO 14498 [egg-security] use xframe middleware
+2021-09-27 14:14:08,586 INFO 14498 [egg-security] use dta middleware
+2021-09-27 14:14:08,587 INFO 14498 [egg-security] compose 6 middlewares into one security middleware
+2021-09-27 14:14:08,602 INFO 14498 [egg:core] dump config after load, 4ms
+2021-09-27 14:14:08,605 INFO 14498 [egg-mongoose] starting...
+2021-09-27 14:14:08,639 INFO 14498 [egg-redis] client connect success
+2021-09-27 14:14:08,648 INFO 14498 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 14:14:08,653 INFO 14498 [egg-mongoose] instance[0] start successfully
+2021-09-27 14:14:08,655 INFO 14498 [egg-redis] instance[0] status OK, client ready
+2021-09-27 14:14:08,656 INFO 14498 [egg-watcher:application] watcher start success
+2021-09-27 14:14:08,666 INFO 14498 [egg:core] dump config after ready, 6ms
+2021-09-27 14:19:26,639 INFO 14948 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-09-27 14:19:26,661 INFO 14948 [egg-multipart] stream mode enable
+2021-09-27 14:19:27,145 INFO 14948 [egg-mongoose] connecting mongodb://127.0.0.1:27017/egg-test-1
+2021-09-27 14:19:27,231 INFO 14948 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2021-09-27 14:19:27,860 INFO 14948 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/Nodejs/12_egg/app/public
+2021-09-27 14:19:27,864 INFO 14948 [egg-security] use methodnoallow middleware
+2021-09-27 14:19:27,865 INFO 14948 [egg-security] use noopen middleware
+2021-09-27 14:19:27,866 INFO 14948 [egg-security] use nosniff middleware
+2021-09-27 14:19:27,867 INFO 14948 [egg-security] use xssProtection middleware
+2021-09-27 14:19:27,868 INFO 14948 [egg-security] use xframe middleware
+2021-09-27 14:19:27,869 INFO 14948 [egg-security] use dta middleware
+2021-09-27 14:19:27,869 INFO 14948 [egg-security] compose 6 middlewares into one security middleware
+2021-09-27 14:19:27,886 INFO 14948 [egg:core] dump config after load, 5ms
+2021-09-27 14:19:27,888 INFO 14948 [egg-mongoose] starting...
+2021-09-27 14:19:27,918 INFO 14948 [egg-redis] client connect success
+2021-09-27 14:19:27,924 INFO 14948 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 14:19:27,929 INFO 14948 [egg-mongoose] instance[0] start successfully
+2021-09-27 14:19:27,930 INFO 14948 [egg-redis] instance[0] status OK, client ready
+2021-09-27 14:19:27,932 INFO 14948 [egg-watcher:application] watcher start success
+2021-09-27 14:19:27,939 INFO 14948 [egg:core] dump config after ready, 4ms
+2021-09-27 14:26:12,762 INFO 15297 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-09-27 14:26:12,784 INFO 15297 [egg-multipart] stream mode enable
+2021-09-27 14:26:13,280 INFO 15297 [egg-mongoose] connecting mongodb://127.0.0.1:27017/egg-test-1
+2021-09-27 14:26:13,359 INFO 15297 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2021-09-27 14:26:13,919 INFO 15297 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/Nodejs/12_egg/app/public
+2021-09-27 14:26:13,921 INFO 15297 [egg-security] use methodnoallow middleware
+2021-09-27 14:26:13,922 INFO 15297 [egg-security] use noopen middleware
+2021-09-27 14:26:13,923 INFO 15297 [egg-security] use nosniff middleware
+2021-09-27 14:26:13,924 INFO 15297 [egg-security] use xssProtection middleware
+2021-09-27 14:26:13,926 INFO 15297 [egg-security] use xframe middleware
+2021-09-27 14:26:13,927 INFO 15297 [egg-security] use dta middleware
+2021-09-27 14:26:13,927 INFO 15297 [egg-security] compose 6 middlewares into one security middleware
+2021-09-27 14:26:13,939 INFO 15297 [egg:core] dump config after load, 4ms
+2021-09-27 14:26:13,941 INFO 15297 [egg-mongoose] starting...
+2021-09-27 14:26:13,971 INFO 15297 [egg-redis] client connect success
+2021-09-27 14:26:13,976 INFO 15297 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 14:26:13,981 INFO 15297 [egg-mongoose] instance[0] start successfully
+2021-09-27 14:26:13,982 INFO 15297 [egg-redis] instance[0] status OK, client ready
+2021-09-27 14:26:13,984 INFO 15297 [egg-watcher:application] watcher start success
+2021-09-27 14:26:13,991 INFO 15297 [egg:core] dump config after ready, 5ms
+2021-09-27 17:07:40,010 ERROR 15297 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-27 17:07:40,018 WARN 15297 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-09-27 17:07:40,019 WARN 15297 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-09-27 17:07:50,024 INFO 15297 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 17:07:50,025 INFO 15297 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 reconnected successfully
+2021-09-27 18:19:12,893 INFO 16865 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-09-27 18:19:12,926 INFO 16865 [egg-multipart] stream mode enable
+2021-09-27 18:19:13,435 INFO 16865 [egg-mongoose] connecting mongodb://127.0.0.1:27017/egg-test-1
+2021-09-27 18:19:13,530 INFO 16865 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2021-09-27 18:19:14,286 INFO 16865 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/Nodejs/12_egg/app/public
+2021-09-27 18:19:14,289 INFO 16865 [egg-security] use methodnoallow middleware
+2021-09-27 18:19:14,289 INFO 16865 [egg-security] use noopen middleware
+2021-09-27 18:19:14,290 INFO 16865 [egg-security] use nosniff middleware
+2021-09-27 18:19:14,291 INFO 16865 [egg-security] use xssProtection middleware
+2021-09-27 18:19:14,292 INFO 16865 [egg-security] use xframe middleware
+2021-09-27 18:19:14,292 INFO 16865 [egg-security] use dta middleware
+2021-09-27 18:19:14,292 INFO 16865 [egg-security] compose 6 middlewares into one security middleware
+2021-09-27 18:19:14,305 INFO 16865 [egg:core] dump config after load, 5ms
+2021-09-27 18:19:14,308 INFO 16865 [egg-mongoose] starting...
+2021-09-27 18:19:14,342 INFO 16865 [egg-redis] client connect success
+2021-09-27 18:19:14,352 INFO 16865 [egg-watcher:application] watcher start success
+2021-09-27 18:19:14,374 INFO 16865 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 18:19:14,384 INFO 16865 [egg-mongoose] instance[0] start successfully
+2021-09-27 18:19:14,386 INFO 16865 [egg-redis] instance[0] status OK, client ready
+2021-09-27 18:19:14,415 INFO 16865 [egg:core] dump config after ready, 14ms
+2021-09-27 18:19:18,556 INFO 16883 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-09-27 18:19:18,595 INFO 16883 [egg-multipart] stream mode enable
+2021-09-27 18:19:18,972 INFO 16883 [egg-mongoose] connecting mongodb://127.0.0.1:27017/egg-test-1
+2021-09-27 18:19:19,017 INFO 16883 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2021-09-27 18:19:19,385 INFO 16883 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/Nodejs/12_egg/app/public
+2021-09-27 18:19:19,388 INFO 16883 [egg-security] use methodnoallow middleware
+2021-09-27 18:19:19,389 INFO 16883 [egg-security] use noopen middleware
+2021-09-27 18:19:19,390 INFO 16883 [egg-security] use nosniff middleware
+2021-09-27 18:19:19,390 INFO 16883 [egg-security] use xssProtection middleware
+2021-09-27 18:19:19,391 INFO 16883 [egg-security] use xframe middleware
+2021-09-27 18:19:19,391 INFO 16883 [egg-security] use dta middleware
+2021-09-27 18:19:19,391 INFO 16883 [egg-security] compose 6 middlewares into one security middleware
+2021-09-27 18:19:19,407 INFO 16883 [egg:core] dump config after load, 8ms
+2021-09-27 18:19:19,416 INFO 16883 [egg-mongoose] starting...
+2021-09-27 18:19:19,546 INFO 16883 [egg-redis] client connect success
+2021-09-27 18:19:19,556 INFO 16883 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 connected successfully
+2021-09-27 18:19:19,563 INFO 16883 [egg-mongoose] instance[0] start successfully
+2021-09-27 18:19:19,564 INFO 16883 [egg-redis] instance[0] status OK, client ready
+2021-09-27 18:19:19,567 INFO 16883 [egg-watcher:application] watcher start success
+2021-09-27 18:19:19,586 INFO 16883 [egg:core] dump config after ready, 12ms

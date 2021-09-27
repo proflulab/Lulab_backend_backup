@@ -1,0 +1,311 @@
+2021-09-02 00:10:14,408 INFO 80369 [egg-logrotator] agent logger reload: got log-reload message
+2021-09-02 00:51:49,015 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 2472737ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 02:38:17,032 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1205858ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 03:10:04,024 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1866298ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 03:29:37,012 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1132859ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 05:01:23,035 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1204564ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 08:50:37,033 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 13733526ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 11:42:57,175 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 10339975ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 13:04:13,081 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1923045ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 13:29:44,168 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 990198ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 14:04:06,282 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1101357ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 14:38:32,021 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1205568ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 17:01:17,014 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 8544964ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 18:38:59,012 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 80409ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
+2021-09-02 21:58:06,791 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/config/mongoDbConnection.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348213024,"size":719,"blocks":8,"atimeMs":1629885697960.1174,"mtimeMs":1629885695846.0059,"ctimeMs":1629885695846.0059,"birthtimeMs":1629885678963.453,"atime":"2021-08-25T10:01:37.960Z","mtime":"2021-08-25T10:01:35.846Z","ctime":"2021-08-25T10:01:35.846Z","birthtime":"2021-08-25T10:01:18.963Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,812 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/config/config.default.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087497,"size":1374,"blocks":8,"atimeMs":1630502194147.831,"mtimeMs":1630502192475.8132,"ctimeMs":1630502192475.8132,"birthtimeMs":1628699230330.0747,"atime":"2021-09-01T13:16:34.148Z","mtime":"2021-09-01T13:16:32.476Z","ctime":"2021-09-01T13:16:32.476Z","birthtime":"2021-08-11T16:27:10.330Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,812 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/router.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087496,"size":76,"blocks":8,"atimeMs":1630503231173.3535,"mtimeMs":1630503229578.3162,"ctimeMs":1630503229578.3162,"birthtimeMs":1628699230329.438,"atime":"2021-09-01T13:33:51.173Z","mtime":"2021-09-01T13:33:49.578Z","ctime":"2021-09-01T13:33:49.578Z","birthtime":"2021-08-11T16:27:10.329Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,812 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/config/plugin.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087498,"size":235,"blocks":8,"atimeMs":1629973725730.2783,"mtimeMs":1629973724119.8723,"ctimeMs":1629973724119.8723,"birthtimeMs":1628699230330.5674,"atime":"2021-08-26T10:28:45.730Z","mtime":"2021-08-26T10:28:44.120Z","ctime":"2021-08-26T10:28:44.120Z","birthtime":"2021-08-11T16:27:10.331Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,814 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/service/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347875008,"size":164,"blocks":8,"atimeMs":1629550386110.249,"mtimeMs":1629550384233.6428,"ctimeMs":1629550384233.6428,"birthtimeMs":1629550239775.9688,"atime":"2021-08-21T12:53:06.110Z","mtime":"2021-08-21T12:53:04.234Z","ctime":"2021-08-21T12:53:04.234Z","birthtime":"2021-08-21T12:50:39.776Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,815 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/service/user.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347149663,"size":537,"blocks":8,"atimeMs":1628767973335.423,"mtimeMs":1628767971183.0742,"ctimeMs":1628767971183.0742,"birthtimeMs":1628703858981.232,"atime":"2021-08-12T11:32:53.335Z","mtime":"2021-08-12T11:32:51.183Z","ctime":"2021-08-12T11:32:51.183Z","birthtime":"2021-08-11T17:44:18.981Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,816 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/adminUser.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347147444,"size":1146,"blocks":8,"atimeMs":1629616150869.604,"mtimeMs":1629616149186,"ctimeMs":1629616149186.7363,"birthtimeMs":1628701520597.9043,"atime":"2021-08-22T07:09:10.870Z","mtime":"2021-08-22T07:09:09.186Z","ctime":"2021-08-22T07:09:09.187Z","birthtime":"2021-08-11T17:05:20.598Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,817 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/fans.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348769340,"size":277,"blocks":8,"atimeMs":1630503832213.4658,"mtimeMs":1630503830624.6555,"ctimeMs":1630503830624.6555,"birthtimeMs":1630484606574.017,"atime":"2021-09-01T13:43:52.213Z","mtime":"2021-09-01T13:43:50.625Z","ctime":"2021-09-01T13:43:50.625Z","birthtime":"2021-09-01T08:23:26.574Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,818 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/user.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347967842,"size":598,"blocks":8,"atimeMs":1630504044195.284,"mtimeMs":1630504042791.9849,"ctimeMs":1630504042791.9849,"birthtimeMs":1629616186613.6804,"atime":"2021-09-01T13:47:24.195Z","mtime":"2021-09-01T13:47:22.792Z","ctime":"2021-09-01T13:47:22.792Z","birthtime":"2021-08-22T07:09:46.614Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,820 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/command.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348769391,"size":362,"blocks":8,"atimeMs":1630503809876.2458,"mtimeMs":1630503808341.0305,"ctimeMs":1630503808341.0305,"birthtimeMs":1630484646016.9458,"atime":"2021-09-01T13:43:29.876Z","mtime":"2021-09-01T13:43:28.341Z","ctime":"2021-09-01T13:43:28.341Z","birthtime":"2021-09-01T08:24:06.017Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,821 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/article.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348769066,"size":599,"blocks":8,"atimeMs":1630504132063.9243,"mtimeMs":1630504131040.3691,"ctimeMs":1630504131040.3691,"birthtimeMs":1630484437311.4922,"atime":"2021-09-01T13:48:52.064Z","mtime":"2021-09-01T13:48:51.040Z","ctime":"2021-09-01T13:48:51.040Z","birthtime":"2021-09-01T08:20:37.311Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,822 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/middleware/error_handler.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347205157,"size":978,"blocks":8,"atimeMs":1629827118770.0486,"mtimeMs":1629827116465.9448,"ctimeMs":1629827116465.9448,"birthtimeMs":1628791481066.794,"atime":"2021-08-24T17:45:18.770Z","mtime":"2021-08-24T17:45:16.466Z","ctime":"2021-08-24T17:45:16.466Z","birthtime":"2021-08-12T18:04:41.067Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,822 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/fans.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348768847,"size":2433,"blocks":8,"atimeMs":1630502449309.9668,"mtimeMs":1630502448074.704,"ctimeMs":1630502448074.704,"birthtimeMs":1630484276496.2954,"atime":"2021-09-01T13:20:49.310Z","mtime":"2021-09-01T13:20:48.075Z","ctime":"2021-09-01T13:20:48.075Z","birthtime":"2021-09-01T08:17:56.496Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,824 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/user.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347877287,"size":3826,"blocks":8,"atimeMs":1630502450680.3257,"mtimeMs":1630502449283.3647,"ctimeMs":1630502449283.3647,"birthtimeMs":1629551402618.2456,"atime":"2021-09-01T13:20:50.680Z","mtime":"2021-09-01T13:20:49.283Z","ctime":"2021-09-01T13:20:49.283Z","birthtime":"2021-08-21T13:10:02.618Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,825 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087500,"size":181,"blocks":8,"atimeMs":1630502893948.7974,"mtimeMs":1630502892439.1592,"ctimeMs":1630502892439.1592,"birthtimeMs":1628699230331.1711,"atime":"2021-09-01T13:28:13.949Z","mtime":"2021-09-01T13:28:12.439Z","ctime":"2021-09-01T13:28:12.439Z","birthtime":"2021-08-11T16:27:10.331Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,825 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/command.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348768793,"size":2671,"blocks":8,"atimeMs":1630502397467.4756,"mtimeMs":1630502395768.08,"ctimeMs":1630502395768.08,"birthtimeMs":1630484238337.6096,"atime":"2021-09-01T13:19:57.467Z","mtime":"2021-09-01T13:19:55.768Z","ctime":"2021-09-01T13:19:55.768Z","birthtime":"2021-09-01T08:17:18.338Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:06,825 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/article.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348766977,"size":3840,"blocks":8,"atimeMs":1630502447967.0876,"mtimeMs":1630502446919.406,"ctimeMs":1630502446919.406,"birthtimeMs":1630482901753.0552,"atime":"2021-09-01T13:20:47.967Z","mtime":"2021-09-01T13:20:46.919Z","ctime":"2021-09-01T13:20:46.919Z","birthtime":"2021-09-01T07:55:01.753Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 21:58:07,028 WARN 80369 [agent:development] reload worker because /Users/apple/Desktop/Nodejs/12_egg/app/controller/article.js change
+2021-09-02 22:08:24,644 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/fans.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348769340,"size":277,"blocks":8,"atimeMs":1630503832213.4658,"mtimeMs":1630503830624.6555,"ctimeMs":1630503830624.6555,"birthtimeMs":1630484606574.017,"atime":"2021-09-01T13:43:52.213Z","mtime":"2021-09-01T13:43:50.625Z","ctime":"2021-09-01T13:43:50.625Z","birthtime":"2021-09-01T08:23:26.574Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,647 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/user.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347967842,"size":598,"blocks":8,"atimeMs":1630504044195.284,"mtimeMs":1630504042791.9849,"ctimeMs":1630504042791.9849,"birthtimeMs":1629616186613.6804,"atime":"2021-09-01T13:47:24.195Z","mtime":"2021-09-01T13:47:22.792Z","ctime":"2021-09-01T13:47:22.792Z","birthtime":"2021-08-22T07:09:46.614Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,648 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/middleware/error_handler.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347205157,"size":978,"blocks":8,"atimeMs":1629827118770.0486,"mtimeMs":1629827116465.9448,"ctimeMs":1629827116465.9448,"birthtimeMs":1628791481066.794,"atime":"2021-08-24T17:45:18.770Z","mtime":"2021-08-24T17:45:16.466Z","ctime":"2021-08-24T17:45:16.466Z","birthtime":"2021-08-12T18:04:41.067Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,648 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/user.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347877287,"size":3826,"blocks":8,"atimeMs":1630502450680.3257,"mtimeMs":1630502449283.3647,"ctimeMs":1630502449283.3647,"birthtimeMs":1629551402618.2456,"atime":"2021-09-01T13:20:50.680Z","mtime":"2021-09-01T13:20:49.283Z","ctime":"2021-09-01T13:20:49.283Z","birthtime":"2021-08-21T13:10:02.618Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,649 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087500,"size":181,"blocks":8,"atimeMs":1630502893948.7974,"mtimeMs":1630502892439.1592,"ctimeMs":1630502892439.1592,"birthtimeMs":1628699230331.1711,"atime":"2021-09-01T13:28:13.949Z","mtime":"2021-09-01T13:28:12.439Z","ctime":"2021-09-01T13:28:12.439Z","birthtime":"2021-08-11T16:27:10.331Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,650 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/fans.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348768847,"size":2433,"blocks":8,"atimeMs":1630502449309.9668,"mtimeMs":1630502448074.704,"ctimeMs":1630502448074.704,"birthtimeMs":1630484276496.2954,"atime":"2021-09-01T13:20:49.310Z","mtime":"2021-09-01T13:20:48.075Z","ctime":"2021-09-01T13:20:48.075Z","birthtime":"2021-09-01T08:17:56.496Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,650 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/article.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348766977,"size":3840,"blocks":8,"atimeMs":1630502447967.0876,"mtimeMs":1630502446919.406,"ctimeMs":1630502446919.406,"birthtimeMs":1630482901753.0552,"atime":"2021-09-01T13:20:47.967Z","mtime":"2021-09-01T13:20:46.919Z","ctime":"2021-09-01T13:20:46.919Z","birthtime":"2021-09-01T07:55:01.753Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,651 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/router.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087496,"size":76,"blocks":8,"atimeMs":1630503231173.3535,"mtimeMs":1630503229578.3162,"ctimeMs":1630503229578.3162,"birthtimeMs":1628699230329.438,"atime":"2021-09-01T13:33:51.173Z","mtime":"2021-09-01T13:33:49.578Z","ctime":"2021-09-01T13:33:49.578Z","birthtime":"2021-08-11T16:27:10.329Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,651 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/controller/command.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348768793,"size":2671,"blocks":8,"atimeMs":1630502397467.4756,"mtimeMs":1630502395768.08,"ctimeMs":1630502395768.08,"birthtimeMs":1630484238337.6096,"atime":"2021-09-01T13:19:57.467Z","mtime":"2021-09-01T13:19:55.768Z","ctime":"2021-09-01T13:19:55.768Z","birthtime":"2021-09-01T08:17:18.338Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,711 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/adminUser.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347147444,"size":1146,"blocks":8,"atimeMs":1629616150869.604,"mtimeMs":1629616149186,"ctimeMs":1629616149186.7363,"birthtimeMs":1628701520597.9043,"atime":"2021-08-22T07:09:10.870Z","mtime":"2021-08-22T07:09:09.186Z","ctime":"2021-08-22T07:09:09.187Z","birthtime":"2021-08-11T17:05:20.598Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,760 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/service/user.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347149663,"size":537,"blocks":8,"atimeMs":1628767973335.423,"mtimeMs":1628767971183.0742,"ctimeMs":1628767971183.0742,"birthtimeMs":1628703858981.232,"atime":"2021-08-12T11:32:53.335Z","mtime":"2021-08-12T11:32:51.183Z","ctime":"2021-08-12T11:32:51.183Z","birthtime":"2021-08-11T17:44:18.981Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,760 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/command.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348769391,"size":362,"blocks":8,"atimeMs":1630503809876.2458,"mtimeMs":1630503808341.0305,"ctimeMs":1630503808341.0305,"birthtimeMs":1630484646016.9458,"atime":"2021-09-01T13:43:29.876Z","mtime":"2021-09-01T13:43:28.341Z","ctime":"2021-09-01T13:43:28.341Z","birthtime":"2021-09-01T08:24:06.017Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,761 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/model/article.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348769066,"size":599,"blocks":8,"atimeMs":1630504132063.9243,"mtimeMs":1630504131040.3691,"ctimeMs":1630504131040.3691,"birthtimeMs":1630484437311.4922,"atime":"2021-09-01T13:48:52.064Z","mtime":"2021-09-01T13:48:51.040Z","ctime":"2021-09-01T13:48:51.040Z","birthtime":"2021-09-01T08:20:37.311Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,762 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/app/service/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347875008,"size":164,"blocks":8,"atimeMs":1629550386110.249,"mtimeMs":1629550384233.6428,"ctimeMs":1629550384233.6428,"birthtimeMs":1629550239775.9688,"atime":"2021-08-21T12:53:06.110Z","mtime":"2021-08-21T12:53:04.234Z","ctime":"2021-08-21T12:53:04.234Z","birthtime":"2021-08-21T12:50:39.776Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:25,010 WARN 80369 [agent:development] reload worker because /Users/apple/Desktop/Nodejs/12_egg/config/config.default.js change
+2021-09-02 22:08:24,809 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/config/mongoDbConnection.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4348213024,"size":719,"blocks":8,"atimeMs":1629885697960.1174,"mtimeMs":1629885695846.0059,"ctimeMs":1629885695846.0059,"birthtimeMs":1629885678963.453,"atime":"2021-08-25T10:01:37.960Z","mtime":"2021-08-25T10:01:35.846Z","ctime":"2021-08-25T10:01:35.846Z","birthtime":"2021-08-25T10:01:18.963Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,809 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/config/plugin.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087498,"size":235,"blocks":8,"atimeMs":1629973725730.2783,"mtimeMs":1629973724119.8723,"ctimeMs":1629973724119.8723,"birthtimeMs":1628699230330.5674,"atime":"2021-08-26T10:28:45.730Z","mtime":"2021-08-26T10:28:44.120Z","ctime":"2021-08-26T10:28:44.120Z","birthtime":"2021-08-11T16:27:10.331Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-02 22:08:24,809 INFO 80369 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/Nodejs/12_egg/config/config.default.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4347087497,"size":1374,"blocks":8,"atimeMs":1630502194147.831,"mtimeMs":1630502192475.8132,"ctimeMs":1630502192475.8132,"birthtimeMs":1628699230330.0747,"atime":"2021-09-01T13:16:34.148Z","mtime":"2021-09-01T13:16:32.476Z","ctime":"2021-09-01T13:16:32.476Z","birthtime":"2021-08-11T16:27:10.330Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-09-26 01:00:37,821 INFO 10499 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-09-26 01:00:37,959 INFO 10499 [egg:core] dump config after load, 5ms
+2021-09-26 01:00:38,009 INFO 10499 [egg-watcher] Start watching: ["/Users/apple/Desktop/Nodejs/12_egg/app","/Users/apple/Desktop/Nodejs/12_egg/config","/Users/apple/Desktop/Nodejs/12_egg/mocks","/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy","/Users/apple/Desktop/Nodejs/12_egg/app.js"]
+2021-09-26 01:00:38,009 INFO 10499 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app"
+2021-09-26 01:00:38,009 INFO 10499 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/config"
+2021-09-26 01:00:38,009 INFO 10499 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks"
+2021-09-26 01:00:38,009 INFO 10499 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy"
+2021-09-26 01:00:38,009 INFO 10499 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app.js"
+2021-09-26 01:00:38,010 INFO 10499 [egg-watcher:agent] watcher start success
+2021-09-26 01:00:38,043 INFO 10499 [egg:core] dump config after ready, 21ms
+2021-09-26 01:47:17,228 INFO 11006 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-09-26 01:47:17,467 INFO 11006 [egg:core] dump config after load, 5ms
+2021-09-26 01:47:17,513 INFO 11006 [egg-watcher] Start watching: ["/Users/apple/Desktop/Nodejs/12_egg/app","/Users/apple/Desktop/Nodejs/12_egg/config","/Users/apple/Desktop/Nodejs/12_egg/mocks","/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy","/Users/apple/Desktop/Nodejs/12_egg/app.js"]
+2021-09-26 01:47:17,513 INFO 11006 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app"
+2021-09-26 01:47:17,513 INFO 11006 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/config"
+2021-09-26 01:47:17,513 INFO 11006 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks"
+2021-09-26 01:47:17,513 INFO 11006 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy"
+2021-09-26 01:47:17,513 INFO 11006 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app.js"
+2021-09-26 01:47:17,514 INFO 11006 [egg-watcher:agent] watcher start success
+2021-09-26 01:47:17,524 INFO 11006 [egg:core] dump config after ready, 5ms
+2021-09-26 02:10:44,375 INFO 11200 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-09-26 02:10:44,633 INFO 11200 [egg:core] dump config after load, 3ms
+2021-09-26 02:10:44,685 INFO 11200 [egg-watcher] Start watching: ["/Users/apple/Desktop/Nodejs/12_egg/app","/Users/apple/Desktop/Nodejs/12_egg/config","/Users/apple/Desktop/Nodejs/12_egg/mocks","/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy","/Users/apple/Desktop/Nodejs/12_egg/app.js"]
+2021-09-26 02:10:44,685 INFO 11200 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app"
+2021-09-26 02:10:44,686 INFO 11200 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/config"
+2021-09-26 02:10:44,686 INFO 11200 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks"
+2021-09-26 02:10:44,686 INFO 11200 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy"
+2021-09-26 02:10:44,686 INFO 11200 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app.js"
+2021-09-26 02:10:44,686 INFO 11200 [egg-watcher:agent] watcher start success
+2021-09-26 02:10:44,705 INFO 11200 [egg:core] dump config after ready, 12ms
+2021-09-26 17:46:44,253 INFO 11980 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-09-26 17:46:44,475 INFO 11980 [egg:core] dump config after load, 4ms
+2021-09-26 17:46:44,525 INFO 11980 [egg-watcher] Start watching: ["/Users/apple/Desktop/Nodejs/12_egg/app","/Users/apple/Desktop/Nodejs/12_egg/config","/Users/apple/Desktop/Nodejs/12_egg/mocks","/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy","/Users/apple/Desktop/Nodejs/12_egg/app.js"]
+2021-09-26 17:46:44,525 INFO 11980 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app"
+2021-09-26 17:46:44,525 INFO 11980 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/config"
+2021-09-26 17:46:44,525 INFO 11980 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks"
+2021-09-26 17:46:44,525 INFO 11980 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy"
+2021-09-26 17:46:44,525 INFO 11980 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app.js"
+2021-09-26 17:46:44,526 INFO 11980 [egg-watcher:agent] watcher start success
+2021-09-26 17:46:44,553 INFO 11980 [egg:core] dump config after ready, 19ms
+2021-09-26 17:59:31,012 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 64201ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 18:04:57,011 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 225966ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 18:29:16,015 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 1438987ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 18:38:25,010 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 408022ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 18:45:47,015 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 421981ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 21:43:14,009 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 563968ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 21:50:06,011 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 372233ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 21:56:54,007 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 367659ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 22:03:56,010 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 380979ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 22:11:19,009 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 402972ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 22:34:52,011 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 1372978ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 22:37:34,924 INFO 13057 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/Nodejs/12_egg/logs/12_egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"12_egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-09-26 22:37:35,248 INFO 13057 [egg:core] dump config after load, 5ms
+2021-09-26 22:37:35,313 INFO 13057 [egg-watcher] Start watching: ["/Users/apple/Desktop/Nodejs/12_egg/app","/Users/apple/Desktop/Nodejs/12_egg/config","/Users/apple/Desktop/Nodejs/12_egg/mocks","/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy","/Users/apple/Desktop/Nodejs/12_egg/app.js"]
+2021-09-26 22:37:35,313 INFO 13057 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app"
+2021-09-26 22:37:35,313 INFO 13057 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/config"
+2021-09-26 22:37:35,313 INFO 13057 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks"
+2021-09-26 22:37:35,313 INFO 13057 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/mocks_proxy"
+2021-09-26 22:37:35,313 INFO 13057 [egg-watcher] Start watching: "/Users/apple/Desktop/Nodejs/12_egg/app.js"
+2021-09-26 22:37:35,314 INFO 13057 [egg-watcher:agent] watcher start success
+2021-09-26 22:37:35,355 INFO 13057 [egg:core] dump config after ready, 30ms
+2021-09-26 22:53:13,015 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 560857ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-26 22:53:13,022 ERROR 13057 nodejs.ClusterClientNoResponseError: client no response in 575014ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13057
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-27 03:20:23,018 ERROR 11980 nodejs.ClusterClientNoResponseError: client no response in 16009977ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 11980
+hostname: appledeMacBook-Pro-2.local
+
+2021-09-27 03:20:23,020 ERROR 13057 nodejs.ClusterClientNoResponseError: client no response in 16009975ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13057
+hostname: appledeMacBook-Pro-2.local
+

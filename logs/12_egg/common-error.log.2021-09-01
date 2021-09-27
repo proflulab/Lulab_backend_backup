@@ -1,0 +1,162 @@
+2021-08-12 03:59:08,073 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 1988625ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 07:34:12,017 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 12863508ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 07:52:26,011 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 913256ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 11:56:31,027 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 14605177ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 12:16:25,018 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 894150ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 15:18:45,011 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 10899277ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 15:34:32,015 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 906415ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 16:09:21,023 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 2047625ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 16:13:51,014 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 229090ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 17:18:05,021 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 913643ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 18:20:43,018 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 3738046ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 20:43:36,194 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 150478ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-12 21:01:14,022 ERROR 2934 nodejs.ClusterClientNoResponseError: client no response in 756757ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 2934
+hostname: bogon
+
+2021-08-21 21:55:29,292 ERROR 13637 nodejs.ClusterClientNoResponseError: client no response in 889595ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 13637
+hostname: bogon
+
+2021-08-21 21:55:29,280 ERROR 13638 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-01 21:34:08,653 ERROR 80142 [-/127.0.0.1/-/0ms GET /] nodejs.ReferenceError: Schema is not defined
+    at module.exports (/Users/apple/Desktop/Nodejs/12_egg/app/model/command.js:5:23)
+    at getExports (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:220:15)
+    at FileLoader.parse (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:158:25)
+    at FileLoader.load (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:67:24)
+    at AppWorkerLoader.loadToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/egg_loader.js:388:25)
+    at loadModelToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:124:14)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:53:7
+    at Object.callFn (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/utils/index.js:44:42)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/lifecycle.js:256:13
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+
+pid: 80142
+hostname: bogon
+
+2021-09-01 21:47:56,517 ERROR 80330 [-/127.0.0.1/-/0ms GET /] nodejs.SyntaxError: [egg-core] load file: /Users/apple/Desktop/Nodejs/12_egg/app/model/article.js, error: Unexpected identifier
+    const ArticleSchema = new.Schema({
+                              ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at wrapSafe (internal/modules/cjs/loader.js:988:16)
+    at Module._compile (internal/modules/cjs/loader.js:1036:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.loadFile (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/utils/index.js:27:19)
+    at getExports (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:199:23)
+    at FileLoader.parse (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:158:25)
+    at FileLoader.load (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/file_loader.js:67:24)
+    at AppWorkerLoader.loadToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/loader/egg_loader.js:388:25)
+    at loadModelToApp (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:124:14)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-mongoose/lib/mongoose.js:53:7
+    at Object.callFn (/Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/utils/index.js:44:42)
+    at /Users/apple/Desktop/Nodejs/12_egg/node_modules/egg-core/lib/lifecycle.js:256:13
+
+pid: 80330
+hostname: bogon
+
+2021-09-02 00:10:14,044 ERROR 80373 [egg-mongoose] mongodb://127.0.0.1:27017/egg-test-1 disconnected
+2021-09-02 00:10:14,178 ERROR 80369 nodejs.ClusterClientNoResponseError: client no response in 1217335ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/Nodejs/12_egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 80369
+hostname: bogon
+
