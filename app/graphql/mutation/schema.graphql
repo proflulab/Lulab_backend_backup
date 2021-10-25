@@ -1,0 +1,14 @@
+type Mutation {
+
+  addCircleAdmin(circleInput: CircleInput!): Circle
+  updateCircleAdmin(id: ID!, circleInput: CircleInput!): Circle
+  deleteCircleAdmin(id: ID!, circleInput: CircleInput): Circle
+
+  adminUserLogout: ID
+
+  onboardSelf(id: ID!, userInput: UserInput!): User!
+  onboardSelfByEmail(userInput: UserInput!): User
+  verifyEmail(userInput: UserInput!): User
+  userLoginByEmail(userInput: UserInput!): User
+
+}

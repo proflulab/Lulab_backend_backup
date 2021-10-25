@@ -1,0 +1,11 @@
+type Query {
+  # User
+  usersAdmin(option: Option!, condition: Condition): [User]
+  userAdmin(id: ID!): User
+  userLogin(userLoginPayload: UserLoginPayload!): User!
+  userRich(id: ID!): User!
+  # userByToken(clientType: String!, accessToken: String!): User!
+
+  circles(option: Option!, condition: Condition): [Circle!]
+  circle(id: ID!): Circle!
+}

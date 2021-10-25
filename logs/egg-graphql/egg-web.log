@@ -1,0 +1,25 @@
+2021-10-25 04:31:34,200 INFO 26070 [egg-logrotator] app logger reload: got log-reload message
+2021-10-25 06:14:06,033 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-25 06:14:06,035 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-25 07:54:03,012 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-25 07:54:03,012 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-25 11:15:04,043 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-25 11:15:04,054 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-25 15:19:48,013 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-25 15:19:48,064 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-25 15:36:51,172 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-25 15:36:51,172 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-25 18:23:38,802 INFO 36339 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-25 18:23:38,859 INFO 36339 [egg-multipart] stream mode enable
+2021-10-25 18:23:39,707 INFO 36339 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-25 18:23:39,710 INFO 36339 [egg-security] use csrf middleware
+2021-10-25 18:23:39,711 INFO 36339 [egg-security] use methodnoallow middleware
+2021-10-25 18:23:39,712 INFO 36339 [egg-security] use noopen middleware
+2021-10-25 18:23:39,713 INFO 36339 [egg-security] use nosniff middleware
+2021-10-25 18:23:39,714 INFO 36339 [egg-security] use xssProtection middleware
+2021-10-25 18:23:39,715 INFO 36339 [egg-security] use xframe middleware
+2021-10-25 18:23:39,716 INFO 36339 [egg-security] use dta middleware
+2021-10-25 18:23:39,716 INFO 36339 [egg-security] compose 7 middlewares into one security middleware
+2021-10-25 18:23:39,726 INFO 36339 [egg:core] dump config after load, 5ms
+2021-10-25 18:23:39,737 INFO 36339 [egg-watcher:application] watcher start success
+2021-10-25 18:23:39,746 INFO 36339 [egg:core] dump config after ready, 7ms

@@ -1,0 +1,177 @@
+2021-10-14 18:04:34,515 INFO 44238 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-14 18:04:35,154 INFO 44238 [egg:core] dump config after load, 5ms
+2021-10-14 18:04:35,192 INFO 44238 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-14 18:04:35,192 INFO 44238 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-14 18:04:35,192 INFO 44238 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-14 18:04:35,192 INFO 44238 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-14 18:04:35,192 INFO 44238 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-14 18:04:35,192 INFO 44238 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-14 18:04:35,193 INFO 44238 [egg-watcher:agent] watcher start success
+2021-10-14 18:04:35,302 ERROR 44238 nodejs.SequelizeConnectionError: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:149:19
+From previous event:
+    at ConnectionManager.connect (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:136:13)
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:338:50
+    at processImmediate (internal/timers.js:464:21)
+From previous event:
+    at ConnectionManager._connect (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:338:8)
+    at ConnectionManager.getConnection (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:266:46)
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:557:34
+From previous event:
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:457:64
+    at /Users/apple/Desktop/egg-graphql/node_modules/retry-as-promised/index.js:39:21
+    at retryAsPromised (/Users/apple/Desktop/egg-graphql/node_modules/retry-as-promised/index.js:29:10)
+    at Sequelize.query (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:457:28)
+    at Sequelize.authenticate (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:786:17)
+    at authenticate (/Users/apple/Desktop/egg-graphql/node_modules/egg-sequelize/lib/loader.js:129:22)
+    at /Users/apple/Desktop/egg-graphql/node_modules/egg-sequelize/lib/loader.js:40:49
+    at Array.map (<anonymous>)
+    at /Users/apple/Desktop/egg-graphql/node_modules/egg-sequelize/lib/loader.js:40:33
+    at Object.callFn (/Users/apple/Desktop/egg-graphql/node_modules/egg-core/lib/utils/index.js:44:42)
+    at /Users/apple/Desktop/egg-graphql/node_modules/egg-core/lib/lifecycle.js:256:13
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+name: "SequelizeConnectionError"
+parent: {"code":"ER_NOT_SUPPORTED_AUTH_MODE","errno":1251,"sqlState":"08004","sqlMessage":"Client does not support authentication protocol requested by server; consider upgrading MySQL client"}
+original: {"code":"ER_NOT_SUPPORTED_AUTH_MODE","errno":1251,"sqlState":"08004","sqlMessage":"Client does not support authentication protocol requested by server; consider upgrading MySQL client"}
+pid: 44238
+hostname: bogon
+
+2021-10-14 18:04:35,320 INFO 44238 [egg:core] dump config after ready, 17ms
+2021-10-14 18:08:17,151 INFO 44918 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-14 18:08:17,813 INFO 44918 [egg:core] dump config after load, 7ms
+2021-10-14 18:08:17,858 INFO 44918 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-14 18:08:17,858 INFO 44918 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-14 18:08:17,858 INFO 44918 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-14 18:08:17,858 INFO 44918 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-14 18:08:17,858 INFO 44918 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-14 18:08:17,858 INFO 44918 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-14 18:08:17,859 INFO 44918 [egg-watcher:agent] watcher start success
+2021-10-14 18:08:17,898 ERROR 44918 nodejs.SequelizeConnectionError: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:149:19
+From previous event:
+    at ConnectionManager.connect (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:136:13)
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:338:50
+    at processImmediate (internal/timers.js:464:21)
+From previous event:
+    at ConnectionManager._connect (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:338:8)
+    at ConnectionManager.getConnection (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:266:46)
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:557:34
+From previous event:
+    at /Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:457:64
+    at /Users/apple/Desktop/egg-graphql/node_modules/retry-as-promised/index.js:39:21
+    at retryAsPromised (/Users/apple/Desktop/egg-graphql/node_modules/retry-as-promised/index.js:29:10)
+    at Sequelize.query (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:457:28)
+    at Sequelize.authenticate (/Users/apple/Desktop/egg-graphql/node_modules/sequelize/lib/sequelize.js:786:17)
+    at authenticate (/Users/apple/Desktop/egg-graphql/node_modules/egg-sequelize/lib/loader.js:129:22)
+    at /Users/apple/Desktop/egg-graphql/node_modules/egg-sequelize/lib/loader.js:40:49
+    at Array.map (<anonymous>)
+    at /Users/apple/Desktop/egg-graphql/node_modules/egg-sequelize/lib/loader.js:40:33
+    at Object.callFn (/Users/apple/Desktop/egg-graphql/node_modules/egg-core/lib/utils/index.js:44:42)
+    at /Users/apple/Desktop/egg-graphql/node_modules/egg-core/lib/lifecycle.js:256:13
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+name: "SequelizeConnectionError"
+parent: {"code":"ER_NOT_SUPPORTED_AUTH_MODE","errno":1251,"sqlState":"08004","sqlMessage":"Client does not support authentication protocol requested by server; consider upgrading MySQL client"}
+original: {"code":"ER_NOT_SUPPORTED_AUTH_MODE","errno":1251,"sqlState":"08004","sqlMessage":"Client does not support authentication protocol requested by server; consider upgrading MySQL client"}
+pid: 44918
+hostname: bogon
+
+2021-10-14 18:08:17,904 INFO 44918 [egg:core] dump config after ready, 5ms
+2021-10-14 18:10:29,091 INFO 45337 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-14 18:10:29,270 INFO 45337 [egg:core] dump config after load, 4ms
+2021-10-14 18:10:29,313 INFO 45337 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-14 18:10:29,313 INFO 45337 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-14 18:10:29,314 INFO 45337 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-14 18:10:29,314 INFO 45337 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-14 18:10:29,314 INFO 45337 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-14 18:10:29,314 INFO 45337 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-14 18:10:29,314 INFO 45337 [egg-watcher:agent] watcher start success
+2021-10-14 18:10:29,348 INFO 45337 [egg:core] dump config after ready, 23ms
+2021-10-14 18:10:30,686 INFO 45337 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/public","stat":{"dev":16777220,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352828438,"size":64,"blocks":0,"atimeMs":1634206230674.6934,"mtimeMs":1634206230674.6934,"ctimeMs":1634206230674.6934,"birthtimeMs":1634206230674.6934,"atime":"2021-10-14T10:10:30.675Z","mtime":"2021-10-14T10:10:30.675Z","ctime":"2021-10-14T10:10:30.675Z","birthtime":"2021-10-14T10:10:30.675Z"},"remove":false,"isDirectory":true,"isFile":false}
+2021-10-14 19:14:09,393 ERROR 45337 nodejs.ClusterClientNoResponseError: client no response in 776504ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45337
+hostname: bogon
+
+2021-10-14 19:54:33,286 ERROR 45337 nodejs.ClusterClientNoResponseError: client no response in 1422982ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45337
+hostname: bogon
+
+2021-10-14 21:09:29,034 ERROR 45337 nodejs.ClusterClientNoResponseError: client no response in 1854170ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45337
+hostname: bogon
+
+2021-10-14 21:46:18,017 ERROR 45337 nodejs.ClusterClientNoResponseError: client no response in 2168959ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45337
+hostname: bogon
+
+2021-10-14 22:00:44,009 ERROR 45337 nodejs.ClusterClientNoResponseError: client no response in 825262ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45337
+hostname: bogon
+
+2021-10-14 22:10:06,196 INFO 46616 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-14 22:10:06,515 INFO 46616 [egg:core] dump config after load, 9ms
+2021-10-14 22:10:06,573 INFO 46616 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-14 22:10:06,573 INFO 46616 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-14 22:10:06,573 INFO 46616 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-14 22:10:06,573 INFO 46616 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-14 22:10:06,573 INFO 46616 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-14 22:10:06,573 INFO 46616 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-14 22:10:06,574 INFO 46616 [egg-watcher:agent] watcher start success
+2021-10-14 22:10:06,597 INFO 46616 [egg:core] dump config after ready, 6ms
+2021-10-14 22:11:09,224 WARN 46616 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/controller/home.js change
+2021-10-14 22:11:09,019 INFO 46616 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/controller/home.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783503,"size":188,"blocks":8,"atimeMs":1634205709009.2183,"mtimeMs":1634220668954.4038,"ctimeMs":1634220668954.4038,"birthtimeMs":1634205577166.8152,"atime":"2021-10-14T10:01:49.009Z","mtime":"2021-10-14T14:11:08.954Z","ctime":"2021-10-14T14:11:08.954Z","birthtime":"2021-10-14T09:59:37.167Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-14 22:12:31,969 INFO 46768 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-14 22:12:32,206 INFO 46768 [egg:core] dump config after load, 4ms
+2021-10-14 22:12:32,253 INFO 46768 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-14 22:12:32,253 INFO 46768 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-14 22:12:32,254 INFO 46768 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-14 22:12:32,254 INFO 46768 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-14 22:12:32,254 INFO 46768 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-14 22:12:32,254 INFO 46768 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-14 22:12:32,254 INFO 46768 [egg-watcher:agent] watcher start success
+2021-10-14 22:12:32,311 INFO 46768 [egg:core] dump config after ready, 42ms
+2021-10-14 22:25:17,016 INFO 46768 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/query/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783517,"size":2175,"blocks":8,"atimeMs":1634205709026.7651,"mtimeMs":1634221516952.753,"ctimeMs":1634221516952.753,"birthtimeMs":1634205577170.5244,"atime":"2021-10-14T10:01:49.027Z","mtime":"2021-10-14T14:25:16.953Z","ctime":"2021-10-14T14:25:16.953Z","birthtime":"2021-10-14T09:59:37.171Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-14 22:25:17,225 WARN 46768 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/query/schema.graphql change
+2021-10-14 22:26:37,070 WARN 46768 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/mutation/schema.graphql change
+2021-10-14 22:26:36,864 INFO 46768 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/mutation/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783515,"size":1221,"blocks":8,"atimeMs":1634205709066.5542,"mtimeMs":1634221596802.17,"ctimeMs":1634221596802.17,"birthtimeMs":1634205577170.1929,"atime":"2021-10-14T10:01:49.067Z","mtime":"2021-10-14T14:26:36.802Z","ctime":"2021-10-14T14:26:36.802Z","birthtime":"2021-10-14T09:59:37.170Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-14 22:26:50,720 INFO 47050 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-14 22:26:50,825 INFO 47050 [egg:core] dump config after load, 5ms
+2021-10-14 22:26:50,872 INFO 47050 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-14 22:26:50,872 INFO 47050 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-14 22:26:50,872 INFO 47050 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-14 22:26:50,872 INFO 47050 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-14 22:26:50,872 INFO 47050 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-14 22:26:50,872 INFO 47050 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-14 22:26:50,873 INFO 47050 [egg-watcher:agent] watcher start success
+2021-10-14 22:26:50,892 INFO 47050 [egg:core] dump config after ready, 6ms
+2021-10-14 22:33:22,356 INFO 47050 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/food","remove":true,"isDirectory":true,"isFile":false}
+2021-10-14 22:33:41,735 INFO 47050 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/Article","stat":{"dev":16777220,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352849850,"size":64,"blocks":0,"atimeMs":1634222021672.6624,"mtimeMs":1634222021672.6624,"ctimeMs":1634222021672.6624,"birthtimeMs":1634222021672.6624,"atime":"2021-10-14T14:33:41.673Z","mtime":"2021-10-14T14:33:41.673Z","ctime":"2021-10-14T14:33:41.673Z","birthtime":"2021-10-14T14:33:41.673Z"},"remove":false,"isDirectory":true,"isFile":false}
+2021-10-14 22:34:33,727 INFO 47050 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/Article","stat":{"dev":16777220,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352849850,"size":64,"blocks":0,"atimeMs":1634222021672.6624,"mtimeMs":1634222021672.6624,"ctimeMs":1634222073622.711,"birthtimeMs":1634222021672.6624,"atime":"2021-10-14T14:33:41.673Z","mtime":"2021-10-14T14:33:41.673Z","ctime":"2021-10-14T14:34:33.623Z","birthtime":"2021-10-14T14:33:41.673Z"},"remove":false,"isDirectory":true,"isFile":false}
+2021-10-14 22:34:33,728 INFO 47050 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/article","stat":{"dev":16777220,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352849850,"size":64,"blocks":0,"atimeMs":1634222021672.6624,"mtimeMs":1634222021672.6624,"ctimeMs":1634222073622.711,"birthtimeMs":1634222021672.6624,"atime":"2021-10-14T14:33:41.673Z","mtime":"2021-10-14T14:33:41.673Z","ctime":"2021-10-14T14:34:33.623Z","birthtime":"2021-10-14T14:33:41.673Z"},"remove":false,"isDirectory":true,"isFile":false}
+2021-10-14 23:55:06,031 ERROR 47050 nodejs.ClusterClientNoResponseError: client no response in 1633282ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 47050
+hostname: bogon
+

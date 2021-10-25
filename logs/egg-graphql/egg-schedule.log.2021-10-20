@@ -1,0 +1,54 @@
+2021-10-20 05:38:13,066 INFO 14588 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 82306975ms at 2021-10-21 04:30:00.041
+2021-10-20 05:38:13,039 INFO 14591 [Job#16346794930133676237836436671] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2021-10-20 05:38:13,072 INFO 14591 [Job#16346794930133676237836436671] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 32ms. 
+2021-10-20 19:26:14,994 INFO 17269 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:26:14,994 INFO 17269 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:26:14,994 INFO 17269 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:26:19,507 INFO 17285 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:26:19,507 INFO 17285 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:26:19,507 INFO 17285 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:26:21,626 INFO 17294 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:26:21,626 INFO 17294 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:26:21,626 INFO 17294 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:32:26,102 INFO 17721 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 32253900ms at 2021-10-21 04:30:00.002
+2021-10-20 19:32:26,102 INFO 17721 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 16053898ms at 2021-10-21 00:00:00.000
+2021-10-20 19:32:26,103 INFO 17721 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 16054898ms at 2021-10-21 00:00:01.001
+2021-10-20 19:32:25,394 INFO 17722 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:32:25,394 INFO 17722 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:32:25,394 INFO 17722 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:36:14,040 INFO 17966 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:36:14,040 INFO 17966 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:36:14,040 INFO 17966 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:36:14,796 INFO 17962 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 32025207ms at 2021-10-21 04:30:00.003
+2021-10-20 19:36:14,796 INFO 17962 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 15825204ms at 2021-10-21 00:00:00.000
+2021-10-20 19:36:14,797 INFO 17962 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 15826204ms at 2021-10-21 00:00:01.001
+2021-10-20 19:39:39,131 INFO 18027 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:39:39,131 INFO 18027 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:39:39,131 INFO 18027 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:39:48,870 INFO 18053 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:39:48,870 INFO 18053 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:39:48,870 INFO 18053 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:40:23,479 INFO 18159 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:40:23,479 INFO 18159 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:40:23,479 INFO 18159 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:40:24,013 INFO 18155 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 31775991ms at 2021-10-21 04:30:00.004
+2021-10-20 19:40:24,013 INFO 18155 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 15575987ms at 2021-10-21 00:00:00.000
+2021-10-20 19:40:24,014 INFO 18155 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 15576987ms at 2021-10-21 00:00:01.000
+2021-10-20 19:41:02,659 INFO 18189 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:41:02,659 INFO 18189 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:41:02,659 INFO 18189 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 19:41:24,863 INFO 18210 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 19:41:24,863 INFO 18210 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 19:41:24,863 INFO 18210 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-20 22:06:19,019 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 23020983ms at 2021-10-21 04:30:00.002
+2021-10-20 22:06:19,019 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 6820981ms at 2021-10-21 00:00:00.000
+2021-10-20 22:06:19,020 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 6821981ms at 2021-10-21 00:00:01.001
+2021-10-20 22:06:18,361 INFO 18427 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2021-10-20 22:06:18,361 INFO 18427 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js
+2021-10-20 22:06:18,361 INFO 18427 [egg-schedule]: register schedule /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2021-10-21 00:00:00,634 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 86399372ms at 2021-10-22 00:00:00.006
+2021-10-21 00:00:00,634 INFO 18427 [Job#16347456006274337268018650081] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2021-10-21 00:00:00,649 INFO 18427 [Job#16347456006274337268018650081] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 12ms. 
+2021-10-21 00:00:01,632 INFO 18427 [Job#16347456016304337278052918991] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2021-10-21 00:00:01,640 INFO 18427 [Job#16347456016304337278052918991] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 8ms. 
+2021-10-21 00:00:01,635 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 86399369ms at 2021-10-22 00:00:01.004

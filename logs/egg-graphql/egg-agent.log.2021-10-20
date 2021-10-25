@@ -1,0 +1,203 @@
+2021-10-20 00:00:03,843 INFO 14588 [egg-logrotator] agent logger reload: got log-reload message
+2021-10-20 02:16:23,038 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 2235985ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 02:59:50,021 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 2566923ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 03:20:43,009 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 1212100ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 05:38:13,067 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 8209981ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 07:50:29,013 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 7895919ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 08:03:03,029 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 92339ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 08:39:07,016 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 2123957ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 09:13:44,016 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 2036953ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 09:34:36,009 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 1211591ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 12:04:19,013 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 8942965ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 12:44:25,036 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 2406002ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 13:49:20,044 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 1213389ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 18:56:51,018 ERROR 14588 nodejs.ClusterClientNoResponseError: client no response in 18430943ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 14588
+hostname: bogon
+
+2021-10-20 19:26:12,607 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/query/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783517,"size":0,"blocks":0,"atimeMs":1634645821349.2466,"mtimeMs":1634729172531.9197,"ctimeMs":1634729172531.9197,"birthtimeMs":1634205577170.5244,"atime":"2021-10-19T12:17:01.349Z","mtime":"2021-10-20T11:26:12.532Z","ctime":"2021-10-20T11:26:12.532Z","birthtime":"2021-10-14T09:59:37.171Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:26:12,820 WARN 14588 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/query/schema.graphql change
+2021-10-20 19:26:18,730 WARN 14588 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/mutation/schema.graphql change
+2021-10-20 19:26:18,528 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/mutation/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783515,"size":1,"blocks":8,"atimeMs":1634292538453.5613,"mtimeMs":1634729178509.057,"ctimeMs":1634729178509.057,"birthtimeMs":1634205577170.1929,"atime":"2021-10-15T10:08:58.454Z","mtime":"2021-10-20T11:26:18.509Z","ctime":"2021-10-20T11:26:18.509Z","birthtime":"2021-10-14T09:59:37.170Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:26:20,679 WARN 14588 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/mutation/schema.graphql change
+2021-10-20 19:26:20,472 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/mutation/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783515,"size":0,"blocks":0,"atimeMs":1634729179640.9834,"mtimeMs":1634729180458.3535,"ctimeMs":1634729180458.3535,"birthtimeMs":1634205577170.1929,"atime":"2021-10-20T11:26:19.641Z","mtime":"2021-10-20T11:26:20.458Z","ctime":"2021-10-20T11:26:20.458Z","birthtime":"2021-10-14T09:59:37.170Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:26:56,192 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/common","remove":true,"isDirectory":true,"isFile":false}
+2021-10-20 19:27:06,954 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/aliyun","remove":true,"isDirectory":true,"isFile":false}
+2021-10-20 19:27:10,903 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/adminUser","remove":true,"isDirectory":true,"isFile":false}
+2021-10-20 19:27:16,166 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/article","remove":true,"isDirectory":true,"isFile":false}
+2021-10-20 19:28:15,074 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/model/user.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783524,"size":3179,"blocks":8,"atimeMs":1634205708914.0327,"mtimeMs":1634729295021.094,"ctimeMs":1634729295021.094,"birthtimeMs":1634205577172.0037,"atime":"2021-10-14T10:01:48.914Z","mtime":"2021-10-20T11:28:15.021Z","ctime":"2021-10-20T11:28:15.021Z","birthtime":"2021-10-14T09:59:37.172Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:28:15,282 WARN 14588 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/model/user.js change
+2021-10-20 19:30:38,966 WARN 14588 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/query/schema.graphql change
+2021-10-20 19:30:38,760 INFO 14588 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/query/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352783517,"size":260,"blocks":8,"atimeMs":1634729175373.8472,"mtimeMs":1634729438699.2104,"ctimeMs":1634729438699.2104,"birthtimeMs":1634205577170.5244,"atime":"2021-10-20T11:26:15.374Z","mtime":"2021-10-20T11:30:38.699Z","ctime":"2021-10-20T11:30:38.699Z","birthtime":"2021-10-14T09:59:37.171Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:32:24,265 INFO 17721 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-20 19:32:24,527 INFO 17721 [egg:core] dump config after load, 4ms
+2021-10-20 19:32:24,576 INFO 17721 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-20 19:32:24,576 INFO 17721 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-20 19:32:24,576 INFO 17721 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-20 19:32:24,576 INFO 17721 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-20 19:32:24,576 INFO 17721 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-20 19:32:24,576 INFO 17721 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-20 19:32:24,577 INFO 17721 [egg-watcher:agent] watcher start success
+2021-10-20 19:32:24,596 INFO 17721 [egg:core] dump config after ready, 6ms
+2021-10-20 19:34:41,631 INFO 17721 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/common/resolverHelper.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4352917958,"size":1872,"blocks":8,"atimeMs":1634729518719.494,"mtimeMs":1634729681567.7756,"ctimeMs":1634729681567.7756,"birthtimeMs":1634291680076.1453,"atime":"2021-10-20T11:31:58.719Z","mtime":"2021-10-20T11:34:41.568Z","ctime":"2021-10-20T11:34:41.568Z","birthtime":"2021-10-15T09:54:40.076Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:34:41,838 WARN 17721 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/common/resolverHelper.js change
+2021-10-20 19:36:13,113 INFO 17962 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-20 19:36:13,246 INFO 17962 [egg:core] dump config after load, 4ms
+2021-10-20 19:36:13,304 INFO 17962 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-20 19:36:13,304 INFO 17962 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-20 19:36:13,305 INFO 17962 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-20 19:36:13,305 INFO 17962 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-20 19:36:13,305 INFO 17962 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-20 19:36:13,305 INFO 17962 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-20 19:36:13,305 INFO 17962 [egg-watcher:agent] watcher start success
+2021-10-20 19:36:13,320 INFO 17962 [egg:core] dump config after ready, 5ms
+2021-10-20 19:39:26,463 INFO 17962 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/input","stat":{"dev":16777220,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4353192602,"size":64,"blocks":0,"atimeMs":1634729966399.053,"mtimeMs":1634729966399.053,"ctimeMs":1634729966399.053,"birthtimeMs":1634729966399.053,"atime":"2021-10-20T11:39:26.399Z","mtime":"2021-10-20T11:39:26.399Z","ctime":"2021-10-20T11:39:26.399Z","birthtime":"2021-10-20T11:39:26.399Z"},"remove":false,"isDirectory":true,"isFile":false}
+2021-10-20 19:39:37,131 WARN 17962 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql rename
+2021-10-20 19:39:36,926 INFO 17962 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4353192619,"size":0,"blocks":0,"atimeMs":1634729976914.582,"mtimeMs":1634729976914.582,"ctimeMs":1634729976914.582,"birthtimeMs":1634729976914.582,"atime":"2021-10-20T11:39:36.915Z","mtime":"2021-10-20T11:39:36.915Z","ctime":"2021-10-20T11:39:36.915Z","birthtime":"2021-10-20T11:39:36.915Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:39:47,807 INFO 17962 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4353192619,"size":55,"blocks":8,"atimeMs":1634729976914.582,"mtimeMs":1634729987795.6182,"ctimeMs":1634729987795.6182,"birthtimeMs":1634729976914.582,"atime":"2021-10-20T11:39:36.915Z","mtime":"2021-10-20T11:39:47.796Z","ctime":"2021-10-20T11:39:47.796Z","birthtime":"2021-10-20T11:39:36.915Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:39:48,065 WARN 17962 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql rename
+2021-10-20 19:39:47,859 INFO 17962 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4353192619,"size":55,"blocks":8,"atimeMs":1634729976914.582,"mtimeMs":1634729987795.6182,"ctimeMs":1634729987795.6182,"birthtimeMs":1634729976914.582,"atime":"2021-10-20T11:39:36.915Z","mtime":"2021-10-20T11:39:47.796Z","ctime":"2021-10-20T11:39:47.796Z","birthtime":"2021-10-20T11:39:36.915Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:40:22,647 INFO 18155 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-20 19:40:22,778 INFO 18155 [egg:core] dump config after load, 4ms
+2021-10-20 19:40:22,828 INFO 18155 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-20 19:40:22,828 INFO 18155 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-20 19:40:22,829 INFO 18155 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-20 19:40:22,829 INFO 18155 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-20 19:40:22,829 INFO 18155 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-20 19:40:22,829 INFO 18155 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-20 19:40:22,829 INFO 18155 [egg-watcher:agent] watcher start success
+2021-10-20 19:40:22,860 INFO 18155 [egg:core] dump config after ready, 7ms
+2021-10-20 19:41:01,162 WARN 18155 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql change
+2021-10-20 19:41:00,954 INFO 18155 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4353192619,"size":133,"blocks":8,"atimeMs":1634729988249.0352,"mtimeMs":1634730060890.5376,"ctimeMs":1634730060890.5376,"birthtimeMs":1634729976914.582,"atime":"2021-10-20T11:39:48.249Z","mtime":"2021-10-20T11:41:00.891Z","ctime":"2021-10-20T11:41:00.891Z","birthtime":"2021-10-20T11:39:36.915Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:41:23,334 WARN 18155 [agent:development] reload worker because /Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql change
+2021-10-20 19:41:23,129 INFO 18155 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/apple/Desktop/egg-graphql/app/graphql/input/schema.graphql","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":4353192619,"size":224,"blocks":8,"atimeMs":1634730061288.4412,"mtimeMs":1634730083066.6492,"ctimeMs":1634730083066.6492,"birthtimeMs":1634729976914.582,"atime":"2021-10-20T11:41:01.288Z","mtime":"2021-10-20T11:41:23.067Z","ctime":"2021-10-20T11:41:23.067Z","birthtime":"2021-10-20T11:39:36.915Z"},"remove":false,"isDirectory":false,"isFile":true}
+2021-10-20 19:57:07,066 ERROR 18155 nodejs.ClusterClientNoResponseError: client no response in 701547ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 18155
+hostname: appledeMacBook-Pro-2.local
+
+2021-10-20 22:03:44,020 ERROR 18155 nodejs.ClusterClientNoResponseError: client no response in 7576929ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 18155
+hostname: appledeMacBook-Pro-2.local
+
+2021-10-20 22:06:17,284 INFO 18426 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2021-10-20 22:06:17,560 INFO 18426 [egg:core] dump config after load, 4ms
+2021-10-20 22:06:17,614 INFO 18426 [egg-watcher] Start watching: ["/Users/apple/Desktop/egg-graphql/app","/Users/apple/Desktop/egg-graphql/config","/Users/apple/Desktop/egg-graphql/mocks","/Users/apple/Desktop/egg-graphql/mocks_proxy","/Users/apple/Desktop/egg-graphql/app.js"]
+2021-10-20 22:06:17,614 INFO 18426 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app"
+2021-10-20 22:06:17,615 INFO 18426 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/config"
+2021-10-20 22:06:17,615 INFO 18426 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks"
+2021-10-20 22:06:17,615 INFO 18426 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/mocks_proxy"
+2021-10-20 22:06:17,615 INFO 18426 [egg-watcher] Start watching: "/Users/apple/Desktop/egg-graphql/app.js"
+2021-10-20 22:06:17,615 INFO 18426 [egg-watcher:agent] watcher start success
+2021-10-20 22:06:17,631 INFO 18426 [egg:core] dump config after ready, 4ms
+2021-10-20 23:21:36,039 ERROR 18426 nodejs.ClusterClientNoResponseError: client no response in 1216276ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 18426
+hostname: appledeMacBook-Pro-2.local
+
+2021-10-20 23:48:55,005 ERROR 18426 nodejs.ClusterClientNoResponseError: client no response in 458278ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/apple/Desktop/egg-graphql/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 18426
+hostname: appledeMacBook-Pro-2.local
+

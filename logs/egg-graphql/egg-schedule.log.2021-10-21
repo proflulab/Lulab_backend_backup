@@ -1,0 +1,9 @@
+2021-10-21 04:30:00,925 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 86399084ms at 2021-10-22 04:30:00.009
+2021-10-21 04:30:00,922 INFO 18427 [Job#16347618009144499268075426921] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2021-10-21 04:30:00,933 INFO 18427 [Job#16347618009144499268075426921] /Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 9ms. 
+2021-10-22 01:50:50,082 INFO 18427 [Job#16348386500685267696123939342] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2021-10-22 01:50:50,087 INFO 18427 [Job#16348386500745267696187155362] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2021-10-22 01:50:50,248 INFO 18427 [Job#16348386500685267696123939342] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 165ms. 
+2021-10-22 01:50:50,356 INFO 18427 [Job#16348386500745267696187155362] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 269ms. 
+2021-10-22 01:50:50,074 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 79749932ms at 2021-10-23 00:00:00.006
+2021-10-22 01:50:50,078 INFO 18426 [Timer] /Users/apple/Desktop/egg-graphql/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 79750926ms at 2021-10-23 00:00:01.003

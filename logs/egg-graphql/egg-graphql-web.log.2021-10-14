@@ -1,0 +1,60 @@
+2021-10-14 22:27:11,171 ERROR 47054 [-/127.0.0.1/-/27ms POST /graphql?] nodejs.Error: Type "Article" not found in document.
+    at ASTDefinitionBuilder._resolveType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:134:11)
+    at ASTDefinitionBuilder.buildType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:218:79)
+    at ASTDefinitionBuilder._buildWrappedType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:227:24)
+    at ASTDefinitionBuilder.buildField (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:248:18)
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:302:21
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:28:31
+    at Array.reduce (<anonymous>)
+    at keyValMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:27:15)
+    at ASTDefinitionBuilder._makeFieldDefMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:299:49)
+    at fields (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:284:23)
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+pid: 47054
+hostname: bogon
+
+2021-10-14 22:27:11,190 ERROR 47054 [-/127.0.0.1/-/4ms POST /graphql?] nodejs.Error: Type "Article" not found in document.
+    at ASTDefinitionBuilder._resolveType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:134:11)
+    at ASTDefinitionBuilder.buildType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:218:79)
+    at ASTDefinitionBuilder._buildWrappedType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:227:24)
+    at ASTDefinitionBuilder.buildField (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:248:18)
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:302:21
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:28:31
+    at Array.reduce (<anonymous>)
+    at keyValMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:27:15)
+    at ASTDefinitionBuilder._makeFieldDefMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:299:49)
+    at fields (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:284:23)
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+pid: 47054
+hostname: bogon
+
+2021-10-14 22:32:17,026 ERROR 47054 [-/127.0.0.1/-/9ms POST /graphql?] nodejs.Error: Type "Article" not found in document.
+    at ASTDefinitionBuilder._resolveType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:134:11)
+    at ASTDefinitionBuilder.buildType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:218:79)
+    at ASTDefinitionBuilder._buildWrappedType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:227:24)
+    at ASTDefinitionBuilder.buildField (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:248:18)
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:302:21
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:28:31
+    at Array.reduce (<anonymous>)
+    at keyValMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:27:15)
+    at ASTDefinitionBuilder._makeFieldDefMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:299:49)
+    at fields (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:284:23)
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+pid: 47054
+hostname: bogon
+
+2021-10-14 22:32:17,097 ERROR 47054 [-/127.0.0.1/-/2ms POST /graphql?] nodejs.Error: Type "Article" not found in document.
+    at ASTDefinitionBuilder._resolveType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:134:11)
+    at ASTDefinitionBuilder.buildType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:218:79)
+    at ASTDefinitionBuilder._buildWrappedType (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:227:24)
+    at ASTDefinitionBuilder.buildField (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:248:18)
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:302:21
+    at /Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:28:31
+    at Array.reduce (<anonymous>)
+    at keyValMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/jsutils/keyValMap.js:27:15)
+    at ASTDefinitionBuilder._makeFieldDefMap (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:299:49)
+    at fields (/Users/apple/Desktop/egg-graphql/node_modules/graphql/utilities/buildASTSchema.js:284:23)
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+pid: 47054
+hostname: bogon
+

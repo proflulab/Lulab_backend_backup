@@ -1,0 +1,193 @@
+2021-10-20 00:00:03,843 INFO 14591 [egg-logrotator] app logger reload: got log-reload message
+2021-10-20 02:16:23,043 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 02:16:23,045 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 02:59:50,006 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 02:59:50,006 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 03:20:43,005 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 03:20:43,005 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 05:38:13,013 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 05:38:13,014 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 05:38:13,043 INFO 14591 [-/127.0.0.1/-/3ms SCHEDULE /__schedule?path=/Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/y3/ctk34xxd2jx_ky2fbpk_z6180000gn/T/egg-multipart-tmp/egg-graphql"
+2021-10-20 05:38:13,072 INFO 14591 [-/127.0.0.1/-/32ms SCHEDULE /__schedule?path=/Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2021-10-20 07:50:29,007 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 07:50:29,007 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 08:03:03,011 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 08:03:03,012 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 08:39:07,006 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 08:39:07,006 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 09:13:44,005 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 09:13:44,010 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 09:34:36,004 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 09:34:36,004 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 12:04:19,005 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 12:04:19,005 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 12:44:25,029 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 12:44:25,029 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 13:49:20,038 WARN 14591 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 13:49:20,045 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 18:56:51,010 WARN 14591 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 19:26:14,934 INFO 17269 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:26:14,995 INFO 17269 [egg-multipart] stream mode enable
+2021-10-20 19:26:16,292 INFO 17269 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:26:16,295 INFO 17269 [egg-security] use csrf middleware
+2021-10-20 19:26:16,297 INFO 17269 [egg-security] use methodnoallow middleware
+2021-10-20 19:26:16,298 INFO 17269 [egg-security] use noopen middleware
+2021-10-20 19:26:16,299 INFO 17269 [egg-security] use nosniff middleware
+2021-10-20 19:26:16,301 INFO 17269 [egg-security] use xssProtection middleware
+2021-10-20 19:26:16,302 INFO 17269 [egg-security] use xframe middleware
+2021-10-20 19:26:16,304 INFO 17269 [egg-security] use dta middleware
+2021-10-20 19:26:16,304 INFO 17269 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:26:16,322 INFO 17269 [egg:core] dump config after load, 10ms
+2021-10-20 19:26:16,335 INFO 17269 [egg-watcher:application] watcher start success
+2021-10-20 19:26:16,344 INFO 17269 [egg:core] dump config after ready, 6ms
+2021-10-20 19:26:19,461 INFO 17285 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:26:19,508 INFO 17285 [egg-multipart] stream mode enable
+2021-10-20 19:26:19,835 INFO 17285 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:26:19,838 INFO 17285 [egg-security] use csrf middleware
+2021-10-20 19:26:19,839 INFO 17285 [egg-security] use methodnoallow middleware
+2021-10-20 19:26:19,840 INFO 17285 [egg-security] use noopen middleware
+2021-10-20 19:26:19,840 INFO 17285 [egg-security] use nosniff middleware
+2021-10-20 19:26:19,841 INFO 17285 [egg-security] use xssProtection middleware
+2021-10-20 19:26:19,843 INFO 17285 [egg-security] use xframe middleware
+2021-10-20 19:26:19,844 INFO 17285 [egg-security] use dta middleware
+2021-10-20 19:26:19,844 INFO 17285 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:26:19,871 INFO 17285 [egg:core] dump config after load, 14ms
+2021-10-20 19:26:19,885 INFO 17285 [egg-watcher:application] watcher start success
+2021-10-20 19:26:19,893 INFO 17285 [egg:core] dump config after ready, 6ms
+2021-10-20 19:26:21,591 INFO 17294 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:26:21,627 INFO 17294 [egg-multipart] stream mode enable
+2021-10-20 19:26:22,160 INFO 17294 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:26:22,170 INFO 17294 [egg-security] use csrf middleware
+2021-10-20 19:26:22,174 INFO 17294 [egg-security] use methodnoallow middleware
+2021-10-20 19:26:22,174 INFO 17294 [egg-security] use noopen middleware
+2021-10-20 19:26:22,178 INFO 17294 [egg-security] use nosniff middleware
+2021-10-20 19:26:22,183 INFO 17294 [egg-security] use xssProtection middleware
+2021-10-20 19:26:22,184 INFO 17294 [egg-security] use xframe middleware
+2021-10-20 19:26:22,185 INFO 17294 [egg-security] use dta middleware
+2021-10-20 19:26:22,185 INFO 17294 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:26:22,209 INFO 17294 [egg:core] dump config after load, 10ms
+2021-10-20 19:26:22,225 INFO 17294 [egg-watcher:application] watcher start success
+2021-10-20 19:26:22,234 INFO 17294 [egg:core] dump config after ready, 7ms
+2021-10-20 19:32:25,296 INFO 17722 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:32:25,395 INFO 17722 [egg-multipart] stream mode enable
+2021-10-20 19:32:26,046 INFO 17722 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:32:26,049 INFO 17722 [egg-security] use csrf middleware
+2021-10-20 19:32:26,050 INFO 17722 [egg-security] use methodnoallow middleware
+2021-10-20 19:32:26,050 INFO 17722 [egg-security] use noopen middleware
+2021-10-20 19:32:26,051 INFO 17722 [egg-security] use nosniff middleware
+2021-10-20 19:32:26,052 INFO 17722 [egg-security] use xssProtection middleware
+2021-10-20 19:32:26,053 INFO 17722 [egg-security] use xframe middleware
+2021-10-20 19:32:26,054 INFO 17722 [egg-security] use dta middleware
+2021-10-20 19:32:26,054 INFO 17722 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:32:26,069 INFO 17722 [egg:core] dump config after load, 9ms
+2021-10-20 19:32:26,085 INFO 17722 [egg-watcher:application] watcher start success
+2021-10-20 19:32:26,096 INFO 17722 [egg:core] dump config after ready, 8ms
+2021-10-20 19:36:13,994 INFO 17966 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:36:14,041 INFO 17966 [egg-multipart] stream mode enable
+2021-10-20 19:36:14,720 INFO 17966 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:36:14,722 INFO 17966 [egg-security] use csrf middleware
+2021-10-20 19:36:14,723 INFO 17966 [egg-security] use methodnoallow middleware
+2021-10-20 19:36:14,724 INFO 17966 [egg-security] use noopen middleware
+2021-10-20 19:36:14,725 INFO 17966 [egg-security] use nosniff middleware
+2021-10-20 19:36:14,727 INFO 17966 [egg-security] use xssProtection middleware
+2021-10-20 19:36:14,727 INFO 17966 [egg-security] use xframe middleware
+2021-10-20 19:36:14,728 INFO 17966 [egg-security] use dta middleware
+2021-10-20 19:36:14,729 INFO 17966 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:36:14,749 INFO 17966 [egg:core] dump config after load, 10ms
+2021-10-20 19:36:14,767 INFO 17966 [egg-watcher:application] watcher start success
+2021-10-20 19:36:14,787 INFO 17966 [egg:core] dump config after ready, 16ms
+2021-10-20 19:39:39,093 INFO 18027 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:39:39,132 INFO 18027 [egg-multipart] stream mode enable
+2021-10-20 19:39:39,914 INFO 18027 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:39:39,916 INFO 18027 [egg-security] use csrf middleware
+2021-10-20 19:39:39,917 INFO 18027 [egg-security] use methodnoallow middleware
+2021-10-20 19:39:39,918 INFO 18027 [egg-security] use noopen middleware
+2021-10-20 19:39:39,920 INFO 18027 [egg-security] use nosniff middleware
+2021-10-20 19:39:39,921 INFO 18027 [egg-security] use xssProtection middleware
+2021-10-20 19:39:39,922 INFO 18027 [egg-security] use xframe middleware
+2021-10-20 19:39:39,922 INFO 18027 [egg-security] use dta middleware
+2021-10-20 19:39:39,922 INFO 18027 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:39:39,934 INFO 18027 [egg:core] dump config after load, 5ms
+2021-10-20 19:39:39,945 INFO 18027 [egg-watcher:application] watcher start success
+2021-10-20 19:39:39,953 INFO 18027 [egg:core] dump config after ready, 6ms
+2021-10-20 19:39:48,841 INFO 18053 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:39:48,871 INFO 18053 [egg-multipart] stream mode enable
+2021-10-20 19:39:49,316 INFO 18053 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:39:49,319 INFO 18053 [egg-security] use csrf middleware
+2021-10-20 19:39:49,320 INFO 18053 [egg-security] use methodnoallow middleware
+2021-10-20 19:39:49,320 INFO 18053 [egg-security] use noopen middleware
+2021-10-20 19:39:49,321 INFO 18053 [egg-security] use nosniff middleware
+2021-10-20 19:39:49,321 INFO 18053 [egg-security] use xssProtection middleware
+2021-10-20 19:39:49,322 INFO 18053 [egg-security] use xframe middleware
+2021-10-20 19:39:49,322 INFO 18053 [egg-security] use dta middleware
+2021-10-20 19:39:49,322 INFO 18053 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:39:49,333 INFO 18053 [egg:core] dump config after load, 6ms
+2021-10-20 19:39:49,345 INFO 18053 [egg-watcher:application] watcher start success
+2021-10-20 19:39:49,355 INFO 18053 [egg:core] dump config after ready, 7ms
+2021-10-20 19:40:23,453 INFO 18159 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:40:23,479 INFO 18159 [egg-multipart] stream mode enable
+2021-10-20 19:40:23,967 INFO 18159 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:40:23,970 INFO 18159 [egg-security] use csrf middleware
+2021-10-20 19:40:23,970 INFO 18159 [egg-security] use methodnoallow middleware
+2021-10-20 19:40:23,971 INFO 18159 [egg-security] use noopen middleware
+2021-10-20 19:40:23,971 INFO 18159 [egg-security] use nosniff middleware
+2021-10-20 19:40:23,972 INFO 18159 [egg-security] use xssProtection middleware
+2021-10-20 19:40:23,972 INFO 18159 [egg-security] use xframe middleware
+2021-10-20 19:40:23,972 INFO 18159 [egg-security] use dta middleware
+2021-10-20 19:40:23,972 INFO 18159 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:40:23,981 INFO 18159 [egg:core] dump config after load, 5ms
+2021-10-20 19:40:23,994 INFO 18159 [egg-watcher:application] watcher start success
+2021-10-20 19:40:24,005 INFO 18159 [egg:core] dump config after ready, 8ms
+2021-10-20 19:41:02,588 INFO 18189 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:41:02,659 INFO 18189 [egg-multipart] stream mode enable
+2021-10-20 19:41:03,481 INFO 18189 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:41:03,484 INFO 18189 [egg-security] use csrf middleware
+2021-10-20 19:41:03,485 INFO 18189 [egg-security] use methodnoallow middleware
+2021-10-20 19:41:03,486 INFO 18189 [egg-security] use noopen middleware
+2021-10-20 19:41:03,487 INFO 18189 [egg-security] use nosniff middleware
+2021-10-20 19:41:03,488 INFO 18189 [egg-security] use xssProtection middleware
+2021-10-20 19:41:03,490 INFO 18189 [egg-security] use xframe middleware
+2021-10-20 19:41:03,491 INFO 18189 [egg-security] use dta middleware
+2021-10-20 19:41:03,491 INFO 18189 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:41:03,501 INFO 18189 [egg:core] dump config after load, 5ms
+2021-10-20 19:41:03,514 INFO 18189 [egg-watcher:application] watcher start success
+2021-10-20 19:41:03,529 INFO 18189 [egg:core] dump config after ready, 12ms
+2021-10-20 19:41:24,643 INFO 18210 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 19:41:24,864 INFO 18210 [egg-multipart] stream mode enable
+2021-10-20 19:41:25,348 INFO 18210 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 19:41:25,351 INFO 18210 [egg-security] use csrf middleware
+2021-10-20 19:41:25,351 INFO 18210 [egg-security] use methodnoallow middleware
+2021-10-20 19:41:25,352 INFO 18210 [egg-security] use noopen middleware
+2021-10-20 19:41:25,353 INFO 18210 [egg-security] use nosniff middleware
+2021-10-20 19:41:25,353 INFO 18210 [egg-security] use xssProtection middleware
+2021-10-20 19:41:25,354 INFO 18210 [egg-security] use xframe middleware
+2021-10-20 19:41:25,355 INFO 18210 [egg-security] use dta middleware
+2021-10-20 19:41:25,355 INFO 18210 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 19:41:25,366 INFO 18210 [egg:core] dump config after load, 6ms
+2021-10-20 19:41:25,378 INFO 18210 [egg-watcher:application] watcher start success
+2021-10-20 19:41:25,388 INFO 18210 [egg:core] dump config after ready, 7ms
+2021-10-20 19:57:07,067 WARN 18210 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 19:57:07,068 WARN 18210 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 22:03:44,013 WARN 18210 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 22:03:44,013 WARN 18210 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 22:06:18,317 INFO 18427 [egg:logger] init all loggers with options: {"dir":"/Users/apple/Desktop/egg-graphql/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2021-10-20 22:06:18,362 INFO 18427 [egg-multipart] stream mode enable
+2021-10-20 22:06:18,970 INFO 18427 [egg-static] starting static serve /public/ -> /Users/apple/Desktop/egg-graphql/app/public
+2021-10-20 22:06:18,973 INFO 18427 [egg-security] use csrf middleware
+2021-10-20 22:06:18,974 INFO 18427 [egg-security] use methodnoallow middleware
+2021-10-20 22:06:18,975 INFO 18427 [egg-security] use noopen middleware
+2021-10-20 22:06:18,976 INFO 18427 [egg-security] use nosniff middleware
+2021-10-20 22:06:18,977 INFO 18427 [egg-security] use xssProtection middleware
+2021-10-20 22:06:18,978 INFO 18427 [egg-security] use xframe middleware
+2021-10-20 22:06:18,979 INFO 18427 [egg-security] use dta middleware
+2021-10-20 22:06:18,980 INFO 18427 [egg-security] compose 7 middlewares into one security middleware
+2021-10-20 22:06:18,991 INFO 18427 [egg:core] dump config after load, 5ms
+2021-10-20 22:06:19,004 INFO 18427 [egg-watcher:application] watcher start success
+2021-10-20 22:06:19,013 INFO 18427 [egg:core] dump config after ready, 6ms
+2021-10-20 23:21:36,036 WARN 18427 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 23:21:36,038 WARN 18427 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-20 23:48:55,004 WARN 18427 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-20 23:48:55,004 WARN 18427 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-21 00:00:00,649 INFO 18427 [egg-logrotator] clean all log before 31 days
+2021-10-21 00:00:01,639 INFO 18427 [egg-logrotator] broadcast log-reload
+2021-10-21 00:00:01,640 INFO 18427 [egg-logrotator] rotate files success by DayRotator, files ["/Users/apple/Desktop/egg-graphql/logs/egg-graphql/common-error.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/common-error.log.2021-10-20","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-graphql-web.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-graphql-web.log.2021-10-20","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-web.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-web.log.2021-10-20","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-schedule.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-schedule.log.2021-10-20","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-agent.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-agent.log.2021-10-20"]

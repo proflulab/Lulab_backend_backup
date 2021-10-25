@@ -1,0 +1,35 @@
+2021-10-23 00:00:01,090 INFO 26070 [egg-logrotator] app logger reload: got log-reload message
+2021-10-23 00:32:18,181 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 00:32:18,184 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 04:02:35,012 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 04:02:35,012 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 08:15:04,014 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 08:15:04,014 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 08:15:04,023 INFO 26070 [-/127.0.0.1/-/1ms SCHEDULE /__schedule?path=/Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/y3/ctk34xxd2jx_ky2fbpk_z6180000gn/T/egg-multipart-tmp/egg-graphql"
+2021-10-23 08:15:04,088 INFO 26070 [-/127.0.0.1/-/66ms SCHEDULE /__schedule?path=/Users/apple/Desktop/egg-graphql/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2021-10-23 08:24:10,574 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 08:24:10,631 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 10:05:00,196 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 10:05:00,197 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 10:44:16,005 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 10:44:16,005 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 11:18:55,010 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 11:18:55,010 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 11:39:47,004 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 11:39:47,005 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 13:46:16,156 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 13:56:43,008 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 13:56:43,009 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 14:29:24,004 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 14:29:24,005 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 16:30:30,006 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 16:30:30,007 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 19:42:18,007 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 19:42:18,009 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 20:00:16,004 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 20:00:16,005 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-23 22:43:57,005 WARN 26070 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2021-10-23 22:43:57,006 WARN 26070 [ClusterClient:Watcher] follower closed, and try to init it again
+2021-10-24 00:00:07,757 INFO 26070 [egg-logrotator] clean all log before 31 days
+2021-10-24 00:00:08,732 INFO 26070 [egg-logrotator] broadcast log-reload
+2021-10-24 00:00:08,732 INFO 26070 [egg-logrotator] rotate files success by DayRotator, files ["/Users/apple/Desktop/egg-graphql/logs/egg-graphql/common-error.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/common-error.log.2021-10-23","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-graphql-web.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-graphql-web.log.2021-10-23","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-web.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-web.log.2021-10-23","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-schedule.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-schedule.log.2021-10-23","/Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-agent.log -> /Users/apple/Desktop/egg-graphql/logs/egg-graphql/egg-agent.log.2021-10-23"]
