@@ -1,5 +1,5 @@
 'use strict';
-
+const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
 /*const {
   CLIENTS
