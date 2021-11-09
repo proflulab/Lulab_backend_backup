@@ -1,4 +1,4 @@
-'use strict'; 
+/*'use strict';
 
 module.exports = app => {
   const { ONBOARDING_STATUS } = require('../constant/user');
@@ -26,9 +26,9 @@ module.exports = app => {
 
   const UserSchema = new Schema({
 
-    /*
+    /!*
       ----用户基本信息----
-    */
+    *!/
     // 用户手机号码
     phone: { type: String },
     // 用户性别
@@ -79,9 +79,9 @@ module.exports = app => {
     onboardingStatus: { type: String, enum: Object.values(ONBOARDING_STATUS), default: ONBOARDING_STATUS.DEFAULT },
     circles: { type: Array, ref: 'Circle' },
 
-    /*
+    /!*
       ----用户风控信息----
-    */
+    *!/
     // 账户是否被屏蔽
     isBlocked: { type: Boolean, default: false },
     // 账户是否被激活
@@ -101,4 +101,17 @@ module.exports = app => {
   UserSchema.index({ accessToken: 1 });
 
   return mongoose.model('User', UserSchema);
-};
+
+};*/
+
+module.exports = app => {
+  const mongoose = app.mongoose;
+  const Schema = mongoose.Schema;
+
+  const UserSchema = new Schema({
+    name: {
+      type: String,
+      unique: true,
+      required: true,
+    },
+  });

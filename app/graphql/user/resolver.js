@@ -10,6 +10,19 @@ module.exports = {
     userAdmin(root, {
       id
     }, ctx) {
+      //console.log("what is the ctx" + Object.prototype.toString.call(ctx))
+      //console.log("what is id" + id)
+      for(const key in ctx){
+        // if(key=="model")
+        //console.log(key + ": value:" + ctx[key] )
+      }
+      console.log("what is the model:" + ctx.hasOwnProperty("model"))
+      /*  console.log(arr.find({
+          _id: {
+            $in: 'n'
+          }) + "what is the find")*/
+      //ctx.model = {};
+      //ctx.model["User"] = [{"id":1},{"id":2}]
       return ResolverHelper.fetchById(id, ctx, CONNECTOR_NAME, MODEL_NAME);
     },
     usersAdmin(root, {

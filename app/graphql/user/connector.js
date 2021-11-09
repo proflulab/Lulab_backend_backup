@@ -1,7 +1,7 @@
 'use strict';
 
 const BasicConnector = require('../common/basicConnector');
-const {
+/*const {
   CLIENTS
 } = require("../../constant/constants");
 const errorCode = require("../../error/errorCode");
@@ -13,16 +13,56 @@ const {
 } = require("../../constant/models");
 const {
   NOTIFICATION_STATUS
-} = require("../../constant/notification");
+} = require("../../constant/notification");*/
 const moment = require('moment');
 const MODEL_NAME = 'User';
 class UserConnector extends BasicConnector {
 
-  constructor(ctx) {
-    super(ctx, MODEL_NAME);
+  constructor(ctx, model) {
+    this.ctx = ctx;
+    //this.model = model;
+    this.loader = new DataLoader(
+        ids => this.fetch(ids)
+    );
   }
 
-  async userRich(id) {
+  async fetch(ids) {
+    //this.ctx.model["User"] = [{"id":1},{"id":2}]
+    // console.log("what is the now model" + this.model)
+    //console.log(this.ctx.model + "1111======" + JSON.stringify(this.ctx.model))
+    // console.log(this.ctx.model + "1111======" + JSON.stringify(this.ctx.model))
+    for (var key in this.ctx.model) {
+      // console.log(key)
+      var val = this.ctx[key]
+      for(var key2 in val){
+        // console.log(key2 +"===" + val[key2])
+        // var val2 = val[key2]
+        /* for(var key3 in val2){
+            console.log(key3 +"===" + val2[key3])*/
+      }
+    }
+
+    //}
+
+    /* return await this.ctx.model.User.create({
+       name:"testone"
+     });*/
+    return await this.ctx.model.User.find({
+      _id: ids.toString()
+    });
+  }
+
+    fetchByIds(ids) {
+      return this.loader.loadMany(ids);
+    }
+
+    fetchById(id) {
+      return this.loader.load(id);
+    }
+
+
+
+    async userRich(id) {
     let user = this.ctx.model[this.model].findOne({
       _id: id
     }).exec();
