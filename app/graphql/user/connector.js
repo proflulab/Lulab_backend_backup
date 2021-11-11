@@ -16,9 +16,9 @@ const {
 } = require("../../constant/notification");*/
 const moment = require('moment');
 const MODEL_NAME = 'User';
-class UserConnector extends BasicConnector {
+class UserConnector /*extends BasicConnector */{
 
-  constructor(ctx, model) {
+  constructor(ctx, model){
     this.ctx = ctx;
     //this.model = model;
     this.loader = new DataLoader(

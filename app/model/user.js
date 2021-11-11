@@ -115,3 +115,5 @@ module.exports = app => {
       required: true,
     },
   });
+  return mongoose.model('User', UserSchema);-a
+}
