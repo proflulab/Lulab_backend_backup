@@ -8,4 +8,7 @@ type Query {
 
   circles(option: Option!, condition: Condition): [Circle!]
   circle(id: ID!): Circle!
+
+  latestCourse(option: Option!): [Course]
+
 }

@@ -1,8 +1,9 @@
 const { GraphQLScalarType } = require('graphql');
 const { Kind } = require('graphql/language');
 
+/*
 module.exports = new GraphQLScalarType({
-  name: 'Date',
+  /!*name: 'Date',
   description: 'Date custom scalar type',
   parseValue(value) {
     return new Date(value);
@@ -15,5 +16,5 @@ module.exports = new GraphQLScalarType({
       return parseInt(ast.value, 10);
     }
     return null;
-  },
-});
+  },*!/
+});*/

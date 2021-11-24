@@ -103,17 +103,74 @@ module.exports = app => {
   return mongoose.model('User', UserSchema);
 
 };*/
-
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
-
-  const UserSchema = new Schema({
+  const moment = require('moment');
+  const CourseSchema = new Schema({
     name: {
       type: String,
       unique: true,
+      required: false,
+    },
+    title: {
+      type: String,
+      unique: false,
       required: true,
     },
+    classTags: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    description: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    author: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    authorTags: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    category: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    mode : {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    videoUrl : {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    duration : {
+      type: Number,
+      unique: false,
+      required: false,
+    },
+    onlineTime: {
+      type: Date,
+      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+    },
+    addTime: {
+      type: Date,
+      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+    },
+    updateTime: {
+      type: Date,
+      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+    },
+
   });
-  return mongoose.model('User', UserSchema);
+  return mongoose.model('Course', CourseSchema);
 }

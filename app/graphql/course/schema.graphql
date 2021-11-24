@@ -1,0 +1,16 @@
+
+type Course {
+	_id: ID
+	title: String
+	classTags: String
+	description: String
+	author: String
+	authorTags: String
+	category: String
+	mode : String
+    videoUrl :String
+    duration :Number
+	onlineTime : Date!
+	addTime   : Date!
+	updateTime :Date!
+}
