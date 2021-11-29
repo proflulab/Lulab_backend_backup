@@ -11,6 +11,23 @@ input Option {
   skip: Int!
 }
 
+input UserInput {
+  name: String!
+  password: String
+  description: String
+  wechat: String
+  phone: String
+  img: String
+  sex: String
+  #确认密码
+  ensurePassword: String
+}
+
+type result {
+  status: String!
+  msg: String
+}
+
 input Condition {
   isDeleted: Boolean
   isBlocked: Boolean

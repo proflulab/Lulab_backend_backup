@@ -110,8 +110,8 @@ module.exports = app => {
   const CourseSchema = new Schema({
     name: {
       type: String,
-      unique: true,
-      required: false,
+      unique: false,
+      required: true,
     },
     title: {
       type: String,

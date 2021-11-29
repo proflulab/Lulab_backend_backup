@@ -101,19 +101,51 @@ module.exports = app => {
   UserSchema.index({ accessToken: 1 });
 
   return mongoose.model('User', UserSchema);
-
+ name: String!
+    password: String
+    description: String
+    wechat: String
+    phone: String
+    img: String
+    sex: String
 };*/
 
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
-
   const UserSchema = new Schema({
     name: {
       type: String,
-      unique: true,
+      unique: false,
       required: true,
     },
+    password: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    img: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    phone: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    wechat: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    sex: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+
+
   });
   return mongoose.model('User', UserSchema);
 }

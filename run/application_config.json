@@ -201,13 +201,7 @@
       "plugins": [],
       "loadModel": true,
       "app": true,
-      "agent": false,
-      "client": {
-        "url": "mongodb://127.0.0.1:27017/test",
-        "options": {
-          "useNewUrlParser": true
-        }
-      }
+      "agent": false
     },
     "env": "local",
     "name": "egg-graphql",

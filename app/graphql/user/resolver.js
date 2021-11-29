@@ -25,17 +25,32 @@ module.exports = {
       //ctx.model["User"] = [{"id":1},{"id":2}]
       return ResolverHelper.fetchById(id, ctx, CONNECTOR_NAME, MODEL_NAME);
     },
+    userLogin(root, {
+      userInput
+    }, ctx) {
+       return ctx.connector[CONNECTOR_NAME].fetchByName(userInput);
+    },
+    userUpdate(root, {
+      userInput
+    }, ctx) {
+      return ctx.connector[CONNECTOR_NAME].userUpdate(userInput);
+    },
+    userRigister(root, {
+      userInput
+    }, ctx) {
+      return ctx.connector[CONNECTOR_NAME].userRigister(userInput);
+    },
     usersAdmin(root, {
       option,
       condition
     }, ctx) {
       return ResolverHelper.fetchByIds(option, condition, ctx, CONNECTOR_NAME, MODEL_NAME);
     },
-    async userLogin(root, {
+    /*async userLogin(root, {
       userLoginPayload
     }, ctx) {
       return await ctx.connector[CONNECTOR_NAME].userLogin(userLoginPayload);
-    },
+    },*/
     async userRich(root, {
       id
     }, ctx) {
