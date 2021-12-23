@@ -13,6 +13,10 @@ class ResolverHelper {
   fetchById(id, ctx, connectorName, modelName) {
     return ctx.connector[connectorName].fetchById(id);
   }
+
+  fetchByName(name, ctx, connectorName, modelName) {
+    return ctx.connector[connectorName].fetchByName(name);
+  }
   
   /**
    * The helper function to support paganation of the list fetch. It gets the list of ids first and then relies on the graphQL

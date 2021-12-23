@@ -101,51 +101,76 @@ module.exports = app => {
   UserSchema.index({ accessToken: 1 });
 
   return mongoose.model('User', UserSchema);
- name: String!
-    password: String
-    description: String
-    wechat: String
-    phone: String
-    img: String
-    sex: String
-};*/
 
+};*/
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
-  const UserSchema = new Schema({
+  const moment = require('moment');
+  const CourseSchema = new Schema({
     name: {
       type: String,
       unique: false,
       required: true,
     },
-    password: {
+    title: {
+      type: String,
+      unique: false,
+      required: true,
+    },
+    classTags: {
       type: String,
       unique: false,
       required: false,
     },
-    img: {
+    description: {
       type: String,
       unique: false,
       required: false,
     },
-    phone: {
+    author: {
       type: String,
       unique: false,
       required: false,
     },
-    wechat: {
+    authorTags: {
       type: String,
       unique: false,
       required: false,
     },
-    sex: {
+    category: {
       type: String,
       unique: false,
       required: false,
     },
-
+    mode : {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    videoUrl : {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    duration : {
+      type: Number,
+      unique: false,
+      required: false,
+    },
+    onlineTime: {
+      type: Date,
+      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+    },
+    addTime: {
+      type: Date,
+      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+    },
+    updateTime: {
+      type: Date,
+      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+    },
 
   });
-  return mongoose.model('User', UserSchema);
+  return mongoose.model('Course', CourseSchema);
 }

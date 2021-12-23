@@ -2,19 +2,23 @@
 
 const ResolverHelper = require("../common/resolverHelper");
 
-const CONNECTOR_NAME = 'user';
-const MODEL_NAME = 'User';
+const CONNECTOR_NAME = 'course';
+const MODEL_NAME = 'Course';
 
 module.exports = {
   Query: {
-    userAdmin(root, {
-      id
+    latestCourse(root, {
+      option
     }, ctx) {
       //console.log("what is the ctx" + Object.prototype.toString.call(ctx))
       //console.log("what is id" + id)
       for(const key in ctx){
         // if(key=="model")
         //console.log(key + ": value:" + ctx[key] )
+      }
+      for(const key in option){
+
+        console.log(key + ": option value:" + option[key] )
       }
       console.log("what is the model:" + ctx.hasOwnProperty("model"))
       /*  console.log(arr.find({
@@ -23,22 +27,10 @@ module.exports = {
           }) + "what is the find")*/
       //ctx.model = {};
       //ctx.model["User"] = [{"id":1},{"id":2}]
-      return ResolverHelper.fetchById(id, ctx, CONNECTOR_NAME, MODEL_NAME);
-    },
-    userLogin(root, {
-      userInput
-    }, ctx) {
-       return ctx.connector[CONNECTOR_NAME].fetchByName(userInput);
-    },
-    userUpdate(root, {
-      userInput
-    }, ctx) {
-      return ctx.connector[CONNECTOR_NAME].userUpdate(userInput);
-    },
-    userRigister(root, {
-      userInput
-    }, ctx) {
-      return ctx.connector[CONNECTOR_NAME].userRigister(userInput);
+
+      var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
+      console.log(temp+"====")
+      return temp
     },
     usersAdmin(root, {
       option,
@@ -46,11 +38,11 @@ module.exports = {
     }, ctx) {
       return ResolverHelper.fetchByIds(option, condition, ctx, CONNECTOR_NAME, MODEL_NAME);
     },
-    /*async userLogin(root, {
+    async userLogin(root, {
       userLoginPayload
     }, ctx) {
       return await ctx.connector[CONNECTOR_NAME].userLogin(userLoginPayload);
-    },*/
+    },
     async userRich(root, {
       id
     }, ctx) {
