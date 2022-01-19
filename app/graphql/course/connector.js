@@ -41,6 +41,12 @@ class CourseConnector /*extends BasicConnector */{
   fetchByIds(id) {
       return this.loader.load(id);
   }
+  async latestCourse(option){
+    return await this.ctx.model.Course.find(null,null,{limit:option.limit,skip:option.skip},function(err,docs){
+      // console.log(docs);
+    });
+  }
+  
 
 }
 

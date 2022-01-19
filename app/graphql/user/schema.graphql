@@ -12,58 +12,18 @@ enum OnboardingStatus {
 	ONBOARDED
 }
 
-type User {
-	_id: ID
-	isBlocked: Boolean
-	isDeleted: Boolean
-	createdAt: Date!
-	updatedAt: Date!
-	loginedAt: Date
-	nickname: String
-	name: String
-	gender: Int
-	province: String
-	city: String
-	birth: String
-	country: String
-	language: String
-	email: String
-	phone: String
-	avatar: String
-	circles: [Circle]
-	commentCount: Int
-	postCount: Int
-	postCommentCount: Int
-	collectCount: Int
-	notificationCount: Int
-	onboardingStatus: OnboardingStatus
 
-	
-	otherTitles: [String]
-	departments: [Department]
-	emailVerificationCode: String #TODO 还需要加密
-	emailVerificationCodeExpiredAt: Date #TODO 还需要加密
-	password: String
-	salt1: String
-	salt2: String
-	# credential: [UserCredential]
+type User {
+    _id: ID
+    name: String!
+    password: String
+    description: String
+    wechat: String
+    phone: String
+    img: String
+    sex: String
 }
 
 input UserLoginPayload {
   jscode: String
-}
-
-input UserInput {
-	nickname: String
-	gender: Int
-	province: String
-	city: String
-	country: String
-	language: String
-	birthYear: String
-	email: String
-	phone: String
-	avatar: String
-	emailVerificationCode: String
-	password: String
 }

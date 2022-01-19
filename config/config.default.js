@@ -24,23 +24,23 @@ module.exports = appInfo => {
   // add your config here
   config.mongoose = {
     //本地环境
-   /* client: {
+    client: {
       url: 'mongodb://127.0.0.1:27017/test',
       options: {
         useNewUrlParser: true,
       },
-    }*/
+    }
     //服务器环境
-    client: {
+    /*client: {
       url: 'mongodb://127.0.0.1:27017/admin',
       options: {
         user: 'opsAdmin',
-        pass: 'O3$ty2@a]O8$pGnw>',
+        pass: 'newpassword',
         useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true
       },
-    }
+    }*/
 
   }
   return config
