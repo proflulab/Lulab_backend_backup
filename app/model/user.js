@@ -129,23 +129,7 @@ module.exports = app => {
       unique: false,
       required: false,
     },
-    phone: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    wechat: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    sex: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-
-
   });
+
   return mongoose.model('User', UserSchema);
 }

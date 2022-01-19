@@ -14,6 +14,10 @@ const {
 const {
   NOTIFICATION_STATUS
 } = require("../../constant/notification");*/
+const dialogflow = require('@google-cloud/dialogflow');
+
+// Instantiates a session client
+
 const moment = require('moment');
 const MODEL_NAME = 'User';
 
@@ -28,23 +32,6 @@ class UserConnector /*extends BasicConnector */ {
     }
 
     async fetch(ids) {
-        //this.ctx.model["User"] = [{"id":1},{"id":2}]
-        // console.log("what is the now model" + this.model)
-        //console.log(this.ctx.model + "1111======" + JSON.stringify(this.ctx.model))
-        // console.log(this.ctx.model + "1111======" + JSON.stringify(this.ctx.model))
-        for (var key in this.ctx.model) {
-            // console.log(key)
-            var val = this.ctx[key]
-            for (var key2 in val) {
-                // console.log(key2 +"===" + val[key2])
-                // var val2 = val[key2]
-                /* for(var key3 in val2){
-                    console.log(key3 +"===" + val2[key3])*/
-            }
-        }
-
-        //}
-
         /* return await this.ctx.model.User.create({
            name:"testone"
          });*/
@@ -58,7 +45,135 @@ class UserConnector /*extends BasicConnector */ {
         return this.loader.loadMany(ids);
     }
 
-    fetchById(id) {
+    async fetchById(id) {
+       
+     /*   if (contexts && contexts.length > 0) {
+            request.queryParams = {
+                contexts: contexts,
+            };
+        }*
+
+        const responses = await sessionClient.detectIntent(request);
+        console.log("========")
+
+        await Promise.all([responses]);
+        //responses = await responses
+        console.log("========")
+        console.log(responses[0])
+        //console.log(responses[0].queryResult.fulfillmentText+"=======")
+        //for(var i in responses[0]){
+
+            //console.log("i+====="+i+"====="+responses[0][i])
+        //}
+
+        console.log('Detected intent');
+
+        */
+        /*
+        const dialogflow2 = require('@google-cloud/dialogflow').v2;
+        const sessionClient = new dialogflow2.SessionsClient();
+        const sessionPath = sessionClient.projectAgentSessionPath(
+            "newagent-npvt",
+            "112233"
+        );
+        const fs = require('fs');
+        const util = require('util');
+        // The audio query request
+        const request = {
+            session: sessionPath,
+            queryInput: {
+                text: {
+                    text: "是什么",
+                    languageCode: "zh-CN",
+                },
+            },
+            outputAudioConfig: {
+                audioEncoding: 'OUTPUT_AUDIO_ENCODING_LINEAR_16',
+            },
+        };
+        sessionClient.detectIntent(request).then(responses => {
+            console.log('Detected intent:');
+            const audioFile = responses[0].outputAudio;
+            util.promisify(fs.writeFile)("./t1.mp3", audioFile, 'binary');
+            console.log(`Audio content written to file: ${"./t1.mp3"}`);
+        });*/
+
+        /*
+        const fs = require('fs');
+        const util = require('util');
+        //const {struct} = require('pb-util');
+// Imports the Dialogflow library
+        const dialogflow = require('@google-cloud/dialogflow');
+
+// Instantiates a session client
+        const sessionClient = new dialogflow.SessionsClient();
+
+// The path to identify the agent that owns the created intent.
+        const sessionPath = sessionClient.projectAgentSessionPath(
+            "newagent-npvt",
+            "112233"
+        );
+
+// Read the content of the audio file and send it as part of the request.
+        const readFile = util.promisify(fs.readFile);
+        const inputAudio = await readFile("/Users/dazeng/IdeaProjects/lulab_backend/t1.mp3");
+        const request = {
+            session: sessionPath,
+            queryInput: {
+                audioConfig: {
+                    audioEncoding: "ENCODING_UNSPECIFIED",
+                    sampleRateHertz: "24000",
+                    languageCode: "zh-CN",
+                },
+            },
+            inputAudio: inputAudio,
+            //add
+            outputAudioConfig: {
+                audioEncoding: 'OUTPUT_AUDIO_ENCODING_LINEAR_16',
+            },
+        };
+
+        console.log('coming Detected intent:');
+        sessionClient.detectIntent(request).then(responses => {
+            console.log('Detected intent:');
+            const audioFile = responses[0].outputAudio;
+            util.promisify(fs.writeFile)("./t3.mp3", audioFile, 'binary');
+            console.log(`Audio content written to file: ${"./t3.mp3"}`);
+        });*/
+
+        /*Ω
+// Recognizes the speech in the audio and detects its intent.
+        const [response] = await sessionClient.detectIntent(request);
+
+        console.log('Detected intent:');
+        const result = response.queryResult;
+// Instantiates a context client
+        const contextClient = new dialogflow.ContextsClient();
+
+        console.log(`  Query: ${result.queryText}`);
+        console.log(`  Response: ${result.fulfillmentText}`);
+        if (result.intent) {
+            console.log(`  Intent: ${result.intent.displayName}`);
+        } else {
+            console.log('  No intent matched.');
+        }
+        /*const parameters = JSON.stringify(struct.decode(result.parameters));
+        console.log(`  Parameters: ${parameters}`);
+        if (result.outputContexts && result.outputContexts.length) {
+            console.log('  Output contexts:');
+            result.outputContexts.forEach(context => {
+                const contextId =
+                    contextClient.matchContextFromProjectAgentSessionContextName(
+                        context.name
+                    );
+                const contextParameters = JSON.stringify(
+                    struct.decode(context.parameters)
+                );
+                console.log(`    ${contextId}`);
+                console.log(`      lifespan: ${context.lifespanCount}`);
+                console.log(`      parameters: ${contextParameters}`);
+            });
+        }*/
         return this.loader.load(id);
     }
 
@@ -66,14 +181,14 @@ class UserConnector /*extends BasicConnector */ {
     async fetchByName(userInput) {
         var user = await this.ctx.model.User.findOne(
             {"name": userInput.name}, function (err, docs) {
-                //console.log(docs);
+                console.log(docs);
             }
         );
 
         await Promise.all([user]);
         user = await user;
         if (userInput.password == user.password) {
-            return {"status": 0, "msg": "success"}
+            return {"status": 0, "msg": "success", data: user}
         } else {
             return {"status": 1, "msg": "faile"}
         }
@@ -395,7 +510,7 @@ class UserConnector /*extends BasicConnector */ {
             upsert: false,
             new: true,
             setDefaultsOnInsert: true
-        });
+        });gi
         return result;
     }
 }

@@ -11,4 +11,6 @@ type Mutation {
   verifyEmail(userInput: UserInput!): User
   userLoginByEmail(userInput: UserInput!): User
 
+  userRigister(userInput: UserInput!): result
+  userUpdate(userInput: UserInput!): result
 }

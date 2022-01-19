@@ -5,9 +5,6 @@ type Query {
   #userLogin(userLoginPayload: UserLoginPayload!): User!
   userRich(id: ID!): User!
   userLogin(userInput: UserInput!): result
-  userRigister(userInput: UserInput!): result
-  userUpdate(userInput: UserInput!): result
-
 
 
   # userByToken(clientType: String!, accessToken: String!): User!
@@ -16,5 +13,10 @@ type Query {
   circle(id: ID!): Circle!
 
   latestCourse(option: Option!): [Course]
+  latestInformation(option: Option!): [Information]
+
+
+  #speech
+  speechGoogle(speechRequest: SpeechRequest): result
 
 }

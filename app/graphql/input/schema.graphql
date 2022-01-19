@@ -11,6 +11,11 @@ input Option {
   skip: Int!
 }
 
+input SpeechRequest{
+   queryText: String
+   userId: String
+}
+
 input UserInput {
   name: String!
   password: String
@@ -26,6 +31,7 @@ input UserInput {
 type result {
   status: String!
   msg: String
+  data: User
 }
 
 input Condition {
