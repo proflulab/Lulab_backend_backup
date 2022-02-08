@@ -1,8 +1,7 @@
 
-type Course {
+type MainCourse {
 	_id: ID
 	title: String
-	dirTitle: String
 	classTags: String
 	description: String
 	author: String
@@ -11,18 +10,9 @@ type Course {
 	mode : String
     videoUrl :String
     imgUrl : String
-    sort : Number
-    mainCourseId : String
+    firstCourseId : String
     duration :Number
 	onlineTime : Date!
 	addTime   : Date!
 	updateTime :Date!
-	subCourses : [SubCourse]
-
-}
-
-type SubCourse {
-     subTitle : String,
-     courseId : String,
-     mainCourseId : String
 }

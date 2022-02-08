@@ -64,37 +64,30 @@ class SpeechConnector /*extends BasicConnector */{
     //console.log(responses[0]);
     //console.log(responses[0].queryResult.fulfillmentText+"=======");
     console.log('Detected intent');
-    console.log('response len' + responses.length)
-    for(var j = 0; j < responses.length; j++) {
-        if (responses[j] && responses[j].queryResult) {
-            if( responses[j].queryResult &&  responses[j].queryResult.fulfillmentMessages){
-                for (var test = 0 ; test < responses[j].queryResult.fulfillmentMessages.length ;test ++ ){
-                     var temp = responses[j].queryResult.fulfillmentMessages[test]
-                     for(var test2 in responses[j].queryResult.fulfillmentMessages[test]){
-                         console.log(test2 + "======test2===" + responses[j].queryResult.fulfillmentMessages[test][test2])
-                         for(var test3 in responses[j].queryResult.fulfillmentMessages[test][test2]){
-                            console.log(test3 + "======test3=====" + responses[j].queryResult.fulfillmentMessages[test][test2][test3])
+    console.log('response len:' + responses.length)
 
-                         }
-                     }
-                   // console.log(test + "the test" + "==========" + responses[j].queryResult.fulfillmentMessages[test])
-                }
-            }
-            for (var i in responses[j].queryResult) {
-               // console.log(i + "===the val" + responses[j].queryResult[i])
-                /*if(i == 'content'){
-                    for(var jj in responses[j][i]){
-                        console.log(jj +" the jj val =====" + responses[j][i][jj])
-                    }
-                }*/
-            }
-            console.log("==============================================")
-            //return {"status": 0, "msg": responses[j].queryResult.fulfillmentText}
-        }
-        }
+    if(responses && responses.length && responses[0] && responses[0].queryResult
+         &&  responses[0].queryResult.fulfillmentMessages
+         &&  responses[0].queryResult.fulfillmentMessages[0]
+         &&  responses[0].queryResult.fulfillmentMessages[0]['text']
+         &&  responses[0].queryResult.fulfillmentMessages[0]['text']['text']
+         &&  responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0]){
+       // console.log("coming 1 ===== " + responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0])
+        return {"status": 0, "msg": responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0]}
+        //return {"status": 0, "msg": responses[0].queryResult.fulfillmentMessages[0]['text']['text']}
+    }else if(responses && responses.length && responses[0]
+             && responses[0].queryResult
+             && responses[0].queryResult.fulfillmentText
+           ){
+        //console.log("coming 2 ===== " + responses[0].queryResult.fulfillmentText)
 
-    return {"status": 0, "msg": responses[0].queryResult.fulfillmentText}
-    
+        return {"status": 0, "msg": responses[0].queryResult.fulfillmentText}
+    }else {
+        //console.log("coming 3 ===== " + responses[0].queryResult.fulfillmentText)
+
+        return {"status": 0, "msg": "请再试一次"}
+    }
+    //return {"status": 0, "msg": responses[0].queryResult.fulfillmentText}
   }
 
   fetchByIds(id) {

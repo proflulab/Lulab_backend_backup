@@ -28,6 +28,27 @@ input UserInput {
   ensurePassword: String
 }
 
+input CommentInput {
+  _id: String
+  content: String
+  courseId: String
+  authorName: String
+  authorId: String
+  authorImg: String
+}
+
+input MobileLogInput {
+  _id: String
+  name: String
+  class: String
+  action: String
+  userId: String
+  entityId: String
+  addTime   : Date!
+  timestamp: String
+}
+
+
 type result {
   status: String!
   msg: String

@@ -10,7 +10,7 @@ module.exports = {
     latestInformation(root, {
       option
     }, ctx) {
-      var temp =  ctx.connector[CONNECTOR_NAME].fetchLatestInformations("", ctx, CONNECTOR_NAME, MODEL_NAME);
+      var temp =  ctx.connector[CONNECTOR_NAME].fetchLatestInformations(option, ctx, CONNECTOR_NAME, MODEL_NAME);
       return temp
     },
 

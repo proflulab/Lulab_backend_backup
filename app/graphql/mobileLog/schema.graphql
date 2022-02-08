@@ -1,0 +1,12 @@
+
+type MobileLog {
+	_id: ID
+	name: String
+	class: String
+	action: String
+	userId: String
+	entityId: String
+	addTime   : Date!
+	timestamp :String
+
+}

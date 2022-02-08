@@ -1,0 +1,13 @@
+
+type Model {
+	_id: ID
+	name: String
+	description: String
+	identity: String
+	imgUrl: String
+	videoUrl: String
+    growthDescription: String
+	addTime   : Date!
+	timestamp :String
+
+}

@@ -13,4 +13,12 @@ type Mutation {
 
   userRigister(userInput: UserInput!): result
   userUpdate(userInput: UserInput!): result
+
+  commentAdd(commentInput: CommentInput!): result
+  commentDelete(id: ID!): result
+
+  #mobilelog
+  mobileLogAdd(mobileLogInput: MobileLogInput!): result
+  mobileLogDelete(id: ID!): result
+
 }
