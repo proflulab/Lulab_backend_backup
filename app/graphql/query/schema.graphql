@@ -13,10 +13,26 @@ type Query {
   circle(id: ID!): Circle!
 
   latestCourse(option: Option!): [Course]
+  latestMainCourse(option: Option!): [MainCourse]
   latestInformation(option: Option!): [Information]
 
 
   #speech
   speechGoogle(speechRequest: SpeechRequest): result
+
+
+  #Latestcomment
+  latestComment(courseId: String!,option :Option!): [Comment]
+
+  #detailCourse
+  detailCourse(dirId: String!,courseId: String!): Course
+
+  #mobilelog
+  latestMobileLog(userId: String!,option :Option!): [MobileLog]
+
+  #model
+  latestModel(option :Option!): [Model]
+
+
 
 }

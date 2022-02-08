@@ -20,8 +20,8 @@ type User {
     description: String
     wechat: String
     phone: String
-    img: String
     sex: String
+    img: String
 }
 
 input UserLoginPayload {

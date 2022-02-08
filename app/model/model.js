@@ -1,38 +1,23 @@
 /*'use strict';
-    name: String!
-    password: String
-    description: String
-    wechat: String
-    phone: String
-    img: String
-    sex: String
-};*/
+type Model {
+	_id: ID
+	name: String
+	description: String
+	identity: String
+	imgUrl: String
+	videoUrl: String
+    growthDescription: String
+	addTime   : Date!
+	timestamp :String
+}
+* */
 
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
-  const UserSchema = new Schema({
+  const moment = require('moment');
+  const ModelSchema = new Schema({
     name: {
-      type: String,
-      unique: false,
-      required: true,
-    },
-    password: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    img: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    phone: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    sex: {
       type: String,
       unique: false,
       required: false,
@@ -40,14 +25,39 @@ module.exports = app => {
     description: {
       type: String,
       unique: false,
-      required: false,
+      required: true,
     },
-    wechat: {
+    identity: {
       type: String,
       unique: false,
       required: false,
     },
-  });
+    imgUrl: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    videoUrl: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    growthDescription: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    addTime: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    timestamp: {
+      type: String,
+      unique: false,
+      required: false,
+    },
 
-  return mongoose.model('User', UserSchema);
+  });
+  return mongoose.model('Model', ModelSchema);
 }

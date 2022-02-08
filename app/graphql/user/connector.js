@@ -26,9 +26,8 @@ class UserConnector /*extends BasicConnector */ {
     constructor(ctx, model) {
         this.ctx = ctx;
         //this.model = model;
-        this.loader = new DataLoader(
-            ids => this.fetch(ids)
-        );
+        ids => this.fetch(ids)
+        ;
     }
 
     async fetch(ids) {
@@ -227,13 +226,15 @@ class UserConnector /*extends BasicConnector */ {
 
     //update user
     async userUpdate(userInput) {
-        var user = await this.ctx.model.User.update(
-            {name:userInput.name},{$set:{sex:userInput.sex,img:userInput.img,
-                               password:userInput.password,description:userInput.description,
-                               wechat:userInput.wechat,phone:userInput.phone}
+        console.log(userInput.wechat + "===" + userInput.phone +"=====" + userInput.sex + "====" + userInput.phone +"=====" + userInput.img)
+        var user = await this.ctx.model.User.updateMany(
+            {name:userInput.name},{$set:{"img":userInput.img,"sex":userInput.sex,
+                               "password":userInput.password,"description":userInput.description,
+                               "wechat":userInput.wechat,phone:userInput.phone}
 
           }, function (err, docs) {
-                // console.log(docs);
+                   console.log(docs+"err" +"====="+err)
+                   return {"status": 1, "msg": "更新失败"+err}
             }
         );
         await Promise.all([user]);
@@ -510,7 +511,7 @@ class UserConnector /*extends BasicConnector */ {
             upsert: false,
             new: true,
             setDefaultsOnInsert: true
-        });gi
+        });
         return result;
     }
 }
