@@ -14,6 +14,14 @@ module.exports = {
       //var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
       // return temp
     },
+    latestDirectCourse(root, {
+      mode,
+      option
+    }, ctx) {
+      return ctx.connector[CONNECTOR_NAME].latestDirectCourse(mode, option);
+      //var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
+      // return temp
+    },
     
   }
 };

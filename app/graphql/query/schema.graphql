@@ -14,6 +14,7 @@ type Query {
 
   latestCourse(option: Option!): [Course]
   latestMainCourse(option: Option!): [MainCourse]
+  latestDirectCourse(mode : String!, option: Option!): [MainCourse]
   latestInformation(option: Option!): [Information]
 
 
@@ -34,5 +35,7 @@ type Query {
   latestModel(option :Option!): [Model]
 
 
+  #orderrecord
+  latestRecord(authorId: String!,option :Option!): [OrderRecord]
 
 }
