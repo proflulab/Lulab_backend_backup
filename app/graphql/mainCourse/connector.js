@@ -43,11 +43,16 @@ class MainCourseConnector /*extends BasicConnector */{
   }
 
   async latestMainCourse(option){
-    return await this.ctx.model.MainCourse.find(null,null,{limit:option.limit,skip:option.skip},function(err,docs){
+    return await this.ctx.model.MainCourse.find({mode: { $ne : "2"}},null,{limit:option.limit,skip:option.skip},function(err,docs){
       // console.log(docs);
     });
   }
-  
+
+  async latestDirectCourse(mode, option){
+    return await this.ctx.model.MainCourse.find({mode:mode},null,{limit:option.limit,skip:option.skip},function(err,docs){
+      // console.log(docs);
+    });
+  }
   
 
 }

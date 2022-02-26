@@ -34,28 +34,7 @@ module.exports = app => {
       unique: false,
       required: false,
     },
-    authorTags: {
-      type: String,
-      unique: false,
-      required: false,
-    },
     category: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    mode : {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    videoUrl : {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    imgUrl : {
-      typecategory: {
       type: String,
       unique: false,
       required: false,

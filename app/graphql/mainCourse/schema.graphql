@@ -14,5 +14,5 @@ type MainCourse {
     duration :Number
 	onlineTime : Date!
 	addTime   : Date!
-	updateTime :Date!
+	updateTime : Date!
 }

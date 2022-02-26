@@ -37,6 +37,15 @@ input CommentInput {
   authorImg: String
 }
 
+
+input OrderRecordInput {
+  courseId: String
+  authorId: String
+  status: String
+  onlineTime : String
+
+}
+
 input MobileLogInput {
   _id: String
   name: String

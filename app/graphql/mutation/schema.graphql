@@ -21,4 +21,7 @@ type Mutation {
   mobileLogAdd(mobileLogInput: MobileLogInput!): result
   mobileLogDelete(id: ID!): result
 
+  #orderrecord
+  recordAdd(orderRecordInput: OrderRecordInput!): result
+
 }
