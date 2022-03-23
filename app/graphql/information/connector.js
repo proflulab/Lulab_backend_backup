@@ -1,26 +1,13 @@
 'use strict';
 const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
-/*const {
-  CLIENTS
-} = require("../../constant/constants");
-const errorCode = require("../../error/errorCode");
-const {
-  ONBOARDING_STATUS
-} = require("../../constant/user");
-const {
-  MODEL_NAMES
-} = require("../../constant/models");
-const {
-  NOTIFICATION_STATUS
-} = require("../../constant/notification");*/
 const moment = require('moment');
 const MODEL_NAME = 'Information';
 
 
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.set('debug', true);
+//mongoose.set('debug', true);
 let dbname1 = 'datab1';
 let dbname2 = 'crawl';
 
@@ -47,7 +34,8 @@ let Article_Schema = new mongoose.Schema({
   img: String,
   author: String,
   publishTime: String,
-  time: String
+  time: String,
+  origin : String
 
   //createdate: {type:Date, default: Date.now}
 }, {
@@ -77,13 +65,16 @@ class InformationConnector /*extends BasicConnector */{
   async fetchLatestInformations(option, ctx, CONNECTOR_NAME, MODEL_NAME) {
 
     class Information {
-      constructor(title,content){
+      constructor(title,content,author,img,releaseDate){
         this.title = title;
         this.content = content;
+        this.author = author;
+        this.img = img;
+        this.releaseDate = releaseDate;
       }
     }
     var res = [];
-    var article = await Articles.find(null, null, {limit:option.limit,skip:option.skip}, function(err, list){
+    var article = await Articles.find(null, null, {sort:{'_id': -1},limit:option.limit,skip:option.skip}, function(err, list){
       console.log("db1.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + err);
     //  console.log(list);
     });
@@ -93,7 +84,7 @@ class InformationConnector /*extends BasicConnector */{
     var article = await  article
     console.log("the content lenth:" + article.length)
     for (var i = 0; i < article.length; i++) {
-      var info = new Information(article[i].title,article[i].content)
+      var info = new Information(article[i].title,article[i].content,article[i].author,article[i].img,article[i].publishTime)
       res.push(info);
     }
     //console.log(res.length)
@@ -196,6 +187,33 @@ class InformationConnector /*extends BasicConnector */{
 
   fetchByIds(id) {
       return this.loader.load(id);
+  }
+
+
+  async fetchGeekLatestInformation(ctx, CONNECTOR_NAME, MODEL_NAME) {
+
+    class Information {
+      constructor(title,content){
+        this.title = title;
+        this.content = content;
+      }
+    }
+    
+    var res = [];
+    var article = await Articles.find({"origin":"geek"}, null, {sort:{'_id': -1},limit:1,skip:0}, function(err, list){
+      console.log("db1.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + err);
+      //  console.log(list);
+    });
+    
+    await Promise.all([article]);
+    var article = await  article
+    console.log("the content lenth:" + article.length)
+    for (var i = 0; i < article.length; i++) {
+      var info = new Information(article[i].title,article[i].content)
+      res.push(info)
+    }
+    //console.log(res.length)
+    return res;
   }
 
 }

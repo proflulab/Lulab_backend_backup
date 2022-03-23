@@ -1,19 +1,6 @@
 'use strict';
 const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
-/*const {
-  CLIENTS
-} = require("../../constant/constants");
-const errorCode = require("../../error/errorCode");
-const {
-  ONBOARDING_STATUS
-} = require("../../constant/user");
-const {
-  MODEL_NAMES
-} = require("../../constant/models");
-const {
-  NOTIFICATION_STATUS
-} = require("../../constant/notification");*/
 const moment = require('moment');
 const MODEL_NAME = 'Course';
 

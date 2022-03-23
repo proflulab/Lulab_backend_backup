@@ -68,7 +68,8 @@
     "client": {
       "url": "/Users/dazeng/IdeaProjects/lulab_backend/config/config.default.js",
       "options": {
-        "useNewUrlParser": "/Users/dazeng/IdeaProjects/lulab_backend/config/config.default.js"
+        "useNewUrlParser": "/Users/dazeng/IdeaProjects/lulab_backend/config/config.default.js",
+        "useUnifiedTopology": "/Users/dazeng/IdeaProjects/lulab_backend/config/config.default.js"
       }
     },
     "url": "/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-mongoose/config/config.default.js",

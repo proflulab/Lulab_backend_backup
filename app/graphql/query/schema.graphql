@@ -14,9 +14,10 @@ type Query {
 
   latestCourse(option: Option!): [Course]
   latestMainCourse(option: Option!): [MainCourse]
-  latestDirectCourse(mode : String!, option: Option!): [MainCourse]
+  latestDirectCourse(mode : String!,  authorId: String, option: Option!): [MainCourse]
   latestInformation(option: Option!): [Information]
-
+  latestGeekInformation(option: Option!): [Information]
+  detailMainCourse(courseId: String!): MainCourse
 
   #speech
   speechGoogle(speechRequest: SpeechRequest): result
@@ -37,5 +38,12 @@ type Query {
 
   #orderrecord
   latestRecord(authorId: String!,option :Option!): [OrderRecord]
+  latestUserCourseRecord(authorId: String!, courseId: String!): result
+
+  #manager
+  queryManager(option :Option!): [Manager]
+
+  #courseclassification
+  queryCourseClassification(option :Option!): [CourseClassification]
 
 }

@@ -1,48 +1,42 @@
 /*'use strict';
 
-*/
+* */
 
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
   const moment = require('moment');
-  const CommentSchema = new Schema({
-    content: {
+  const ManagerSchema = new Schema({
+    name: {
       type: String,
       unique: false,
       required: false,
     },
-    courseId: {
-      type: String,
-      unique: false,
-      required: true,
-    },
-    authorName: {
+    tags: {
       type: String,
       unique: false,
       required: false,
     },
-    authorId: {
+    imgUrl: {
       type: String,
       unique: false,
       required: false,
     },
-    authorImg: {
+    description: {
       type: String,
       unique: false,
       required: false,
+    },
+    addTime: {
+      type: Date,
+      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
     },
     timestamp: {
       type: String,
       unique: false,
       required: false,
     },
-    addTime: {
-      type: String,
-      unique: false,
-      required: false,
-    },
 
   });
-  return mongoose.model('Comment', CommentSchema);
+  return mongoose.model('Manager', ManagerSchema);
 }

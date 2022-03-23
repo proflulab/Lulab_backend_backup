@@ -26,12 +26,11 @@ module.exports = app => {
     },
     timestamp: {
       type: String,
-      unique: false,
       required: false,
     },
     onlineTime: {
       type: Date,
-      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+      get: v => moment(v.getTime()).valueOf(),
     },
 
   });

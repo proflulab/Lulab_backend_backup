@@ -14,6 +14,11 @@ module.exports = app => {
       unique: false,
       required: true,
     },
+    img: {
+      type: String,
+      unique: false,
+      required: false,
+    },
     content: {
       type: String,
       unique: false,
