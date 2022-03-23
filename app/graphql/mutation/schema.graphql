@@ -23,5 +23,6 @@ type Mutation {
 
   #orderrecord
   recordAdd(orderRecordInput: OrderRecordInput!): result
+  recordIntelligentAdd(orderRecordInput: OrderRecordInput!): result
 
 }

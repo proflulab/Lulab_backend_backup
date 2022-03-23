@@ -1,11 +1,4 @@
 /*'use strict';
-    name: String!
-    password: String
-    description: String
-    wechat: String
-    phone: String
-    img: String
-    sex: String
 };*/
 
 module.exports = app => {

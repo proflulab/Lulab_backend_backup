@@ -8,5 +8,6 @@ type Information {
 	releaseDate: String
 	addTime : String
     updateTime :String
+    img: String
 }
 

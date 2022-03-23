@@ -12,8 +12,12 @@ module.exports = {
       option
     }, ctx) {
       return ctx.connector[CONNECTOR_NAME].latestRecord(authorId, option);
-      //var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
-      // return temp
+      },
+    latestUserCourseRecord(root, {
+      authorId,
+      courseId
+    }, ctx) {
+      return ctx.connector[CONNECTOR_NAME].latestUserCourseRecord(authorId, courseId);
     },
   },
   Mutation: {
@@ -21,7 +25,12 @@ module.exports = {
       orderRecordInput
     }, ctx) {
       return  ctx.connector[CONNECTOR_NAME].recordAdd(orderRecordInput);
-    }
+    },
+    recordIntelligentAdd(root, {
+      orderRecordInput
+    }, ctx) {
+      return  ctx.connector[CONNECTOR_NAME].recordIntelligentAdd(orderRecordInput);
+    },
 
   }
 };

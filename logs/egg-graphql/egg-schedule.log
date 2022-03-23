@@ -1,0 +1,61 @@
+2022-03-23 00:39:18,324 INFO 5443 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js next time will execute after 7200000ms at 2022-03-23 02:39:18.323
+2022-03-23 00:39:18,338 INFO 65032 [Job#164796715831630909024648637416] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js executing by app
+2022-03-23 00:39:18,343 ERROR 65032 [Job#164796715831630909024648637416] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js execute failed, used 2ms. ReferenceError: dataGeek is not defined
+    at Object.task (/Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js:31:28)
+    at Messenger.<anonymous> (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-schedule/app.js:47:21)
+    at Messenger.emit (node:events:390:28)
+    at Messenger._onMessage (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg/lib/core/messenger/ipc.js:116:12)
+    at process.emit (node:events:402:35)
+    at emit (node:internal/child_process:917:12)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2022-03-23 02:42:38,604 INFO 65032 [Job#164797455858831649083464312417] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js executing by app
+2022-03-23 02:42:38,612 ERROR 65032 [Job#164797455858831649083464312417] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js execute failed, used 3ms. ReferenceError: dataGeek is not defined
+    at Object.task (/Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js:31:28)
+    at Messenger.<anonymous> (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-schedule/app.js:47:21)
+    at Messenger.emit (node:events:390:28)
+    at Messenger._onMessage (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg/lib/core/messenger/ipc.js:116:12)
+    at process.emit (node:events:402:35)
+    at emit (node:internal/child_process:917:12)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2022-03-23 02:42:38,592 INFO 5443 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js next time will execute after 7200000ms at 2022-03-23 04:42:38.591
+2022-03-23 04:30:27,345 INFO 65032 [Job#16479810273183229597911246662] /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2022-03-23 04:30:27,384 INFO 65032 [Job#16479810273183229597911246662] /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 36ms. 
+2022-03-23 04:30:27,348 INFO 5443 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 86372673ms at 2022-03-24 04:30:00.021
+2022-03-23 04:47:02,791 INFO 65032 [Job#164798202277432395524626616618] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js executing by app
+2022-03-23 04:47:02,804 ERROR 65032 [Job#164798202277432395524626616618] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js execute failed, used 5ms. ReferenceError: dataGeek is not defined
+    at Object.task (/Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js:31:28)
+    at Messenger.<anonymous> (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-schedule/app.js:47:21)
+    at Messenger.emit (node:events:390:28)
+    at Messenger._onMessage (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg/lib/core/messenger/ipc.js:116:12)
+    at process.emit (node:events:402:35)
+    at emit (node:internal/child_process:917:12)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2022-03-23 04:47:02,788 INFO 5443 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js next time will execute after 7200000ms at 2022-03-23 06:47:02.788
+2022-03-23 06:51:38,693 INFO 65032 [Job#164798949855033143117216791619] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js executing by app
+2022-03-23 06:51:38,699 ERROR 65032 [Job#164798949855033143117216791619] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js execute failed, used 3ms. ReferenceError: dataGeek is not defined
+    at Object.task (/Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js:31:28)
+    at Messenger.<anonymous> (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-schedule/app.js:47:21)
+    at Messenger.emit (node:events:390:28)
+    at Messenger._onMessage (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg/lib/core/messenger/ipc.js:116:12)
+    at process.emit (node:events:402:35)
+    at emit (node:internal/child_process:917:12)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2022-03-23 06:51:38,603 INFO 5443 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js next time will execute after 7200000ms at 2022-03-23 08:51:38.600
+2022-03-23 08:51:38,213 INFO 5443 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js next time will execute after 7200000ms at 2022-03-23 10:51:38.213
+2022-03-23 08:51:38,236 INFO 65032 [Job#164799669820433863122896158320] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js executing by app
+2022-03-23 08:51:38,252 ERROR 65032 [Job#164799669820433863122896158320] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js execute failed, used 10ms. ReferenceError: dataGeek is not defined
+    at Object.task (/Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js:31:28)
+    at Messenger.<anonymous> (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-schedule/app.js:47:21)
+    at Messenger.emit (node:events:390:28)
+    at Messenger._onMessage (/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg/lib/core/messenger/ipc.js:116:12)
+    at process.emit (node:events:402:35)
+    at emit (node:internal/child_process:917:12)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2022-03-23 15:36:55,740 INFO 35562 [egg-schedule]: register schedule /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2022-03-23 15:36:55,740 INFO 35562 [egg-schedule]: register schedule /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-logrotator/app/schedule/clean_log.js
+2022-03-23 15:36:55,740 INFO 35562 [egg-schedule]: register schedule /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2022-03-23 15:36:55,741 INFO 35562 [egg-schedule]: register schedule /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js
+2022-03-23 15:36:56,730 INFO 35560 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 46383278ms at 2022-03-24 04:30:00.008
+2022-03-23 15:36:56,733 INFO 35560 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 30183269ms at 2022-03-24 00:00:00.002
+2022-03-23 15:36:56,735 INFO 35560 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 30184267ms at 2022-03-24 00:00:01.002
+2022-03-23 15:36:56,735 INFO 35560 [Timer] /Users/dazeng/IdeaProjects/lulab_backend/app/schedule/geekParkCronTask.js next time will execute after 7200000ms at 2022-03-23 17:36:56.735

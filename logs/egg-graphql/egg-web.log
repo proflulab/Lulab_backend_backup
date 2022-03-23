@@ -1,37 +1,195 @@
-2021-11-23 00:45:45,514 INFO 91255 [egg-logrotator] app logger reload: got log-reload message
-2021-11-23 01:11:39,042 WARN 91255 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
-2021-11-23 01:11:39,045 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 01:29:00,658 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 01:46:59,557 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 01:48:48,021 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 02:04:50,161 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 04:49:11,491 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 05:05:14,436 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 05:37:21,564 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 05:53:44,467 WARN 91255 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
-2021-11-23 05:53:44,485 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 06:24:39,945 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 06:42:19,986 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 07:21:38,925 WARN 91255 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
-2021-11-23 07:21:38,982 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 07:37:28,105 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 07:53:49,381 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 08:25:11,754 WARN 91255 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
-2021-11-23 08:25:11,789 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 08:41:41,310 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 08:58:50,037 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 09:30:01,735 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 09:47:42,892 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 10:03:22,145 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 10:34:54,484 WARN 91255 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
-2021-11-23 10:34:54,496 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 10:52:30,421 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 11:22:38,963 WARN 91255 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
-2021-11-23 11:22:38,971 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 11:38:38,314 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 11:56:30,965 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 12:27:19,115 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 12:44:02,095 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 13:00:55,429 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
-2021-11-23 13:20:18,583 WARN 91255 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
-2021-11-23 13:20:18,715 WARN 91255 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-22 23:59:59,712 INFO 65032 [egg-logrotator] app logger reload: got log-reload message
+2022-03-23 00:11:46,984 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 00:11:46,991 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 00:11:46,994 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 00:11:57,036 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 00:11:57,036 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 00:22:47,013 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 00:22:57,033 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 00:22:57,033 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 00:33:47,022 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 00:33:56,992 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 00:33:56,992 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 00:39:18,186 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 00:39:18,315 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 00:39:18,316 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 00:39:28,228 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 00:39:28,228 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 00:59:03,941 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 00:59:13,970 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 00:59:13,970 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 01:10:07,953 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 01:10:17,972 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 01:10:17,972 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 01:21:11,731 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 01:21:11,733 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 01:21:11,734 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 01:21:21,742 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 01:21:21,743 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 01:32:14,458 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 01:32:14,461 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 01:32:14,461 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 01:32:24,458 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 01:32:24,459 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 01:43:18,129 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 01:43:18,130 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 01:43:18,130 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 01:43:28,134 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 01:43:28,134 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 01:54:34,858 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 01:54:44,879 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 01:54:44,879 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 02:36:53,172 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 02:37:03,199 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 02:37:03,199 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 02:48:39,421 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 02:48:39,542 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 02:48:39,544 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 02:48:49,428 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 02:48:49,428 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 03:24:35,452 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 03:24:35,460 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 03:24:35,464 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 03:24:45,485 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 03:24:45,485 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 03:30:29,022 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 03:30:38,974 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 03:30:38,974 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 03:41:32,761 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 03:41:32,763 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 03:41:32,764 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 03:41:42,775 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 03:41:42,775 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 03:47:06,351 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 03:47:16,346 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 03:47:16,346 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 03:52:51,631 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 03:52:51,634 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 03:52:51,634 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 03:53:01,641 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 03:53:01,641 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 04:13:51,065 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 04:13:51,087 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 04:13:51,088 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 04:14:01,084 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 04:14:01,084 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 04:24:55,082 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 04:24:55,084 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 04:30:27,310 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 04:30:27,318 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 04:30:27,319 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 04:30:27,372 INFO 65032 [-/127.0.0.1/-/23ms SCHEDULE /__schedule?path=/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/xq/9bh5zty91rq7s4n1hk0_mwcm0000gn/T/egg-multipart-tmp/egg-graphql"
+2022-03-23 04:30:27,383 INFO 65032 [-/127.0.0.1/-/35ms SCHEDULE /__schedule?path=/Users/dazeng/IdeaProjects/lulab_backend/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&disable=false&immediate=false] [egg-multipart:CleanTmpdir] end
+2022-03-23 04:30:37,384 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 04:30:37,384 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 04:41:31,116 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 04:41:31,119 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 04:41:31,142 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 04:41:41,114 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 04:41:41,115 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 04:52:48,176 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 04:52:48,177 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 04:52:48,177 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 04:52:58,242 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 04:52:58,242 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 05:08:16,791 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 05:08:26,735 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 05:08:26,736 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 05:19:23,665 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 05:19:23,668 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 05:19:33,674 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 05:19:33,674 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 05:24:54,857 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 05:24:54,860 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 05:25:04,821 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 05:25:04,821 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 05:35:58,595 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 05:36:08,606 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 05:36:08,606 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 05:41:30,727 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 05:41:40,730 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 05:41:40,730 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 05:52:47,919 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 05:52:47,921 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 06:08:16,298 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 06:08:26,346 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 06:08:26,346 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 06:19:20,296 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 06:19:30,296 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 06:19:30,296 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 06:40:20,607 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 06:40:20,623 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 06:40:20,626 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 06:40:30,635 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 06:40:30,635 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 06:51:38,560 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 06:51:48,583 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 06:51:48,583 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 07:12:40,958 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 07:12:51,007 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 07:12:51,007 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 07:18:12,371 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 07:18:22,404 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 07:18:22,404 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 07:29:16,451 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 07:29:16,476 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 07:29:16,481 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 07:29:26,463 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 07:29:26,463 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 07:40:20,395 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 07:40:30,414 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 07:40:30,414 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 07:45:52,888 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 07:45:52,892 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 07:45:52,894 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 07:46:02,924 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 07:46:02,925 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 07:57:11,693 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 07:57:11,699 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 07:57:11,699 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 07:57:21,696 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 07:57:21,696 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 08:18:11,246 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 08:18:11,250 WARN 65032 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2022-03-23 08:18:11,250 WARN 65032 [ClusterClient:Watcher] follower closed, and try to init it again
+2022-03-23 08:18:21,257 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 08:18:21,257 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 08:29:15,007 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 08:29:24,966 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 08:29:24,966 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 08:40:18,672 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 08:40:28,698 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 08:40:28,698 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 08:51:35,475 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 08:51:45,494 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 08:51:45,495 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 09:12:35,775 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 09:12:45,794 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 09:12:45,794 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 09:23:39,611 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 09:23:49,629 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 09:23:49,629 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 09:34:43,474 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 09:34:53,484 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 09:34:53,484 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 09:42:07,683 ERROR 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test disconnected
+2022-03-23 09:42:17,690 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 09:42:17,690 INFO 65032 [egg-mongoose] mongodb://127.0.0.1:27017/test reconnected successfully
+2022-03-23 15:36:55,554 INFO 35562 [egg:logger] init all loggers with options: {"dir":"/Users/dazeng/IdeaProjects/lulab_backend/logs/egg-graphql","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-graphql-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2022-03-23 15:36:55,743 INFO 35562 [egg-multipart] stream mode enable
+2022-03-23 15:36:55,963 INFO 35562 [egg-mongoose] connecting mongodb://127.0.0.1:27017/test
+2022-03-23 15:36:56,458 INFO 35562 [egg-static] starting static serve /public/ -> /Users/dazeng/IdeaProjects/lulab_backend/app/public
+2022-03-23 15:36:56,460 INFO 35562 [egg-security] use csrf middleware
+2022-03-23 15:36:56,461 INFO 35562 [egg-security] use methodnoallow middleware
+2022-03-23 15:36:56,461 INFO 35562 [egg-security] use noopen middleware
+2022-03-23 15:36:56,462 INFO 35562 [egg-security] use nosniff middleware
+2022-03-23 15:36:56,462 INFO 35562 [egg-security] use xssProtection middleware
+2022-03-23 15:36:56,462 INFO 35562 [egg-security] use xframe middleware
+2022-03-23 15:36:56,462 INFO 35562 [egg-security] use dta middleware
+2022-03-23 15:36:56,462 INFO 35562 [egg-security] compose 7 middlewares into one security middleware
+2022-03-23 15:36:56,475 INFO 35562 [egg:core] dump config after load, 6ms
+2022-03-23 15:36:56,477 INFO 35562 [egg-mongoose] starting...
+2022-03-23 15:36:56,602 INFO 35562 [egg-watcher:application] watcher start success
+2022-03-23 15:36:56,614 INFO 35562 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2022-03-23 15:36:56,662 INFO 35562 [egg-mongoose] instance[0] start successfully
+2022-03-23 15:36:56,696 INFO 35562 [egg:core] dump config after ready, 5ms

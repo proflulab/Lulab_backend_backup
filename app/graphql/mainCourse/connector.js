@@ -1,19 +1,6 @@
 'use strict';
 const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
-/*const {
-  CLIENTS
-} = require("../../constant/constants");
-const errorCode = require("../../error/errorCode");
-const {
-  ONBOARDING_STATUS
-} = require("../../constant/user");
-const {
-  MODEL_NAMES
-} = require("../../constant/models");
-const {
-  NOTIFICATION_STATUS
-} = require("../../constant/notification");*/
 const moment = require('moment');
 const MODEL_NAME = 'MainCourse';
 class MainCourseConnector /*extends BasicConnector */{
@@ -43,15 +30,55 @@ class MainCourseConnector /*extends BasicConnector */{
   }
 
   async latestMainCourse(option){
-    return await this.ctx.model.MainCourse.find({mode: { $ne : "2"}},null,{limit:option.limit,skip:option.skip},function(err,docs){
+    return await this.ctx.model.MainCourse.find({mode: { $ne : "2"}},null,{sort:{'_id': -1},limit:option.limit,skip:option.skip},function(err,docs){
       // console.log(docs);
     });
   }
 
-  async latestDirectCourse(mode, option){
-    return await this.ctx.model.MainCourse.find({mode:mode},null,{limit:option.limit,skip:option.skip},function(err,docs){
-      // console.log(docs);
-    });
+  async detailMainCourse(courseId){
+      return await this.ctx.model.MainCourse.findOne({_id:courseId},null,{},function(err,docs){
+          // console.log(docs);
+      }); 
+  }
+
+  async latestDirectCourse(mode, authorId , option){
+    if(mode == 2) {
+      //直播课
+      var courses =  await this.ctx.model.MainCourse.find({
+        mode: mode,
+        onlineTime: {$gte: new Date(new Date().getTime() + 1000 * 60 * 60 * 8)}
+      }, null, {limit: option.limit, skip: option.skip}, function (err, docs) {
+        //console.log(docs)
+      });
+      
+      //预约记录
+      var records = await this.ctx.model.OrderRecord.find({authorId: authorId}, null, {}, function (err, docs) {
+         console.log(docs);
+      });
+
+      await Promise.all([courses,records]);
+      var courses = await  courses;
+      var records = await records;
+      
+      //zhibo 
+      if(courses && courses.length){
+         for(var i=0; i<courses.length; i++){
+              var cid = courses[i]._id;
+                   if(records && records.length && records.length > 0){
+                       for (var j =0 ; j<  records.length; j++){
+                            if(records[j].courseId == cid){
+                               courses[i].status = records[j].status;
+                            }
+                       }
+                   }    
+         }
+      }
+      return courses;
+    }else {
+      return await this.ctx.model.MainCourse.find({mode : mode},null,{limit:option.limit,skip:option.skip},function(err,docs){
+        // console.log(docs);
+      });
+    }
   }
   
 

@@ -1,29 +1,11 @@
 'use strict';
 const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
-/*const {
-  CLIENTS
-} = require("../../constant/constants");
-const errorCode = require("../../error/errorCode");
-const {
-  ONBOARDING_STATUS
-} = require("../../constant/user");
-const {
-  MODEL_NAMES
-} = require("../../constant/models");
-const {
-  NOTIFICATION_STATUS
-} = require("../../constant/notification");*/
 const moment = require('moment');
 const MODEL_NAME = 'Speech';
 
-//dialog flow
-// Construct request
-//   text to text
-// The path to identify the agent that owns the intents.
 const dialogflow = require('@google-cloud/dialogflow');
 const intentsClient = new dialogflow.IntentsClient();
-// Instantiates a session client
 const sessionClient = new dialogflow.SessionsClient();
 class SpeechConnector /*extends BasicConnector */{
 
@@ -61,10 +43,47 @@ class SpeechConnector /*extends BasicConnector */{
 
     const responses = await sessionClient.detectIntent(request);
     await Promise.all([responses]);
-    //console.log(responses[0]);
-    //console.log(responses[0].queryResult.fulfillmentText+"=======");
     console.log('Detected intent');
     console.log('response len:' + responses.length)
+
+    //预约课程
+      if(responses && responses.length && responses[0] && responses[0].queryResult
+         && responses[0].queryResult.intent) {
+
+          if (responses[0].queryResult.intent.displayName == 'Order zhibo Course') {
+              console.log("the zhibo course======= coming")
+
+
+              var course = await this.ctx.model.MainCourse.find({
+                  mode: "2",
+                  onlineTime: {$gte: new Date(new Date().getTime() + 1000 * 60 * 60 * 8)}
+              }, null, {sort: {_id: -1}, limit: 1, skip: 0}, function (err, docs) {
+                  /* console.log(docs)
+                   console.log(err)*/
+              })
+              await Promise.all([course]);
+              course = await course;
+              console.log(course.length + "====")
+              if (!course.length || course.length == 0) {
+                  return {"status": -1, "msg": "暂时没有直播课"}
+              }
+              var record = await this.ctx.model.OrderRecord.create(
+                  {
+                      courseId: course[0]._id,
+                      authorId: speechRequest.userId,
+                      status: 1,
+                      onlineTime: course[0].onlineTime,
+                      addTime: new Date().toLocaleString(),
+                      timestamp: '' + Date.now()
+                  }
+              );
+              await Promise.all([record]);
+              record = await record;
+              return {"status": 0, "msg": "预约成功，时间为" + moment(parseInt(orderRecordInput.onlineTime)).format('YYYY年MM月DD日 HH时mm分') + ",主题为：" + course[0].title +",地点为陆向谦创新创业实验室"}
+
+          }
+      }
+
 
     if(responses && responses.length && responses[0] && responses[0].queryResult
          &&  responses[0].queryResult.fulfillmentMessages
@@ -72,22 +91,16 @@ class SpeechConnector /*extends BasicConnector */{
          &&  responses[0].queryResult.fulfillmentMessages[0]['text']
          &&  responses[0].queryResult.fulfillmentMessages[0]['text']['text']
          &&  responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0]){
-       // console.log("coming 1 ===== " + responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0])
+        
         return {"status": 0, "msg": responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0]}
-        //return {"status": 0, "msg": responses[0].queryResult.fulfillmentMessages[0]['text']['text']}
     }else if(responses && responses.length && responses[0]
              && responses[0].queryResult
              && responses[0].queryResult.fulfillmentText
            ){
-        //console.log("coming 2 ===== " + responses[0].queryResult.fulfillmentText)
-
         return {"status": 0, "msg": responses[0].queryResult.fulfillmentText}
     }else {
-        //console.log("coming 3 ===== " + responses[0].queryResult.fulfillmentText)
-
         return {"status": 0, "msg": "请再试一次"}
     }
-    //return {"status": 0, "msg": responses[0].queryResult.fulfillmentText}
   }
 
   fetchByIds(id) {

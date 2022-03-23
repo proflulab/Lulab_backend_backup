@@ -24,6 +24,11 @@ module.exports = app => {
       unique: false,
       required: false,
     },
+    notification: {
+      type: String,
+      unique: false,
+      required: false,
+    },
     author: {
       type: String,
       unique: false,
@@ -54,6 +59,11 @@ module.exports = app => {
       unique: false,
       required: false,
     },
+    coverUrl : {
+      type: String,
+      unique: false,
+      required: false,
+    },
     firstCourseId : {
       type: String,
       unique: false,
@@ -66,7 +76,7 @@ module.exports = app => {
     },
     onlineTime: {
       type: Date,
-      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+      get: v => moment(v.getTime()).valueOf(),
     },
     addTime: {
       type: Date,

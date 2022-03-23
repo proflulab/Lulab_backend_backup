@@ -1,15 +1,4 @@
 /*'use strict';
-type MobileLog {
-	_id: ID
-	name: String
-	class: String
-	action: String
-	userId: String
-	entityId: String
-	addTime   : Date!
-	timestamp :String
-
-}
 * */
 
 module.exports = app => {
