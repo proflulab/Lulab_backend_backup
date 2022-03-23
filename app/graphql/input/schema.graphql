@@ -1,0 +1,71 @@
+input Sort {
+  updatedAt: String
+  createdAt: String
+  recordedAt: String
+  _id: String
+}
+
+input Option {
+  sort: Sort
+  limit: Int
+  skip: Int!
+}
+
+input SpeechRequest{
+   queryText: String
+   userId: String
+}
+
+input UserInput {
+  name: String!
+  password: String
+  description: String
+  wechat: String
+  phone: String
+  img: String
+  sex: String
+  #确认密码
+  ensurePassword: String
+}
+
+input CommentInput {
+  _id: String
+  content: String
+  courseId: String
+  authorName: String
+  authorId: String
+  authorImg: String
+}
+
+
+input OrderRecordInput {
+  courseId: String
+  authorId: String
+  status: String
+  onlineTime : String
+
+}
+
+input MobileLogInput {
+  _id: String
+  name: String
+  class: String
+  action: String
+  userId: String
+  entityId: String
+  addTime   : Date!
+  timestamp: String
+}
+
+
+type result {
+  status: String!
+  msg: String
+  data: User
+}
+
+input Condition {
+  isDeleted: Boolean
+  isBlocked: Boolean
+  type: String
+}

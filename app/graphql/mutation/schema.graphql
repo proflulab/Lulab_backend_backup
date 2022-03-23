@@ -1,0 +1,28 @@
+type Mutation {
+
+  addCircleAdmin(circleInput: CircleInput!): Circle
+  updateCircleAdmin(id: ID!, circleInput: CircleInput!): Circle
+  deleteCircleAdmin(id: ID!, circleInput: CircleInput): Circle
+
+  adminUserLogout: ID
+
+  onboardSelf(id: ID!, userInput: UserInput!): User!
+  onboardSelfByEmail(userInput: UserInput!): User
+  verifyEmail(userInput: UserInput!): User
+  userLoginByEmail(userInput: UserInput!): User
+
+  userRigister(userInput: UserInput!): result
+  userUpdate(userInput: UserInput!): result
+
+  commentAdd(commentInput: CommentInput!): result
+  commentDelete(id: ID!): result
+
+  #mobilelog
+  mobileLogAdd(mobileLogInput: MobileLogInput!): result
+  mobileLogDelete(id: ID!): result
+
+  #orderrecord
+  recordAdd(orderRecordInput: OrderRecordInput!): result
+  recordIntelligentAdd(orderRecordInput: OrderRecordInput!): result
+
+}

@@ -1,0 +1,10 @@
+
+type Manager {
+	_id: ID
+	name: String
+	tags: String
+    imgUrl: String
+    description: String
+	addTime   : Date
+	timestamp :String
+}

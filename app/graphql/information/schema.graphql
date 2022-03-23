@@ -1,0 +1,13 @@
+type Information {
+	_id: ID
+	tag: String
+	title: String
+	content: String
+	author: String
+	authorAccount: String
+	releaseDate: String
+	addTime : String
+    updateTime :String
+    img: String
+}
+
