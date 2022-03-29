@@ -39,37 +39,14 @@ class CourseConnector /*extends BasicConnector */ {
         });
     }
 
-    async detailCourse(dirId, detailCourseId) {
-
-
-        var course = await this.ctx.model.Course.findOne({_id: detailCourseId}, null, {}, function (err, docs) {
-          //  console.log(docs+"====1");
-        });
-        var brotherCourse = await this.ctx.model.Course.find({mainCourseId: dirId}, null, {}, function (err, docs) {
+    async detailCourse(dirId) {
+        return await this.ctx.model.Course.find({mainCourseId: dirId}, null, {}, function (err, docs) {
            //  console.log(docs+"====2");
         });
-        await Promise.all([course, brotherCourse]);
-        var course = await  course;
-        //var brotherCourse = await  brotherCourse;
-
-        class subCourse {
-            constructor(subTitle, courseId, mainCourseId){
-                this.subTitle = subTitle;
-                this.courseId = courseId;
-                this.mainCourseId = mainCourseId;
-            }
-        }
-        console.log("the brotherCourse length:" + brotherCourse.length)
-        var subCourses= [];
-        for (var i = 0; i < brotherCourse.length; i++) {
-            var temp = brotherCourse[i];
-            var bro = new subCourse(temp.dirTitle, temp._id, temp.mainCourseId)
-            subCourses.push(bro);
-        }
-        //console.log("test course=====" + course.toString()+"===="+course["_id"])
-        course.subCourses = subCourses ;
-        //return {"dirTitle":"test"}
-        return course;
+        await Promise.all([brotherCourse]);
+        //var course = await  course;
+        var brotherCourse = await  brotherCourse;
+        return brotherCourse;
     }
 
 

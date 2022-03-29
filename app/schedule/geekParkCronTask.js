@@ -29,9 +29,9 @@ module.exports = {
         });
         */
         await Promise.all([dataGeek,dataTiger,dataEntry]);
-        dataGeek = await   dataGeek;
+       /* dataGeek = await   dataGeek;
         dataTiger = await  dataTiger;
-        dataEntry = await  dataEntry;
+        dataEntry = await  dataEntry;*/
        // dataBlack = await  dataBlack;
 
         console.log("任务执行爬虫 : "+ new Date().toString());

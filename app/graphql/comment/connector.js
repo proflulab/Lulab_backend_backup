@@ -29,8 +29,8 @@ class CommentConnector /*extends BasicConnector */{
   fetchByIds(id) {
       return this.loader.load(id);
   }
-  async latestComment(id,option){
-    return await this.ctx.model.Comment.find({courseId:id},null,{sort:{'_id': -1},limit:option.limit,skip:option.skip},function(err,docs){
+  async latestComment(entityId, category, option){
+    return await this.ctx.model.Comment.find({entityId:entityId,category:category},null,{sort:{'_id': -1},limit:option.limit,skip:option.skip},function(err,docs){
       // console.log(docs);
     });
   }
@@ -57,19 +57,24 @@ class CommentConnector /*extends BasicConnector */{
 
   //add
   async commentAdd(commentInput) {
-    if( !commentInput.courseId ){
-s    }
+    if( !commentInput.entityId ){
+        return {"status": -1, "msg": "评论添加失败，评论主体不能为空"}
+    }
     if(  !commentInput.content ){
       return {"status": -1, "msg": "评论添加失败，评论不能为空"}
     }
     if(  !commentInput.authorId){
       return {"status": -1, "msg": "评论添加失败，作者不能为空"}
     }
+    if(  !commentInput.category){
+          return {"status": -1, "msg": "评论添加失败，类别不能为空"}
+    }
     
     var comment = await this.ctx.model.Comment.create(
         {
           content: commentInput.content,
-          courseId: commentInput.courseId,
+          entityId: commentInput.entityId,
+          category:  commentInput.category,
           authorName: commentInput.authorName,
           authorId: commentInput.authorId,
           authorImg: commentInput.authorImg,
@@ -94,8 +99,6 @@ s    }
     comment = await comment;
     return {"status": 0, "msg": "删除成功"}
   }
-
-
 
 }
 

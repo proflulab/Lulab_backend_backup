@@ -17,21 +17,43 @@ input SpeechRequest{
 }
 
 input UserInput {
-  name: String!
-  password: String
-  description: String
-  wechat: String
-  phone: String
-  img: String
-  sex: String
-  #确认密码
-  ensurePassword: String
+      name: String!
+      age: String
+      sex: String
+      position:String
+      industry:String
+      country:String
+      phone:String
+      email:String
+      wechat:String
+      schoolRecord:String
+      workCondition:String
+      detailMsg:String
+      description: String
+
+      category:String
+      userType:String
+
+      identity: String
+      imgUrl: String
+      iconUrl: String
+      bigCoverUrl:String
+
+      password:String
+
+
+      videos:[String]
+      imgs:[String]
+      docs:[String]
+      growthDescriptions: [String]
+      tags:[String]
 }
 
 input CommentInput {
   _id: String
   content: String
-  courseId: String
+  entityId: String
+  category: String
   authorName: String
   authorId: String
   authorImg: String
@@ -69,3 +91,25 @@ input Condition {
   isBlocked: Boolean
   type: String
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

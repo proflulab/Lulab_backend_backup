@@ -2,12 +2,13 @@
 type Comment {
 	_id: ID
 	content: String
-	courseId: String
+	entityId: String
+    parentCommentId: String
 	authorName: String
 	authorId: String
 	authorImg: String
 	category: String
-	addTime   : Date!
+	addTime   : Date
 	timestamp :String
 
 }

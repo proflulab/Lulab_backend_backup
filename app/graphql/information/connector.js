@@ -35,8 +35,11 @@ let Article_Schema = new mongoose.Schema({
   author: String,
   publishTime: String,
   time: String,
-  origin : String
-
+  origin : String,
+  htmltext :String,
+  mdtext: String,
+  introduction:String
+   
   //createdate: {type:Date, default: Date.now}
 }, {
   versionKey: false,
@@ -65,26 +68,42 @@ class InformationConnector /*extends BasicConnector */{
   async fetchLatestInformations(option, ctx, CONNECTOR_NAME, MODEL_NAME) {
 
     class Information {
-      constructor(title,content,author,img,releaseDate){
+      constructor(title,content,author,img,releaseDate,htmltext,mdtext,introduction){
         this.title = title;
         this.content = content;
         this.author = author;
         this.img = img;
         this.releaseDate = releaseDate;
+        this.htmltext = htmltext;
+        this.mdtext = mdtext;
+        this.introduction = introduction;
+
       }
     }
     var res = [];
-    var article = await Articles.find(null, null, {sort:{'_id': -1},limit:option.limit,skip:option.skip}, function(err, list){
+    var article = await Articles.find({origin:"heima"}, null, {sort:{'_id': -1},limit:option.limit,skip:option.skip}, function(err, list){
       console.log("db1.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + err);
     //  console.log(list);
     });
    
 
     await Promise.all([article]);
-    var article = await  article
+    var article = await  article;
     console.log("the content lenth:" + article.length)
     for (var i = 0; i < article.length; i++) {
-      var info = new Information(article[i].title,article[i].content,article[i].author,article[i].img,article[i].publishTime)
+      if(article[i].img == null || !article[i].img || article[i].img==""){
+         article[i].img = "https://qn2.proflu.cn/%E5%92%A8%E8%AF%A2%E5%B0%81%E9%9D%A2/%E5%92%A8%E8%AF%A2%E5%B0%81%E9%9D%A21.png"
+      }
+      if(article[i].publishTime==null || !article[i].publishTime){
+         article[i].publishTime = moment().subtract(15*i, "minutes").format("YYYY-MM-DD HH:mm")
+      }
+      var info = new Information(article[i].title,article[i].content,article[i].author,article[i].img,article[i].publishTime,article[i].htmltext,article[i].mdtext,article[i].introduction);
+      var imgs = [];
+      var herfs = [];
+      var random = Math.floor(Math.random()*10 / 2);//imgs[random]
+      info.adv = "https://qn2.proflu.cn/%E5%B9%BF%E5%91%8A%E5%9B%BE/%E5%B0%81%E9%9D%A21.jpg";
+      info.href= "http://hao123.com" ;//
+      info._id = article[i]._id;
       res.push(info);
     }
     //console.log(res.length)

@@ -8,10 +8,11 @@ const MODEL_NAME = 'Comment';
 module.exports = {
   Query: {
     latestComment(root, {
-      courseId,
+      entityId,
+      category,
       option
     }, ctx) {
-      return ctx.connector[CONNECTOR_NAME].latestComment(courseId, option);
+      return ctx.connector[CONNECTOR_NAME].latestComment(entityId, category, option);
       //var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
       // return temp
     },

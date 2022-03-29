@@ -34,11 +34,18 @@ class MainCourseConnector /*extends BasicConnector */{
       // console.log(docs);
     });
   }
-
   async detailMainCourse(courseId){
-      return await this.ctx.model.MainCourse.findOne({_id:courseId},null,{},function(err,docs){
+      var mainCourses =  await this.ctx.model.MainCourse.findOne({_id:courseId},null,{},function(err,docs){
           // console.log(docs);
-      }); 
+      });
+      await Promise.all([mainCourses]);
+      var mainCourses = await  mainCourses;
+      for(var i=0; i< mainCourses.length;i++){
+          if(mainCourses.status == "" || mainCourses.status== null || !mainCourses.status){
+              mainCourses.status = "0"
+          }
+      }
+      return mainCourses;
   }
 
   async latestDirectCourse(mode, authorId , option){
@@ -70,14 +77,26 @@ class MainCourseConnector /*extends BasicConnector */{
                                courses[i].status = records[j].status;
                             }
                        }
-                   }    
+                   }
+                   if(courses[i].status == null){
+                       courses[i].status = "0";
+                   }
          }
       }
       return courses;
     }else {
-      return await this.ctx.model.MainCourse.find({mode : mode},null,{limit:option.limit,skip:option.skip},function(err,docs){
+        var courses = await this.ctx.model.MainCourse.find({mode : mode},null,{limit:option.limit,skip:option.skip},function(err,docs){
         // console.log(docs);
-      });
+        });
+        await Promise.all([courses]);
+        var courses = await  courses;
+        for(var i=0; i<courses.length; i++){
+            if(courses[i].status == null || !courses[i].status ){
+                courses[i].status = "0";
+            }
+        }
+        return courses;
+
     }
   }
   

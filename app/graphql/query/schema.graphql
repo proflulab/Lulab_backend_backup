@@ -5,6 +5,7 @@ type Query {
   #userLogin(userLoginPayload: UserLoginPayload!): User!
   userRich(id: ID!): User!
   userLogin(userInput: UserInput!): result
+  latestClassificationUser(category: String , option: Option):[User]
 
 
   # userByToken(clientType: String!, accessToken: String!): User!
@@ -24,17 +25,13 @@ type Query {
 
 
   #Latestcomment
-  latestComment(courseId: String!,option :Option!): [Comment]
+  latestComment(entityId: String!, category: String, option :Option!): [Comment]
 
   #detailCourse
-  detailCourse(dirId: String!,courseId: String!): Course
+  detailCourse(dirId: String): [Course]
 
   #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
-
-  #model
-  latestModel(option :Option!): [Model]
-
 
   #orderrecord
   latestRecord(authorId: String!,option :Option!): [OrderRecord]
