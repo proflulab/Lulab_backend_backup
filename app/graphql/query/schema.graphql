@@ -35,6 +35,8 @@ type Query {
   #model
   latestModel(option :Option!): [Model]
 
+  #training
+  latestTraining(option :Option!): [Training]
 
   #orderrecord
   latestRecord(authorId: String!,option :Option!): [OrderRecord]
