@@ -15,12 +15,12 @@ module.exports = {
       // return temp
     },
     detailCourse(root, {
-      dirId,
-      courseId
+        dirId
     }, ctx) {
-      return ctx.connector[CONNECTOR_NAME].detailCourse(dirId, courseId);
+      return ctx.connector[CONNECTOR_NAME].detailCourse(dirId);
       //var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
       // return temp
-    },
+    }
+
   }
 };

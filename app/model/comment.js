@@ -12,12 +12,22 @@ module.exports = app => {
       unique: false,
       required: false,
     },
-    courseId: {
+    entityId: {
       type: String,
       unique: false,
       required: true,
     },
+    category: {
+      type: String,
+      unique: false,
+      required: false,
+    },
     authorName: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    parentCommontId: {
       type: String,
       unique: false,
       required: false,

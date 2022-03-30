@@ -7,25 +7,60 @@ module.exports = app => {
   const UserSchema = new Schema({
     name: {
       type: String,
-      unique: false,
-      required: true,
-    },
-    password: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    img: {
-      type: String,
-      unique: false,
-      required: false,
-    },
-    phone: {
-      type: String,
-      unique: false,
+      unique: true,
       required: false,
     },
     sex: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    age:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    schoolRecord:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    position:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    location:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    country:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    phone:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    email:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    wechat: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    workCondition:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    industry:{
       type: String,
       unique: false,
       required: false,
@@ -35,7 +70,86 @@ module.exports = app => {
       unique: false,
       required: false,
     },
-    wechat: {
+    identity: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    detailMsg:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+
+   password: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+
+
+    category:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+
+    userType:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+
+    imgUrl: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    iconUrl: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    bigCoverUrl: {
+        type: String,
+        unique: false,
+        required: false,
+    },
+
+
+    videos:[{
+      type: String,
+      unique: false,
+      required: false,
+    }],
+    imgs:[{
+      type: String,
+      unique: false,
+      required: false,
+    }],
+    docs:[{
+      type: String,
+      unique: false,
+      required: false,
+    }],
+    growthDescriptions:[{
+      type: String,
+      unique: false,
+      required: false,
+    }],
+    tags:[{
+      type: String,
+      unique: false,
+      required: false,
+    }],
+
+
+    addTime: {
+      type: String,
+      unique: false,
+      required: false,
+    },
+    timestamp: {
       type: String,
       unique: false,
       required: false,

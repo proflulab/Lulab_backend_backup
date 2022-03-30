@@ -14,7 +14,7 @@ type MainCourse {
     status : String
     firstCourseId : String
     duration :Number
-	onlineTime : Date!
-	addTime   : Date!
-	updateTime : Date!
+	onlineTime : Date
+	addTime   : Date
+	updateTime : Date
 }

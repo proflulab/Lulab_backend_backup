@@ -14,15 +14,7 @@ type Course {
     sort : Number
     mainCourseId : String
     duration :Number
-	onlineTime : Date!
-	addTime   : Date!
-	updateTime :Date!
-	subCourses : [SubCourse]
-
-}
-
-type SubCourse {
-     subTitle : String,
-     courseId : String,
-     mainCourseId : String
+	onlineTime : Date
+	addTime   : Date
+	updateTime : Date
 }
