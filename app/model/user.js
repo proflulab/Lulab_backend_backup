@@ -81,8 +81,7 @@ module.exports = app => {
       required: false,
     },
 
-
-    password: {
+   password: {
       type: String,
       unique: false,
       required: false,
@@ -112,9 +111,9 @@ module.exports = app => {
       required: false,
     },
     bigCoverUrl: {
-      type: String,
-      unique: false,
-      required: false,
+        type: String,
+        unique: false,
+        required: false,
     },
 
 
@@ -155,8 +154,6 @@ module.exports = app => {
       unique: false,
       required: false,
     },
-    
-   
   });
 
   return mongoose.model('User', UserSchema);

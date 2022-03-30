@@ -33,6 +33,10 @@ type Query {
   #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
 
+
+  #training
+  latestTraining(option :Option!): [Training]
+
   #orderrecord
   latestRecord(authorId: String!,option :Option!): [OrderRecord]
   latestUserCourseRecord(authorId: String!, courseId: String!): result

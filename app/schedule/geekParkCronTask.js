@@ -32,7 +32,7 @@ module.exports = {
        /* dataGeek = await   dataGeek;
         dataTiger = await  dataTiger;
         dataEntry = await  dataEntry;*/
-       // dataBlack = await  dataBlack;
+        // dataBlack = await  dataBlack;
 
         console.log("任务执行爬虫 : "+ new Date().toString());
        // GeekParkSpider.getUrl();

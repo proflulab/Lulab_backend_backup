@@ -10,22 +10,19 @@ module.exports = {
     latestMainCourse(root, {
       option
     }, ctx) {
-      
       return ctx.connector[CONNECTOR_NAME].latestMainCourse(option);
     },
     detailMainCourse(root, {
       courseId
     }, ctx) {
-      
       return ctx.connector[CONNECTOR_NAME].detailMainCourse(courseId);
-    },
+      },
     latestDirectCourse(root, {
       mode,
       authorId,
       option
     }, ctx) {
-
-      return ctx.connector[CONNECTOR_NAME].latestDirectCourse(mode, authorId, option);
+     return ctx.connector[CONNECTOR_NAME].latestDirectCourse(mode, authorId, option);
     },
     
   }

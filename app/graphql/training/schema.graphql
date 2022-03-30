@@ -1,0 +1,12 @@
+type Training {
+	_id: ID
+	name: String
+	description: String
+	detailUrl: String
+	imgUrl: String
+	applyUrl: String
+    trait: String
+	addTime   : Date!
+	timestamp :String
+
+}

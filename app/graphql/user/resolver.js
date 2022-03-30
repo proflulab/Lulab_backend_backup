@@ -31,9 +31,10 @@ module.exports = {
             category,
             option
         }, ctx) {
-            
+
             return ctx.connector[CONNECTOR_NAME].latestClassificationUser(category , option);
         }
+
     },
     Mutation: {
         userUpdate(root, {

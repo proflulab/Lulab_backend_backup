@@ -69,7 +69,7 @@ class CommentConnector /*extends BasicConnector */{
     if(  !commentInput.category){
           return {"status": -1, "msg": "评论添加失败，类别不能为空"}
     }
-    
+
     var comment = await this.ctx.model.Comment.create(
         {
           content: commentInput.content,
@@ -99,7 +99,6 @@ class CommentConnector /*extends BasicConnector */{
     comment = await comment;
     return {"status": 0, "msg": "删除成功"}
   }
-
 }
 
 module.exports = CommentConnector;

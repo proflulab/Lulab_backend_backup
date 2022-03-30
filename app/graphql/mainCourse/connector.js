@@ -96,7 +96,6 @@ class MainCourseConnector /*extends BasicConnector */{
             }
         }
         return courses;
-
     }
   }
   

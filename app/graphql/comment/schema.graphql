@@ -10,5 +10,4 @@ type Comment {
 	category: String
 	addTime   : Date
 	timestamp :String
-
 }

@@ -39,8 +39,7 @@ let Article_Schema = new mongoose.Schema({
   htmltext :String,
   mdtext: String,
   introduction:String
-   
-  //createdate: {type:Date, default: Date.now}
+   //createdate: {type:Date, default: Date.now}
 }, {
   versionKey: false,
   collection: "article"
