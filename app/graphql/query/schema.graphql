@@ -21,7 +21,7 @@ type Query {
   detailMainCourse(courseId: String!): MainCourse
 
   #speech
-  speechGoogle(speechRequest: SpeechRequest): result
+  speechGoogle(speechRequest: SpeechRequest): speechResult
 
 
   #Latestcomment
@@ -32,6 +32,9 @@ type Query {
 
   #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
+
+  #growth
+  latestUserGrowth(userId: String!,option :Option!): [Growth]
 
 
   #training

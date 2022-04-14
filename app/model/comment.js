@@ -11,26 +11,31 @@ module.exports = app => {
       type: String,
       unique: false,
       required: false,
+      get: v => v==null ? "" : v
     },
     entityId: {
       type: String,
       unique: false,
       required: true,
+      get: v => v==null ? "" : v
     },
     category: {
       type: String,
       unique: false,
       required: false,
+      get: v => v==null ? "" : v
     },
     authorName: {
       type: String,
       unique: false,
       required: false,
+      get: v => v==null ? "" : v
     },
     parentCommontId: {
       type: String,
       unique: false,
       required: false,
+      get: v => v==null ? "" : v
     },
     authorId: {
       type: String,

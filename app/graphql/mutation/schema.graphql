@@ -21,6 +21,10 @@ type Mutation {
   mobileLogAdd(mobileLogInput: MobileLogInput!): result
   mobileLogDelete(id: ID!): result
 
+  #growth
+  growthAdd(growthInput: GrowthInput!): result
+  growthDelete(id: ID!): result
+
   #orderrecord
   recordAdd(orderRecordInput: OrderRecordInput!): result
   recordIntelligentAdd(orderRecordInput: OrderRecordInput!): result

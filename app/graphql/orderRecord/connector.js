@@ -89,6 +89,16 @@ class OrderRecordConnector /*extends BasicConnector */ {
         if (!orderRecordInput.onlineTime) {
             return {"status": -1, "msg": "评论添加失败，直播时间不能为空"}
         }
+        var recordHistory = await this.ctx.model.OrderRecord.findOne(
+            {"courseId": orderRecordInput.courseId,"authorId":orderRecordInput.authorId}, function (err, docs) {
+                // console.log(docs);
+            }
+        );
+        await Promise.all([recordHistory]);
+        recordHistory = await recordHistory;
+        if(recordHistory != null || recordHistory){
+            return {"status": -1, "msg": "已经预约过该课程"}
+        }
 
         var record = await this.ctx.model.OrderRecord.create(
             {
@@ -111,6 +121,8 @@ class OrderRecordConnector /*extends BasicConnector */ {
         if (!orderRecordInput.authorId) {
             return {"status": -1, "msg": "评论添加失败，用户不能为空"}
         }
+
+
         //(moment(Date.now()).format('YYYY-MM-DD HH:mm:ss'))
         var course =  await this.ctx.model.MainCourse.find({mode: "2", onlineTime: {$gte: new Date(new Date().getTime()+1000*60*60*8)}}, null, {sort:{_id: -1},limit:1,skip :0},function(err,docs){
             console.log(docs)
@@ -122,6 +134,16 @@ class OrderRecordConnector /*extends BasicConnector */ {
         if(!course.length || course.length== 0){
             return {"status": -1, "msg": "课程不存在"}
         }
+        var recordHistory = await this.ctx.model.OrderRecord.findOne(
+            {"courseId": course[0]._id,"authorId":orderRecordInput.authorId}, function (err, docs) {
+                // console.log(docs);
+            }
+        );
+        await Promise.all([recordHistory]);
+        recordHistory = await recordHistory;
+        if(recordHistory != null || recordHistory){
+            return {"status": -1, "msg": "已经预约了该课程"}
+        }
         var record = await this.ctx.model.OrderRecord.create(
             {
                 courseId: course[0]._id,
@@ -132,6 +154,9 @@ class OrderRecordConnector /*extends BasicConnector */ {
                 timestamp: '' + Date.now()
             }
         );
+
+
+
         await Promise.all([record]);
         record = await record;
         return {"status": 0, "msg": "插入成功"}

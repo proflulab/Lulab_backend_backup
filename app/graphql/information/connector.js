@@ -69,11 +69,11 @@ class InformationConnector /*extends BasicConnector */{
     class Information {
       constructor(title,content,author,img,releaseDate,htmltext,mdtext,introduction){
         this.title = title;
-        this.content = content;
+        this.content = "";
         this.author = author;
         this.img = img;
         this.releaseDate = releaseDate;
-        this.htmltext = htmltext;
+        this.htmltext = "";
         this.mdtext = mdtext;
         this.introduction = introduction;
 
@@ -90,12 +90,20 @@ class InformationConnector /*extends BasicConnector */{
     var article = await  article;
     console.log("the content lenth:" + article.length)
     for (var i = 0; i < article.length; i++) {
+
+      if(article[i].title && article[i].title.includes("早报")){
+         continue;
+      }
       if(article[i].img == null || !article[i].img || article[i].img==""){
          article[i].img = "https://qn2.proflu.cn/%E5%92%A8%E8%AF%A2%E5%B0%81%E9%9D%A2/%E5%92%A8%E8%AF%A2%E5%B0%81%E9%9D%A21.png"
       }
-      if(article[i].publishTime==null || !article[i].publishTime){
-         article[i].publishTime = moment().subtract(15*i, "minutes").format("YYYY-MM-DD HH:mm")
+      if(article[i].origin == "heima" && (article[i].publishTime!=null ||article[i].publishTime) ){
+         article[i].publishTime = moment(article[i].publishTime,"YYYY-MM-DD HH:mm").unix() * 1000
       }
+      if(article[i].publishTime==null || !article[i].publishTime){
+        article[i].publishTime = moment().startOf("minute").unix() * 1000
+      }
+
       var info = new Information(article[i].title,article[i].content,article[i].author,article[i].img,article[i].publishTime,article[i].htmltext,article[i].mdtext,article[i].introduction);
       var imgs = [];
       var herfs = [];
@@ -135,8 +143,7 @@ class InformationConnector /*extends BasicConnector */{
      dataGeek = await   dataGeek;
      dataTiger = await  dataTiger;
      dataEntry = await  dataEntry;
-     dataBlack = await  dataBlack;
- 
+
      var lenthF = dataTiger.data.data.length;
      var lenthS = dataEntry.data.data.length;
      var lenthT = dataBlack.data.data.length;

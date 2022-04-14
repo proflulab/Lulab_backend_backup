@@ -16,11 +16,11 @@ enum OnboardingStatus {
 type User {
     _id: ID
     name: String
-   	age: String
     sex: String
+    birth:String
     position:String
+    company:String
     industry:String
-    country:String
     phone:String
     email:String
     wechat:String
@@ -28,28 +28,42 @@ type User {
     workCondition:String
     detailMsg:String
     description: String
-
+    duration:String
     category:String
     userType:String
-
    	identity: String
+
    	imgUrl: String
    	iconUrl: String
    	bigCoverUrl:String
+   	profileImgUrl:String
+   	videoUrl:String
 
    	password:String
 
-
-    videos:[String]
+   	country:String
+   	address:String
+   	homeTown:[String]
+   	location:[String]
     imgs:[String]
-    docs:[String]
-    growthDescriptions: [String]
     tags:[String]
-
    	addTime   : Date
    	timestamp :String
 
 }
+
+
+type Video {
+	videoUrl:String
+	title:String
+	desc:String
+	author:String
+	releaseTime:String
+	coverUrl:String
+	#desc: String # wechat only
+}
+
+
 
 input UserLoginPayload {
   jscode: String
