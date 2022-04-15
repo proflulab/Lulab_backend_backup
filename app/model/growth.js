@@ -1,120 +1,144 @@
-/*'use strict';*/
+/*'use strict';
+* */
+
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
   const moment = require('moment');
-  const MainCourseSchema = new Schema({
-    name: {
-      type: String,
-      unique: false,
-      required: true,
-      get: v => v==null ? "" : v
-    },
-    title: {
-      type: String,
-      unique: false,
-      required: true,
-      get: v => v==null ? "" : v
-    },
-    classTags: {
+  const GrowthSchema = new Schema({
+    userId: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
     },
-    description: {
+    category:{
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
     },
-    notification: {
+    type:{
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
     },
-    author: {
+    company: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
     },
-    authorTags: {
+    beginTime: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
     },
-    category: {
+    endTime: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
-
     },
-    mode : {
+    position: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
-
     },
-    videoUrl : {
+    positionDetail: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
-
     },
-    imgUrl : {
+    desc: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
-
     },
-    coverUrl : {
+    industry: {
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
-
+    },
+    companySize: {
+      type: String,
+      unique: false,
+      required: false,
+      get: v => v==null ? "" : v
+    },
+    properties: {
+      type: String,
+      unique: false,
+      required: false,
+      get: v => v==null ? "" : v
+    },
+    logoUrl: {
+      type: String,
+      unique: false,
+      required: false,
+      get: v => v==null ? "" : v
+    },
+    imgUrl:{
+      type: String,
+      unique: false,
+      required: false,
+      get: v => v==null ? "" : v
     },
     detailUrl:{
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
-
     },
-    firstCourseId : {
+    httpUrls:{
       type: String,
       unique: false,
       required: false,
       get: v => v==null ? "" : v
-
     },
-    duration : {
-      type: Number,
+    videos:[{
+      type: String,
       unique: false,
       required: false,
-      get: v => v==null ? 0 : v
-
+      get: v => v==null ? "" : v
+    }],
+    accquirePosition:{
+      type: String,
+      unique: false,
+      required: false,
     },
-    onlineTime: {
-      type: Date,
-      get: v => moment(v.getTime()).valueOf(),
+    extraOne:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    extraTwo:{
+      type: String,
+      unique: false,
+      required: false,
+    },
+    extraThree:{
+      type: String,
+      unique: false,
+      required: false,
     },
     addTime: {
-      type: Date,
-      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+      type: String,
+      unique: false,
+      required: false,
     },
-    updateTime: {
-      type: Date,
-      get: v => moment(v).format('YYYY-MM-DD HH:mm:ss'),
+    timestamp: {
+      type: String,
+      unique: false,
+      required: false,
     },
 
   });
-  return mongoose.model('MainCourse', MainCourseSchema);
+  return mongoose.model('Growth', GrowthSchema);
 }

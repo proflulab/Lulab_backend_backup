@@ -7,31 +7,37 @@ module.exports = app => {
         type: String,
         unique: false,
         required: false,
+        get: v => v==null ? "" : v
       },
       description: {
         type: String,
         unique: false,
         required: true,
+        get: v => v==null ? "" : v
       },
       imgUrl: {
         type: String,
         unique: false,
         required: false,
+        get: v => v==null ? "" : v
       },
       detailUrl: {
         type: String,
         unique: false,
         required: false,
+        get: v => v==null ? "" : v
       },
       applyUrl: {
         type: String,
         unique: false,
         required: false,
+        get: v => v==null ? "" : v
       },
       trait: {
         type: String,
         unique: false,
         required: false,
+        get: v => v==null ? "" : v
       },
       addTime: {
         type: String,

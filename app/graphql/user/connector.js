@@ -49,8 +49,9 @@ class UserConnector /*extends BasicConnector */ {
         if(user == null || !user){
             return {"status": 1, "msg": "该用户不存在"}
         }
+
         if (userInput.password == user.password) {
-            return {"status": 0, "msg": "success", data: user}
+            return {"status": 0, "msg": "success", data:user}
         } else {
             return {"status": 1, "msg": "faile"}
         }
@@ -66,7 +67,7 @@ class UserConnector /*extends BasicConnector */ {
         }
         var user = await this.ctx.model.User.findOne(
             {"name": userInput.name}, function (err, docs) {
-                console.log(docs);
+               // console.log(docs);
                 return {"status": 1, "name": "hehe"}
             }
         );
@@ -97,21 +98,103 @@ class UserConnector /*extends BasicConnector */ {
         return {"status": 0, "msg": "插入成功"}
     }
 
+
     //update user
     async userUpdate(userInput) {
-        var user = await this.ctx.model.User.update(
-            {name:userInput.name},{$set:{"imgUrl":userInput.imgUrl,"sex":userInput.sex,
-                               "description":userInput.description,"tags":userInput.tags,
-                               "wechat":userInput.wechat,phone:userInput.phone,"position":userInput.position,
-                               "industry":userInput.industry,"country":userInput.country,"phone":userInput.phone,
-                               "email":userInput.email,"schoolRecord":userInput.schoolRecord,"detailMsg":userInput.detailMsg,
-                                "workCondition":userInput.workCondition, "category":userInput.category, "userType":userInput.userType,
-                    "identity":userInput.identity, "iconUrl":userInput.iconUrl, "bigCoverUrl":userInput.bigCoverUrl, "password":userInput.password,
-                    "videos":userInput.videos,"imgs":userInput.imgs,"docs":userInput.docs,"growthDescriptions":userInput.growthDescriptions}
-       // console.log(userInput.wechat + "===" + userInput.phone +"=====" + userInput.sex + "====" + userInput.phone +"=====" + userInput.img)
+        console.log(userInput.wechat + "===" + userInput.phone +"=====" + userInput.sex + "====" + userInput.age +"=====" + userInput.img)
+        var user = await this.ctx.model.User.findOne(
+            {"name": userInput.name}, function (err, docs) {
+                // console.log(docs);
+               // return {"status": 1, "name": "hehe"}
+            }
+        );
+
+        await Promise.all([user]);
+        user = await user;
+        if (user && user.name != null && user._id != userInput._id ) {
+            return {"status": 1, "msg": "更新失败,已存在一样的用户名"}
+        }
+
+        var user = await this.ctx.model.User.findOne(
+            {"_id": userInput._id}, function (err, docs) {
+                // console.log(docs);
+                // return {"status": 1, "name": "hehe"}
+            }
+        );
+        await Promise.all([user]);
+        user = await user;
+       // console.log(userInput.sex + "==thetestundefined" + (userInput.sex == undefined) +"======")
+        if(userInput.imgUrl!=null){
+            user.imgUrl = userInput.imgUrl;
+        }if(userInput.sex != null){
+            user.sex = userInput.sex;
+        }if(userInput.imgs!=null){
+            user.imgs = userInput.imgs;
+        }if(userInput.description!=null){
+            user.description = userInput.description;
+        }if(userInput.wechat!=null){
+            user.wechat = userInput.wechat;
+        }if(userInput.phone!=null){
+            user.phone = userInput.phone;
+        }if(userInput.profileImgUrl!=null){
+            user.profileImgUrl = userInput.profileImgUrl;
+        }if(userInput.email!=null){
+            user.email = userInput.email;
+        }if(userInput.schoolRecord!=null){
+            user.schoolRecord = userInput.schoolRecord;
+        }if(userInput.detailMsg!=null){
+            user.detailMsg = userInput.detailMsg;
+        }if(userInput.workCondition!=null){
+            user.workCondition = userInput.workCondition;
+        }if(userInput.category!=null){
+            user.category = userInput.category;
+        }if(userInput.userType!=null){
+            user.userType = userInput.userType;
+        }if(userInput.birth!=null){
+            user.birth = userInput.birth;
+        }if(userInput.identity!=null){
+            user.identity = userInput.identity;
+        }if(userInput.iconUrl!=null){
+            user.iconUrl = userInput.iconUrl;
+        }if(userInput.bigCoverUrl!=null){
+            user.bigCoverUrl = userInput.bigCoverUrl;
+        }if(userInput.password!=null){
+            user.password = userInput.password;
+        }if(userInput.duration!=null){
+            user.duration = userInput.duration;
+        }if(userInput.address!=null){
+            user.address = userInput.address;
+        }if(userInput.name!=null){
+            user.name = userInput.name;
+        }if(userInput.company!=null){
+            user.company = userInput.company;
+        }if(userInput.location!=null){
+            user.location = userInput.location;
+        }if(userInput.tags!=null){
+            user.tags = userInput.tags;
+        }if(userInput.homeTown!=null){
+            user.homeTown = userInput.homeTown;
+        }if(userInput.videoUrl!=null){
+            user.videoUrl = userInput.videoUrl;
+        }if(userInput.addTime!=null){
+            user.addTime = userInput.addTime;
+        }if(userInput.timestamp!=null){
+            user.timestamp = userInput.timestamp;
+        }
+
+
+
+        var user = await this.ctx.model.User.updateMany(
+            {_id:userInput._id},{$set:{"imgUrl":user.imgUrl,"sex":user.sex,"imgs":user.imgs,
+                               "description":user.description,"addTime":user.addTime,"timestamp":user.timestamp,
+                               "wechat":user.wechat,phone:user.phone,"position":user.position,"videoUrl":user.videoUrl,
+                               "industry":user.industry,"country":user.country,"phone":user.phone,"profileImgUrl":user.profileImgUrl,
+                               "email":user.email,"schoolRecord":user.schoolRecord,"detailMsg":user.detailMsg,
+                    "identity":user.identity, "iconUrl":user.iconUrl, "bigCoverUrl":user.bigCoverUrl, "password":user.password,"location":user.location,
+                    "duration":user.duration,"address":user.address,"name":user.name,"company":user.company,"tags":user.tags,"homeTown":user.homeTown}
 
           }, function (err, docs) {
-                   console.log(docs+"err" +"====="+err)
+                   console.log(JSON.stringify(docs)+"err" +"====="+err)
                    return {"status": 1, "msg": "更新失败"+err}
             }
         );
