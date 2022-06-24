@@ -29,16 +29,15 @@ db1.on('error', () => {
 
 let Article_Schema = new mongoose.Schema({
   aid: String,
-  content: String,
   title: String,
   img: String,
   author: String,
   publishTime: String,
   time: String,
   origin : String,
-  htmltext :String,
   mdtext: String,
-  introduction:String
+  introduction:String,
+  //content:String
    //createdate: {type:Date, default: Date.now}
 }, {
   versionKey: false,
@@ -67,7 +66,7 @@ class InformationConnector /*extends BasicConnector */{
   async fetchLatestInformations(option, ctx, CONNECTOR_NAME, MODEL_NAME) {
 
     class Information {
-      constructor(title,content,author,img,releaseDate,htmltext,mdtext,introduction){
+      constructor(title,content,author,img,releaseDate,htmltext,mdtext,introduction,addTime){
         this.title = title;
         this.content = "";
         this.author = author;
@@ -76,11 +75,12 @@ class InformationConnector /*extends BasicConnector */{
         this.htmltext = "";
         this.mdtext = mdtext;
         this.introduction = introduction;
+        this.addTime = addTime;
 
       }
     }
-    var res = [];
-    var article = await Articles.find({origin:"heima"}, null, {sort:{'_id': -1},limit:option.limit,skip:option.skip}, function(err, list){
+    var res = [];//,title:{ $not: /黑马早报/ }
+    var article = await Articles.find({origin:"heima",title:{ $not: /黑马早报/ }}, null, {sort:{'_id': -1},limit:option.limit,skip:option.skip}, function(err, list){
       console.log("db1.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + err);
     //  console.log(list);
     });
@@ -91,12 +91,13 @@ class InformationConnector /*extends BasicConnector */{
     console.log("the content lenth:" + article.length)
     for (var i = 0; i < article.length; i++) {
 
-      if(article[i].title && article[i].title.includes("早报")){
+     /* if(article[i].title && article[i].title.includes("早报")){
          continue;
-      }
+      }*/
       if(article[i].img == null || !article[i].img || article[i].img==""){
          article[i].img = "https://qn2.proflu.cn/%E5%92%A8%E8%AF%A2%E5%B0%81%E9%9D%A2/%E5%92%A8%E8%AF%A2%E5%B0%81%E9%9D%A21.png"
       }
+      console.log("the the  the " + article[i].publishTime);
       if(article[i].origin == "heima" && (article[i].publishTime!=null ||article[i].publishTime) ){
          article[i].publishTime = moment(article[i].publishTime,"YYYY-MM-DD HH:mm").unix() * 1000
       }
@@ -104,7 +105,9 @@ class InformationConnector /*extends BasicConnector */{
         article[i].publishTime = moment().startOf("minute").unix() * 1000
       }
 
-      var info = new Information(article[i].title,article[i].content,article[i].author,article[i].img,article[i].publishTime,article[i].htmltext,article[i].mdtext,article[i].introduction);
+      var addtime = moment(article[i].time).unix() * 1000;
+
+      var info = new Information(article[i].title,"",article[i].author,article[i].img,article[i].publishTime,"",article[i].mdtext,article[i].introduction,addtime);
       var imgs = [];
       var herfs = [];
       var random = Math.floor(Math.random()*10 / 2);//imgs[random]

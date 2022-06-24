@@ -20,6 +20,13 @@ module.exports = {
       return ctx.connector[CONNECTOR_NAME].detailCourse(dirId);
       //var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
       // return temp
+    },
+    detailLitterCourse(root, {
+      id
+    }, ctx) {
+      return ctx.connector[CONNECTOR_NAME].detailLitterCourse(id);
+      //var temp =  ResolverHelper.fetchById("", ctx, CONNECTOR_NAME, MODEL_NAME);
+      // return temp
     }
 
   }

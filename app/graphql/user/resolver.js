@@ -15,6 +15,16 @@ module.exports = {
         }, ctx) {
             return await ResolverHelper.fetchById(id, ctx, CONNECTOR_NAME, MODEL_NAME);
         },
+        mobileLogin(root, {
+            userCheck
+        }, ctx) {
+            return  ctx.connector[CONNECTOR_NAME].mobileLogin(userCheck.token, userCheck.accessToken);
+        },
+        verifyLogin(root, {
+            token
+        }, ctx) {
+            return  ctx.connector[CONNECTOR_NAME].verifyLogin(token);
+        },
         userLogin(root, {
             userInput
         }, ctx) {
@@ -24,14 +34,12 @@ module.exports = {
             option,
             condition
         }, ctx) {
-
             return ResolverHelper.fetchByIds(option, condition, ctx, CONNECTOR_NAME, MODEL_NAME);
         },
         latestClassificationUser(root, {
             category,
             option
         }, ctx) {
-
             return ctx.connector[CONNECTOR_NAME].latestClassificationUser(category , option);
         }
 

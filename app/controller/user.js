@@ -116,8 +116,11 @@ const verify = async ctx => {
  * 修改用户密码
  */
 const updatePwd = async ctx => {
-    let {username,pwd} = ctx.request.body
-
+    let it = ctx.request.body
+    for(var i in it){
+        console.log("what is the i" + i +"===" + it[i])
+    }
+    console.log("what is the username,pwd" +it.length)
     await Users.updateOne(
         {username},
         {pwd}
@@ -157,7 +160,7 @@ const updatePersonal = async ctx => {
             phone,
             email
         }
-    ).then(rel=>{
+    ) .then(rel=>{
         if(rel.n > 0){
             ctx.body = {
                 code: 200,

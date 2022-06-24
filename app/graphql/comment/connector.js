@@ -1,7 +1,6 @@
 'use strict';
 const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
-
 const moment = require('moment');
 const MODEL_NAME = 'Comment';
 class CommentConnector /*extends BasicConnector */{
@@ -67,7 +66,7 @@ class CommentConnector /*extends BasicConnector */{
       return {"status": -1, "msg": "评论添加失败，作者不能为空"}
     }
     if(  !commentInput.category){
-          return {"status": -1, "msg": "评论添加失败，类别不能为空"}
+         return {"status": -1, "msg": "评论添加失败，类别不能为空"}
     }
 
     var comment = await this.ctx.model.Comment.create(

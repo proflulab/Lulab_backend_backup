@@ -14,6 +14,14 @@ input Option {
 input SpeechRequest{
    queryText: String
    userId: String
+   detail: String
+}
+
+
+
+input userCheck{
+    token:String
+    accessToken:String
 }
 
 input UserInput {
@@ -116,6 +124,7 @@ type result {
   status: String!
   msg: String
   data: User
+  token:String
 }
 
 
@@ -124,10 +133,11 @@ type speechResult {
   msg: String
   code: String
   category:String
+  details:String
   detail:String
-  subBreak:[String]
   fields:[String]
-  }
+  subBreak:[String]
+ }
 
 input Condition {
   isDeleted: Boolean

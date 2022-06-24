@@ -9,7 +9,6 @@ module.exports = appInfo => {
       }
     },
     cors: {
-      origin: '*',
       allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     },
     proxyworker: {
@@ -25,7 +24,8 @@ module.exports = appInfo => {
   config.mongoose = {
     //本地环境
     client: {
-      url: 'mongodb://127.0.0.1:27017/test',
+      //url: 'mongodb://127.0.0.1:27017/test',
+        url: 'mongodb://test:123456@192.168.101.14:27017/test',
       options: {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -44,5 +44,11 @@ module.exports = appInfo => {
     }*/
 
   }
+
+  config.jwt = {
+        secret: "lulablll"//这个是加密秘钥，自行添加
+      //  enable:  true
+  };
+
   return config
 }

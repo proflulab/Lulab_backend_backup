@@ -3,10 +3,16 @@ const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
 const moment = require('moment');
 const MODEL_NAME = 'Speech';
-
+const util = require('util');
+const fs = require('fs');
 const dialogflow = require('@google-cloud/dialogflow');
 const intentsClient = new dialogflow.IntentsClient();
 const sessionClient = new dialogflow.SessionsClient();
+
+
+
+
+
 class SpeechConnector /*extends BasicConnector */{
 
   constructor(ctx, model){
@@ -28,7 +34,7 @@ class SpeechConnector /*extends BasicConnector */{
     // The path to identify the agent that owns the created intent.
     const sessionPath = sessionClient.projectAgentSessionPath(
         "newagent-npvt",
-        speechRequest.userId
+         speechRequest.userId
     );
 
     var userName = '';
@@ -56,7 +62,20 @@ class SpeechConnector /*extends BasicConnector */{
         },
     };
 
-    var result ={status:"-1","msg":"程序错误",code:"0","detail":"",subBreak:[],fields:[],category:"0"};
+    //begin
+    /*outputAudioConfig: {
+          audioEncoding: 'OUTPUT_AUDIO_ENCODING_LINEAR_16',
+      },
+    };
+    sessionClient.detectIntent(request).then(responses => {
+    console.log('Detected intent:');
+    const audioFile = responses[0].outputAudio;
+    util.promisify(fs.writeFile)('./test1.wav', audioFile, 'binary');
+    console.log(`Audio content written to file: ./test1.wav`);
+    });
+    //end*/
+
+    var result ={status:"-1","msg":"程序错误",code:"0","detail":"",subBreak:[],fields:[],category:"0",details:""};
     const responses = await sessionClient.detectIntent(request);
     await Promise.all([responses]);
     console.log('Detected intent');
@@ -74,7 +93,7 @@ class SpeechConnector /*extends BasicConnector */{
               var course = await this.ctx.model.MainCourse.find({
                   mode: "2",
                   onlineTime: {$gte: new Date(new Date().getTime() + 1000 * 60 * 60 * 8)}
-              }, null, {sort: {_id: -1}, limit: 1, skip: 0}, function (err, docs) {
+              }, null, {sort: {onlineTime: -1}, limit: 1, skip: 0}, function (err, docs) {
                   /* console.log(docs)
                    console.log(err)*/
               })
@@ -97,7 +116,7 @@ class SpeechConnector /*extends BasicConnector */{
               if(recordHistory != null || recordHistory){
                   result.status=0;
                   result.code = "1";
-                  result.msg = /*userName + "你好，professorLu*/"已为您预约最近直播课,主题为：" + course[0].title + "，时间为"+ moment(parseInt(course[0].onlineTime)).format('MM月DD日 HH时mm分') + ",请及时关注陆向谦实验室微信视频号";
+                  result.msg = /*userName + "你好，professorLu*/"已为您预约最近直播课,主题为：" + course[0].title + "，时间为"+ moment(parseInt(course[0].onlineTime)).format('MM月DD日 HH时mm分') + ",请及时关注陆向谦实验室app通知";
                   return result;
               }
 
@@ -113,26 +132,11 @@ class SpeechConnector /*extends BasicConnector */{
               );
               await Promise.all([record]);
               record = await record;
-
-              var titleIndex = course[0].title != null ?  course[0].title.length : 0;
-              var desIndex = 0;
-              if(course[0].description ){
-                   desIndex = course[0].description.length
-              }else {
-                  course[0].description=""
-              }
-              var timeIndex= 0;
-              if(course[0].onlineTime){
-                  timeIndex = (course[0].onlineTime+ "").length;
-              }else {
-                  course[0].onlineTime=""
-              }
-              console.log(timeIndex+"==iiiii="+desIndex)
-              var subBreak = [titleIndex,titleIndex+timeIndex,titleIndex+timeIndex+desIndex];
-              var detail = course[0].title+course[0].onlineTime+course[0].description;
-              var fields = ["title","onlineTime","description"]
+          //var subBreak = [titleIndex,titleIndex+timeIndex,titleIndex+timeIndex+desIndex];
+              var detail = "{\"title\":"+ course[0].title  + ",\"onlineTime\":" + course[0].onlineTime  + ", \"description\":" + course[0].description  + "}"   // course[0].title+course[0].onlineTime+course[0].description;
+              //var fields = ["title","onlineTime","description"]
               var code = "1";
-              return {code:code,"status": 0,"detail":detail,"fields":fields,"subBreak":subBreak, "msg": /*userName + "你好，professorLu已为您*/"预约最近直播课成功，主题为：" + course[0].title + "，时间为"+ moment(parseInt(course[0].onlineTime)).format('MM月DD日 HH时mm分') + ",请及时关注陆向谦实验室视频号",category:"0"}
+              return {detail:"",code:code,"status": 0,"details":detail,"msg": /*userName + "你好，professorLu已为您*/"预约最近直播课成功，主题为：" + course[0].title + "，时间为"+ moment(parseInt(course[0].onlineTime)).format('MM月DD日 HH时mm分') + ",请及时关注陆向谦实验室app通知",category:"0"}
 
          }
          if(responses[0].queryResult.intent.displayName == 'Query zhibo Course'){
@@ -161,7 +165,7 @@ class SpeechConnector /*extends BasicConnector */{
          if(responses[0].queryResult.intent.displayName == 'Query order record'){
              var recordHistory = await this.ctx.model.OrderRecord.findOne(
                  {   "authorId":speechRequest.userId,
-                     onlineTime: {$gte: new Date(new Date().getTime() + 1000 * 60 * 60 * 8)}
+                      onlineTime: {$gte: new Date(new Date().getTime() + 1000 * 60 * 60 * 8)}
                  }, function (err, docs) {
                      // console.log(docs);
                  }
@@ -178,6 +182,44 @@ class SpeechConnector /*extends BasicConnector */{
                  return result;
              }
          }
+
+         //调大声音
+          if(responses[0].queryResult.intent.displayName == 'Sound Bigger'){
+              result.status = 0;
+              result.msg = responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0];
+              result.code = 3;
+              return result;
+
+          }
+
+          //调小声音
+          if(responses[0].queryResult.intent.displayName == 'Sound Lesser'){
+              result.status = 0;
+              result.msg = responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0];
+              result.code = 4;
+              return result;
+
+          }
+
+          //默认
+          if(responses[0].queryResult.intent.displayName == 'test'){
+              result.status = 0;
+              result.msg = responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0];
+              result.code = 4;
+              return result;
+
+          }
+
+          //咨询
+          if(responses[0].queryResult.intent.displayName == 'Morning Geek News'){
+              result.status = 0;
+              result.msg = responses[0].queryResult.fulfillmentMessages[0]['text']['text'][0];
+              result.code = 2;
+              return result;
+
+          }
+
+
       }
 
 

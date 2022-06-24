@@ -8,7 +8,13 @@ module.exports = app => {
         name: {
             type: String,
             unique: true,
-            required: false,
+            required: true,
+            get: v => v==null ? "" : v,
+        },
+        account :{
+            type: String,
+            unique: true,
+            required: true,
             get: v => v==null ? "" : v,
         },
         sex: {

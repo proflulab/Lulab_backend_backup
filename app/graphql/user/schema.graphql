@@ -16,6 +16,7 @@ enum OnboardingStatus {
 type User {
     _id: ID
     name: String
+    account:String
     sex: String
     birth:String
     position:String

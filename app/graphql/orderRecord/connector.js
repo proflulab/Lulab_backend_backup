@@ -50,7 +50,10 @@ class OrderRecordConnector /*extends BasicConnector */ {
                 temp.onlineTime = course.onlineTime;
                 temp.title = course.title;
                 temp.author = course.author;
-                temp.description = course.notification;
+                temp.description = course.description;
+                temp.coverUrl = course.coverUrl;
+                temp.backgroundUrl = course.imgUrl;
+                temp.videoUrl = course.videoUrl;
                 res.push(temp);
             }
         }
@@ -124,7 +127,7 @@ class OrderRecordConnector /*extends BasicConnector */ {
 
 
         //(moment(Date.now()).format('YYYY-MM-DD HH:mm:ss'))
-        var course =  await this.ctx.model.MainCourse.find({mode: "2", onlineTime: {$gte: new Date(new Date().getTime()+1000*60*60*8)}}, null, {sort:{_id: -1},limit:1,skip :0},function(err,docs){
+        var course =  await this.ctx.model.MainCourse.find({mode: "2", onlineTime: {$gte: new Date(new Date().getTime()+1000*60*60*8)}}, null, {onlineTime:{_id: -1},limit:1,skip :0},function(err,docs){
             console.log(docs)
             console.log(err)
         })

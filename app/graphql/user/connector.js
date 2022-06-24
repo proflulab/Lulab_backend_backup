@@ -1,11 +1,14 @@
 'use strict';
 const DataLoader = require('dataloader');
 const BasicConnector = require('../common/basicConnector');
+var querystring = require('querystring');
 
 const dialogflow = require('@google-cloud/dialogflow');
-
+var UUID = require('uuid');
 // Instantiates a session client
+const crypto = require("crypto");
 
+const request = require('request');
 const moment = require('moment');
 const MODEL_NAME = 'User';
 
@@ -26,6 +29,143 @@ class UserConnector /*extends BasicConnector */ {
         return await this.ctx.model.User.find({
             name: ids
         });
+    }
+
+    async mobileLogin(token, accessToken) {
+
+        var utils = require('../common/utils');
+        //产品密钥ID，产品标识
+        var secretId = "***************************";
+        // 产品私有密钥，服务端生成签名信息使用，请严格保管，避免泄露
+        var secretKey = "***************************";
+        // 业务ID，易盾根据产品业务特点分配
+        var businessId = "***************************";
+        // 一键登录服务端check接口
+        var apiurl = "***************************";
+
+        var resMsg = "";
+        var resCode = "TT";
+
+//请求参数
+        var post_data = {
+            // 1.设置公有有参数
+            secretId: secretId,
+            businessId: businessId,
+            version: "v1",
+            timestamp: new Date().getTime(),
+            nonce: utils.noncer()
+        };
+// 2.设置私有属性
+        post_data.accessToken =accessToken ;
+        post_data.token = token;
+
+        var signature = utils.genSignature(secretKey, post_data);
+        post_data.signature = signature;
+        //http请求结果
+        //
+       // await next();
+        var responseCallback = function (responseData) {
+            var data = JSON.parse(responseData);
+            var code = data.code;
+            var msg = data.msg;
+            // 检测结果
+            if (code == 200) {
+                //console.log("data:" + data);
+                resCode = "0";
+                resMsg =  data["data"]["phone"]
+                for (var i in data){
+                    console.log(i + "===ddd==" + data[i])
+                    if(i == 'data'){
+                         for(var j in data[i]){
+                             console.log(j+ "wwww" + data[i][j])
+                         }
+                    }
+                }
+                return {"msg":"手机无j效22","status":-1}
+            } else {
+                resCode = "-1";
+                resMsg =  msg;
+                //console.log('ERROR:code=' + code + ',msg=' + msg);
+                return {"msg":"手机无www效22","status":-1}
+
+            }
+        }
+        //await next();
+        utils.sendHttpRequest(apiurl, "POST", post_data, responseCallback);
+        var test = await  utils.sendHttpRequestSync(apiurl, "POST", post_data);
+        console.log("the test body"+ test);
+        for(var t in test){
+            console.log(t + "the ttt" + test[t])
+        }
+       // await Promise.all([check]);
+        //check = await  check;
+        //console.log("thes rescoDE" + check)
+
+       // const sleep = () => new Promise((res, rej) => setTimeout(res, 2000));
+
+
+
+        //await sleep();
+
+
+        //return  responseCallback;
+        console.log("the rescode" +resCode )
+        if(resCode != '0'){
+           //return {"msg":"手机无效","status":-1}
+        }
+        var user = await this.ctx.model.User.findOne(
+            {"account": resMsg}, function (err, docs) {
+                console.log(docs);
+            }
+        );
+        await Promise.all([user]);
+        user = await user;
+        if(user != null){
+            var signtoken =  await this.ctx.app.jwt.sign({ id: user._id}, this.ctx.app.config.jwt.secret, { expiresIn: "240h" });
+            return {"msg":msg,"status":resCode,"data":user,token:signtoken}
+        }else{
+
+            var imgs = ["https://qn2.proflu.cn/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F10.png",
+                "https://qn2.proflu.cn/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F8.png",
+                "https://qn2.proflu.cn/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F9.png",
+                "https://qn2.proflu.cn/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F5.png",
+                "https://qn2.proflu.cn/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F5.png",
+                "https://qn2.proflu.cn/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F6.png"];
+            var random = Math.floor(Math.random()*10 / 5);
+            var test = await this.ctx.model.User.create(
+                {
+                    password: '123456',
+                    name: '用户'+ resMsg.substring(7,10),
+                    imgUrl: imgs[random],
+                    addTime   : new Date().toLocaleString(),
+                    timestamp : '' + Date.now()
+                }
+            );
+            await Promise.all([test]);
+            test = await test;
+            var signtoken =  await this.ctx.app.jwt.sign({ id: test._id}, "lulablll", { expiresIn: "720h" });
+
+            return {"status": 0, "msg": "注册成功",token:signtoken,data:test}
+        }
+
+        //注册
+
+      // lsof return {"msg":msg,"status":resCode}
+    }
+
+
+
+    async verifyLogin(token){
+        var decode = await this.ctx.app.jwt.verify(token, "lulablll");
+        // console.log("the decode" + decode)
+        /*for(var i in decode){
+            console.log(i+"===="+"the decode" + decode[i])
+        }*/
+        if(decode && decode.id){
+            return {"status": "0", "msg": "success"}
+        }else {
+            return {"status": "-1", "msg": "fail"}
+        }
     }
 
     fetchByIds(ids) {
@@ -51,7 +191,9 @@ class UserConnector /*extends BasicConnector */ {
         }
 
         if (userInput.password == user.password) {
-            return {"status": 0, "msg": "success", data:user}
+            var signtoken =  await this.ctx.app.jwt.sign({ id: user._id}, this.ctx.app.config.jwt.secret, { expiresIn: "240h" });
+
+            return {"status": 0, "msg": "success",token:signtoken, data:user}
         } else {
             return {"status": 1, "msg": "faile"}
         }
@@ -90,7 +232,8 @@ class UserConnector /*extends BasicConnector */ {
                 name: userInput.name,
                 imgUrl: imgs[random],
                 addTime   : new Date().toLocaleString(),
-                timestamp : '' + Date.now()
+                timestamp : '' + Date.now(),
+                account:userInput.name
             }
         );
         await Promise.all([test]);
@@ -195,7 +338,7 @@ class UserConnector /*extends BasicConnector */ {
 
           }, function (err, docs) {
                    console.log(JSON.stringify(docs)+"err" +"====="+err)
-                   return {"status": 1, "msg": "更新失败"+err}
+                   //return {"status": 1, "msg": "更新失败"+err}
             }
         );
         await Promise.all([user]);
@@ -481,6 +624,10 @@ class UserConnector /*extends BasicConnector */ {
         });
         return result;
     }
+
+
+
+
 }
 
 module.exports = UserConnector;
