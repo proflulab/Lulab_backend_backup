@@ -26,7 +26,7 @@ class GeekParkSpider {
         var MongoClient = require('mongodb').MongoClient;
         // 数据库cars
         //var DB_CONN_STR = 'mongodb://127.0.0.1:27017/test';
-        var DB_CONN_STR = 'mongodb://test:123456@192.168.101.14:27017/test';
+        var DB_CONN_STR = 'mongodb://test:123456@192.168.101.3:27017/test';
         
         //语音合成
         var AipSpeechClient = require("baidu-aip-sdk").speech;
@@ -102,8 +102,6 @@ class GeekParkSpider {
                         //console.log(result);
                     });
                 });
-
-
             })
 
         });
