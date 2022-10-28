@@ -1,59 +1,18 @@
 type Query {
-  # User
-  usersAdmin(option: Option!, condition: Condition): [User]
-  userAdmin(id: ID!): User
-  #userLogin(userLoginPayload: UserLoginPayload!): User!
-  userRich(id: ID!): User!
-  userLogin(userInput: UserInput!): result
-  latestClassificationUser(category: String , option: Option):[User]
+  # user
+  user: [User!]
+  # orderInfo
+  orderInfo: OrderInfo!
 
+  # qiniu
+  qiniu: Qiniu!
 
-  # userByToken(clientType: String!, accessToken: String!): User!
+  #login(登陆接口)
+  login(mobile: String!, password: String!): Return!
 
-  circles(option: Option!, condition: Condition): [Circle!]
-  circle(id: ID!): Circle!
+  #发送验证码
+  sendcode(mobile: String!): Res!
 
-  latestCourse(option: Option!): [Course]
-  latestMainCourse(option: Option!): [MainCourse]
-  latestDirectCourse(mode : String!,  authorId: String, option: Option!): [MainCourse]
-  latestInformation(option: Option!): [Information]
-  latestGeekInformation(option: Option!): [Information]
-  detailMainCourse(courseId: String!): MainCourse
-
-  #speech
-  speechGoogle(speechRequest: SpeechRequest): speechResult
-  mobileLogin(userCheck: userCheck!): result
-
-
-  #Latestcomment
-  latestComment(entityId: String!, category: String, option :Option!): [Comment]
-
-  #detailCourse
-  detailCourse(dirId: String): [Course]
-
-  #detailCourse
-  detailLitterCourse(id: String): Course
-
-
-  #mobilelog
-  latestMobileLog(userId: String!,option :Option!): [MobileLog]
-
-  #growth
-  latestUserGrowth(userId: String!,option :Option!): [Growth]
-
-
-  #training
-  latestTraining(option :Option!): [Training]
-  verifyLogin(token:String!):result
-
-  #orderrecord
-  latestRecord(authorId: String!,option :Option!): [OrderRecord]
-  latestUserCourseRecord(authorId: String!, courseId: String!): result
-
-  #manager
-  queryManager(option :Option!): [Manager]
-
-  #courseclassification
-  queryCourseClassification(option :Option!): [CourseClassification]
-
+  #校验验证码
+  checkcode(mobile: String!,code: String!): Res!
 }

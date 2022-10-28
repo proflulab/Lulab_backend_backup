@@ -1,12 +1,1 @@
 scalar Date
-scalar Number
-
-type SubDepartment {
-	name: String
-}
-
-type Department {
-	name: String
-	location: String
-	subDepartments: [SubDepartment]
-}

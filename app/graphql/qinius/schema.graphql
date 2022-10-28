@@ -1,0 +1,6 @@
+type Qiniu  {
+  v: String,
+}
+
+
+

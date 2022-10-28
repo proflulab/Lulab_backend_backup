@@ -1,6 +1,0 @@
-
-type Speech {
-	requestText: String
-	userId: String
-    responseText: String
-}

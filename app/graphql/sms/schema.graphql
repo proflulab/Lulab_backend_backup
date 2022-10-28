@@ -1,0 +1,15 @@
+# user
+type Res {
+  status: String,
+  msg: String,
+}
+
+# type User {
+#   username: String,
+#   dsc: String,
+#   updatedAt: Int,
+# }
+
+
+
+

@@ -1,8 +1,0 @@
-
-type CourseClassification {
-	_id: ID
-	title: String
-	mode: String
-	addTime   : Date
-	timestamp :String
-}

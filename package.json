@@ -1,57 +1,57 @@
 {
-  "name": "egg-graphql",
+  "name": "lulab_backend",
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "egg": {
+    "declarations": true
+  },
   "dependencies": {
-    "@google-cloud/dialogflow": "^4.7.0",
-    "cheerio": "^1.0.0-rc.10",
-    "dataloader": "^1.4.0",
-    "egg": "^2.2.1",
-    "egg-cors": "^2.1.2",
-    "egg-graphql": "^2.3.0",
-    "egg-jsonp": "^2.0.0",
+    "@alicloud/pop-core": "^1.7.12",
+    "alipay-mobile": "^4.0.2",
+    "crypto": "^1.0.1",
+    "dataloader": "^2.1.0",
+    "egg": "^3",
+    "egg-cors": "^2.2.3",
+    "egg-graphql": "^2.8.0",
     "egg-jwt": "^3.1.7",
     "egg-mongoose": "^3.3.1",
-    "egg-scripts": "^2.5.0",
-    "egg-sequelize": "^4.3.0",
-    "egg-validate": "^2.0.2",
-    "lodash": "^4.17.11",
-    "mysql2": "^1.6.4",
-    "request": "^2.88.2"
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2",
+    "koa-xml-body": "^2.2.0",
+    "nodemailer": "^6.8.0",
+    "qiniu": "^7.7.0",
+    "redis": "^4.3.1"
   },
   "devDependencies": {
-    "autod": "^3.0.1",
-    "autod-egg": "^1.0.0",
-    "egg-bin": "^5.1.1",
-    "egg-ci": "^1.8.0",
-    "egg-mock": "^3.14.0",
-    "eslint": "^4.11.0",
-    "eslint-config-egg": "^6.0.0",
-    "webstorm-disable-index": "^1.2.0"
+    "egg-bin": "^5",
+    "egg-ci": "^2",
+    "egg-mock": "^5",
+    "eslint": "^8",
+    "eslint-config-egg": "^12"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-egg-graphql",
-    "stop": "egg-scripts stop --title=egg-server-egg-graphql",
+    "start": "egg-scripts start --daemon --title=egg-server-lulab_backend",
+    "stop": "egg-scripts stop --title=egg-server-lulab_backend",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "ci": "npm run lint && npm run cov"
   },
   "ci": {
-    "version": "8"
+    "version": "16, 18",
+    "type": "github"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
-  "author": "",
+  "author": "lulab",
   "license": "MIT"
 }
