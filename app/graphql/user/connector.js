@@ -34,9 +34,26 @@ class LaunchConnector {
     return tag
   }
 
+  //用户登陆
   async login(mobile, password) {
     const { ctx, app } = this;
     return await ctx.service.user.login(mobile, password);
+  }
+
+  //退出登陆
+  async logOut() {
+    const { ctx, app } = this;
+    const token = ctx.request.header['authorization'].replace(/^Bearer\s/, '');
+    
+     //const res = await ctx.service.jwt.getUserIdFromToken(token);
+    
+     return await ctx.service.user.logOut(token);
+     
+
+    // return {
+    //   status: "100",
+    //   msg: "退出登陆成功",
+    // }
   }
 
 }

@@ -1,0 +1,9 @@
+type GoodRes {
+  title: String,
+  # 价格
+  price: Float,
+}
+
+
+
+

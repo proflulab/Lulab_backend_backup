@@ -78,7 +78,7 @@ class JwtService extends Service {
   async getUserIdFromToken(token, isRefresh = false) {
     await this.verifyToken(token, isRefresh);
     const res = await this.app.jwt.decode(token);
-    return res.uid;
+    return res;
   }
 
   async reToken(token) {

@@ -7,7 +7,10 @@ module.exports = {
     },
     login(root, { mobile, password }, ctx) {
       return ctx.connector.user.login(mobile, password);
-    }
+    },
+    logOut(root, { }, ctx) {
+      return ctx.connector.user.logOut();
+    },
   },
   Mutation: {
     adduser(root, {

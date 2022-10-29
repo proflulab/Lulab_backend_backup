@@ -89,8 +89,8 @@ module.exports = appInfo => {
 
   // 阿里云配置
   config.ali = {
-    accessKeyId: 'LTAI5tDykLsugqAXbrHahVdh',
-    accessKeySecret: 'fqcBmMY6pNkyeb8sTVZYax2RRMRBzA',
+    accessKeyId: '----------',
+    accessKeySecret: '----------',
     endpoint: 'https://dysmsapi.aliyuncs.com',
     apiVersion: '2017-05-25'
   };
@@ -98,8 +98,8 @@ module.exports = appInfo => {
 
   // 七牛云配置
   config.qiniu = {
-    AccessKey: 'KFqF5HyG8JWMqjam7WpeMBHgO2247c6G1RLdVYFC',// 七牛云Access_Key
-    SecretKey: '8tA-YoXCJIeuIahlceuTLfQno9VkkpAZuzwlvmTB',// 七牛云SecretKey
+    AccessKey: '----------',// 七牛云Access_Key
+    SecretKey: '----------',// 七牛云SecretKey
   };
 
   // add your user config here

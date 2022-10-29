@@ -35,8 +35,8 @@ module.exports = options => {
             var chektList = true;
             //todo: 校验Uid权限,如Uid无权限，则拒绝访问。
             if (chekToken) {
-              var uid = await ctx.service.jwt.getUserIdFromToken(retoken);
-              console.log(uid);
+              var res = await ctx.service.jwt.getUserIdFromToken(retoken);
+              console.log(res.uid);
 
             }
 
@@ -48,16 +48,33 @@ module.exports = options => {
 
 
             return next()
+          case 'logOut':
+            var retoken = await ctx.service.jwt.reToken(token);
+            //校验token,如果无法通过，则拒绝访问
+            var chekToken = await ctx.service.jwt.verifyToken(retoken);
+            if (chekToken) {
+              var res = await ctx.service.jwt.getUserIdFromToken(retoken);
+              console.log(res.uid);
+            }
+            var chektAuth = true;
+            if (!chekToken) return;
+            return next()
 
           // 不需要auth check的API
           case 'login':
             return next()
-          case 'other':
+          case 'sendcode':
             return next()
+          case 'checkcode':
+            return next()
+
           default:
+            return next()
         }
 
       //预留给resful接口做权限管理
+      case '/graphql?':
+        return next()
       case '/other':
         return
       default:

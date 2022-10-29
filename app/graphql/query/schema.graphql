@@ -1,6 +1,8 @@
 type Query {
+
   # user
   user: [User!]
+
   # orderInfo
   orderInfo: OrderInfo!
 
@@ -15,4 +17,10 @@ type Query {
 
   #校验验证码
   checkcode(mobile: String!,code: String!): Res!
+
+  #退出登陆
+  logOut: Res!
+
+  #获取商品信息
+  goodInfo(number: Int!): GoodRes!
 }
