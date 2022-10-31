@@ -46,11 +46,11 @@ class JwtService extends Service {
   async verifyToken(token, isRefresh = false) {
     if (!token) {
       this.ctx.response.body = {
-        error: "Fail to auth request due to exception: " + e,
-        code: 100
+        error: 'Fail to auth request due to exception: ' + e,
+        code: 100,
       };
       return false;
-      //throw new AuthException();
+      // throw new AuthException();
 
     }
     const secret = isRefresh ? this.app.config.jwt.refresh_secret : this.app.config.jwt.secret;
@@ -59,18 +59,18 @@ class JwtService extends Service {
     } catch (e) {
       if (e.message === 'jwt expired' && !isRefresh) {
         this.ctx.response.body = {
-          error: "Fail to auth request due to exception: " + e,
-          code: 100
+          error: 'Fail to auth request due to exception: ' + e,
+          code: 100,
         };
         return false;
-        //throw new AuthException('令牌过期', 10003);
+        // throw new AuthException('令牌过期', 10003);
       }
       this.ctx.response.body = {
-        error: "Fail to auth request due to exception: " + e,
-        code: 100
+        error: 'Fail to auth request due to exception: ' + e,
+        code: 100,
       };
       return false;
-      //throw new AuthException();
+      // throw new AuthException();
     }
     return true;
   }
@@ -83,9 +83,9 @@ class JwtService extends Service {
 
   async reToken(token) {
     if (token === undefined) {
-      ctx.response.body = { message: '令牌为空，请登陆获取！' }
-      ctx.status = 401
-      return
+      ctx.response.body = { message: '令牌为空，请登陆获取！' };
+      ctx.status = 401;
+      return;
     }
     return token.replace(/^Bearer\s/, '');
   }

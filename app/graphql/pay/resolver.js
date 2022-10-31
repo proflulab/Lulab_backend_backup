@@ -2,8 +2,8 @@
 
 module.exports = {
   Query: {
-    orderInfo(root, {}, ctx) {
-      return ctx.connector.alipay.fetchAll();
-    }
-  }
-}
+    orderInfo(root, { number }, ctx) {
+      return ctx.connector.pay.fetchAll(number);
+    },
+  },
+};

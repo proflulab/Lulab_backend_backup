@@ -9,12 +9,12 @@ module.exports = {
 
   mongoose: {
     enable: true,
-    package: "egg-mongoose"
+    package: 'egg-mongoose',
   },
 
   cors: {
     enable: true,
-    package: "egg-cors",
+    package: 'egg-cors',
   },
 
   graphql: {
@@ -24,7 +24,7 @@ module.exports = {
 
   jwt: {
     enable: true,
-    package: "egg-jwt"
+    package: 'egg-jwt',
   },
 
   redis: {

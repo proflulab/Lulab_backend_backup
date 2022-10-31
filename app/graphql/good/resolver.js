@@ -19,4 +19,4 @@ module.exports = {
   //     return ctx.connector.user.add(username);
   //   },
   // }
-}
+};

@@ -2,6 +2,9 @@
 
 const DataLoader = require('dataloader');
 
+
+const GenId = require('../../extend/IdGenerator.js');
+
 class LaunchConnector {
   constructor(ctx) {
     this.ctx = ctx;
@@ -16,27 +19,36 @@ class LaunchConnector {
     // });
   }
 
-  async fetchAll() {
-    //return await this.ctx.controller.default.aliPay.pay_app();
-    let date = (new Date()).getTime();
-    // 此处为模拟数据
-    let data = {
+  async fetchAll(number) {
+
+    const genid = new GenId({ WorkerId: 1 });
+    const out_trade_no = genid.NextId();
+    const corrs = await this.ctx.model.Good.findOne({ goods_number: number });
+    if (!corrs) {
+      return { v: '找不到该商品' };
+    }
+    const data = {
       body: '实验室课程会员',
-      subject: '实验室课程会员',
-      out_trade_no: date.toString(),
-      total_amount: '0.1',
+      subject: corrs.title,
+      out_trade_no: out_trade_no.toString(),
+      total_amount: corrs.price.toString(),
       timeout_express: '30m',
       // goods_type: '0',
-    }
-    let res = await this.ctx.service.pay.doPay_app(data);
-    console.log("-------------------------------------------------------");
-    console.log(res);
-    //assert(result.code == 0, result.message)
-    var a = { v: res }
-    return a;
+    };
 
 
+    const order = this.ctx.model.Order({
+      title: corrs.title,
+      goods_id: corrs._id,
+      price: corrs.price,
+      orderNumber: out_trade_no,
+    });
 
+    await order.save();
+
+    const res = await this.ctx.service.pay.doPay_app(data);
+
+    return { v: res };
   }
 
 }

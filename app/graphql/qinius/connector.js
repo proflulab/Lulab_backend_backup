@@ -19,27 +19,27 @@ class LaunchConnector {
   }
 
   async fetchAll() {
-    let res = await this.ctx.service.qiniu.qiniu_upload();
-    var result = { v: res }
+    const res = await this.ctx.service.qiniu.qiniu_upload();
+    const result = { v: res };
     return result;
   }
 
   async fetchDown() {
 
-    var accessKey = this.config.qiniu.AccessKey;
-    var secretKey = this.config.qiniu.SecretKey;
-    console.log("-------------------------------------------------------1");
-    var mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
-    //自定义凭证有效期（示例2小时，expires单位为秒，为上传凭证的有效时间）
+    const accessKey = this.config.qiniu.AccessKey;
+    const secretKey = this.config.qiniu.SecretKey;
+    console.log('-------------------------------------------------------1');
+    const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
+    // 自定义凭证有效期（示例2小时，expires单位为秒，为上传凭证的有效时间）
     console.log(mac);
-    var options = {
-      scope: "shimingy",
-      expires: 7200
+    const options = {
+      scope: 'shimingy',
+      expires: 7200,
     };
-    var putPolicy = new qiniu.rs.PutPolicy(options);
-    var uploadToken = putPolicy.uploadToken(mac);
+    const putPolicy = new qiniu.rs.PutPolicy(options);
+    const uploadToken = putPolicy.uploadToken(mac);
 
-    var a = { v: uploadToken }
+    const a = { v: uploadToken };
     return a;
 
   }

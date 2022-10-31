@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  Date: require('./scalars/date')
-}
+  Date: require('./scalars/date'),
+};

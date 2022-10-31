@@ -11,8 +11,8 @@ class LaunchConnector {
   }
 
   async fetch(ids) {
-    return await this.ctx.model.User.find(null, null, { limit: 4 }, function (err, docs) {
-      //console.log(docs);
+    return await this.ctx.model.User.find(null, null, { limit: 4 }, function(err, docs) {
+      // console.log(docs);
     });
   }
 
@@ -23,9 +23,8 @@ class LaunchConnector {
 
   }
 
-   
 
-  //获取商品信息
+  // 获取商品信息
   async goodInfo(number) {
     const { ctx, app } = this;
     return await ctx.service.good.goodInfo(number);

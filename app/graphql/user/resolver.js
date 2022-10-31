@@ -5,8 +5,11 @@ module.exports = {
     user(root, { }, ctx) {
       return ctx.connector.user.fetchAll();
     },
-    login(root, { mobile, password }, ctx) {
+    loginPassword(root, { mobile, password }, ctx) {
       return ctx.connector.user.login(mobile, password);
+    },
+    loginOne_click(root, { mobile, accessCode, outId }, ctx) {
+      return ctx.connector.user.login(mobile, accessCode, outId);
     },
     logOut(root, { }, ctx) {
       return ctx.connector.user.logOut();
@@ -14,9 +17,9 @@ module.exports = {
   },
   Mutation: {
     adduser(root, {
-      username
+      username,
     }, ctx) {
       return ctx.connector.user.add(username);
     },
-  }
-}
+  },
+};

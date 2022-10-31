@@ -1,25 +1,23 @@
 type Query {
+  verifySend(mobile: String!, area: Int!): Res!
+  #验证码相关
+  verifyCheck(mobile: String!, code: String!): Res!
+
+  loginOne_click(mobile: String!, accessCode: String!, outId: String!): Return!
+  loginPassword(mobile: String!, password: String!): Return!
+  #登陆注册
+  logOut: Res!
 
   # user
   user: [User!]
 
-  # orderInfo
-  orderInfo: OrderInfo!
+  # 获取支付信息
+  orderInfo(number: Int!): OrderInfo!
 
-  # qiniu
+  # 七牛云
   qiniu: Qiniu!
 
-  #login(登陆接口)
-  login(mobile: String!, password: String!): Return!
-
-  #发送验证码
-  sendcode(mobile: String!): Res!
-
-  #校验验证码
-  checkcode(mobile: String!,code: String!): Res!
-
   #退出登陆
-  logOut: Res!
 
   #获取商品信息
   goodInfo(number: Int!): GoodRes!

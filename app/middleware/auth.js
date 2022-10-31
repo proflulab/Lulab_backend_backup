@@ -1,5 +1,5 @@
 const { countReset, count } = require('console');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 module.exports = options => {
   return async function auth(ctx, next) {
@@ -11,29 +11,29 @@ module.exports = options => {
     const operationName = ctx.request.body.operationName;
 
     // 获取token
-    let token = ctx.request.header['authorization']
+    const token = ctx.request.header.authorization;
 
-    //console.log(operationName + "_" + url);
+    console.log(operationName + '_' + url);
 
     switch (url) {
 
       case '/graphql':
-        //开启 GraphiQL IDE 调试时，所有的请求放过
+        // 开启 GraphiQL IDE 调试时，所有的请求放过
         if (ctx.app.config.graphql.graphiql) {
-          await next()
-          return
+          await next();
+          return;
         }
 
         switch (operationName) {
 
           case 'qiniu':
             var retoken = await ctx.service.jwt.reToken(token);
-            //校验token,如果无法通过，则拒绝访问
+            // 校验token,如果无法通过，则拒绝访问
             var chekToken = await ctx.service.jwt.verifyToken(retoken);
 
-            //todo: 校验token黑名单(或白名单)，利用Redis进行缓存,如token被拉入黑名单(或白名单)，则拒绝访问。
+            // todo: 校验token黑名单(或白名单)，利用Redis进行缓存,如token被拉入黑名单(或白名单)，则拒绝访问。
             var chektList = true;
-            //todo: 校验Uid权限,如Uid无权限，则拒绝访问。
+            // todo: 校验Uid权限,如Uid无权限，则拒绝访问。
             if (chekToken) {
               var res = await ctx.service.jwt.getUserIdFromToken(retoken);
               console.log(res.uid);
@@ -47,10 +47,10 @@ module.exports = options => {
             if (!chektAuth) return ctx.response.body = { message: '该用户没有访问权限' };
 
 
-            return next()
+            return next();
           case 'logOut':
             var retoken = await ctx.service.jwt.reToken(token);
-            //校验token,如果无法通过，则拒绝访问
+            // 校验token,如果无法通过，则拒绝访问
             var chekToken = await ctx.service.jwt.verifyToken(retoken);
             if (chekToken) {
               var res = await ctx.service.jwt.getUserIdFromToken(retoken);
@@ -58,29 +58,29 @@ module.exports = options => {
             }
             var chektAuth = true;
             if (!chekToken) return;
-            return next()
+            return next();
 
           // 不需要auth check的API
           case 'login':
-            return next()
+            return next();
           case 'sendcode':
-            return next()
+            return next();
           case 'checkcode':
-            return next()
+            return next();
 
           default:
-            return next()
+            return next();
         }
 
-      //预留给resful接口做权限管理
+      // 预留给resful接口做权限管理
       case '/graphql?':
-        return next()
+        return next();
       case '/other':
-        return
+        return;
       default:
-        return next()
+        return next();
 
     }
 
-  }
-}
+  };
+};

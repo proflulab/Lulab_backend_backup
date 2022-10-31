@@ -17,5 +17,5 @@ module.exports = new GraphQLScalarType({
       return parseInt(ast.value, 10);
     }
     return null;
-  }
-})
+  },
+});

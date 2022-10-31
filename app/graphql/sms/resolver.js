@@ -2,12 +2,12 @@
 
 module.exports = {
   Query: {
-    sendcode(root, { mobile }, ctx) {
-      return ctx.connector.sms.sendcode(mobile);
+    verifySend(root, { mobile, area }, ctx) {
+      return ctx.connector.sms.verifySend(mobile, area);
     },
-    checkcode(root, { mobile, code }, ctx) {
-      return ctx.connector.sms.checkcode(mobile, code);
+    verifyCheck(root, { mobile, code }, ctx) {
+      return ctx.connector.sms.verifyCheck(mobile, code);
     },
   },
 
-}
+};

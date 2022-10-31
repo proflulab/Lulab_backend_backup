@@ -22,43 +22,42 @@ class LaunchConnector {
   }
 
 
-  async sendcode(mobile) {
+  async verifySend(mobile, area) {
     const { ctx, app } = this;
-    const code = ctx.helper.rand(4);
+    const code = ctx.helper.rand(6);
     await ctx.service.sms.alisms(mobile, code);
-    await ctx.service.cache.set("mobilecode" + mobile, code, 1000);
+    await ctx.service.cache.set('mobileVerify' + mobile, code, 60);
 
     return {
-      status: "String",
-      msg: "String",
-    }
+      status: 'String',
+      msg: 'String',
+    };
   }
 
-  async checkcode(mobile, code) {
+  async verifyCheck(mobile, code) {
     const { ctx, app } = this;
-    const getcode = await ctx.service.cache.get("mobilecode" + mobile);
+    const getcode = await ctx.service.cache.get('mobileVerify' + mobile);
     console.log(getcode);
     if (getcode != code || getcode == undefined) {
       return {
-        status: "101",
-        msg: "登陆失败",
-      }
-    };
-    
-    const corr = await ctx.model.User.findOne({ mobile: mobile });
+        status: '101',
+        msg: '登陆失败',
+      };
+    }
+
+    const corr = await ctx.model.User.findOne({ mobile });
     if (!corr) {
-      await this.ctx.model.User.insertMany([{ mobile: mobile }]);
+      await this.ctx.model.User.insertMany([{ mobile }]);
       this.ctx.body = '注册成功';
     } else {
       this.ctx.body = '该用户名已注册';
       return {
-        status: "101",
-        msg: "登陆成功",
-      }
+        status: '101',
+        msg: '登陆成功',
+      };
     }
 
   }
-
 
 
 }
