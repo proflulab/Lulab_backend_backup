@@ -32,6 +32,29 @@ class SmsService extends Service {
   }
 
 
+  //发送验证码
+  async verifySend(mobile, area) {
+    const { ctx, app } = this;
+    const code = ctx.helper.rand(6);
+    await this.alisms(mobile, code);
+    await ctx.service.cache.set('mobileVerify' + mobile, code, 60);
+    return {
+      status: '100',
+      msg: '发送成功',
+    };
+  }
+
+  //校验验证码
+  async verifyCheck(mobile, code) {
+    const { ctx, app } = this;
+    const getcode = await ctx.service.cache.get('mobileVerify' + mobile);
+    if (getcode == code) {
+      return true
+    }
+    return false
+  }
+
+
   // 发送邮件
   async sendEmail() {
     const { app, ctx } = this;

@@ -24,14 +24,8 @@ class LaunchConnector {
 
   async verifySend(mobile, area) {
     const { ctx, app } = this;
-    const code = ctx.helper.rand(6);
-    await ctx.service.sms.alisms(mobile, code);
-    await ctx.service.cache.set('mobileVerify' + mobile, code, 60);
+    return await ctx.service.sms.verifySend(mobile);
 
-    return {
-      status: 'String',
-      msg: 'String',
-    };
   }
 
   async verifyCheck(mobile, code) {
@@ -41,7 +35,7 @@ class LaunchConnector {
     if (getcode != code || getcode == undefined) {
       return {
         status: '101',
-        msg: '登陆失败',
+        msg: '校验失败',
       };
     }
 

@@ -1,8 +1,11 @@
 type Query {
-  verifySend(mobile: String!, area: Int!): Res!
+  
   #验证码相关
-  verifyCheck(mobile: String!, code: String!): Res!
+  verifySend(mobile: String!, area: Int!): Res!
 
+  #verifyCheck(mobile: String!, code: String!): Res!
+
+  loginCaptcha(mobile: String!, area: Int!,code: Int!): Return!
   loginOne_click(mobile: String!, accessCode: String!, outId: String!): Return!
   loginPassword(mobile: String!, password: String!): Return!
   #登陆注册
