@@ -1,4 +1,25 @@
+type Category {
+  _id:String,
+  title: String,
+}
 
+
+type Course {
+  _id: String,
+  createdAt: String,
+  title: String,
+  author: String,
+  description: String,
+}
+
+type CourseDetail {
+  _id: String,
+  title: String,
+}
+
+type Link {
+  link: String,
+}
 
 
 

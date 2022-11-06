@@ -4,14 +4,11 @@ module.exports = app => {
 
     const d = new Date();
 
-    const CourseSchema = new Schema({
+    const CourseCategorySchema = new Schema({
         title: { type: String },
-        mode: { type: Number },
-        sort:{ type: Number },
-        author: { type: String },
+        sort: { type: Number },
         description: { type: String },
         status: { type: Number, default: 1 },
-        category_id:{ type: Schema.Types.ObjectId },
         createdAt: {
             type: Number,
             default: d.getTime(),
@@ -23,10 +20,10 @@ module.exports = app => {
     });
 
 
-    const Course =mongoose.model('Course', CourseSchema, 'course');
+    const CourseCategory = mongoose.model('CourseCategory', CourseCategorySchema, 'coursecategory');
 
-    initUserData(Course);
-    return Course;
+    initUserData(CourseCategory);
+    return CourseCategory;
 };
 
 
@@ -38,16 +35,14 @@ function initUserData(User) {
             console.log('创建用户失败');
         } else if (!doc.length) {
             new User({
-                title: '测试课程',
-                mode: 1,
-                sort: 1,
-                author: '陆向谦',
-                description: '课程描述',
-                category_id:'6362d1e02bbfd16b331657ca',
+                title: '理论课程',
+                sort:1,
                 createdAt: Date.now(),
             }).save();
         } else {
-            console.log('-------------创建主课成功--------------');
+            console.log('-------------创建分类成功--------------');
         }
     });
 }
+
+

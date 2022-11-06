@@ -21,14 +21,14 @@ class QiniuService extends Service {
     return uploadToken;
   }
 
-  async qiniu_Down() {
+  async qiniuDown(name, seconds) {
     const qn = this.config.qiniu;
     const mac = new qiniu.auth.digest.Mac(qn.AccessKey, qn.SecretKey);
     const config = new qiniu.conf.Config();
     const bucketManager = new qiniu.rs.BucketManager(mac, config);
     const privateBucketDomain = 'https://qn.proflu.cn';
-    const deadline = parseInt(Date.now() / 1000) + 100; // 1小时过期
-    const privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, '2022-09-13 03:38:21.439054', deadline);
+    const deadline = parseInt(Date.now() / 1000) + seconds; // 1小时过期
+    const privateDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, name, deadline);
     return privateDownloadUrl;
   }
 }
