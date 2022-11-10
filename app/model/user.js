@@ -17,6 +17,7 @@ module.exports = app => {
     },
     mobile: { type: String },
     email: { type: String },
+    profile:{ type: String },
     status: { type: Number, default: 1 },
     createdAt: {
       type: Number,

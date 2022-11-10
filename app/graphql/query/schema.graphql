@@ -19,6 +19,9 @@ type Query {
   courseLink(detail_id: String!):Link!
 
 
+  # 获取支付信息
+  reToken(token: String!): Token! 
+
 
   # user
   user: [User!]

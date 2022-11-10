@@ -17,6 +17,9 @@ module.exports = {
     logOut(root, { }, ctx) {
       return ctx.connector.user.logOut();
     },
+    // userEdit(root, { }, ctx) {
+    //   return ctx.connector.user.userEdit();
+    // },
   },
   Mutation: {
     // adduser(root, {

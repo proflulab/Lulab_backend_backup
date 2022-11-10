@@ -62,9 +62,9 @@ module.exports = appInfo => {
   };
 
   config.jwt = {
-    expire: 7200,
+    expire: 7200,//2小时
     secret: '123456',
-    refresh_expire: 259200,
+    refresh_expire: 259200,//3天
     refresh_secret: 'b2ce49e4a541068c',
     ignore: ['/api/registered', '/api/login'], // 哪些请求不需要认证
     // expiresIn: '24h',
@@ -93,7 +93,7 @@ module.exports = appInfo => {
     apiVersion: '2017-05-25',
   };
 
-  // 支付宝支付的配置
+  // 支付宝支付配置
   exports.aliPayOptions = {
     app_id: '2021000121657681',
     appPrivKeyFile: 'MIIEowIBAAKCAQEAjvt+IIkyyaQMA+gucXL8BBW8rKtcjt8hsQ4ECKSd7ehnqoODnjobSUVPjXvUfEJFy0YnEaNvM6C+AvuVPWZVhgcJ8XJMFv2k/nirLn9+YraU8dsCouklFROVJdV54tunhkK9x5ZVF5ExEabfqMUe3BOT2zbAJS5HBQPNT594S++MsKpaaLc+0YAjMt7WmzflzRWYHO+xP2cDe7LwlWonU8chNy/QsTToO7AKuoOZJdBzQuhiP7kuvKK1ZgByCRKCLA/00wOxzJt0G2d2bYeD8Mtd2NG/iNxHJrNUh6TNRR5Eac/5UpN7t5XjeJHjCDLMj3NbQz6XFVCn3EtA6LO+fwIDAQABAoIBAHgcAZa5SeWjHcjGaQU6T0PrMqRmCwmlnPrLyE2uY1Bv822ErrLjIvrI84vpotSDI3gfxUAG56oZ9KQyzOpYJa3CCfM+TXbeuZRer4YO6Y9oyvPkQ3GwokrzOU4f5xTP6glZ1Wxs96wldm/am3V9qW+8Lm9urbhOCLDIwdaKIpa+L3glL49QJIj8wJTwbRMzXUX0K5elr0EZ1tv+lW4EWtE8tN/wXDGPIJKvQrx6RUp2SJBo3biJdwVGK1gpHiiAtTovrBN4Lh8owPX4/ErkXRMjb9vgBjv/flm1/gdq/YjgoCDwthfUTDsYnNNBF+IgYFEVXnF0uRKSaHIykgE0G8kCgYEA2aZ7wRIjv1qeJCAu+ZX+8340moLBYNHEXP8kLyLS7S/26a3Z5lZPsky6u/Ueni8hrDCU6/dsYq8FZxeopHyJeH9ogMxJtcP1hgDZ6Q+KE7z+A/2NCGpK5f6RUCPl94zdOWGEjKnvsGzIuhyk8uYhxzI+nbry+JsF0E4W1PEFs7UCgYEAqCz5tLOVX2ILZd02EGyH6DTqXgWvOUWd0IArLo3O/c/V3JGjuD8QL5sGfNvsikLgQkM0m7asTVqlhQknC6b/24S0tGavHVOgWqbFb3ojcFNYhwaaWIJTtXAwTaimZ1PsbQQT6DyBYiNxqaCIcLAPRT1pC+aX4K3ms+ohvwOY8eMCgYEAsMIsLxh0P6twUxZwD/JpI4aTYghe1CqHtp7e3AkEE+yoMg8mr5HZF4yI+qyPORg92IF78Eb4lwxc7uSf6TXazylpzXAbTKrgcvut/UDJek46XTNFnlf0i+S6TsNYuDqGT1uLMlGwfy9ZtQweScXsGMINaDuzp4L+rbU9haJYZyECgYAhOom4F4ebCg9AeD3XbupHijUIkMz3Xvb4nGprz18nrSoPY8NagzNahKH6h6WsB9yxmv/JCIXw3sk3iQBq//srz4O45VUSUVSstKjsBtD7v6wNOdPDSzTo85rHrVv7rIxZWeXpDBNwZZpurqZmxZKu1pxr2osFvLaJs+gpCrfsiwKBgB/41GBnFzgCmQKM8f3B/A5nuiPMppkynBlZXteZEc5H1NqRuN0B/Qtghp/D/UTbKAF4rQmist/GyBO4s16vyiT6nmLEMGx/4dlKytge/FCZw9JRa4+/THtT/kXX7Z+RLIlUuNYrs7RZFRl91NVxBHS6yQzmW+Am0RQ0pbyy6pDn',

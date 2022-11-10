@@ -1,0 +1,7 @@
+type Token  {
+  token: String,
+  refresh_token: String,
+}
+
+
+

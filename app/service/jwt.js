@@ -36,7 +36,10 @@ class JwtService extends Service {
 
   async refreshToken(refreshToken) {
     const userId = await this.getUserIdFromToken(refreshToken, true);
-    const token = await this.createToken(userId, this.app.config.jwt.secret, this.app.config.jwt.expire);
+    if (!userId) {
+      return false;
+    }
+    const token = await this.createToken(userId.uid, this.app.config.jwt.secret, this.app.config.jwt.expire);
     return {
       token,
       refresh_token: refreshToken,
@@ -46,12 +49,11 @@ class JwtService extends Service {
   async verifyToken(token, isRefresh = false) {
     if (!token) {
       this.ctx.response.body = {
-        error: 'Fail to auth request due to exception: ' + e,
+        error: 'Fail to auth request due to exception: ',
         code: 100,
       };
       return false;
       // throw new AuthException();
-
     }
     const secret = isRefresh ? this.app.config.jwt.refresh_secret : this.app.config.jwt.secret;
     try {
@@ -76,7 +78,10 @@ class JwtService extends Service {
   }
 
   async getUserIdFromToken(token, isRefresh = false) {
-    await this.verifyToken(token, isRefresh);
+    const result = await this.verifyToken(token, isRefresh);
+    if (!result) {
+      return false
+    }
     const res = await this.app.jwt.decode(token);
     return res;
   }

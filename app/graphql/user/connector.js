@@ -74,7 +74,13 @@ class LaunchConnector {
         msg: "验证码错误",
       }
     }
+  }
 
+
+  // 修改用户信息
+  async userEdit() {
+    const { ctx, app } = this;
+    
   }
 
 
