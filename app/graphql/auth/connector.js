@@ -23,7 +23,7 @@ class LaunchConnector {
     const { ctx, app } = this;
     const secret = await ctx.service.jwt.refreshToken(token);
     if (!secret) {
-      return { token: "String", refresh_token: "String," }
+      return { token: 'String', refresh_token: 'String,' };
     }
     return secret;
   }

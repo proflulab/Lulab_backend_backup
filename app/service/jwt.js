@@ -3,7 +3,7 @@
 const UUID = require('uuid').v4;
 const dayjs = require('dayjs');
 const Service = require('egg').Service;
-const AuthException = require('../exception/auth');
+// const AuthException = require('../exception/auth');
 
 class JwtService extends Service {
   async createToken(userId, secret, expire) {
@@ -80,7 +80,7 @@ class JwtService extends Service {
   async getUserIdFromToken(token, isRefresh = false) {
     const result = await this.verifyToken(token, isRefresh);
     if (!result) {
-      return false
+      return false;
     }
     const res = await this.app.jwt.decode(token);
     return res;
@@ -88,8 +88,8 @@ class JwtService extends Service {
 
   async reToken(token) {
     if (token === undefined) {
-      ctx.response.body = { message: '令牌为空，请登陆获取！' };
-      ctx.status = 401;
+      this.ctx.response.body = { message: '令牌为空，请登陆获取！' };
+      this.ctx.status = 401;
       return;
     }
     return token.replace(/^Bearer\s/, '');

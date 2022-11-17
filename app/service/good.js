@@ -13,7 +13,6 @@ class GoodService extends Service {
     return corr;
   }
 
-
 }
 
 module.exports = GoodService;

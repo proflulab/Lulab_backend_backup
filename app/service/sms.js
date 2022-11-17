@@ -32,7 +32,7 @@ class SmsService extends Service {
   }
 
 
-  //发送验证码
+  // 发送验证码
   async verifySend(mobile, area) {
     const { ctx, app } = this;
     const code = ctx.helper.rand(6);
@@ -44,14 +44,14 @@ class SmsService extends Service {
     };
   }
 
-  //校验验证码
+  // 校验验证码
   async verifyCheck(mobile, code) {
     const { ctx, app } = this;
     const getcode = await ctx.service.cache.get('mobileVerify' + mobile);
-    if (getcode == code) {
-      return true
+    if (getcode === code) {
+      return true;
     }
-    return false
+    return false;
   }
 
 

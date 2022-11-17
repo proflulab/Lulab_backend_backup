@@ -1,14 +1,11 @@
 'use strict';
 
-const { info } = require('console');
 const DataLoader = require('dataloader');
 
 class LaunchConnector {
   constructor(ctx) {
     this.ctx = ctx;
-    this.loader = new DataLoader(
-      ids => this.fetch(ids)
-    );
+    this.loader = new DataLoader(ids => this.fetch(ids));
   }
 
   async fetch(ids) {
@@ -17,22 +14,18 @@ class LaunchConnector {
     // });
   }
 
-  async fetchAll() {
-
-  }
-
+  async fetchAll() { }
 
   async verifySend(mobile, area) {
     const { ctx, app } = this;
     return await ctx.service.sms.verifySend(mobile);
-
   }
 
   async verifyCheck(mobile, code) {
     const { ctx, app } = this;
     const getcode = await ctx.service.cache.get('mobileVerify' + mobile);
     console.log(getcode);
-    if (getcode != code || getcode == undefined) {
+    if (getcode !== code || getcode === undefined) {
       return {
         status: '101',
         msg: '校验失败',
@@ -50,10 +43,7 @@ class LaunchConnector {
         msg: '登陆成功',
       };
     }
-
   }
-
-
 }
 
 module.exports = LaunchConnector;

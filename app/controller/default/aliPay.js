@@ -73,8 +73,8 @@ class AliPayController extends Controller {
     const result = await this.service.pay.aliPayNotify(params);
     console.log('-------------------------------------------------------pay_check');
     console.log(result);
-    if (result.code == 0) {
-      if (params.trade_status == 'TRADE_SUCCESS') {
+    if (result.code === 0) {
+      if (params.trade_status === 'TRADE_SUCCESS') {
         // 更新订单信息
         await this.service.order.orderState(result.data.out_trade_no, 2, 543);
       }

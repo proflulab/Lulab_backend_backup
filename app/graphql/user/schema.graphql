@@ -1,20 +1,15 @@
 # user
 type Return {
-  
-  status: String,
+  status: String
   # user
-  msg: String,
-  token: String,
-  refresh_token: String,
-  data:User
+  msg: String
+  token: String
+  refresh_token: String
+  data: User
 }
 
 type User {
-  username: String,
-  dsc: String,
-  updatedAt: Int,
+  username: String
+  dsc: String
+  updatedAt: Int
 }
-
-
-
-

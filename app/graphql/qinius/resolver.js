@@ -2,7 +2,7 @@
 
 module.exports = {
   Query: {
-    qiniu(root, {}, ctx) {
+    qiniu(root, { }, ctx) {
       return ctx.connector.qinius.fetchAll();
     },
   },

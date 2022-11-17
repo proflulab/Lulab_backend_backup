@@ -41,19 +41,17 @@ class LaunchConnector {
   }
 
 
-
   // 验证码登陆
   async loginCaptcha(mobile, code, area) {
     const { ctx, app } = this;
     const getcode = await ctx.service.sms.verifyCheck(mobile, code);
-    if (getcode) { return await ctx.service.user.loginVerify(mobile); } else {
-      return {
-        status: "200",
-        msg: "验证码错误",
-      }
-    }
-  }
+    if (getcode) { return await ctx.service.user.loginVerify(mobile); }
+    return {
+      status: '200',
+      msg: '验证码错误',
+    };
 
+  }
 
 
   // 退出登陆
@@ -68,19 +66,19 @@ class LaunchConnector {
   async passwordChange(mobile, password, code) {
     const { ctx, app } = this;
     const getcode = await ctx.service.sms.verifyCheck(mobile, code);
-    if (getcode) { return await ctx.service.user.password(mobile, password); } else {
-      return {
-        status: "200",
-        msg: "验证码错误",
-      }
-    }
+    if (getcode) { return await ctx.service.user.password(mobile, password); }
+    return {
+      status: '200',
+      msg: '验证码错误',
+    };
+
   }
 
 
   // 修改用户信息
   async userEdit() {
     const { ctx, app } = this;
-    
+
   }
 
 

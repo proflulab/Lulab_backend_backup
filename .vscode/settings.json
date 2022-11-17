@@ -1,3 +1,7 @@
 {
-    "eggHelper.serverPort": 47229
+    "eggHelper.serverPort": 52598,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
 }

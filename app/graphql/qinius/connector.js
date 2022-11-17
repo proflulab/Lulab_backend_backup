@@ -7,9 +7,7 @@ const qiniu = require('qiniu');
 class LaunchConnector {
   constructor(ctx) {
     this.ctx = ctx;
-    this.loader = new DataLoader(
-      ids => this.fetch(ids)
-    );
+    this.loader = new DataLoader(ids => this.fetch(ids));
   }
 
   async fetch(ids) {
@@ -25,7 +23,6 @@ class LaunchConnector {
   }
 
   async fetchDown() {
-
     const accessKey = this.config.qiniu.AccessKey;
     const secretKey = this.config.qiniu.SecretKey;
     console.log('-------------------------------------------------------1');
@@ -41,9 +38,7 @@ class LaunchConnector {
 
     const a = { v: uploadToken };
     return a;
-
   }
-
 }
 
 module.exports = LaunchConnector;

@@ -17,7 +17,7 @@ module.exports = app => {
     },
     mobile: { type: String },
     email: { type: String },
-    profile:{ type: String },
+    profile: { type: String },
     status: { type: Number, default: 1 },
     createdAt: {
       type: Number,
@@ -33,7 +33,7 @@ module.exports = app => {
       type: String,
     },
   });
-    // 映射到egg-mongo db 库的user表中（不区分大小写）
+  // 映射到egg-mongo db 库的user表中（不区分大小写）
   const User = mongoose.model('users', UserSchema);
   // 方法放到这里
   initUserData(User);

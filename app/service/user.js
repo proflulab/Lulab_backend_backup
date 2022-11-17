@@ -23,15 +23,15 @@ class UserService extends Service {
   async loginVerify(mobile) {
     const { ctx, app } = this;
     // 注册判断是否存在
-    const corr = await ctx.model.User.findOne({ mobile: mobile });
+    const corr = await ctx.model.User.findOne({ mobile });
     if (!corr) {
-      await ctx.model.User.insertMany([mobile]);
+      await ctx.model.User.insertMany([ mobile ]);
       ctx.body = '注册成功';
-      return true
-    } else {
-      ctx.body = '该用户名已注册';
-      return false
+      return true;
     }
+    ctx.body = '该用户名已注册';
+    return false;
+
   }
 
 
@@ -79,13 +79,13 @@ class UserService extends Service {
   // 修改密码
   async password(mobile, password) {
     const { ctx } = this;
-    const corr = await ctx.model.User.findOne({ mobile: mobile });
+    const corr = await ctx.model.User.findOne({ mobile });
     if (!corr) {
       return {
         msg: '用户不存在',
       };
     }
-    await ctx.model.User.updateOne({ mobile: mobile }, { $set: { password } });
+    await ctx.model.User.updateOne({ mobile }, { $set: { password } });
     return {
       msg: '修改密码成功',
     };
