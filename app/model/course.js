@@ -2,8 +2,6 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
 
-  const d = new Date();
-
   const CourseSchema = new Schema({
     title: { type: String },
     mode: { type: Number },
@@ -12,13 +10,8 @@ module.exports = app => {
     description: { type: String },
     status: { type: Number, default: 1 },
     category_id: { type: Schema.Types.ObjectId },
-    createdAt: {
-      type: Number,
-      default: d.getTime(),
-    },
-    updatedAt: {
-      type: Number,
-    },
+  }, {
+    timestamps: true,
   });
 
   const Course = mongoose.model('Course', CourseSchema, 'course');

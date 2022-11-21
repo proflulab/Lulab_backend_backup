@@ -25,7 +25,7 @@ class UserService extends Service {
     // 注册判断是否存在
     const corr = await ctx.model.User.findOne({ mobile });
     if (!corr) {
-      await ctx.model.User.insertMany([ mobile ]);
+      await ctx.model.User.insertMany([mobile]);
       ctx.body = '注册成功';
       return true;
     }
@@ -49,9 +49,10 @@ class UserService extends Service {
         console.log(corr._id);
         // token 存储至Redis
         await ctx.service.cache.set(corr._id, Token.token, 1000);
-        const user = await ctx.model.User.findOne({ account });
+        // const user = await ctx.model.User.findOne({ account });
         // 将生成的Token返回给前端
-        return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: user };
+        console.log(corr);
+        return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
       }
       ctx.body = '密码错误,请重新输入!';
       return { status: '100', msg: '密码错误,请重新输入' };

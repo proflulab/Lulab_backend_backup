@@ -1,7 +1,6 @@
 module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
-  const d = new Date();
   const UserTempSchema = new Schema({
     phone: {
       type: Number,
@@ -15,10 +14,8 @@ module.exports = app => {
     ip: {
       type: String,
     },
-    add_time: {
-      type: Number,
-      default: d.getTime(),
-    },
+  }, {
+    timestamps: true,
   });
 
   return mongoose.model('UserTemp', UserTempSchema, 'user_temp');

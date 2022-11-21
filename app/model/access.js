@@ -1,7 +1,7 @@
 module.exports = app => {
   const mongoose = app.mongoose; /* 引入建立连接的mongoose */
   const Schema = mongoose.Schema;
-  const d = new Date();
+
   const AccessSchema = new Schema({
     module_name: { type: String }, // 模块名称
     action_name: { type: String }, // 操作名称
@@ -16,15 +16,13 @@ module.exports = app => {
       type: Number,
       default: 100,
     },
-    description: { type: String },
+    dsc: { type: String },
     status: {
       type: Number,
       default: 1,
     },
-    add_time: {
-      type: Number,
-      default: d.getTime(),
-    },
+  }, {
+    timestamps: true,
   });
   return mongoose.model('Access', AccessSchema, 'access');
 };

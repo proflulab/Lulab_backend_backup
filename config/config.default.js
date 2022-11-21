@@ -1,7 +1,7 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
-require('dotenv').config()
+require('dotenv').config();
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -62,9 +62,9 @@ module.exports = appInfo => {
   };
 
   config.jwt = {
-    expire: 7200,//2小时
+    expire: 7200, // 2小时
     secret: '123456',
-    refresh_expire: 259200,//3天
+    refresh_expire: 259200, // 3天
     refresh_secret: 'b2ce49e4a541068c',
     ignore: ['/api/registered', '/api/login'], // 哪些请求不需要认证
     // expiresIn: '24h',
@@ -77,7 +77,7 @@ module.exports = appInfo => {
       ignore: ctx => {
         // console.log("____________________________________________________");
         // console.log(ctx.request.url);
-        if (ctx.request.url == '/aliPay/aliPayNotify' || ctx.request.url == '/graphql' || ctx.request.url == '/graphql?' || ctx.request.url == '/api/registered' || ctx.request.url == '/api/login') {
+        if (ctx.request.url === '/aliPay/aliPayNotify' || ctx.request.url === '/graphql' || ctx.request.url === '/graphql?' || ctx.request.url === '/api/registered' || ctx.request.url === '/api/login') {
           return true;
         }
         return false;
@@ -88,7 +88,7 @@ module.exports = appInfo => {
   // 阿里云配置
   config.ali = {
     accessKeyId: process.env.ALI_ACCESS_KEY_ID,
-    accessKeySecret:  process.env.ALI_ACCESS_KEY_SECRET,
+    accessKeySecret: process.env.ALI_ACCESS_KEY_SECRET,
     endpoint: 'https://dysmsapi.aliyuncs.com',
     apiVersion: '2017-05-25',
   };

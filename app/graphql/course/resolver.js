@@ -5,8 +5,8 @@ module.exports = {
     courseCategory(root, { }, ctx) {
       return ctx.connector.course.category();
     },
-    course(root, { category_id, skip, limit }, ctx) {
-      return ctx.connector.course.course(category_id, skip, limit);
+    course(root, { category_id, page, limit }, ctx) {
+      return ctx.connector.course.course(category_id, page, limit);
     },
     courseDetail(root, { course_id, skip, limit }, ctx) {
       return ctx.connector.course.courseDetail(course_id, skip, limit);

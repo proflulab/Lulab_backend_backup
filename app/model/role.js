@@ -2,20 +2,13 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
 
-  const d = new Date();
-
   const RoleSchema = new Schema({
-    title: { type: String },
-    description: { type: String },
+    name: { type: String },
+    code: { type: String },
+    dsc: { type: String },
     status: { type: Number, default: 1 },
-    createdAt: {
-      type: Number,
-      default: d.getTime(),
-    },
-    updatedAt: {
-      type: Number,
-    },
-
+  }, {
+    timestamps: true,
   });
 
 

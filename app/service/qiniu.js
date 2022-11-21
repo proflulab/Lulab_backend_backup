@@ -21,6 +21,7 @@ class QiniuService extends Service {
     return uploadToken;
   }
 
+
   async qiniuDown(name, seconds) {
     const qn = this.config.qiniu;
     const mac = new qiniu.auth.digest.Mac(qn.AccessKey, qn.SecretKey);

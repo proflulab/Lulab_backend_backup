@@ -2,8 +2,6 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
 
-  const d = new Date();
-
   const CourseDetailSchema = new Schema({
     title: { type: String },
     course_id: { type: Schema.Types.ObjectId },
@@ -12,14 +10,8 @@ module.exports = app => {
     sort: { type: Number },
     description: { type: String },
     status: { type: Number, default: 1 },
-    createdAt: {
-      type: Number,
-      default: d.getTime(),
-    },
-    updatedAt: {
-      type: Number,
-    },
-
+  }, {
+    timestamps: true,
   });
 
 

@@ -7,6 +7,12 @@ module.exports = app => {
   const UserRoleSchema = new Schema({
     user_id: { type: Schema.Types.ObjectId },
     role_id: { type: Schema.Types.ObjectId },
+    createdAt: {
+      type: Number,
+    },
+    updatedAt: {
+      type: Number,
+    },
   });
 
 

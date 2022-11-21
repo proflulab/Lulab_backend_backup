@@ -2,8 +2,6 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
 
-  const d = new Date();
-
   const GoodSchema = new Schema({
     title: { type: String },
     goods_number: { type: Number },
@@ -12,14 +10,9 @@ module.exports = app => {
     original: { type: Number },
     tags: { type: String },
     status: { type: Number, default: 1 },
-    createdAt: {
-      type: Number,
-      default: d.getTime(),
-    },
-    updatedAt: {
-      type: Number,
-    },
 
+  }, {
+    timestamps: true,
   });
 
   const Good = mongoose.model('Good', GoodSchema, 'good');

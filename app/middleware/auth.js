@@ -1,4 +1,4 @@
-const { countReset, count } = require('console');
+// const { countReset, count } = require('console');
 
 module.exports = options => {
   return async function auth(ctx, next) {
@@ -54,7 +54,6 @@ module.exports = options => {
             // var chektAuth = true;
             // if (!chekToken) return;
             return next();
-
           // 不需要auth check的API
           case 'login':
             return next();

@@ -18,12 +18,8 @@ module.exports = app => {
       type: Number,
       default: d.getTime(),
     },
-    PaymentdAt: {
-      type: Number,
-    },
-    updatedAt: {
-      type: Number,
-    },
+  }, {
+    timestamps: true,
   });
 
   const Order = mongoose.model('Order', OrderSchema, 'order');

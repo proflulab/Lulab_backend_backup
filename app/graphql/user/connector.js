@@ -36,7 +36,7 @@ class LaunchConnector {
 
   // 用户密码登陆
   async login(account, password) {
-    const { ctx, app } = this;
+    const { ctx } = this;
     return await ctx.service.user.login(account, password);
   }
 
@@ -50,7 +50,6 @@ class LaunchConnector {
       status: '200',
       msg: '验证码错误',
     };
-
   }
 
 

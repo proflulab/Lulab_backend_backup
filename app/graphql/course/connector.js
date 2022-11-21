@@ -33,8 +33,17 @@ class LaunchConnector {
     return cors;
   }
 
-  async course(category_id, skip, limit) {
+  /**
+   * 返回课程列表
+   * @param {String} category_id 课程分类编号
+   * @param {Int} page 请求页数
+   * @param {Int} limit 每页请求个数
+   * @return {} 返回课程数据
+   */
+  async course(category_id, page, limit) {
     const { ctx, app } = this;
+
+    const skip = (page - 1) * limit;
 
     const cors = await ctx.model.Course.aggregate(
       [

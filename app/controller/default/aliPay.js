@@ -50,6 +50,7 @@ class AliPayController extends Controller {
 
 
   // app调用支付
+
   async pay_check() {
 
     const result = await this.service.pay.doPay_check();
