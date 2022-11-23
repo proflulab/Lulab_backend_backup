@@ -10,7 +10,6 @@ module.exports = app => {
     original: { type: Number },
     tags: { type: String },
     status: { type: Number, default: 1 },
-
   }, {
     timestamps: true,
   });

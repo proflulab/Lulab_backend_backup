@@ -23,16 +23,6 @@ class LaunchConnector {
 
   }
 
-  // async add(username) {
-  //   const tag = await this.ctx.model.User.create({ username }, function (error, doc) {
-  //     if (error) {
-  //       console.log(error);
-  //     } else {
-  //       console.log(doc);
-  //     }
-  //   });
-  //   return tag;
-  // }
 
   // 用户密码登陆
   async login(account, password) {

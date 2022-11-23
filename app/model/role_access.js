@@ -5,6 +5,8 @@ module.exports = app => {
   const RoleAccessSchema = new Schema({
     access_id: { type: Schema.Types.ObjectId },
     role_id: { type: Schema.Types.ObjectId },
+  }, {
+    timestamps: true,
   });
 
 

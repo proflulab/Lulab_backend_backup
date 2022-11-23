@@ -5,8 +5,8 @@ module.exports = app => {
   // const d = new Date();
 
   const UserRoleSchema = new Schema({
-    user_id: { type: Schema.Types.ObjectId },
-    role_id: { type: Schema.Types.ObjectId },
+    user_id: { type: Schema.Types.ObjectId, ref: 'Users' },
+    role_id: { type: Schema.Types.ObjectId, ref: 'Role' },
     createdAt: {
       type: Number,
     },
