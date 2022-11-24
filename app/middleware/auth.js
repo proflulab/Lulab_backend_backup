@@ -12,7 +12,7 @@ module.exports = options => {
     const token = ctx.request.header.authorization;
 
     console.log(operationName + '_' + url);
-
+    console.log(this.app.config.env);
     switch (url) {
       case '/graphql':
         // 开启 GraphiQL IDE 调试时，所有的请求放过

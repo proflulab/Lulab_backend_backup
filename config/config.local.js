@@ -41,7 +41,7 @@ module.exports = appInfo => {
 
 
   config.mongoose = {
-    url: process.env.MONGOOSE_URL, // 端口号27021数据库名VietNamVisa
+    url: process.env.LOCAL_MONGOOSE_URL, // 端口号27021数据库名VietNamVisa
     options: { useNewUrlParser: true, useUnifiedTopology: true }, // 其他配置警告解除方法
   };
 
@@ -87,8 +87,8 @@ module.exports = appInfo => {
 
   // 阿里云配置
   config.ali = {
-    accessKeyId: process.env.ALI_ACCESS_KEY_ID,
-    accessKeySecret: process.env.ALI_ACCESS_KEY_SECRET,
+    accessKeyId: process.env.LOCAL_ALI_ACCESS_KEY_ID,
+    accessKeySecret: process.env.LOCAL_ALI_ACCESS_KEY_SECRET,
     endpoint: 'https://dysmsapi.aliyuncs.com',
     apiVersion: '2017-05-25',
   };
@@ -104,16 +104,16 @@ module.exports = appInfo => {
   // 支付宝支付回调地址
   exports.aliPayBasicParams = {
     // 支付成功返回地址
-    return_url: process.env.ALIPAY_RETURN_URL,
+    return_url: process.env.LOCAL_ALIPAY_RETURN_URL,
     // 支付成功异步通知地址
-    notify_url: process.env.ALIPAY_NOTIFY_URL,
+    notify_url: process.env.LOCAL_ALIPAY_NOTIFY_URL,
   };
 
 
   // 七牛云配置
   config.qiniu = {
-    AccessKey: process.env.QINIU_ACCESS_KEY, // 七牛云Access_Key
-    SecretKey: process.env.QINIU_SECRET_KEY, // 七牛云SecretKey
+    AccessKey: process.env.LOCAL_QINIU_ACCESS_KEY, // 七牛云Access_Key
+    SecretKey: process.env.LOCAL_QINIU_SECRET_KEY, // 七牛云SecretKey
   };
 
   // add your user config here
