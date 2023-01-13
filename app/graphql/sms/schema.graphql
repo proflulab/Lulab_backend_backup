@@ -4,11 +4,6 @@ type Res {
   msg: String,
 }
 
-# type User {
-#   username: String,
-#   dsc: String,
-#   updatedAt: Int,
-# }
 
 
 

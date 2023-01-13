@@ -10,12 +10,11 @@ type Return {
 
 type User {
   username: String
-  profile: String
-  video: String
+  profile_picture: String
+  sex: Int
+  birth: String
   mobile: String
   email: String
-  birth: Float
   wechat: String
-  sex: Int!
   dsc: String
 }
