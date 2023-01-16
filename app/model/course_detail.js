@@ -33,11 +33,10 @@ function initUserData(User) {
         } else if (!doc.length) {
             new User({
                 title: 'test3',
-                course_id: '63618230c1e06925ae885665',
+                course_id: '63c4dbd53baf2e0dc871e426',
                 duration: 20,
                 free: true,
                 sort: 1,
-                createdAt: Date.now(),
             }).save();
         } else {
             console.log('-------------创建主课成功--------------');

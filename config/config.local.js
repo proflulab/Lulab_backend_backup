@@ -1,7 +1,9 @@
 exports.mongoose = {
-    client: {
-        url: 'mongodb://127.0.0.1:27017/proflu',
-        options: {}
+    url: process.env.MONGOOSE_URL, // 端口号27021数据库名VietNamVisa
+    options: {
+        auth: { authSource: "admin" },
+        user: "root",
+        pass: process.env.MONGOOSE_PASS
     }
 }
 

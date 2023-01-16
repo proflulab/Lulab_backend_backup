@@ -42,10 +42,10 @@ function initUserData(User) {
                 authorTags: '',
                 description: '',
                 onlineTime: '',
-                addTime: Date.now(),
-                updateTime: Date.now(),
+                addTime: Date(),
+                updateTime: Date(),
                 sort: 1,
-                category_id: '6362d1e02bbfd16b331657ca',
+                category_id: '63c4d7e691dc5226f0a9fe83',
             }).save();
         } else {
             console.log('-------------创建主课成功--------------');

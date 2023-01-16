@@ -28,7 +28,6 @@ function initUserData(User) {
             new User({
                 title: '理论课程',
                 sort: 1,
-                createdAt: Date.now(),
             }).save();
         } else {
             console.log('-------------创建分类成功--------------');

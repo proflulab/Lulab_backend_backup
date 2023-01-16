@@ -15,7 +15,7 @@ class LaunchConnector {
      */
     async category() {
         const { ctx, app } = this;
-        const cors = await ctx.model.CourseCategory.find({}, { title: 1 });
+        const cors = await ctx.model.CourseCategory.find({}, { title: 1 }).sort({ sort: 1 });
         return cors;
     }
 
@@ -26,7 +26,7 @@ class LaunchConnector {
      * @param {Int} limit 每页请求个数
      * @return {} 返回课程数据
      */
-    async course(category_id, page, limit) {
+    async course(category_id, page = 1, limit = 100) {
         const { ctx, app } = this;
         const skip = (page - 1) * limit;
         const cors = await ctx.model.Course.aggregate(
@@ -37,10 +37,13 @@ class LaunchConnector {
                     },
                 },
                 {
-                    $skip: skip,
+                    $sort: { sort: 1 }
                 },
                 {
-                    $limit: limit,
+                    $skip: skip
+                },
+                {
+                    $limit: limit
                 },
             ],
             (err, docs) => {
@@ -72,7 +75,7 @@ class LaunchConnector {
                     console.log(JSON.stringify(docs));
                 }
             }
-        ).sort({ sort: 1 });
+        );
 
         return cors;
     }
@@ -92,7 +95,7 @@ class LaunchConnector {
                 } else {
                     console.log(JSON.stringify(docs))
                 }
-            })
+            }).sort({ sort: 1 })
 
         return catalogue;
     }
@@ -117,7 +120,7 @@ class LaunchConnector {
             }
         );
         const getcode = await ctx.service.qiniu.qiniuDown(cors[0].title, 3600);
-        return { link: getcode };
+        return { link: getcode, state: '待解决' };
     }
 }
 

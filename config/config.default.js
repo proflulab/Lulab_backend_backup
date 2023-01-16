@@ -41,8 +41,12 @@ module.exports = appInfo => {
 
 
     config.mongoose = {
-        url: process.env.MONGOOSE_URL, // 端口号27021数据库名VietNamVisa
-        options: { useNewUrlParser: true, useUnifiedTopology: true }, // 其他配置警告解除方法
+        url: process.env.MONGOOSE_URL,
+        options: {
+            auth: { authSource: "admin" },
+            user: "root",
+            pass: process.env.MONGOOSE_PASS
+        }
     };
 
 
