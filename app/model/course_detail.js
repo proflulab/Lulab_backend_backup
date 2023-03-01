@@ -32,7 +32,7 @@ function initUserData(User) {
             console.log('创建用户失败');
         } else if (!doc.length) {
             new User({
-                title: 'test3',
+                title: '人工智能讨论会.mp4',
                 course_id: '63c4dbd53baf2e0dc871e426',
                 duration: 20,
                 free: true,

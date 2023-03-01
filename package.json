@@ -9,6 +9,7 @@
   "dependencies": {
     "@alicloud/pop-core": "^1.7.12",
     "alipay-mobile": "^4.0.2",
+    "aws-sdk": "^2.1323.0",
     "big-integer": "^1.6.51",
     "crypto": "^1.0.1",
     "dataloader": "^2.1.0",

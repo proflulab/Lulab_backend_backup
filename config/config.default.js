@@ -41,12 +41,8 @@ module.exports = appInfo => {
 
 
     config.mongoose = {
-        url: process.env.MONGOOSE_URL,
-        options: {
-            auth: { authSource: "admin" },
-            user: "root",
-            pass: process.env.MONGOOSE_PASS
-        }
+        url: process.env.MONGOOSE_URL, //'mongodb://账号:密码@服务器:端口/库名'
+        options: {},
     };
 
 
@@ -120,6 +116,12 @@ module.exports = appInfo => {
         AccessKey: process.env.QINIU_ACCESS_KEY, // 七牛云Access_Key
         SecretKey: process.env.QINIU_SECRET_KEY, // 七牛云SecretKey
     };
+
+    config.s3 = {
+        accessKeyId: process.env.S3_ACCESS_KEY_ID,
+        secretAccessKey: process.env.S3_ACCESS_KEY_SECRET,
+        region: 'us-west-1',
+    }
 
     // add your user config here
     const userConfig = {

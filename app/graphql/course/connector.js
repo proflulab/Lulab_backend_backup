@@ -119,7 +119,8 @@ class LaunchConnector {
                 }
             }
         );
-        const getcode = await ctx.service.qiniu.qiniuDown(cors[0].title, 3600);
+        //const getcode = await ctx.service.qiniu.qiniuDown(cors[0].title, 3600);
+        const getcode = await ctx.service.s3.s3Down(cors[0].title, 1);
         return { link: getcode, state: '待解决' };
     }
 }

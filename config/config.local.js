@@ -1,10 +1,6 @@
 exports.mongoose = {
     url: process.env.MONGOOSE_URL, // 端口号27021数据库名VietNamVisa
-    options: {
-        auth: { authSource: "admin" },
-        user: "root",
-        pass: process.env.MONGOOSE_PASS
-    }
+    options: {}
 }
 
 //url of eggjs app
