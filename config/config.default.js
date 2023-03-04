@@ -94,6 +94,12 @@ module.exports = appInfo => {
         apiVersion: '2017-05-25',
     };
 
+    config.sms = {
+        aliSignName: process.env.ALI_SIGN_NAME,
+        nationalCode: process.env.ALI_NATIONAL_CODE,
+        internationalCode: process.env.ALI_INTERNATIONAL_CODE,
+    }
+
     // 支付宝支付配置
     exports.aliPayOptions = {
         app_id: '2021000121657681',

@@ -10,6 +10,7 @@
     "@alicloud/pop-core": "^1.7.12",
     "alipay-mobile": "^4.0.2",
     "aws-sdk": "^2.1323.0",
+    "bcryptjs": "^2.4.3",
     "big-integer": "^1.6.51",
     "crypto": "^1.0.1",
     "dataloader": "^2.1.0",
@@ -25,7 +26,8 @@
     "koa-xml-body": "^2.2.0",
     "nodemailer": "^6.8.0",
     "qiniu": "^7.7.0",
-    "redis": "^4.3.1"
+    "redis": "^4.3.1",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

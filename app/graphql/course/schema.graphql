@@ -26,7 +26,6 @@ type CourseDetail {
 
 type Link {
   link: String,
-  state: String,
 }
 
 type Catalogue{

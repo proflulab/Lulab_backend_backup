@@ -2,12 +2,11 @@
 
 const Helper = require('../extend/helper.js');
 
+
 module.exports = app => {
     const mongoose = app.mongoose;
-    // 定义数据库的结构
-    const Schema = mongoose.Schema;
 
-    const UserSchema = new Schema(
+    const UserSchema = new mongoose.Schema(
         {
             username: {
                 type: String,
@@ -15,7 +14,12 @@ module.exports = app => {
                 unique: true, // 创建唯一索引
             },
             salt: { type: String, default: '' },
-            password: { type: String },
+            password: {
+                type: String,
+                required: true,
+                minlength: [8, 'Password must be more than 8 characters'],
+                select: false,
+            },
             /**
              * 性别
              * 0:未知
@@ -27,14 +31,18 @@ module.exports = app => {
                 type: String,
                 unique: true,
             },
-            email: { type: String, default: '' },
+            email: {
+                type: String,
+                unique: true,
+                lowercase: true,
+                default: ''
+            },
             wechat: { type: String, default: '' },
             birth: { type: Number, default: 0 },
             profile: { type: String },
-            activated: {
-                type: String,
-                enum: ['0', '1'], // 0待激活 1已激活
-                default: '1',
+            role: {
+                type: [String],
+                default: 'user',
             },
             status: { type: Number, default: 1 },
             dsc: { type: String, default: '' },
@@ -46,6 +54,13 @@ module.exports = app => {
             timestamps: true,
         }
     );
+
+    // userSchema.pre('save', async function (next) {
+    //     // Check if the password has been modified
+    //     if (!this.isModified('password')) return next();
+    //     this.password = await app.bcrypt.hash(this.password, 12);
+    //     next();
+    // });
 
     // 映射到egg-mongo db 库的user表中（不区分大小写）
     const User = mongoose.model('Users', UserSchema);

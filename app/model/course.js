@@ -42,8 +42,8 @@ function initUserData(User) {
                 authorTags: '',
                 description: '',
                 onlineTime: '',
-                addTime: Date(),
-                updateTime: Date(),
+                addTime: Date.now(),
+                updateTime: Date.now(),
                 sort: 1,
                 category_id: '63c4d7e691dc5226f0a9fe83',
             }).save();

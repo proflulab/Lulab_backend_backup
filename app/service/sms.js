@@ -22,12 +22,13 @@ class SmsService extends Service {
      */
     async alisms(mobile, code, area = 86) {
         const client = new Core(this.config.ali);
-        const templateCode = 'SMS_154950909' //国内
+        var templateCode = this.config.sms.nationalCode//国内
         if (area !== 86) {
-            templateCode = 'SMS_154950909' //国际
+            templateCode = this.config.sms.internationalCode //国际
+            mobile += area
         }
         const params = {
-            SignName: '阿里云短信测试', //短信签名名称
+            SignName: this.config.sms.aliSignName,//'阿里云短信测试', //短信签名名称
             TemplateCode: templateCode, //阿里云模板管理页面
             PhoneNumbers: mobile,
             TemplateParam: '{"code":"' + code + '"}',
