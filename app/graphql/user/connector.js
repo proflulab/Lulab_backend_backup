@@ -47,13 +47,12 @@ class LaunchConnector {
         const { ctx, app } = this;
         const token = ctx.request.header.authorization.replace(/^Bearer\s/, '');
         return await ctx.service.user.logOut(token);
-
     }
 
     // 修改密码
-    async passwordChange(mobile, password, code) {
+    async passwordChange(mobile, area, password, code) {
         const { ctx, app } = this;
-        const getcode = await ctx.service.sms.verifyCheck(mobile, code);
+        const getcode = await ctx.service.sms.verifyCheck(mobile, code, area);
         if (getcode) { return await ctx.service.user.password(mobile, password); }
         return {
             status: '200',

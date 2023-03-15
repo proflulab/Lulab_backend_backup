@@ -1,5 +1,4 @@
 'use strict';
-
 const Helper = require('../extend/helper.js');
 
 
@@ -10,15 +9,13 @@ module.exports = app => {
         {
             username: {
                 type: String,
-                default: '',
+                default: '陆向谦实验室学员',
                 unique: true, // 创建唯一索引
             },
-            salt: { type: String, default: '' },
             password: {
                 type: String,
                 required: true,
                 minlength: [8, 'Password must be more than 8 characters'],
-                select: false,
             },
             /**
              * 性别
@@ -30,12 +27,6 @@ module.exports = app => {
             mobile: {
                 type: String,
                 unique: true,
-            },
-            email: {
-                type: String,
-                unique: true,
-                lowercase: true,
-                default: ''
             },
             wechat: { type: String, default: '' },
             birth: { type: Number, default: 0 },
@@ -55,12 +46,12 @@ module.exports = app => {
         }
     );
 
-    // userSchema.pre('save', async function (next) {
-    //     // Check if the password has been modified
-    //     if (!this.isModified('password')) return next();
-    //     this.password = await app.bcrypt.hash(this.password, 12);
-    //     next();
-    // });
+    UserSchema.pre('save', async function (next) {
+        // Check if the password has been modified
+        if (!this.isModified('password')) return next();
+        this.password = await Helper.encrypt(this.password);
+        next();
+    });
 
     // 映射到egg-mongo db 库的user表中（不区分大小写）
     const User = mongoose.model('Users', UserSchema);
@@ -77,13 +68,9 @@ function initUserData(User) {
             console.log(err);
             console.log('创建用户失败');
         } else if (!doc.length) {
-            const passwordInit = 'admin';
-            const salt = Helper.genRandomString(15);
-            const password = Helper.cryptPwd(passwordInit, salt);
             new User({
-                username: 'admin',
-                password,
-                salt,
+                username: "admin",
+                password: "adminpwd",
                 dsc: '该用户拥有系统内所有菜单和路由权限',
                 mobile: '18184502522',
                 profile: 'http://qn3.proflu.cn/default.jpg',

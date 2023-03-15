@@ -7,7 +7,6 @@ class CacheService extends Service {
 
     // 设置值的方法
     async set(key, value, seconds) {
-        console.log("存储int值到cache...", value)
         if (this.app.redis) {
             if (!seconds) {
                 await this.app.redis.set(key, value);

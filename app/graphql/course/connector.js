@@ -28,6 +28,7 @@ class LaunchConnector {
      */
     async course(category_id, page = 1, limit = 100) {
         const { ctx, app } = this;
+        console.log(ctx.request.body)
         const skip = (page - 1) * limit;
         const cors = await ctx.model.Course.aggregate(
             [

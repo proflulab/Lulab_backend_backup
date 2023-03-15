@@ -54,6 +54,7 @@ class SmsService extends Service {
 
     /**
      * 验证码发送
+     * 验证码 5 分钟内有效
      * 待解决：area未测试
      * @param {String} mobile 
      * @param {Int} area 
@@ -63,7 +64,7 @@ class SmsService extends Service {
         const code = this.ctx.helper.rand(6);
         const result = await this.alisms(mobile, code, area);
         if (result.status === '100') {
-            await this.ctx.service.cache.set('mobileVerify ' + area + ' ' + mobile, code, 60);
+            await this.ctx.service.cache.set('mobileVerify ' + area + ' ' + mobile, JSON.stringify(code), 300);
         }
         return result
     }
@@ -77,7 +78,7 @@ class SmsService extends Service {
      */
     async verifyCheck(mobile, code, area) {
         const getcode = await this.ctx.service.cache.get('mobileVerify ' + area + ' ' + mobile);
-        if (getcode === code) {
+        if (getcode && getcode === code) {
             return true;
         }
         return false;

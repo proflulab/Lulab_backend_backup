@@ -1,6 +1,4 @@
 type Mutation {
 
-  #adduser(username: String!): User
-  
-  passwordChange(mobile: String!, password: String!,code: String!): Res
+  passwordChange(mobile: String!, area: Int!, password: String!,code: String!): Res
 }

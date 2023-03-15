@@ -22,7 +22,7 @@ module.exports = options => {
                 }
 
                 switch (operationName) {
-                    case 'qiniu': {
+                    case 'courseLink': {
                         const retoken = await ctx.service.jwt.reToken(token);
                         // 校验token,如果无法通过，则拒绝访问
                         const chekToken = await ctx.service.jwt.verifyToken(retoken);

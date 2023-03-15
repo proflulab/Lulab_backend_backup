@@ -2,8 +2,9 @@ type Query {
   #验证码相关
   # sms
   verifySend(mobile: String!, area: Int!): Res!
+  verifyCheck(mobile: String!, code: String!, area: Int!): Res!
   # user
-  loginCaptcha(mobile: String!, area: Int!, code: Int!): Return!
+  loginCaptcha(mobile: String!, area: Int!, code: String!): Return!
   loginOne_click(mobile: String!, accessCode: String!, outId: String!): Return!
   loginPassword(mobile: String!, password: String!): Return!
   #登陆注册

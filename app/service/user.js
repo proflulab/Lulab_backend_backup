@@ -1,5 +1,6 @@
 'use strict';
 const Service = require('egg').Service;
+const Helper = require('../extend/helper.js');
 
 class UserService extends Service {
 
@@ -12,6 +13,7 @@ class UserService extends Service {
         if (!corr) {
             const course = new ctx.model.User({
                 mobile: mobile,
+                password: Helper.encrypt(Helper.genRandomPwd()),
                 profile: 'http://qn3.proflu.cn/default.jpg',
             });
             const result = await course.save();
@@ -47,7 +49,7 @@ class UserService extends Service {
         if (!corr) {
             ctx.body = '用户名错误';
         } else {
-            if (password === corr.password) {
+            if (Helper.compare(password, corr.password)) {
                 // 生成Token
                 const Token = await ctx.service.jwt.awardToken(corr._id);
                 // token 存储至Redis
@@ -85,13 +87,28 @@ class UserService extends Service {
         const corr = await ctx.model.User.findOne({ mobile });
         if (!corr) {
             return {
+                status: '200',
                 msg: '用户不存在',
             };
+        } else if (Helper.compare(password, corr.password)) {
+            return {
+                status: '200',
+                msg: '新密码不能与旧密码相同'
+            }
         }
-        await ctx.model.User.updateOne({ mobile }, { $set: { password } });
-        return {
-            msg: '修改密码成功',
-        };
+        const encrypt = Helper.encrypt(password)
+        const ismodified = await (await ctx.model.User.updateOne({ mobile }, { password: encrypt })).nModified;
+        if (ismodified == 1) {
+            return {
+                status: '100',
+                msg: '修改密码成功',
+            };
+        } else {
+            return {
+                status: '200',
+                msg: '修改密码失败',
+            };
+        }
     }
 
 

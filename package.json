@@ -10,6 +10,7 @@
     "@alicloud/pop-core": "^1.7.12",
     "alipay-mobile": "^4.0.2",
     "aws-sdk": "^2.1323.0",
+    "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "big-integer": "^1.6.51",
     "crypto": "^1.0.1",
