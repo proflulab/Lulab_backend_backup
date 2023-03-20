@@ -51,7 +51,7 @@ module.exports = appInfo => {
             port: 6379, // Redis port
             host: '144.24.84.85', // Redis host
             password: '',
-            db: 1,
+            db: 0,
         },
     };
 
@@ -64,9 +64,9 @@ module.exports = appInfo => {
 
     config.jwt = {
         expire: 7200, // 2小时
-        secret: '123456',
+        secret: process.env.JWT_SECRET,
         refresh_expire: 259200, // 3天
-        refresh_secret: 'b2ce49e4a541068c',
+        refresh_secret: process.env.REFRESH_SECRET,
         ignore: ['/api/registered', '/api/login'], // 哪些请求不需要认证
         // expiresIn: '24h',
     };

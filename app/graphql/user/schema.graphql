@@ -10,10 +10,14 @@ type Return {
 
 type User {
   username: String
-  profile_picture: String
+  imageUrl: String
   sex: Int
-  birth: String
-  mobile: String
   wechat: String
   dsc: String
+}
+
+type Mob {
+  status: String
+  msg: String
+  mobile: String
 }

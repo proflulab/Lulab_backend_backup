@@ -1,4 +1,6 @@
 type Mutation {
 
-  passwordChange(mobile: String!, area: Int!, password: String!,code: String!): Res
+  passwordChange(mobile: String!, area: Int!, password: String!,code: String!): Res!
+  mobileChange(mobile: String!, area: Int!, code: String!): Mob!
+  changeUserInfo(username: String!, sex: Int!, wechat: String!, dsc: String!): User!
 }

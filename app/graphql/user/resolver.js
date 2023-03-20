@@ -2,18 +2,18 @@
 
 module.exports = {
     Query: {
-        user(root, { }, ctx) {
-            return ctx.connector.user.fetchAll();
+        userInfo(root, { }, ctx) {
+            return ctx.connector.user.userInfo();
         },
-        loginPassword(root, { mobile, password }, ctx) {
-            return ctx.connector.user.login(mobile, password);
+        loginPassword(root, { mobile, area, password }, ctx) {
+            return ctx.connector.user.loginPassword(mobile, area, password);
         },
         loginCaptcha(root, { mobile, code, area }, ctx) {
             return ctx.connector.user.loginCaptcha(mobile, code, area);
         },
-        loginOne_click(root, { mobile, accessCode, outId }, ctx) {
-            return ctx.connector.user.login(mobile, accessCode, outId);
-        },
+        // loginOne_click(root, { mobile, accessCode, outId }, ctx) {
+        //     return ctx.connector.user.login(mobile, accessCode, outId);
+        // },
         logOut(root, { }, ctx) {
             return ctx.connector.user.logOut();
         },
@@ -27,8 +27,14 @@ module.exports = {
         // }, ctx) {
         //   return ctx.connector.user.add(username);
         // },
+        changeUserInfo(root, { username, sex, wechat, dsc }, ctx) {
+            return ctx.connector.user.changeUserInfo(username, sex, wechat, dsc)
+        },
         passwordChange(root, { mobile, area, password, code }, ctx) {
             return ctx.connector.user.passwordChange(mobile, area, password, code);
         },
+        mobileChange(root, { mobile, area, code }, ctx) {
+            return ctx.connector.user.mobileChange(mobile, area, code);
+        }
     },
 };

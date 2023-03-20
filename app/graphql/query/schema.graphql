@@ -4,15 +4,14 @@ type Query {
   verifySend(mobile: String!, area: Int!): Res!
   verifyCheck(mobile: String!, code: String!, area: Int!): Res!
   # user
+  userInfo: User!
   loginCaptcha(mobile: String!, area: Int!, code: String!): Return!
-  loginOne_click(mobile: String!, accessCode: String!, outId: String!): Return!
-  loginPassword(mobile: String!, password: String!): Return!
-  #登陆注册
+  #loginOne_click(mobile: String!, accessCode: String!, outId: String!): Return!
+  loginPassword(mobile: String!, area: Int!, password: String!): Return!
   logOut: Res!
   #课程请求
   courseCategory: [Category!]
-  course(category_id: String!, page: Int, limit: Int): [Course!]
-  courseDetail(course_id: String!): [CourseDetail!]
+  course(category_id: String!, page: Int, limit: Int): [CourseDetail!]
   courseCatalogue(course_id: String!): [Catalogue!]
   courseLink(detail_id: String!): Link!
 

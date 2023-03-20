@@ -3,13 +3,6 @@ type Category {
   title: String,
 }
 
-type Course {
-  _id: String,
-  title: String,
-  imageUrl: String,
-  author: String,
-  description: String,
-}
 
 type CourseDetail {
   _id: String,

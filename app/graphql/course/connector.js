@@ -60,28 +60,6 @@ class LaunchConnector {
     }
 
     /**
-     * 大课（eg.俞敏洪系列课程）的详细资料
-     * @param {String} course_id
-     * @returns 
-     */
-    async courseDetail(course_id) {
-        const { ctx, app } = this;
-
-        const cors = await ctx.model.Course.find(
-            { _id: ObjectId(course_id) },
-            (err, docs) => {
-                if (err) {
-                    console.log('查询错误');
-                } else {
-                    console.log(JSON.stringify(docs));
-                }
-            }
-        );
-
-        return cors;
-    }
-
-    /**
      * 大课下的小课目录
      * @param {String} course_id 
      * @returns 
@@ -107,11 +85,11 @@ class LaunchConnector {
      * @returns 
      */
     async courseLink(detail_id) {
-        const { ctx, app } = this;
+        const { ctx } = this;
 
-        const cors = await ctx.model.CourseDetail.find(
+        const cors = await ctx.model.CourseDetail.findOne(
             { _id: detail_id },
-            { title: 1 },
+            { title: 1, free: 1 },
             (err, docs) => {
                 if (err) {
                     console.log('查询错误');
@@ -120,9 +98,23 @@ class LaunchConnector {
                 }
             }
         );
-        //const getcode = await ctx.service.qiniu.qiniuDown(cors[0].title, 3600);
-        const getcode = await ctx.service.s3.s3Down(cors[0].title, 1);
-        return { link: getcode };
+        if (cors.free) {
+            const link = await ctx.service.s3.s3Down(cors.title, 1)
+            return { link: link }
+        } else {
+            const token = ctx.request.header.authorization;
+            if (!token) {
+                return { link: "" }
+            }
+            const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+            const role = ctx.model.User.findOne({ _id: secret.uid }).role
+            if (role === "vip") {
+                const link = await ctx.service.s3.s3Down(cors.title, 1)
+                return { link: link }
+            } else {
+                return { link: "" }
+            }
+        }
     }
 }
 

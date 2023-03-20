@@ -5,32 +5,42 @@ const Helper = require('../extend/helper.js');
 class UserService extends Service {
 
 
-    // 登录校验
-    async loginVerify(mobile) {
+    /**
+     * 登陆校验
+     * 待解决：refresh token存哪里？
+     * @param {String} mobile 
+     * @param {Int} area 
+     * @returns 
+     */
+    async loginVerify(mobile, area) {
         const { ctx, app } = this;
         // 注册判断是否存在
-        const corr = await ctx.model.User.findOne({ mobile });
+        const account = '' + area + '#' + mobile;
+        const corr = await ctx.model.User.findOne({ mobile: account });
+        console.log("我创建了：", account)
         if (!corr) {
+            console.log("我进来了")
             const course = new ctx.model.User({
-                mobile: mobile,
+                mobile: account,
                 password: Helper.encrypt(Helper.genRandomPwd()),
-                profile: 'http://qn3.proflu.cn/default.jpg',
+                imageUrl: 'http://qn3.proflu.cn/default.jpg',
             });
             const result = await course.save();
             console.log(result);
 
             ctx.body = '注册成功';
-            const Token = await ctx.service.jwt.awardToken(result._id);
+            const Token = await ctx.service.jwt.awardToken(result._id); //前端存本地
             // token 存储至Redis
-            await ctx.service.cache.set(result._id, Token.token, 1000);
+            await ctx.service.cache.set(result._id, Token.token, 7200);
             // 将生成的Token返回给前端
             return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: result };
         }
+        console.log("该用户名已注册")
         ctx.body = '该用户名已注册';
         // 生成Token
         const Token = await ctx.service.jwt.awardToken(corr._id);
         // token 存储至Redis
-        await ctx.service.cache.set(corr._id, Token.token, 1000);
+        await ctx.service.cache.set(corr._id, Token.token, 7200);
         // 将生成的Token返回给前端
         return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
     }
@@ -38,29 +48,32 @@ class UserService extends Service {
 
     /**
      * 用户密码登陆
-     * @param {String} account //账号
-     * @param {String} password //密码
-     * @return {*} //
+     * @param {String} mobile 手机号
+     * @param {Int} area 区号 
+     * @param {String} password 密码
+     * @return {*} 
      */
-    async login(account, password) {
-        const { ctx, app } = this;
+    async loginPassword(mobile, area, password) {
+        const { ctx } = this;
+        const account = '' + area + '#' + mobile;
         const corr = await ctx.model.User.findOne({ mobile: account });
         // 用户是否存在
         if (!corr) {
             ctx.body = '用户名错误';
+            return { status: '200', msg: '用户名错误' };
         } else {
             if (Helper.compare(password, corr.password)) {
                 // 生成Token
                 const Token = await ctx.service.jwt.awardToken(corr._id);
                 // token 存储至Redis
-                await ctx.service.cache.set(corr._id, Token.token, 1000);
+                await ctx.service.cache.set(corr._id, Token.token, 7200);
                 // const user = await ctx.model.User.findOne({ account });
                 // 将生成的Token返回给前端
                 console.log(corr);
                 return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
             }
             ctx.body = '密码错误,请重新输入!';
-            return { status: '100', msg: '密码错误,请重新输入' };
+            return { status: '200', msg: '密码错误,请重新输入' };
         }
     }
 
@@ -81,10 +94,16 @@ class UserService extends Service {
     }
 
 
-    // 修改密码
-    async password(mobile, password) {
+    /**
+     * 修改密码
+     * 待解决：是否有必要把password设置成select=false
+     * @param {String} account 账号 = 区号#手机号 
+     * @param {*} password 新密码
+     * @returns 
+     */
+    async password(account, password) {
         const { ctx } = this;
-        const corr = await ctx.model.User.findOne({ mobile });
+        const corr = await ctx.model.User.findOne({ mobile: account });
         if (!corr) {
             return {
                 status: '200',
@@ -97,7 +116,7 @@ class UserService extends Service {
             }
         }
         const encrypt = Helper.encrypt(password)
-        const ismodified = await (await ctx.model.User.updateOne({ mobile }, { password: encrypt })).nModified;
+        const ismodified = await (await ctx.model.User.updateOne({ mobile: account }, { password: encrypt })).nModified;
         if (ismodified == 1) {
             return {
                 status: '100',
@@ -110,6 +129,45 @@ class UserService extends Service {
             };
         }
     }
+
+    /**
+     * 
+     * @param {String} uid 
+     * @param {*} account 
+     * @returns 
+     */
+    async mobileChange(uid, account) {
+        const { ctx } = this;
+        const corr = await ctx.model.User.findOne({ mobile: uid });
+        if (!corr) {
+            return {
+                status: '200',
+                msg: '用户不存在',
+                mobile: corr.mobile,
+            };
+        } else if (account === corr.mobile) {
+            return {
+                status: '200',
+                msg: '新手机号与旧手机号相同',
+                mobile: corr.mobile,
+            }
+        }
+        const ismodified = await (await ctx.model.User.updateOne({ mobile: uid }, { mobile: account })).nModified;
+        if (ismodified) {
+            return {
+                status: '100',
+                msg: '修改手机号成功',
+                mobile: account
+            };
+        } else {
+            return {
+                status: '200',
+                msg: '修改手机号失败',
+                mobile: corr.mobile
+            };
+        }
+    }
+
 
 
     // 删除用户

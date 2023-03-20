@@ -64,7 +64,7 @@ class SmsService extends Service {
         const code = this.ctx.helper.rand(6);
         const result = await this.alisms(mobile, code, area);
         if (result.status === '100') {
-            await this.ctx.service.cache.set('mobileVerify ' + area + ' ' + mobile, JSON.stringify(code), 300);
+            await this.ctx.service.cache.set('mobileVerify ' + area + ' ' + mobile, JSON.stringify(code), 600);
         }
         return result
     }

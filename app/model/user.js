@@ -10,7 +10,6 @@ module.exports = app => {
             username: {
                 type: String,
                 default: '陆向谦实验室学员',
-                unique: true, // 创建唯一索引
             },
             password: {
                 type: String,
@@ -29,10 +28,9 @@ module.exports = app => {
                 unique: true,
             },
             wechat: { type: String, default: '' },
-            birth: { type: Number, default: 0 },
-            profile: { type: String },
+            imageUrl: { type: String },
             role: {
-                type: [String],
+                type: String,
                 default: 'user',
             },
             status: { type: Number, default: 1 },
@@ -73,7 +71,7 @@ function initUserData(User) {
                 password: "adminpwd",
                 dsc: '该用户拥有系统内所有菜单和路由权限',
                 mobile: '18184502522',
-                profile: 'http://qn3.proflu.cn/default.jpg',
+                imageUrl: 'http://qn3.proflu.cn/default.jpg',
             }).save();
         } else {
             console.log('-------------创建超级管理员成功--------------');

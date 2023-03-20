@@ -25,16 +25,16 @@ class LaunchConnector {
 
 
     // 用户密码登陆
-    async login(account, password) {
+    async loginPassword(mobile, area, password) {
         const { ctx } = this;
-        return await ctx.service.user.login(account, password);
+        return await ctx.service.user.loginPassword(mobile, area, password);
     }
 
 
     // 验证码登陆
     async loginCaptcha(mobile, code, area) {
         const getcode = await this.ctx.service.sms.verifyCheck(mobile, code, area);
-        if (getcode) { return await this.ctx.service.user.loginVerify(mobile); }
+        if (getcode) { return await this.ctx.service.user.loginVerify(mobile, area); }
         return {
             status: '200',
             msg: '验证码错误',
@@ -44,16 +44,17 @@ class LaunchConnector {
 
     // 退出登陆
     async logOut() {
-        const { ctx, app } = this;
+        const { ctx } = this;
         const token = ctx.request.header.authorization.replace(/^Bearer\s/, '');
         return await ctx.service.user.logOut(token);
     }
 
     // 修改密码
     async passwordChange(mobile, area, password, code) {
-        const { ctx, app } = this;
+        const { ctx } = this;
         const getcode = await ctx.service.sms.verifyCheck(mobile, code, area);
-        if (getcode) { return await ctx.service.user.password(mobile, password); }
+        const account = '' + area + '#' + mobile;
+        if (getcode) { return await ctx.service.user.password(account, password); }
         return {
             status: '200',
             msg: '验证码错误',
@@ -61,12 +62,58 @@ class LaunchConnector {
 
     }
 
-
-    // 修改用户信息
-    async userEdit() {
-        const { ctx, app } = this;
-
+    /**
+     * 修改手机号
+     * @param {String} mobile 新手机号
+     * @param {*} area 地区
+     * @param {*} code 验证码
+     * @returns 
+     */
+    async mobileChange(mobile, area, code) {
+        const { ctx } = this;
+        const token = ctx.request.header.authorization;
+        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+        const getcode = await ctx.service.sms.verifyCheck(mobile, code, area);
+        if (getcode) {
+            const account = '' + area + '#' + mobile;
+            return await this.ctx.service.user.mobileChange(secret.uid, account)
+        }
+        return {
+            status: '200',
+            msg: '验证码错误',
+            mobile: secret.mobile
+        };
     }
+
+    /**
+     * 获取用户信息
+     * @returns 
+     */
+    async userInfo() {
+        const { ctx } = this;
+        const token = ctx.request.header.authorization;
+        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+        return ctx.model.User.findOne({ _id: secret.uid })
+    }
+
+    /**
+     * 用户信息修改
+     * @param {String} name 用户名
+     * @param {Int} sex 性别
+     * @param {String} wechat 微信号
+     * @param {String} dsc 个人简介
+     * @returns 
+     */
+    async changeUserInfo(username, sex, wechat, dsc) {
+        const { ctx } = this;
+        const token = ctx.request.header.authorization;
+        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+        await ctx.model.User.updateOne({ _id: secret.uid }, { username, sex, wechat, dsc })
+        return await ctx.model.User.findOne({ _id: secret.uid })
+    }
+
+    //destroy 注销 - 黑名单机制 
+    //黑名单机制注销登录时，缓存JWT至Redis，且【缓存有效时间设置为JWT的有效期】，请求资源时判断是否存在缓存的黑名单中，存在则拒绝访问。
 
 
 }
