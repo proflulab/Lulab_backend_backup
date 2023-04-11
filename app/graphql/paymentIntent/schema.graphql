@@ -1,0 +1,6 @@
+type clientSecret{
+    clientSecret:String,
+}
+type paymentIntentStatus{
+    paymentIntentStatus:String,
+}

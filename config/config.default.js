@@ -78,7 +78,7 @@ module.exports = appInfo => {
             ignore: ctx => {
                 // console.log("____________________________________________________");
                 // console.log(ctx.request.url);
-                if (ctx.request.url === '/aliPay/aliPayNotify' || ctx.request.url === '/graphql' || ctx.request.url === '/graphql?' || ctx.request.url === '/api/registered' || ctx.request.url === '/api/login') {
+                if (ctx.request.url === '/aliPay/aliPayNotify' || ctx.request.url === '/graphql' || ctx.request.url === '/graphql?' || ctx.request.url === '/api/registered' || ctx.request.url === '/api/login' || ctx.request.url === '/webhook') {
                     return true;
                 }
                 return false;
