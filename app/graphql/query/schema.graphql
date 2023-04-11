@@ -14,6 +14,7 @@ type Query {
   course(category_id: String!, page: Int, limit: Int): [CourseDetail!]
   courseCatalogue(course_id: String!): [Catalogue!]
   courseLink(detail_id: String!): Link!
+  
   #stripe paymentIntent支付
   createPaymentIntent(items:Items!):clientSecret!
   retrievePaymentIntent(id:String!):paymentIntentStatus!
