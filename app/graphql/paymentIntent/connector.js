@@ -5,7 +5,6 @@ const { cors } = require('../../../config/plugin');
 const ObjectId = require('mongodb').ObjectID;
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
-
 const calculateOrderAmount = (items) => {
     // Replace this constant with a calculation of the order's amount
     // Calculate the order total on the server to prevent
