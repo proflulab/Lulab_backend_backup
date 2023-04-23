@@ -25,7 +25,7 @@ class SmsService extends Service {
         var templateCode = this.config.sms.nationalCode//国内
         if (area !== 86) {
             templateCode = this.config.sms.internationalCode //国际
-            mobile += area
+            mobile = area + mobile
         }
         const params = {
             SignName: this.config.sms.aliSignName,//'阿里云短信测试', //短信签名名称
