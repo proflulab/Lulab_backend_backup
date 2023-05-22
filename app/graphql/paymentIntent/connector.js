@@ -51,15 +51,85 @@ class paymentIntentConnector {
      */
 
     async retrievePaymentIntent(id) {
-        let paymentIntent;
-        await stripe.paymentIntents.retrieve(
-            id
-        ).then(result => {
-            //console.log(result);
-            paymentIntent = result;
-            console.log(paymentIntent);
+        const { ctx } = this;
+        const user = await ctx.model.User.updateOne({ mobile: '86#15910203613' }, { $unset: { vipExpTime: 1 } });
+        // console.log(user);
+        // console.log(user.vipExpTime.getTime())
+        // let paymentIntent;
+        // await stripe.paymentIntents.retrieve(
+        //     id
+        // ).then(result => {
+        //     //console.log(result);
+        //     paymentIntent = result;
+        //     console.log(paymentIntent);
+        // });
+        return { paymentIntentStatus: 'test' };
+    }
+
+    /**
+     * 查询stripe订单
+     * @param {Strin} id 订单id 
+     * @returns paymentIntentStatus 订单状态
+     */
+
+    async searchPaymentIntent() {
+        const { ctx } = this;
+        const token = ctx.request.header.authorization;
+        if (!token) {
+            return { link: "" }
+        }
+        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+        const user = await ctx.model.User.findOne({ _id: secret.uid });
+
+        // const user = await ctx.model.User.findOne({ mobile: '86#15910203613' });
+        console.log(user);
+        if (user.cusId === undefined) {
+            return [];
+        }
+        console.log(user.cusId);
+        console.log(user);
+        const paymentIntents = await stripe.paymentIntents.search({
+            query: 'customer: \'' + user.cusId + '\'',
         });
-        return { paymentIntentStatus: paymentIntent.status };
+        console.log(paymentIntents);
+        let i;
+        for (i = 0; i < paymentIntents.data.length; i++) {
+            delete paymentIntents.data[i].object;
+            delete paymentIntents.data[i].amount_capturable;
+            delete paymentIntents.data[i].amount_details;
+            delete paymentIntents.data[i].application;
+            delete paymentIntents.data[i].application_fee_amount;
+            delete paymentIntents.data[i].automatic_payment_methods;
+            delete paymentIntents.data[i].canceled_at;
+            delete paymentIntents.data[i].cancellation_reason;
+            delete paymentIntents.data[i].capture_method;
+            delete paymentIntents.data[i].client_secret;
+            delete paymentIntents.data[i].confirmation_method;
+            delete paymentIntents.data[i].created;
+            delete paymentIntents.data[i].application;
+            delete paymentIntents.data[i].invoice;
+            delete paymentIntents.data[i].last_payment_error;
+            delete paymentIntents.data[i].metadata;
+            delete paymentIntents.data[i].next_action;
+            delete paymentIntents.data[i].on_behalf_of;
+            delete paymentIntents.data[i].payment_method_options;
+            delete paymentIntents.data[i].payment_method_types;
+            delete paymentIntents.data[i].processing;
+            delete paymentIntents.data[i].review;
+            delete paymentIntents.data[i].setup_future_usage;
+            delete paymentIntents.data[i].shipping;
+            delete paymentIntents.data[i].source;
+            delete paymentIntents.data[i].statement_descriptor;
+            delete paymentIntents.data[i].statement_descriptor_suffix;
+            delete paymentIntents.data[i].transfer_data;
+            delete paymentIntents.data[i].transfer_group;
+
+
+        }
+        console.log(paymentIntents.data);
+        console.log(typeof paymentIntents.data);
+        const x = paymentIntents.data[0];
+        return paymentIntents.data;
     }
 }
 

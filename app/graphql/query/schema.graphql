@@ -16,8 +16,10 @@ type Query {
   courseLink(detail_id: String!): Link!
   
   #stripe paymentIntent支付
+  createCheckoutSession:sessionId
   createPaymentIntent(items:Items!):clientSecret!
   retrievePaymentIntent(id:String!):paymentIntentStatus!
+  searchPaymentIntent:[paymentIntentInfo]
   #stripe refunds支付
   createRefunds(id:String!):paymentIntentStatus!
 

@@ -4,3 +4,16 @@ type clientSecret{
 type paymentIntentStatus{
     paymentIntentStatus:String,
 }
+type paymentIntentInfo{
+    id:String,
+    amount:Int,
+    amount_received:Int,
+    currency:String,
+    customer:String,
+    description:String,
+    latest_charge:String,
+    livemode:Boolean,
+    payment_method:String,
+    receipt_email:String,
+    status:String,
+}

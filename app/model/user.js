@@ -38,6 +38,8 @@ module.exports = app => {
             token: {
                 type: String,
             },
+            cusId: { type: String, },
+            vipExpTime: { type: Date, },
         },
         {
             timestamps: true,

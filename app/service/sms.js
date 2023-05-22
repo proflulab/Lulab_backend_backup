@@ -2,6 +2,7 @@
 
 const Service = require('egg').Service;
 const Core = require('@alicloud/pop-core');
+const AWS = require('aws-sdk');
 
 /**
  * 阿里云短信发送
@@ -21,34 +22,70 @@ class SmsService extends Service {
      * @exception https://help.aliyun.com/document_detail/101347.html
      */
     async alisms(mobile, code, area = 86) {
-        const client = new Core(this.config.ali);
-        var templateCode = this.config.sms.nationalCode//国内
         if (area !== 86) {
-            templateCode = this.config.sms.internationalCode //国际
-            mobile = area + mobile
+            const options = {
+                accessKeyId: 'String',
+                secretAccessKey: 'String',
+                apiVersion: '2010-03-31',
+            };
+            const snsService = new AWS.SNS(options);
+            const params = {
+                Message: text,
+                MessageAttributes: {
+                    'AWS.SNS.SMS.SMSType': {
+                        DataType: 'String',
+                        StringValue: 'Transactional', // Transactional or Promotional
+                    },
+                    // AWS.SNS.SMS.MaxPrice
+                    // AWS.SNS.SMS.SenderId
+                },
+                PhoneNumber: phoneNumber, // 电话号码，需要遵从E.164格式
+            };
+            // const response = await snsService.publish(params).promise();
+            try {
+                const response = await snsService.publish(params)
+                console.log(JSON.stringify(result))
+                return {
+                    status: '100',
+                    msg: '发送成功',
+                };
+            } catch (ex) {
+                return {
+                    status: ex.code,
+                    msg: ex.message,
+                };
+            }
         }
-        const params = {
-            SignName: this.config.sms.aliSignName,//'阿里云短信测试', //短信签名名称
-            TemplateCode: templateCode, //阿里云模板管理页面
-            PhoneNumbers: mobile,
-            TemplateParam: '{"code":"' + code + '"}',
-        };
-        const requestOption = {
-            method: 'POST',
-            formatParams: false,
-        };
-        try {
-            const result = await client.request('SendSms', params, requestOption)
-            console.log(JSON.stringify(result))
-            return {
-                status: '100',
-                msg: '发送成功',
+        else {
+            const client = new Core(this.config.ali);
+            var templateCode = this.config.sms.nationalCode//国内
+            if (area !== 86) {
+                //templateCode = this.config.sms.internationalCode //国际
+                mobile = area + mobile
+            }
+            const params = {
+                SignName: this.config.sms.aliSignName,//'阿里云短信测试', //短信签名名称
+                TemplateCode: templateCode, //阿里云模板管理页面
+                PhoneNumbers: mobile,
+                TemplateParam: '{"code":"' + code + '"}',
             };
-        } catch (ex) {
-            return {
-                status: ex.code,
-                msg: ex.message,
+            const requestOption = {
+                method: 'POST',
+                formatParams: false,
             };
+            try {
+                const result = await client.request('SendSms', params, requestOption)
+                console.log(JSON.stringify(result))
+                return {
+                    status: '100',
+                    msg: '发送成功',
+                };
+            } catch (ex) {
+                return {
+                    status: ex.code,
+                    msg: ex.message,
+                };
+            }
         }
     }
 

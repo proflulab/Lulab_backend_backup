@@ -8,5 +8,8 @@ module.exports = {
         retrievePaymentIntent(root, { id }, ctx) {
             return ctx.connector.paymentIntent.retrievePaymentIntent(id);
         },
+        searchPaymentIntent(root, { }, ctx) {
+            return ctx.connector.paymentIntent.searchPaymentIntent();
+        },
     },
 };
