@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    Query: {
+    Mutation: {
         createCheckoutSession(root, { }, ctx) {
             return ctx.connector.checkoutSession.createCheckoutSession();
         },

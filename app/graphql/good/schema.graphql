@@ -1,7 +1,9 @@
 type GoodRes {
-  title: String,
-  # 价格
-  price: Float,
+  status: String,
+  msg: String,
+  poster: String,
+  goodsName: String,
+  goodsPrice: String,
 }
 
 

@@ -1,6 +1,6 @@
-type OrderInfo  {
-  v: String,
-}
+#type OrderInfo  {
+#  v: String,
+#}
 
 
 

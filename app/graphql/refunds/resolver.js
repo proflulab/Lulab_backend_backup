@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    Query: {
+    Mutation: {
         createRefunds(root, { id }, ctx) {
             return ctx.connector.refunds.createRefunds(id);
         },

@@ -20,80 +20,85 @@ class checkoutSessionConnector {
     }
 
     /**
-     * 创建stripe订单
-     * @returns sessionid
+     * 创建stripe checkoutSession
+     * @returns id Sessionid
      */
 
     async createCheckoutSession() {
         const { ctx } = this;
         const token = ctx.request.header.authorization;
-        if (!token) {
-            return { link: "" }
-        }
-        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
-        // if (await ctx.model.User.find({ mobile: '86#15910203613' }) == false) {
-        //     await ctx.model.User.create({
-        //         username: 'x',
-        //         password: 'xxxxxxxx',
-        //         mobile: '86#15910203613'
-        //     })
-        // }
-        const user = await ctx.model.User.findOne({ _id: secret.uid });
-        // const user = await ctx.model.User.findOne({ mobile: '86#15910203613' });
-
-        const mobile = '+' + user.mobile.split("#")[0] + user.mobile.split("#")[1];
-        const customers = await stripe.customers.search({
-            query: 'phone:\'' + mobile + '\'',
-        });
-        let customer;
-        if (customers.data == false) {
-            customer = await stripe.customers.create({
-                description: '陆向谦实验室会员',
-                phone: mobile,
-            });
-            console.log(customer);
-            const user = await ctx.model.User.updateOne(
-                // { mobile: '86#15910203613' },
-                { mobile: user.mobile },
-                { $set: { cusId: customer.id } }
-            );
-            console.log(customer.id);
-            console.log('create new customer');
-        }
-        else {
-            customer = customers.data[0];
-            console.log('use old customer');
-        }
-        console.log(customer);
-        let session;
-        session = await stripe.checkout.sessions.create({
-            customer: customer.id,
-            phone_number_collection: {
-                enabled: true,
-            },
-            payment_method_types: ['card'],
-            line_items: [
-                {
-                    price_data: {
-                        currency: 'usd',
-                        product_data: {
-                            name: 'Stubborn Attachments',
-                            images: ['https://i.imgur.com/EHyR2nP.png'],
+        let customers;
+        let session = {
+            id: '未接收到sessionId'
+        };
+        let status = 100, msg = '成功创建stripe checkout session';
+        try {
+            const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+            let user = await ctx.model.User.findOne({ _id: secret.uid });
+            console.log(user);
+            console.log(secret);
+            //const mobile = '+' + user.mobile.split("#")[0] + user.mobile.split("#")[1];//这里的手机号是用于填写stripe.customers.create中的phone选项
+            let customer;
+            if (user.cusId === undefined) {
+                customer = await stripe.customers.create({
+                    description: '陆向谦实验室会员',
+                    //phone: mobile,
+                    /*取消注释这里会上传用户手机的信息到stripe，在使用stripe checkout支付的时候会自动填写
+                    在支付表格的手机号处，用户在提交前可以修改手机号，无论如何修改不改变获得vip的对象。以后
+                    可以根据需要取消注释*/
+                    //email: user.email,
+                    /*如果以后有开发者在用户user的表中的mongodb表中加入了email属性，且填写了邮箱信息，
+                        那么取消注释这里会上传用户邮箱的信息，在使用stripe checkout支付的时候会自动填写在
+                        支付表格的邮箱处，用户在提交支付表格前无法修改。以后可以根据需要取消注释。
+                      如果没有有开发者在用户user的表中的mongodb表中加入了email属性，或者未填写邮箱信息，
+                        那么禁止取消注释
+                    */
+                });
+                console.log(customer);
+                await ctx.model.User.updateOne(
+                    { _id: secret.uid },
+                    { $set: { cusId: customer.id } }
+                );
+                user = await ctx.model.User.findOne({ _id: secret.uid });
+                console.log(user.cusId);
+                console.log('create new customer');
+            }
+            else {
+                console.log('use old customer');
+            }
+            console.log(user.cusId);
+            session = await stripe.checkout.sessions.create({
+                customer: user.cusId,
+                // phone_number_collection: {
+                //     enabled: true,
+                // },//可根据需要取消注释，此处注释和上面与手机相关的两处注释同时取消即可使用
+                payment_method_types: ['card'],
+                line_items: [
+                    {
+                        price_data: {
+                            currency: 'usd',
+                            product_data: {
+                                name: 'Stubborn Attachments',
+                                images: ['https://i.imgur.com/EHyR2nP.png'],
+                            },
+                            unit_amount: 2000,
                         },
-                        unit_amount: 2000,
+                        quantity: 1,
                     },
-                    quantity: 1,
+                ],
+                mode: 'payment',
+                payment_intent_data: {
+                    description: '陆向谦实验室会员'
                 },
-            ],
-            mode: 'payment',
-            payment_intent_data: {
-                description: '陆向谦实验室会员'
-            },
-            success_url: `https://checkout.stripe.dev/success`,
-            cancel_url: `https://checkout.stripe.dev/cancel`,
-        });
-        console.log(session);
-        return ({ id: session.id });
+                success_url: `https://checkout.stripe.dev/success`,
+                cancel_url: `https://checkout.stripe.dev/cancel`,
+            });
+        }
+        catch (ex) {
+            status = ex.code;
+            msg = ex.message;
+        }
+        return ({ status, msg, id: session.id });
     }
 }
 

@@ -2,7 +2,17 @@ type clientSecret{
     clientSecret:String,
 }
 type paymentIntentStatus{
+    status:Int,
+    msg:String,
     paymentIntentStatus:String,
+}
+type paymentIntentData{
+    status:Int,
+    msg:String,
+    role:String,
+    vipExpTime:String,
+    now:String,
+    paymentIntentInfo:[paymentIntentInfo],
 }
 type paymentIntentInfo{
     id:String,
@@ -16,4 +26,16 @@ type paymentIntentInfo{
     payment_method:String,
     receipt_email:String,
     status:String,
+    refunds:[refunds],
+}
+type refunds{
+    id: String,
+    object: String,
+    amount: Int,
+    balance_transaction:String,
+    charge: String,
+    created: Int,
+    currency: String,
+    payment_intent: String,
+    status: String,
 }

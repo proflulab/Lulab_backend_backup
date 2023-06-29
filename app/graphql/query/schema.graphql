@@ -15,13 +15,12 @@ type Query {
   courseCatalogue(course_id: String!): [Catalogue!]
   courseLink(detail_id: String!): Link!
   
-  #stripe paymentIntent支付
-  createCheckoutSession:sessionId
-  createPaymentIntent(items:Items!):clientSecret!
+  #查询某一用户所有订单
+  searchPaymentIntent:paymentIntentData!
+  #查询某一订单相关信息
   retrievePaymentIntent(id:String!):paymentIntentStatus!
-  searchPaymentIntent:[paymentIntentInfo]
-  #stripe refunds支付
-  createRefunds(id:String!):paymentIntentStatus!
+  #stripe支付
+  #createPaymentIntent(items:Items!):clientSecret!
 
   # 获取支付信息
   reToken(token: String!): Token!
@@ -30,7 +29,7 @@ type Query {
   user: [User!]
 
   # 获取支付信息
-  orderInfo(number: Int!): OrderInfo!
+  #orderInfo(number: Int!): OrderInfo!
 
   # 七牛云
   qiniu: Qiniu!

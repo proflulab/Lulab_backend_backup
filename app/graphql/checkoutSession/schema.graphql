@@ -1,3 +1,5 @@
 type sessionId{
-    id:String
+    status:Int,
+    msg:String,
+    id:String,
 }
