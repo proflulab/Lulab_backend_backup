@@ -25,7 +25,7 @@ module.exports = appInfo => {
   config.mongoose = {
     //本地环境
     client: {
-      url: 'mongodb://127.0.0.1:27017/test',
+      url: 'mongodb://root:lulab1005@144.24.84.85:27017/',
       options: {
         useNewUrlParser: true,
         useUnifiedTopology: true

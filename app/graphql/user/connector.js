@@ -187,7 +187,7 @@ class UserConnector /*extends BasicConnector */ {
         var user = await this.ctx.model.User.updateMany(
             {_id:userInput._id},{$set:{"imgUrl":user.imgUrl,"sex":user.sex,"imgs":user.imgs,
                                "description":user.description,"addTime":user.addTime,"timestamp":user.timestamp,
-                               "wechat":user.wechat,phone:user.phone,"position":user.position,"videoUrl":user.videoUrl,
+                               "wechat":user.wechat,"position":user.position,"videoUrl":user.videoUrl,
                                "industry":user.industry,"country":user.country,"phone":user.phone,"profileImgUrl":user.profileImgUrl,
                                "email":user.email,"schoolRecord":user.schoolRecord,"detailMsg":user.detailMsg,
                     "identity":user.identity, "iconUrl":user.iconUrl, "bigCoverUrl":user.bigCoverUrl, "password":user.password,"location":user.location,
