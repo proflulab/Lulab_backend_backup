@@ -3,6 +3,7 @@ type Query {
   usersAdmin(option: Option!, condition: Condition): [User]
   userAdmin(id: ID!): User
   #userLogin(userLoginPayload: UserLoginPayload!): User!
+  logOut(id: ID!): LogOutResponse
   userRich(id: ID!): User!
   userLogin(userInput: UserInput!): result
   latestClassificationUser(category: String , option: Option):[User]
