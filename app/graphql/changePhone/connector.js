@@ -7,8 +7,8 @@ const axios = require('axios');
 async function changePhone(mobile, area, code) {
     return {
         "status": "yes",
-        "msg": "手机号更改成功",
-        "mobile": "+86 12345678910"
+        "msg": "手机号更改成功, code: "+code,
+        "mobile":  "+测试字符串(地区编码) 测试字符串String(更改后的手机号)"
     };
 }
 
