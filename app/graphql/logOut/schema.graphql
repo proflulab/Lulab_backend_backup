@@ -1,5 +1,6 @@
 
 type LogOutResponse {
+    id: ID!
     status: String!
     msg: String!
 }
