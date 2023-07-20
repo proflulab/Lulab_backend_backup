@@ -204,54 +204,54 @@ class UserConnector /*extends BasicConnector */ {
     }
 
 
-    async userRich(id) {
-        let user = this.ctx.model[this.model].findOne({
-            _id: id
-        }).exec();
+    // async userRich(id) {
+    //     let user = this.ctx.model[this.model].findOne({
+    //         _id: id
+    //     }).exec();
 
-        const basicQuery = {
-            user: id,
-            isDeleted: false,
-            isBlocked: false
-        };
+    //     const basicQuery = {
+    //         user: id,
+    //         isDeleted: false,
+    //         isBlocked: false
+    //     };
 
-        const getCount = (model, query) => {
-            return this.ctx.model[model].countDocuments(query).exec();
-        }
+    //     const getCount = (model, query) => {
+    //         return this.ctx.model[model].countDocuments(query).exec();
+    //     }
 
-        let postCount = getCount(MODEL_NAMES.POST, basicQuery);
-        let commentCount = getCount(MODEL_NAMES.COMMENT, basicQuery);
-        let postCommentCount = getCount(MODEL_NAMES.POST_COMMENT, basicQuery);
-        let collectCount = getCount(MODEL_NAMES.COLLECT, {
-            actor: id,
-            value: true
-        });
-        let notificationCount = getCount(MODEL_NAMES.NOTIFICATION, {
-            ...basicQuery,
-            status: NOTIFICATION_STATUS.INIT
-        });
+    //     let postCount = getCount(MODEL_NAMES.POST, basicQuery);
+    //     let commentCount = getCount(MODEL_NAMES.COMMENT, basicQuery);
+    //     let postCommentCount = getCount(MODEL_NAMES.POST_COMMENT, basicQuery);
+    //     let collectCount = getCount(MODEL_NAMES.COLLECT, {
+    //         actor: id,
+    //         value: true
+    //     });
+    //     let notificationCount = getCount(MODEL_NAMES.NOTIFICATION, {
+    //         ...basicQuery,
+    //         status: NOTIFICATION_STATUS.INIT
+    //     });
 
-        await Promise.all([user, postCount, commentCount, postCommentCount, collectCount, notificationCount]);
+    //     await Promise.all([user, postCount, commentCount, postCommentCount, collectCount, notificationCount]);
 
-        // 将promise转化成值，mongoose配合promise.all所需的特殊操作
-        user = await user;
-        postCount = await postCount;
-        commentCount = await commentCount;
-        postCommentCount = await postCommentCount;
-        collectCount = await collectCount;
-        notificationCount = await notificationCount;
+    //     // 将promise转化成值，mongoose配合promise.all所需的特殊操作
+    //     user = await user;
+    //     postCount = await postCount;
+    //     commentCount = await commentCount;
+    //     postCommentCount = await postCommentCount;
+    //     collectCount = await collectCount;
+    //     notificationCount = await notificationCount;
 
-        if (user) {
-            return {
-                ...user._doc,
-                postCount,
-                commentCount,
-                postCommentCount,
-                collectCount,
-                notificationCount
-            };
-        }
-    }
+    //     if (user) {
+    //         return {
+    //             ...user._doc,
+    //             postCount,
+    //             commentCount,
+    //             postCommentCount,
+    //             collectCount,
+    //             notificationCount
+    //         };
+    //     }
+    // }
 
     async userLogin(userLoginPayload) {
         const clientType = await this.ctx.service.util.getClientType();
@@ -480,6 +480,14 @@ class UserConnector /*extends BasicConnector */ {
             setDefaultsOnInsert: true
         });
         return result;
+    }
+
+    async userInfo() {
+        const {ctx} = this;
+        const token = ctx.request.header.authorization;
+        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+        return ctx.model.User.findOne({ _id: secret.uid })
+
     }
 }
 

@@ -26,12 +26,9 @@ class LaunchConnector {
     }
 
 
-    async logOut(id) {
+    async logOut() {
     const {ctx} = this
-    const token = ctx.request.header.authorization.findOne({
-        where: {_id: id},
-       },
-    );
+    const token = ctx.request.header.authorization.replace(/^Bearer\s/, '');
     return await ctx.service.user.logOut(token);
     // const users = await this.ctx.model.logOut.find({})
     // //try {

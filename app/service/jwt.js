@@ -18,6 +18,26 @@ class JwtService extends Service {
     }, secret);
 }
 
+async awardToken(userId) {
+    const config = this.app.config.jwt;
+    return {
+        token: await this.createToken(userId, config.secret, config.expire),
+        refresh_token: await this.createToken(userId, config.refresh_secret, config.refresh_expire),
+    };
+}
+
+async refreshToken(refreshToken) {
+    const userId = await this.getUserIdFromToken(refreshToken, true);
+    if (!userId) {
+        return false;
+    }
+    const token = await this.createToken(userId.uid, this.app.config.jwt.secret, this.app.config.jwt.expire);
+    return {
+        token,
+        refresh_token: refreshToken,
+    };
+}
+
 async verifyToken(token, isRefresh = false) {
   if (!token) {
       this.ctx.response.body = {
@@ -55,9 +75,17 @@ async getUserIdFromToken(token, isRefresh = false) {
       return false;
   }
   const res = await this.app.jwt.decode(token);
-  return res;
+  return res.uid;
 }
 
+async reToken(token) {
+    if (token === undefined) {
+        this.ctx.response.body = { message: '令牌为空，请登陆获取！' };
+        this.ctx.status = 401;
+        return;
+    }
+    return token.replace(/^Bearer\s/, '');
+}
 }
 
 module.exports = JwtService;

@@ -1,7 +1,7 @@
 module.exports = {
     Query: {
-        logOut(root, {id}, ctx) {
-            return ctx.connector.logOut.logOut(id);
+        logOut(root, {}, ctx) {
+            return ctx.connector.logOut.logOut();
         },
     }
 }

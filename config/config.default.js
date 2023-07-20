@@ -8,6 +8,9 @@ module.exports = appInfo => {
         ignore: () => true
       }
     },
+    jwt: {
+      secret: "123456"
+    },
     cors: {
       origin: '*',
       allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
