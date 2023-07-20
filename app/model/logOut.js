@@ -1,6 +1,5 @@
 
 // app/model/logOut.js
-
 module.exports = app => {
     const mongoose = app.mongoose;
     const Schema = mongoose.Schema;
@@ -16,7 +15,8 @@ module.exports = app => {
                 required: true
             }
         },
-        {
+    
+    {
             toJSON: { getters: true } // 使得获取数据时可以调用 getters
         }
     );

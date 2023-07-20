@@ -5,7 +5,8 @@ type Query {
   userAdmin(id: ID!): User
   #userLogin(userLoginPayload: UserLoginPayload!): User!
   logOut(id: ID!): LogOutResponse
-  userRich(id: ID!): User!
+  logIn(id: ID!): LogInResponse
+  userInfo: User!
   userLogin(userInput: UserInput!): result
   latestClassificationUser(category: String , option: Option):[User]
 
@@ -35,10 +36,11 @@ type Query {
   #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
   verifySend(mobile: String!, area: String!): VerifySendResponse!
+  reToken(token: String!): ReTokenResponse!
+  verifyCheck(mobile: String!, code: String!, area: Int!): VerifyCheckResult
 
   #growth
   latestUserGrowth(userId: String!,option :Option!): [Growth]
-
 
   #training
   latestTraining(option :Option!): [Training]

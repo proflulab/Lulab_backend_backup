@@ -8,6 +8,9 @@ module.exports = appInfo => {
         ignore: () => true
       }
     },
+    jwt: {
+      secret: "123456"
+    },
     cors: {
       origin: '*',
       allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
@@ -17,7 +20,14 @@ module.exports = appInfo => {
     },
     middleware: ['graphql']
   }
-
+  /*
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 8002,
+      hostname: '0.0.0.0',
+    }
+  };*/
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1546846389359_709'
 

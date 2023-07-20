@@ -10,6 +10,9 @@ const GeekParkSpider = require("../../spider/geekParkSpider")
 module.exports = {  
     
     Query: {
+        userInfo(root, { }, ctx) {
+            return ctx.connector.user.userInfo();
+        },
         async userAdmin(root, {
             id
         }, ctx) {

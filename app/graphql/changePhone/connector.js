@@ -1,14 +1,11 @@
 // connector.js
 
-// 导入所需的库和模块
-const axios = require('axios');
-
 // 定义请求函数
 async function changePhone(mobile, area, code) {
     return {
         "status": "yes",
-        "msg": "手机号更改成功, code: "+code,
-        "mobile":  "+测试字符串(地区编码) 测试字符串String(更改后的手机号)"
+        "msg": "手机号更改成功",
+        "mobile": "+86 12345678910"
     };
 }
 
