@@ -34,6 +34,7 @@ type Query {
 
   #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
+  verifySend(mobile: String!, area: String!): VerifySendResponse!
 
   #growth
   latestUserGrowth(userId: String!,option :Option!): [Growth]
