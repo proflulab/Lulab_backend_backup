@@ -8,12 +8,10 @@ class LaunchConnector {
             ids => this.fetch(ids)
         );
     }
-	async logInpassword() {
-		//获取用户通过post请求传过来的参数
-		const {ctx} = this
-		const data = ctx.request.body
-		return await ctx.service.user.logInpassword(data);
-	  }
+	async loginPassword(mobile, area, password) {
+        const { ctx } = this;
+        return await ctx.service.user.loginPassword(mobile, area, password);
+    }
 	}
 
 module.exports = LaunchConnector;

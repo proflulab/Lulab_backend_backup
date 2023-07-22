@@ -26,9 +26,9 @@ class LaunchConnector {
         return await this.ctx.service.user.mobileChange(secret.uid, account)
     }
     return {
-        status: '200',
-        msg: '验证码错误',
-        mobile: secret.mobile
+        "status": "yes",
+        "msg": "手机号更改成功",
+        "mobile": "+86 12345678910"
     };
 }
 

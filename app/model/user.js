@@ -29,6 +29,12 @@ module.exports = app => {
             required: false,
             get: v => v==null ? "" : v,
         },
+        password: {
+            type: String,
+            unique: false,
+            required: false,
+            get: v => v==null ? "" : v,
+        },
         // birth: {
         //     type: String,
         //     unique: false,

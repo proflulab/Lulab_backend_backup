@@ -3,6 +3,47 @@
 const Service = require('egg').Service;
 
 class UserService extends Service {
+
+    /**
+     * 登陆校验
+     * 待解决：refresh token存哪里？
+     * @param {String} mobile 
+     * @param {Int} area 
+     * @returns 
+     */
+    async loginVerify(mobile, area) {
+        const { ctx, app } = this;
+        // 注册判断是否存在
+        const account = '' + area + '#' + mobile;
+        const corr = await ctx.model.User.findOne({ mobile: account });
+        console.log("我创建了：", account)
+        if (!corr) {
+            console.log("我进来了")
+            const course = new ctx.model.User({
+                mobile: account,
+                password: Helper.encrypt(Helper.genRandomPwd()),
+                imageUrl: 'http://qn3.proflu.cn/default.jpg',
+            });
+            const result = await course.save();
+            console.log(result);
+
+            ctx.body = '注册成功';
+            const Token = await ctx.service.jwt.awardToken(result._id); //前端存本地
+            // token 存储至Redis
+            await ctx.service.cache.set(result._id, Token.token, 7200);
+            // 将生成的Token返回给前端
+            return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: result };
+        }
+        console.log("该用户名已注册")
+        ctx.body = '该用户名已注册';
+        // 生成Token
+        const Token = await ctx.service.jwt.awardToken(corr._id);
+        // token 存储至Redis
+        await ctx.service.cache.set(corr._id, Token.token, 7200);
+        // 将生成的Token返回给前端
+        return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
+    }
+
     async logOut(token) {
         const { ctx } = this;
         const res = await ctx.service.jwt.getUserIdFromToken(token);
@@ -16,26 +57,35 @@ class UserService extends Service {
         }
     }
 
-    async logIn(data) {
-        const {ctx,app} = this;
-        if (data.userName == 'woshigezhu' && data.password == '123456') {
-            // 通过jwt生产token
-            const token = app.jwt.sign({
-              userName: data.userName,     //需要存储的Token数据
-            }, app.config.jwt.secret, {   //app.config.jwt.secret是在配置里配置的密钥'123456'
-              expiresIn: 60 * 60 * 24    //expiresIn是token过期时间
-            });      
-            // 返回token
-            ctx.body = {
-              code: 0,
-              token,
+    /**
+     * 用户密码登陆
+     * @param {String} mobile 手机号
+     * @param {Int} area 区号 
+     * @param {String} password 密码
+     * @return {*} 
+     */
+    async loginPassword(mobile, area, password) {
+        const { ctx } = this;
+        const account = '' + area + '#' + mobile;
+        const corr = await ctx.model.User.findOne({ mobile: account });
+        // 用户是否存在
+        if (!corr) {
+            ctx.body = '用户名错误';
+            return { status: '200', msg: '用户名错误' };
+        } else {
+            if (Helper.compare(password, corr.password)) {
+                // 生成Token
+                const Token = await ctx.service.jwt.awardToken(corr._id);
+                // token 存储至Redis
+                await ctx.service.cache.set(corr._id, Token.token, 7200);
+                // const user = await ctx.model.User.findOne({ account });
+                // 将生成的Token返回给前端
+                console.log(corr);
+                return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
             }
-          } else {
-            ctx.body = {
-              code: -200,
-              message: "账号或密码错误"
-            }
-          }
+            ctx.body = '密码错误,请重新输入!';
+            return { status: '200', msg: '密码错误,请重新输入' };
+        }
     }
 
     /**
