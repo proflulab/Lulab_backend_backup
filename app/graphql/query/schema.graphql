@@ -5,7 +5,6 @@ type Query {
   userAdmin(id: ID!): User
   #userLogin(userLoginPayload: UserLoginPayload!): User!
   logOut(id: ID!): LogOutResponse
-  logInpassword(username: String!, password: String!): LogInResponse
   userInfo: User!
   userLogin(userInput: UserInput!): result
   latestClassificationUser(category: String , option: Option):[User]

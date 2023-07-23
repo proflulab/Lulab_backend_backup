@@ -1,7 +1,7 @@
 module.exports = {
     Query: {
-        logInpassword(root, {}, ctx) {
-            return ctx.connector.logIn.logInpassword();
+        loginPassword(root, { mobile, area, password }, ctx) {
+            return ctx.connector.logInpassword.loginPassword(mobile, area, password);
         },
     }
 }
