@@ -1,0 +1,10 @@
+# user
+type Res {
+  status: String,
+  msg: String,
+}
+
+
+
+
+

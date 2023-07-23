@@ -18,6 +18,17 @@ module.exports = appInfo => {
     proxyworker: {
       port: 10086
     },
+    bcrypt: {
+      saltRounds: 10 // default 10
+    },
+    redis: {
+      client: {
+        port: 6379,          // Redis port
+        host: '144.24.84.85',   // Redis host
+        password: '',
+        db: 0,
+      },
+    },
     middleware: ['graphql']
   }
 
