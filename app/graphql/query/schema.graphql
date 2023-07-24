@@ -1,4 +1,3 @@
-
 type Query {
   # User
   usersAdmin(option: Option!, condition: Condition): [User]
@@ -35,12 +34,10 @@ type Query {
 
   #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
-  verifySend(mobile: String!, area: String!): VerifySendResponse!
-  reToken(token: String!): ReTokenResponse!
-  verifyCheck(mobile: String!, code: String!, area: Int!): VerifyCheckResult
 
   #growth
   latestUserGrowth(userId: String!,option :Option!): [Growth]
+
 
   #training
   latestTraining(option :Option!): [Training]

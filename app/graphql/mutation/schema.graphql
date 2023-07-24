@@ -5,6 +5,7 @@ type Mutation {
   deleteCircleAdmin(id: ID!, circleInput: CircleInput): Circle
   mobileChange(mobile: String!, area: Int!, code: String!): MobileChangeResponse!
   adminUserLogout: ID
+  passwordLogin($area: Int!, $mobile: String!, $password: Int!): LogInResponse
 
   onboardSelf(id: ID!, userInput: UserInput!): User!
   onboardSelfByEmail(userInput: UserInput!): User

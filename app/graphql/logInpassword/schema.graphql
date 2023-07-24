@@ -1,0 +1,4 @@
+type LogInResponse {
+    status: String!
+    msg: String!
+}
