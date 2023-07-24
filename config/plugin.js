@@ -27,3 +27,13 @@ exports.jwt = {
   enable: true,
   package: "egg-jwt"
 };
+
+exports.bcrypt = {
+  enable: true,
+  package: 'egg-bcrypt'
+};
+
+exports.redis = {
+  enable: true,
+  package: 'egg-redis',
+};
