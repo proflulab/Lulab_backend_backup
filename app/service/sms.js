@@ -97,7 +97,7 @@
 //      * @param {Int} area
 //      * @returns 验证码发送状态RES -> {status, message}
 //      */
-//     async verifySend(mobile, area) {
+//     async verifySend_mobile(mobile, area) {
 //         const code = this.ctx.helper.rand(6);
 //         const result = await this.alisms(mobile, code, area);
 //         if (result.status === '100') {
@@ -113,7 +113,7 @@
 //      * @param {Int} area
 //      * @returns 输入验证码是否正确
 //      */
-//     async verifyCheck(mobile, code, area) {
+//     async verifyCheck_mobile(mobile, code, area) {
 //         const getcode = await this.ctx.service.cache.get('mobileVerify ' + area + ' ' + mobile);
 //         if (getcode && getcode === code) {
 //             return true;

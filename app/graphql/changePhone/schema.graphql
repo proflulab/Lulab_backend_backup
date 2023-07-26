@@ -1,5 +1,0 @@
-type MobileChangeResponse {
-    status: String!
-    msg: String!
-    mobile: String!
-}
