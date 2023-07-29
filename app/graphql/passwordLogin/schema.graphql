@@ -6,6 +6,7 @@ type LoginResponse {
   data: User
 }
 
+
 type User {
   name: String
   imageUrl: String

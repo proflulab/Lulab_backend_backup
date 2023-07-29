@@ -5,6 +5,6 @@ module.exports = {
         passwordLogin: async (_, { input }, ctx) => {
             const passwordLoginService = new UserService(ctx);
             return passwordLoginService.passwordLogin(input);
-          },   
+        },   
     }
 }
