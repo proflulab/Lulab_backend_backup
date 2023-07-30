@@ -8,19 +8,19 @@ module.exports = {
         if(randomNumber === 0){
             return {
                 status: 'no',
-                msg: '发送验证码失败-mobile'
+                msg: '发送验证码失败-mailbox'
             };
         }
         if(randomNumber === 1){
             return {
                 status: 'yes',
-                msg: '成功发送验证码-mobile'
+                msg: '成功发送验证码-mailbox'
             };
         }
         if(randomNumber === 2){
             return {
                 status: 'error',
-                msg: '无法验证是否发送成功-mobile'
+                msg: '无法验证是否发送成功-mailbox'
             };
         }
     }
