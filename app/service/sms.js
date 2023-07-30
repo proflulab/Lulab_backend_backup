@@ -1,16 +1,16 @@
 // 'use strict';
-//
+
 // const Service = require('egg').Service;
 // const Core = require('@alicloud/pop-core');
 // const AWS = require('aws-sdk');
-//
+
 // /**
 //  * 阿里云短信发送
 //  * @author 杨仕明，刘荣轩
 //  * @see https://juejin.cn/post/7082782762364567566
 //  */
 // class SmsService extends Service {
-//
+
 //     /**
 //      * 通过阿里云发送短信
 //      * 国内短信：+/+86/0086/86或无任何前缀的11位手机号码，例如1390000****。
@@ -88,13 +88,13 @@
 //             }
 //         }
 //     }
-//
+
 //     /**
 //      * 验证码发送
 //      * 验证码 5 分钟内有效
 //      * 待解决：area未测试
-//      * @param {String} mobile
-//      * @param {Int} area
+//      * @param {String} mobile 
+//      * @param {Int} area 
 //      * @returns 验证码发送状态RES -> {status, message}
 //      */
 //     async verifySend_mobile(mobile, area) {
@@ -105,11 +105,11 @@
 //         }
 //         return result
 //     }
-//
+
 //     /**
 //      * 验证码校验（已完成）
 //      * @param {String} mobile
-//      * @param {Int} code
+//      * @param {Int} code 
 //      * @param {Int} area
 //      * @returns 输入验证码是否正确
 //      */
@@ -120,7 +120,7 @@
 //         }
 //         return false;
 //     }
-//
+
 //     // 发送邮件(待检验)
 //     async sendEmail() {
 //         const { app, ctx } = this;
@@ -141,19 +141,19 @@
 //                     <p style="font-size: 1.5rem;color:#999;">该验证码5分钟内有效，请勿泄漏于他人！</p>
 //                     `,
 //         };
-//
+
 //         const emailCotent = {
 //             from: '1051447098@qq.com', // 发件人地址
 //             to: `${account}`, // 收件人地址，多个收件人可以使用逗号分隔
 //             subject: email.title, // 邮件标题
 //             html: email.body, // 邮件内容
 //         };
-//
+
 //         return await ctx.helper.sendEmail(emailCotent);// 该辅助方法在extend/helper.js中定义
-//
-//     }
-//
-//
+
+//     } 
+
+
 // }
-//
+
 // module.exports = SmsService;

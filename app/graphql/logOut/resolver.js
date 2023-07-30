@@ -1,20 +1,7 @@
-// module.exports = {
-//     Query: {
-//         logOut(root, {}, ctx) {
-//             return ctx.connector.logOut.logOut();
-//         },
-//     }
-// }
-// resolver.js
-
-const { logOut } = require("./connector");
-
-const resolvers = {
+module.exports = {
     Query: {
-        logOut: async () => {
-            return logOut();
+        logOut(root, {}, ctx) {
+            return ctx.connector.logOut.logOut();
         },
-    },
-};
-
-module.exports = resolvers;
+    }
+}

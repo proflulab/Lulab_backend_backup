@@ -13,7 +13,7 @@ enum OnboardingStatus {
 }
 
 
-type User {
+type othor {
     userName: String
     sex: String
 	wechat:String
@@ -31,8 +31,26 @@ type Video {
 	#desc: String # wechat only
 }
 
+type UserInfo {
+  name: String
+  imageUrl: String
+  sex: String
+  dsc: String
+  email: String
+}
 
+type ChangeUserInfo {
+  name: String
+  imageUrl: String
+  sex: String
+  dsc: String
+  email: String
+}
 
+type AccountCancellationResponse {
+  status: String!
+  msg: String!
+}
 input UserLoginPayload {
   jscode: String
 }
