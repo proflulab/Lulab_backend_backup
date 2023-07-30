@@ -3,14 +3,14 @@ type Mutation {
   addCircleAdmin(circleInput: CircleInput!): Circle
   updateCircleAdmin(id: ID!, circleInput: CircleInput!): Circle
   deleteCircleAdmin(id: ID!, circleInput: CircleInput): Circle
-  mobileChange(mobile: String!, area: Int!, code: String!): MobileChangeResponse!
+  #mobileChange(mobile: String!, area: Int!, code: String!): MobileChangeResponse!
   adminUserLogout: ID
-  passwordLogin(area: Int!,mobile: String!,password: Int!): LoginResponse!
+  passwordLogin(area: Int!,mobile: String!,password: Int!): AuthResponse!
   changeUserInfo(name: String, sex: String, dsc: String, email: String): ChangeUserInfo!
 # sms
   verifySend(mobile: String!, area: String!): VerifySendResponse!
   verifyCheck(mobile: String!, code: String!, area: Int!): Res!
-  
+
   onboardSelf(id: ID!, userInput: UserInput!): User!
   onboardSelfByEmail(userInput: UserInput!): User
   verifyEmail(userInput: UserInput!): User
