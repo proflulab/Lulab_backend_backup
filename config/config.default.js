@@ -21,24 +21,31 @@ module.exports = appInfo => {
     bcrypt: {
       saltRounds: 10 // default 10
     },
-    redis: {
-      client: {
-        port: 6379,          // Redis port
-        host: '144.24.84.85',   // Redis host
-        password: '',
-        db: 0,
-      },
-    },
+    // redis: {
+    //   client: {
+    //     port: 6379,          // Redis port
+    //     host: '144.24.84.85',   // Redis host
+    //     password: '',
+    //     db: 0,
+    //   },
+    // },
+
+  //   //  阿里云配置
+  //    ali: {
+  //     accessKeyId: process.env.ALI_ACCESS_KEY_ID,
+  //     accessKeySecret: process.env.ALI_ACCESS_KEY_SECRET,
+  //     endpoint: 'https://dysmsapi.aliyuncs.com',
+  //     apiVersion: '2017-05-25',
+  // },
+
+  //   sms: {
+  //     aliSignName: process.env.ALI_SIGN_NAME,
+  //     nationalCode: process.env.ALI_NATIONAL_CODE,
+  //     internationalCode: process.env.ALI_INTERNATIONAL_CODE,
+  // },
     middleware: ['graphql']
   }
-  /*
-  config.cluster = {
-    listen: {
-      path: '',
-      port: 8002,
-      hostname: '0.0.0.0',
-    }
-  };*/
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1546846389359_709'
 
@@ -46,7 +53,7 @@ module.exports = appInfo => {
   config.mongoose = {
     //本地环境
     client: {
-      url: 'mongodb://root:lulab1005@144.24.84.85:27017/',
+      url: 'mongodb://localhost:27017/test_mongodb',
       options: {
         useNewUrlParser: true,
         useUnifiedTopology: true

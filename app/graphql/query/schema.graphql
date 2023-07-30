@@ -4,11 +4,10 @@ type Query {
   userAdmin(id: ID!): User
   #userLogin(userLoginPayload: UserLoginPayload!): User!
   logOut(id: ID!): LogOutResponse
-  logIn(id: ID!): LogInResponse
-  userInfo: User!
+  userInfo: UserInfo
+  accountCancellation(number: String!): AccountCancellationResponse!
   userLogin(userInput: UserInput!): result
   latestClassificationUser(category: String , option: Option):[User]
-
 
   # userByToken(clientType: String!, accessToken: String!): User!
 
