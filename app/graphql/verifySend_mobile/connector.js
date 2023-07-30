@@ -1,9 +1,9 @@
-const axios = require('axios');
+
 function getRandomNumber() {
     return Math.floor(Math.random() * 3);
 }
 module.exports = {
-    verifySend: async (mobile, area) => {
+    verifySend: async () => {
         const randomNumber = getRandomNumber();
         if(randomNumber === 0){
             return {
