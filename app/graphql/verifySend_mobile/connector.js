@@ -3,7 +3,7 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 3);
 }
 module.exports = {
-    verifySend: async () => {
+    verifySend: async (mobile, area) => {
         const randomNumber = getRandomNumber();
         if(randomNumber === 0){
             return {
