@@ -51,4 +51,11 @@ type Query {
   #courseclassification
   queryCourseClassification(option :Option!): [CourseClassification]
 
+  #good
+  goodInfo: GoodInfo
+  refund(orderid: String!, reason: String!, description: String!): RefundResponse
+  orderInfo: OrderInfo
+  orderDetail(orderID: String!): OrderDetail
+
+
 }

@@ -1,0 +1,5 @@
+type GoodInfo {
+    poster: String
+    goodsName: String
+    goodsPrice: Float
+}

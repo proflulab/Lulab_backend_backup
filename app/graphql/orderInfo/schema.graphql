@@ -1,0 +1,7 @@
+type OrderInfo {
+    orderId: String
+    totalAmount: Float
+    goodsName: String
+    payTime: String
+    orderStatus: String
+}

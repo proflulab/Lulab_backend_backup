@@ -1,0 +1,6 @@
+type OrderDetail {
+    reason: String
+    afterNumber: String
+    orderStatus: String
+    applyTime: String
+}
