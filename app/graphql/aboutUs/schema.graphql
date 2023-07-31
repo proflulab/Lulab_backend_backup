@@ -1,0 +1,7 @@
+type AboutUs {
+    official_weChat: String
+    official_email_address: String
+    service_usage_agreement: String
+    privacy_policy: String
+    copyright_notice: String
+}

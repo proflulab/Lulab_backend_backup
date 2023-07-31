@@ -57,5 +57,7 @@ type Query {
   orderInfo: OrderInfo
   orderDetail(orderID: String!): OrderDetail
 
+  #about us
+  about_us: AboutUs
 
 }
