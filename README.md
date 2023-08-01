@@ -1,4 +1,11 @@
-本项目是后端服务器仓库，使用egg-graphql项目模板[egg-graphql-boilerplate](https://github.com/freebyron/egg-graphql-boilerplate)。建议生产环境系统CentOS。
+# 陆向谦实验室AI智能App后端项目
+# Lu Lab AI Intelligent Application Back-end Project
+
+```
+
+本项目是后端服务器仓库，使用egg-graphql项目模板[egg-graphql-boilerplate](https://github.com/freebyron/egg-graphql-boilerplate)。建议生产环境系统CentOS + Docker容器。
+
+```
 
 ## installation
 1. 安装redis
