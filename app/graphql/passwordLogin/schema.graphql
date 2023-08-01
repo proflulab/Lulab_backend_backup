@@ -16,3 +16,12 @@ type User {
   description: String
 }
 
+type SendCode {
+  success: String
+  message: String
+}
+
+type VerifyCode {
+  success: String
+  message: String
+}

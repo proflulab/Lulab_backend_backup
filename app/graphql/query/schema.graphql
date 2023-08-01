@@ -8,8 +8,12 @@ type Query {
   accountCancellation(number: String!): AccountCancellationResponse!
   userLogin(userInput: UserInput!): result
   latestClassificationUser(category: String , option: Option):[User]
-
+  reToken(token: String!): ReTokenResponse!
   # userByToken(clientType: String!, accessToken: String!): User!
+
+  #verifySend & verifyCheck(mobile)
+  verifySend(mobile: String!, area: String!): verifySendmobile!
+  verifyCheck(mobile: String!, code: String!, area: Int!): verifyCheckmobile!
 
   circles(option: Option!, condition: Condition): [Circle!]
   circle(id: ID!): Circle!

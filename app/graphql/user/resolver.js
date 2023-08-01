@@ -10,13 +10,14 @@ const GeekParkSpider = require("../../spider/geekParkSpider")
 module.exports = {  
     
     Query: {
-        userInfo: async (_, __, ctx) => {
-            const userService = new UserService(ctx);
-            return userService.userInfo(); 
+        userInfo(root, { }, ctx) {
+          return ctx.connector.user.userInfo();
+            // const userService = new UserService(ctx);
+            // return userService.userInfo(); 
           },
           accountCancellation: async (_, { number }, ctx) => {
             const accountCancellationService = new UserService(ctx);
-            return accountCancellationService.performAccountCancellation(number);
+            return accountCancellationService.accountCancellation(number);
           },
     //     async userAdmin(root, {
     //         id
@@ -45,9 +46,10 @@ module.exports = {
 
     },
     Mutation: {
-        changeUserInfo: async (_, args, ctx) => {
-            const userService = new UserService(ctx);
-            return userService.changeUserInfo(args);
+        changeUserInfo(root, {name, sex, dsc, email }, ctx) {
+            return ctx.connector.user.changeUserInfo(name, sex, dsc, email)
+            // const userService = new UserService(ctx);
+            // return userService.changeUserInfo(args);
           },
     //     userUpdate(root, {
     //         userInput
