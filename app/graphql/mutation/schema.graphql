@@ -1,6 +1,6 @@
 type Mutation {
-  #Read the documents in Apifox/Lulab_app/
-  #阅读Apifox/Lulab_app中的文档
+  # Read the documents in Apifox/Lulab_app/
+  # 阅读Apifox/Lulab_app中的文档
 
   addCircleAdmin(circleInput: CircleInput!): Circle
   updateCircleAdmin(id: ID!, circleInput: CircleInput!): Circle

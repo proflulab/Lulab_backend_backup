@@ -51,6 +51,11 @@ type AccountCancellationResponse {
   status: String!
   msg: String!
 }
+
+type ResetPasswordResponse {
+  success: Boolean!
+  message: String!
+}
 input UserLoginPayload {
   jscode: String
 }
