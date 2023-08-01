@@ -482,11 +482,20 @@ class UserConnector /*extends BasicConnector */ {
         return result;
     }
 
-    // async userInfo() {
-    //     const {ctx,user} = this;
-    //     return user = await ctx.service.user.userInfo()
+    async userInfo() {
+        const { ctx } = this;
+        const token = ctx.request.header.authorization;
+        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+        return ctx.model.User.findOne({ _id: secret.uid })
+    }
 
-    // }
+    async changeUserInfo(name, sex, dsc, email) {
+        const { ctx } = this;
+        const token = ctx.request.header.authorization;
+        const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+        await ctx.model.User.updateOne({ _id: secret.uid }, { name, sex, dsc, email})
+        return await ctx.model.User.findOne({ _id: secret.uid })
+    }
 }
 
 module.exports = UserConnector;

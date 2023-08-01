@@ -64,39 +64,103 @@ class UserService extends Service {
      * @param {Int} area 区号 
      * @param {String} password 密码
      * @return {*} 
+     * 
      */
     async passwordLogin(mobile, area, password) {
-        // const {ctx} = this;
-        // const res = await ctx.model.User.findOne();
-        // if(!res){
-        //     return{
-        //         success: 'true',message:'登陆失败'
-        //     }
-        // }else{
-        //     if(Helper.compare(password,res.password)){
-        //         const token = app.jwt.sign({...res }, app.config.jwt.secret,{
-        //             expiresIn: "1h",
-        //           });
-        //     }
-        // }
-        const user = {
-            name: 'John Doe',
-            imageUrl: 'https://example.com/john-doe.jpg',
-            sex: 'Male',
-            mobile: mobile,
-            email: 'john.doe@example.com',
-            description: 'A user from the demo.',
-          };
+      const { ctx } = this;
+        const account = '' + area + '#' + mobile;
+        const corr = await ctx.model.User.findOne({ mobile: account });
+        // 用户是否存在
+        if (!corr) {
+            ctx.body = '用户名错误';
+            return { status: '200', msg: '用户名错误' };
+        } else {
+            if (Helper.compare(password, corr.password)) {
+                // 生成Token
+                const Token = await ctx.service.jwt.awardToken(corr._id);
+                // token 存储至Redis
+                await ctx.service.cache.set(corr._id, Token.token, 7200);
+                // const user = await ctx.model.User.findOne({ account });
+                // 将生成的Token返回给前端
+                console.log(corr);
+                return { success: true, message: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
+            }
+            ctx.body = '密码错误,请重新输入!';
+            return { success: false, message: '密码错误,请重新输入' };
+        }
+      // const user = {
+      //   name: 'John Doe',
+      //   imageUrl: 'https://example.com/john-doe.jpg',
+      //   sex: 'Male',
+      //   mobile: '12340761995',
+      //   email: 'john.doe@example.com',
+      //   description: 'A user from the demo.',
+      // };
+      //     return {
+      //       success: true,
+      //       message: 'Login successful',
+      //       token: 'generated-token',
+      //       reToken: 'refresh-token',
+      //       data: user,
+      //     };
+      }
+        async resetPassword(uid, password) {
+          const {ctx} = this;
+          const corr = await ctx.model.User.findOne({account: uid});
+          if(!corr){
+            return{
+              success: false,
+              message: "用户不存在",
+              account: corr.account
+            }
+          }else if(account == corr.password){
+            return{
+              success:false,
+              message: "新密码与旧密码相同",
+              account: corr.account
+            }
+          }
+          const ismodified = await (await ctx.model.User.updateOne({ account: uid }, { account: password})).nModified;
+        if (ismodified) {
+            return {
+                status: '100',
+                msg: '修改手机号成功',
+                account: password
+            };
+        } else {
+            return {
+                status: '200',
+                msg: '修改手机号失败',
+                account: corr.account
+            };
+        }
+            // Implement the logic to reset the user's password with the new password.
+            // For demonstration purposes, we assume the password reset was successful.
+            // Replace this with your actual logic to handle the password reset process.
+            // return {
+            //   success: true,
+            //   message: 'Password reset successful.',
+            // };
+          }
 
-          return {
+        async sendResetPasswordCode(code){
+
+          return{
             success: true,
-            message: 'Login successful',
-            token: 'generated-token',
-            reToken: 'refresh-token',
-            data: user,
-          };
+            message: "验证码发送成功",
+          }
         }
 
+        async verifyResetPasswordCode(code){
+          const {ctx} = this;
+          if(!code){
+
+          }
+          return{
+            success: true,
+            message: "验证成功"
+          }
+        }
         async userInfo() {
             // 实现从数据源获取用户信息的逻辑。
             // 出于演示目的，我们假设一个预定义的用户对象。
@@ -126,43 +190,53 @@ class UserService extends Service {
         
             return updatedUser;
           }
+
+          async accountCancellation(accountNumber) {
+            // Implement the logic to perform the account cancellation.
+            // For demonstration purposes, we assume the account cancellation was successful.
+            // Replace this with your actual logic to handle the account cancellation process.
+            return {
+              status: 'Success',
+              msg: `Account with number ${accountNumber} has been successfully cancelled.`,
+            };
+          }
     /**
      * 
      * @param {String} uid 
      * @param {*} account 
      * @returns 
      */
-    async mobileChange(uid, account) {
-        const { ctx } = this;
-        const corr = await ctx.model.User.findOne({ mobile: uid });
-        if (!corr) {
-            return {
-                status: '200',
-                msg: '用户不存在',
-                mobile: corr.mobile,
-            };
-        } else if (account === corr.mobile) {
-            return {
-                status: '200',
-                msg: '新手机号与旧手机号相同',
-                mobile: corr.mobile,
-            }
-        }
-        const ismodified = await (await ctx.model.User.updateOne({ mobile: uid }, { mobile: account })).nModified;
-        if (ismodified) {
-            return {
-                status: '100',
-                msg: '修改手机号成功',
-                mobile: account
-            };
-        } else {
-            return {
-                status: '200',
-                msg: '修改手机号失败',
-                mobile: corr.mobile
-            };
-        }
-    }
+    // async mobileChange(uid, account) {
+    //     const { ctx } = this;
+    //     const corr = await ctx.model.User.findOne({ mobile: uid });
+    //     if (!corr) {
+    //         return {
+    //             status: '200',
+    //             msg: '用户不存在',
+    //             mobile: corr.mobile,
+    //         };
+    //     } else if (account === corr.mobile) {
+    //         return {
+    //             status: '200',
+    //             msg: '新手机号与旧手机号相同',
+    //             mobile: corr.mobile,
+    //         }
+    //     }
+    //     const ismodified = await (await ctx.model.User.updateOne({ mobile: uid }, { mobile: account })).nModified;
+    //     if (ismodified) {
+    //         return {
+    //             status: '100',
+    //             msg: '修改手机号成功',
+    //             mobile: account
+    //         };
+    //     } else {
+    //         return {
+    //             status: '200',
+    //             msg: '修改手机号失败',
+    //             mobile: corr.mobile
+    //         };
+    //     }
+    // }
 
  /**
      * 生成token

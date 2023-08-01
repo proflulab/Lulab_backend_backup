@@ -1,12 +1,10 @@
-const { passwordLogin } = require("./connector");
+const UserService = require('../../service/user');
 
-const resolvers = {
+module.exports = {
     Mutation: {
-        PasswordLogin: async (_, { area, mobile, password }) => {
-            // 在这里调用connector中的函数，模拟与后端的通信
-            return await passwordLogin(area, mobile, password);
+        passwordLogin: async (_, { input }, ctx) => {
+            const passwordLoginService = new UserService(ctx);
+            return passwordLoginService.passwordLogin(input);
         },
-    },
-};
-
-module.exports = resolvers;
+    }
+}

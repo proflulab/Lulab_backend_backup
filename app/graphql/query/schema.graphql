@@ -1,6 +1,6 @@
 type Query {
-  #Read the documents in Apifox/Lulab_app/
-  #阅读Apifox/Lulab_app中的文档
+  # Read the documents in Apifox/Lulab_app/
+  # 阅读Apifox/Lulab_app中的文档
 
   usersAdmin(option: Option!, condition: Condition): [User]
   userAdmin(id: ID!): User
