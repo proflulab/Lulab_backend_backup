@@ -1,63 +1,36 @@
 type Query {
-  # User
+  #Read the documents in Apifox/Lulab_app/
+  #阅读Apifox/Lulab_app中的文档
+
   usersAdmin(option: Option!, condition: Condition): [User]
   userAdmin(id: ID!): User
-  #userLogin(userLoginPayload: UserLoginPayload!): User!
   logOut(id: ID!): LogOutResponse
+  accountCancellation(number: String!): AccountCancellation
   userInfo: UserInfo
   accountCancellation(number: String!): AccountCancellationResponse!
   userLogin(userInput: UserInput!): result
   latestClassificationUser(category: String , option: Option):[User]
-
-  # userByToken(clientType: String!, accessToken: String!): User!
-
   circles(option: Option!, condition: Condition): [Circle!]
   circle(id: ID!): Circle!
-
   latestCourse(option: Option!): [Course]
   latestMainCourse(option: Option!): [MainCourse]
   latestDirectCourse(mode : String!,  authorId: String, option: Option!): [MainCourse]
   latestInformation(option: Option!): [Information]
   latestGeekInformation(option: Option!): [Information]
   detailMainCourse(courseId: String!): MainCourse
-
-  #speech
   speechGoogle(speechRequest: SpeechRequest): speechResult
-
-
-  #Latestcomment
   latestComment(entityId: String!, category: String, option :Option!): [Comment]
-
-  #detailCourse
   detailCourse(dirId: String): [Course]
-
-  #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
-
-  #growth
   latestUserGrowth(userId: String!,option :Option!): [Growth]
-
-
-  #training
   latestTraining(option :Option!): [Training]
-
-  #orderrecord
   latestRecord(authorId: String!,option :Option!): [OrderRecord]
   latestUserCourseRecord(authorId: String!, courseId: String!): result
-
-  #manager
   queryManager(option :Option!): [Manager]
-
-  #courseclassification
   queryCourseClassification(option :Option!): [CourseClassification]
-
-  #good
   goodInfo: GoodInfo
   refund(orderid: String!, reason: String!, description: String!): RefundResponse
   orderInfo: OrderInfo
   orderDetail(orderID: String!): OrderDetail
-
-  #about us
   about_us: AboutUs
-
 }
