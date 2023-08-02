@@ -48,19 +48,27 @@ module.exports = appInfo => {
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1546846389359_709'
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 8002,
+      hostname: '0.0.0.0',
+    }
+  };
+
 
   // add your config here
   config.mongoose = {
     //本地环境
-    client: {
-      url: 'mongodb://localhost:27017/test_mongodb',
-      options: {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      },
-    }
+    // client: {
+    //   url: 'mongodb://localhost:27017/test_mongodb',
+    //   options: {
+    //     useNewUrlParser: true,
+    //     useUnifiedTopology: true
+    //   },
+    //}
     //服务器环境
-    /*client: {
+    client: {
       url: 'mongodb://127.0.0.1:27017/admin',
       options: {
         user: 'opsAdmin',
@@ -69,8 +77,13 @@ module.exports = appInfo => {
         useCreateIndex: true,
         useUnifiedTopology: true
       },
-    }*/
+    },
 
   }
   return config
 }
+
+
+//mongodb://fiona_shen0225:lulab123456.@34.31.185.148:27017
+//docker stop mongodb-container;docker rm mongodb-container;docker run -d --name mongodb-container -p 27017:27017 mongo;
+
