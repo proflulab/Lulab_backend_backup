@@ -1,4 +1,4 @@
-type VerifySendResponse {
+type VerifySendResponse_m {
     status: String!
     msg: String!
 }

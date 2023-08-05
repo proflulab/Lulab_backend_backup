@@ -1,7 +1,9 @@
+// app/graphql/resolver.js
+
 module.exports = {
     Query: {
-        loginPassword(root, { mobile, area, password }, ctx) {
-            return ctx.connector.logInpassword.loginPassword(mobile, area, password);
+        loginPassword(root, args, ctx) {
+            return ctx.connector.loginPassword(args.mobile, args.area, args.password);
         },
     }
 }

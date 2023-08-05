@@ -1,0 +1,16 @@
+type UserData_m {
+    name: String
+    imageUrl: String
+    sex: String
+    mobile: String
+    email: String
+    description: String
+}
+
+type VerifyCheckResult_m {
+    success: Boolean
+    message: String
+    token: String
+    refresh_token: String
+    data: UserData
+}

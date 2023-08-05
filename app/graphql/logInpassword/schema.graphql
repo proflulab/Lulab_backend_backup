@@ -1,0 +1,16 @@
+type LoginResponse {
+    status: String!
+    msg: String!
+    token: String!
+    reToken: String!
+    data: User!
+}
+
+type User {
+    name: String!
+    imageUrl: String!
+    sex: String!
+    mobile: String!
+    wechat: String!
+    description: String!
+}

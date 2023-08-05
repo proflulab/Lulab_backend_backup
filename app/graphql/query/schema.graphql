@@ -2,8 +2,8 @@ type Query {
   # Read the documents in Apifox/Lulab_app/
   # 阅读Apifox/Lulab_app中的文档
 
-  usersAdmin(option: Option!, condition: Condition): [User]
-  userAdmin(id: ID!): User
+#  usersAdmin(option: Option!, condition: Condition): [User]
+#  userAdmin(id: ID!): User
   logOut(id: ID!): LogOutResponse
   accountCancellation(number: String!): AccountCancellation
   userInfo: UserInfo
@@ -33,4 +33,7 @@ type Query {
   orderInfo: OrderInfo
   orderDetail(orderID: String!): OrderDetail
   about_us: AboutUs
+  logIn(username: String!, password: String!): LogInResponse
+  loginPassword(mobile: String!, area: Int!, password: String!): LoginResponse!
+
 }

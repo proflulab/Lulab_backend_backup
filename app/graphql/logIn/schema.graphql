@@ -1,4 +1,5 @@
 type LogInResponse {
-    status: String!
-    msg: String!
+    success: Boolean!
+    message: String!
+    token: String!
 }

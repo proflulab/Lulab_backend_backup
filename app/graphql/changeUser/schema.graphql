@@ -1,4 +1,4 @@
-type ChangeUserInfo {
+type ChangeUser {
     name: String
     imageUrl: String
     sex: String
