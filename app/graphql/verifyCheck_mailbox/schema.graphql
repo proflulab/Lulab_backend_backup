@@ -2,7 +2,7 @@ type UserData_m {
     name: String
     imageUrl: String
     sex: String
-    mobile: String
+    mailbox: String
     email: String
     description: String
 }

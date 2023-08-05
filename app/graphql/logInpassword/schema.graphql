@@ -3,10 +3,10 @@ type LoginResponse {
     msg: String!
     token: String!
     reToken: String!
-    data: User!
+    data: UserLogin!
 }
 
-type User {
+type UserLogin {
     name: String!
     imageUrl: String!
     sex: String!

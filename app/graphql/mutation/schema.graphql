@@ -11,8 +11,8 @@ type Mutation {
 
   verifySend_mobile(mobile: String!, area: String!): VerifySendResponse!
   verifyCheck_mobile(mobile: String!, code: String!, area: Int!): VerifyCheckResult!
-  verifySend_mailbox(mobile: String!, area: String!): VerifySendResponse_m!
-  verifyCheck_mailbox(mobile: String!, code: String!, area: Int!): VerifyCheckResult_m!
+  verifySend_mailbox(mailbox: String!, area: String!): VerifySendResponse_m!
+  verifyCheck_mailbox(mailbox: String!, code: String!, area: Int!): VerifyCheckResult_m!
 
   onboardSelf(id: ID!, userInput: UserInput!): User!
   onboardSelfByEmail(userInput: UserInput!): User

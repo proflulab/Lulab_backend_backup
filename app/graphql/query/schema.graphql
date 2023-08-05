@@ -31,7 +31,7 @@ type Query {
   goodInfo: GoodInfo
   refund(orderid: String!, reason: String!, description: String!): RefundResponse
   orderInfo: OrderInfo
-  orderDetail(orderID: String!): OrderDetail
+  orderDrtail(orderID: String!): OrderDetail
   about_us: AboutUs
   logIn(username: String!, password: String!): LogInResponse
   loginPassword(mobile: String!, area: Int!, password: String!): LoginResponse!
