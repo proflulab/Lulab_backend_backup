@@ -5,8 +5,8 @@ const Core = require('@alicloud/pop-core');
 const AWS = require('aws-sdk');
 
 // 配置阿里云短信服务的 AccessKeyID 和 AccessKeySecret
-// const accessKeyId = 'LTAI5tG46VRtTvGofPiX7v8Z';
-// const accessKeySecret = 'TA1WZLu2RxfhzE8CIqiQ9TjBojrE1p';
+// const accessKeyId = '';
+// const accessKeySecret = '';
 
 // 创建一个阿里云短信服务客户端
 // const client = new Core({

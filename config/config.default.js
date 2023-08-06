@@ -63,8 +63,8 @@ module.exports = appInfo => {
       },
     },
     // config.twilio = {
-    //   accountSid: 'AC21a5756a1b9963c1f79a1a0cd9855f3d',
-    //   authToken: '9e18df2c8b3ddfa26d16224dd46b1b38',
+    //   accountSid: '',
+    //   authToken: '',
     // }
 
     //  阿里云配置

@@ -6,8 +6,8 @@ const twilio = require('twilio');
 
 // 创建 Twilio 客户端实例
 // const { accountSid, authToken } = app.config.twilio; // 这里直接解构出 accountSid 和 authToken
-      const accountSid = 'AC21a5756a1b9963c1f79a1a0cd9855f3d'
-      const authToken = '9e18df2c8b3ddfa26d16224dd46b1b38'
+      const accountSid = ''
+      const authToken = ''
 const client = twilio(accountSid, authToken);
 
 
