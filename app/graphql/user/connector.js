@@ -11,11 +11,11 @@ const MODEL_NAME = 'User';
 
 class UserConnector /*extends BasicConnector */ {
 
-    constructor(ctx, model) {
+    constructor(ctx) {
         this.ctx = ctx;
-        //this.model = model;
+        this.loader = new DataLoader(
         ids => this.fetch(ids)
-        ;
+        );
     }
 
     async fetch(ids) {
@@ -496,6 +496,12 @@ class UserConnector /*extends BasicConnector */ {
         await ctx.model.User.updateOne({ _id: secret.uid }, { name, sex, dsc, email})
         return await ctx.model.User.findOne({ _id: secret.uid })
     }
+
+    async accountCancellation(args) {
+        const {ctx} = this;
+        return ctx.service.user.accountCancellation(args);
+    }
+
 }
 
 module.exports = UserConnector;

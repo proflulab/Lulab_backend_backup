@@ -15,9 +15,10 @@ module.exports = {
             // const userService = new UserService(ctx);
             // return userService.userInfo(); 
           },
-          accountCancellation: async (_, { number }, ctx) => {
-            const accountCancellationService = new UserService(ctx);
-            return accountCancellationService.accountCancellation(number);
+          accountCancellation(root, { args }, ctx) {
+            return ctx.connector.user.accountCancellation(args);
+            // const accountCancellationService = new UserService(ctx);
+            // return accountCancellationService.accountCancellation(mobile);
           },
     //     async userAdmin(root, {
     //         id

@@ -1,11 +1,14 @@
 /*'use strict';
 };*/
 
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+
 module.exports = app => {
     const mongoose = app.mongoose;
     const Schema = mongoose.Schema;
     const UserSchema = new Schema({
-        username: {
+        name: {
             type: String,
             unique: true,
             required: false,
@@ -23,7 +26,7 @@ module.exports = app => {
             required: false,
             get: v => v==null ? "" : v,
         },
-        dsc: {
+        description: {
             type: String,
             unique: false,
             required: false,
@@ -35,181 +38,52 @@ module.exports = app => {
             required: false,
             get: v => v==null ? "" : v,
         },
-        // birth: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // schoolRecord: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // position: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // location: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // country: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // phone: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // email: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // workCondition: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // industry: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // description: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v,
-        // },
-        // identity: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // detailMsg: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // duration: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // address: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // company: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-
-
-        // password: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // category: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-
-        // userType: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-
-        // imgUrl: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // iconUrl: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // bigCoverUrl: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // profileImgUrl: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // videoUrl: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // homeTown: [{
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        // }],
-        // location:[{
-        //     type:String,
-        //     unique:false,
-        //     required:false,
-        // }],
-        // imgs: [{
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        // }],
-        // tags: [{
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        // }],
-        // addTime: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
-        // timestamp: {
-        //     type: String,
-        //     unique: false,
-        //     required: false,
-        //     get: v => v==null ? "" : v
-        // },
+        email: {
+            type: String,
+            unique: false,
+            required: false,
+            get: v => v==null ? "" : v,
+        },
+        mobile: {
+            type: String,
+            unique: false,
+            required: false,
+            get: v => v==null ? "" : v,
+        },
+        imageUrl: {
+            type: String,
+            unique: false,
+            required: false,
+            get: v => v==null ? "" : v
+        },
     });
+
+    // 在保存用户前对密码进行哈希处理
+UserSchema.pre('save', async function (next) {
+    if (!this.isModified('password')) {
+      return next();
+    }
+  
+    try {
+      const salt = await bcrypt.genSalt(10);
+      this.password = await bcrypt.hash(this.password, salt);
+      return next();
+    } catch (err) {
+      return next(err);
+    }
+  });
+
+  // 添加更新密码方法
+  UserSchema.methods.updatePassword = async function (newPassword) {
+    try {
+      const salt = await bcrypt.genSalt(10);
+      this.password = await bcrypt.hash(newPassword, salt);
+      await this.save();
+      return true;
+    } catch (err) {
+      return false;
+    }
+  };
 
     return mongoose.model('User', UserSchema);
 }

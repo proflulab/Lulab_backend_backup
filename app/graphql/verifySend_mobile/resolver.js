@@ -1,8 +1,12 @@
-//const connector = require('./connector');
-const {verifySend} = require("./connector");
+
 
 module.exports = {
-    Query: {
-        verifySend
+    Mutation: {
+        verifySend(root, { email }, ctx) {
+            return ctx.connector.verifySend.verifySend(email);
+        },
+        resendCode(root, { email }, ctx) {
+            return ctx.connector.verifySend.resendCode(email);
+        }
     }
 };
