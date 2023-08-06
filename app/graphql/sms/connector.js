@@ -12,11 +12,10 @@ class LaunchConnector {
      * @returns 验证码发送状态RES -> {status, message}
      */
     async verifySend(mobile, area) {
-        return await this.ctx.service.sms.verifySend(mobile, area);
+        return await this.ctx.service.sendsms.verifySend(mobile, area);
     }
-
     async verifyCheck(mobile, area, code) {
-        const isright = await this.ctx.service.sms.verifyCheck(mobile, code, area);
+        const isright = await this.ctx.service.sendsms.verifyCheck(mobile, code, area);
         if (isright) {
             return {
                 status: '100',

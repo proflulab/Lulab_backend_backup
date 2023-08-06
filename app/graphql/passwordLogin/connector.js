@@ -12,17 +12,17 @@ class LaunchConnector {
         const { ctx } = this;
         return await ctx.service.user.passwordLogin(mobile, area, password);
     }
-    async sendResetPasswordCode() {
+    async sendResetPasswordCode(code) {
         const { ctx } = this;
-        return await ctx.service.user.sendResetPasswordCode();
+        return await ctx.service.sendsms.sendResetPasswordCode(code);
     }
     async verifyResetPasswordCode(code) {
         const { ctx } = this;
-        return await ctx.service.user.verifyResetPasswordCode(code);
+        return await ctx.service.sendsms.verifyResetPasswordCode(code);
     }
-    async  resetPassword(mobile, area, password) {
+    async  resetPassword(newpassword) {
         const { ctx } = this;
-        return await ctx.service.user.resetPassword(mobile, area, password);
+        return await ctx.service.user.resetPassword(newpassword);
     }
 	}
 

@@ -25,3 +25,8 @@ type VerifyCode {
   success: String
   message: String
 }
+
+type ResetPassword {
+  success: String
+  message: String
+}

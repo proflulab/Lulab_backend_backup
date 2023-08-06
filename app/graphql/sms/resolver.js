@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    Query: {
+    Mutation: {
         verifySend(root, { mobile, area }, ctx) {
             return ctx.connector.sms.verifySend(mobile, area);
         },
