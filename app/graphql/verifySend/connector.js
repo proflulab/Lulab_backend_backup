@@ -1,28 +1,25 @@
-const axios = require('axios');
-function getRandomNumber() {
-    return Math.floor(Math.random() * 3);
-}
-module.exports = {
-    verifySend: async (mobile, area) => {
-        const randomNumber = getRandomNumber();
-        if(randomNumber === 0){
-            return {
-                status: 'no',
-                msg: '发送验证码失败'
-            };
-        }
-        if(randomNumber === 1){
-            return {
-                status: 'yes',
-                msg: '成功发送验证码'
-            };
-        }
-        if(randomNumber === 2){
-            return {
-                status: 'error',
-                msg: '无法验证是否发送成功'
-            };
-        }
-    }
-};
+'use strict';
 
+class LaunchConnector {
+    constructor(ctx) {
+        this.ctx = ctx;
+    }
+
+    /**
+     * 发送验证码
+     * @param {String} mobile 
+     * @param {Int} area 
+     * @returns 验证码发送状态RES -> {status, message}
+     */
+    async verifySend(email) {
+        const {ctx} = this;
+       return ctx.service.sms.verifySend(email)
+    }
+    async resendCode(email) {
+        const {ctx} = this;
+        return ctx.service.sms.resendCode(email)
+
+    }
+}
+
+module.exports = LaunchConnector;

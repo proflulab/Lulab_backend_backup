@@ -1,0 +1,6 @@
+
+
+type ReTokenResponse {
+    token: String!
+    refresh_token: String!
+}
