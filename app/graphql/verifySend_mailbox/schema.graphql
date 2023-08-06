@@ -1,4 +1,4 @@
-type VerifySendResponse_m {
+type VerifySendResponseMailbox {
     status: String!
     msg: String!
 }

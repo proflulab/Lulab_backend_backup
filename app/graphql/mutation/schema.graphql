@@ -9,14 +9,14 @@ type Mutation {
   passwordLogin(area: Int!,mobile: String!,password: Int!): AuthResponse!
   changeUserInfo(name: String, sex: String, dsc: String, email: String): ChangeUserInfo!
 
-  verifySend_mobile(mobile: String!, area: String!): VerifySendResponse!
-  verifyCheck_mobile(mobile: String!, code: String!, area: Int!): VerifyCheckResult!
-  verifySend_mailbox(mailbox: String!, area: String!): VerifySendResponse_m!
-  verifyCheck_mailbox(mailbox: String!, code: String!, area: Int!): VerifyCheckResult_m!
+  verifySendMobile(mobile: String!, area: String!): VerifySendResponse!
+  verifyCheckMobile(mobile: String!, code: String!, area: Int!): VerifyCheckResult!
+  verifySendMailbox(mailbox: String!, area: String!): VerifySendResponseMailbox!
+  verifyCheckMailbox(mailbox: String!, code: String!, area: Int!): VerifyCheckResultMailbox!
 
   onboardSelf(id: ID!, userInput: UserInput!): User!
   onboardSelfByEmail(userInput: UserInput!): User
-  verifyEmail(userInput: UserInput!): User
+  #verifyEmail(userInput: UserInput!): User
   userLoginByEmail(userInput: UserInput!): User
   userRigister(userInput: UserInput!): result
   userUpdate(userInput: UserInput!): result

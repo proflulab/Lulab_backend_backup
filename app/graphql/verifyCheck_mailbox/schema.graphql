@@ -1,4 +1,4 @@
-type UserData_m {
+type UserDataMailbox {
     name: String
     imageUrl: String
     sex: String
@@ -7,7 +7,7 @@ type UserData_m {
     description: String
 }
 
-type VerifyCheckResult_m {
+type VerifyCheckResultMailbox {
     success: Boolean
     message: String
     token: String

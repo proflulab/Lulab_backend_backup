@@ -1,4 +1,4 @@
-async function verifyCheck({ mobile, code, area }) {
+async function verifyCheckMailbox({ mobile, code, area }) {
     const accessToken = "ACCESS_TOKEN";
     const refreshToken = "REFRESH_TOKEN";
     const isValid = true; // 假设验证成功
@@ -19,4 +19,4 @@ async function verifyCheck({ mobile, code, area }) {
     };
 }
 
-module.exports = { verifyCheck };
+module.exports = { verifyCheckMailbox };
