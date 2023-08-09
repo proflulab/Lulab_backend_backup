@@ -1,4 +1,0 @@
-type RefundResponse {
-    status: String
-    msg: String
-}

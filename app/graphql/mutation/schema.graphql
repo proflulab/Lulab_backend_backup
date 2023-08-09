@@ -1,32 +1,48 @@
 type Mutation {
-  # Read the documents in Apifox/Lulab_app/
-  # 阅读Apifox/Lulab_app中的文档
 
   addCircleAdmin(circleInput: CircleInput!): Circle
   updateCircleAdmin(id: ID!, circleInput: CircleInput!): Circle
   deleteCircleAdmin(id: ID!, circleInput: CircleInput): Circle
+  mobileChange(mobile: String!, area: Int!, code: String!): MobileChangeResponse!
   adminUserLogout: ID
-  passwordLogin(area: Int!,mobile: String!,password: Int!): AuthResponse!
+
+# password
+  passwordLogin(area: Int!,mobile: String!,password: Int!): LoginResponse!
+  resetPassword(newPassword: Int!): ResetPassword!
+  
+# user
   changeUserInfo(name: String, sex: String, dsc: String, email: String): ChangeUserInfo!
 
-  verifySendMobile(mobile: String!, area: String!): VerifySendResponse!
-  verifyCheckMobile(mobile: String!, code: String!, area: Int!): VerifyCheckResult!
-  verifySendMailbox(mailbox: String!, area: String!): VerifySendResponseMailbox!
-  verifyCheckMailbox(mailbox: String!, code: String!, area: Int!): VerifyCheckResultMailbox!
-
+# sendCode(mailbox)
+  resendCode(email: String!): ResendCode!
+  verifySend(email: String!): VerifySendResponse!
+  verifyCheck(email: String!, code: Int!): VerifyCheckResult!
+  
+# send & verify resetpasswordcode
+  sendResetPasswordCode: SendCode!
+  verifyResetPasswordCode(code: Int!): VerifyCode!
+  
   onboardSelf(id: ID!, userInput: UserInput!): User!
   onboardSelfByEmail(userInput: UserInput!): User
-  #verifyEmail(userInput: UserInput!): User
+  verifyEmail(userInput: UserInput!): User
   userLoginByEmail(userInput: UserInput!): User
+
   userRigister(userInput: UserInput!): result
   userUpdate(userInput: UserInput!): result
+
   commentAdd(commentInput: CommentInput!): result
   commentDelete(id: ID!): result
+
+  #mobilelog
   mobileLogAdd(mobileLogInput: MobileLogInput!): result
   mobileLogDelete(id: ID!): result
-  user(name: String, sex: String, dsc: String, email: String): ChangeUserInfo
+
+  #growth
   growthAdd(growthInput: GrowthInput!): result
   growthDelete(id: ID!): result
+
+  #orderrecord
   recordAdd(orderRecordInput: OrderRecordInput!): result
   recordIntelligentAdd(orderRecordInput: OrderRecordInput!): result
+
 }

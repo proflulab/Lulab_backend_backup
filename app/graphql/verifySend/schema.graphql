@@ -1,0 +1,9 @@
+type VerifySendResponse {
+    success: String!
+    message: String!
+}
+
+type ResendCode {
+    success: String!
+    message: String!
+}

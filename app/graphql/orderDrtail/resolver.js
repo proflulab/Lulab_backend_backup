@@ -1,11 +1,11 @@
-const { getOrderDetail } = require('./connector');
+// const { getOrderDetail } = require('./connector');
 
-const resolvers = {
-    Query: {
-        orderDrtail: (_, { orderID }) => {
-            return getOrderDetail(orderID);
-        }
-    },
-};
+// const resolvers = {
+//     Query: {
+//         orderDrtail: (_, { orderID }) => {
+//             return getOrderDetail(orderID);
+//         }
+//     },
+// };
 
-module.exports = resolvers;
+// module.exports = resolvers;

@@ -1,39 +1,72 @@
 type Query {
-  # Read the documents in Apifox/Lulab_app/
-  # 阅读Apifox/Lulab_app中的文档
+  usersAdmin(option: Option!, condition: Condition): [User]
+  userAdmin(id: ID!): User
+  #userLogin(userLoginPayload: UserLoginPayload!): User!
+  userLogin(userInput: UserInput!): result
 
-#  usersAdmin(option: Option!, condition: Condition): [User]
-#  userAdmin(id: ID!): User
+
+  # User
   logOut(id: ID!): LogOutResponse
-  accountCancellation(number: String!): AccountCancellation
   userInfo: UserInfo
   accountCancellation(number: String!): AccountCancellationResponse!
-  userLogin(userInput: UserInput!): result
+  reToken(token: String!): ReTokenResponse!
+
+
+  # userByToken(clientType: String!, accessToken: String!): User!
   latestClassificationUser(category: String , option: Option):[User]
+
+
+  #about
+  about_us: AboutUs!
+
+  #pay
+  goodInfo: GoodInfo!
+  refund(orderid: String! ,reason: Int! , description:String!): RefundResponse!
+  orderInfo: OrderInfo!
+  orderDrtail(orderID:String!): OrderDetail!
+
+  #verifySend & verifyCheck(mobile)
+  verifySend(mobile: String!, area: String!): verifySendmobile!
+  verifyCheck(mobile: String!, code: String!, area: Int!): verifyCheckmobile!
+
   circles(option: Option!, condition: Condition): [Circle!]
   circle(id: ID!): Circle!
+
   latestCourse(option: Option!): [Course]
   latestMainCourse(option: Option!): [MainCourse]
   latestDirectCourse(mode : String!,  authorId: String, option: Option!): [MainCourse]
   latestInformation(option: Option!): [Information]
   latestGeekInformation(option: Option!): [Information]
   detailMainCourse(courseId: String!): MainCourse
+
+  #speech
   speechGoogle(speechRequest: SpeechRequest): speechResult
+
+
+  #Latestcomment
   latestComment(entityId: String!, category: String, option :Option!): [Comment]
+
+  #detailCourse
   detailCourse(dirId: String): [Course]
+
+  #mobilelog
   latestMobileLog(userId: String!,option :Option!): [MobileLog]
+
+  #growth
   latestUserGrowth(userId: String!,option :Option!): [Growth]
+
+
+  #training
   latestTraining(option :Option!): [Training]
+
+  #orderrecord
   latestRecord(authorId: String!,option :Option!): [OrderRecord]
   latestUserCourseRecord(authorId: String!, courseId: String!): result
+
+  #manager
   queryManager(option :Option!): [Manager]
+
+  #courseclassification
   queryCourseClassification(option :Option!): [CourseClassification]
-  goodInfo: GoodInfo
-  refund(orderid: String!, reason: String!, description: String!): RefundResponse
-  orderInfo: OrderInfo
-  orderDrtail(orderID: String!): OrderDetail
-  about_us: AboutUs
-  logIn(username: String!, password: String!): LogInResponse
-  loginPassword(mobile: String!, area: Int!, password: String!): LoginResponse!
 
 }

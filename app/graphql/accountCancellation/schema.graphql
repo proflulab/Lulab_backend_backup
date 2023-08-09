@@ -1,4 +1,0 @@
-type AccountCancellation {
-    status: String!
-    msg: String!
-}

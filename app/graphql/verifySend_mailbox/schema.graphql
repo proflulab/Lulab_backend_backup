@@ -1,4 +1,0 @@
-type VerifySendResponseMailbox {
-    status: String!
-    msg: String!
-}

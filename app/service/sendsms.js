@@ -6,9 +6,9 @@ const twilio = require('twilio');
 
 // 创建 Twilio 客户端实例
 // const { accountSid, authToken } = app.config.twilio; // 这里直接解构出 accountSid 和 authToken
-      const accountSid = ''
-      const authToken = ''
-const client = twilio(accountSid, authToken);
+      const ACcountSid = 'ACCOUNTSID'
+      const AuthToken = 'AUTHTOKEN'
+const client = twilio(ACcountSid, AuthToken);
 
 
 const Service = require('egg').Service;
