@@ -1,5 +1,0 @@
-type LogInResponse {
-    success: Boolean!
-    message: String!
-    token: String!
-}

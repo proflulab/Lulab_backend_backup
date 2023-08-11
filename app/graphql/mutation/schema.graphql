@@ -3,7 +3,6 @@ type Mutation {
   addCircleAdmin(circleInput: CircleInput!): Circle
   updateCircleAdmin(id: ID!, circleInput: CircleInput!): Circle
   deleteCircleAdmin(id: ID!, circleInput: CircleInput): Circle
-  mobileChange(mobile: String!, area: Int!, code: String!): MobileChangeResponse!
   adminUserLogout: ID
 
 # password
