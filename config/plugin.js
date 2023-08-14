@@ -18,10 +18,10 @@ exports.cors = {
   package: 'egg-cors'
 }
 
-exports.mongoose = {
-  enable: true,
-  package: 'egg-mongoose',
-};
+// exports.mongoose = {
+//   enable: true,
+//   package: 'egg-mongoose',
+// };
 
 exports.jwt = {
   enable: true,
@@ -33,7 +33,7 @@ exports.bcrypt = {
   package: 'egg-bcrypt'
 };
 
-exports.redis = {
-  enable: true,
-  package: 'egg-redis',
-};
+// exports.redis = {
+//   enable: true,
+//   package: 'egg-redis',
+// };

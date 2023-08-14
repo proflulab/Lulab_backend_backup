@@ -1,24 +1,9 @@
+'use strict'
 
-'use strict';
-require('dotenv').config();
-
-/**
- * @param {Egg.EggAppInfo} appInfo app info
- */
 module.exports = appInfo => {
-    /**
-     * built-in config
-     * @type {Egg.EggAppConfig} 
-     **/
-    const config = exports = {};
+  const config = {
 
-    // use for cookie sign key, should change to your own and keep security
-    config.keys = appInfo.name + '_1546846389359_709'
-
-    config.middleware = ['graphql']
-
-    // graphql
-    config.graphql = {
+    graphql: {
       // 默认访问路由
       // http://127.0.0.1:7001/graphql
       router: '/graphql',
@@ -35,69 +20,35 @@ module.exports = appInfo => {
       // onPreGraphiQL: function* (ctx) {
       // },
     },
-    config.security = {
+
+    security: {
       csrf: {
         ignore: () => true
       }
     },
-    config.jwt = {
+    jwt: {
       secret: "123456"
     },
-    config.cors = {
+    cors: {
       origin: '*',
       allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     },
-    // proxyworker: {
-    //   port: 10086
-    // },
-    // bcrypt: {
-    //   saltRounds: 10 // default 10
-    // },
-    config.redis = {
-      client: {
-        port: 6379,          // Redis port
-        host: '127.0.0.1',   // Redis host
-        password: '',
-        db: 0,
-      },
+    proxyworker: {
+      port: 10086
     },
-    // config.twilio = {
-    //   accountSid: '',
-    //   authToken: '',
-    // }
+    middleware: ['graphql']
+  }
 
-    //  阿里云配置
-  //    config.ali = {
-  //     accessKeyId: process.env.ALI_ACCESS_KEY_ID,
-  //     accessKeySecret: process.env.ALI_ACCESS_KEY_SECRET,
-  //     endpoint: 'https://dysmsapi.aliyuncs.com',
-  //     apiVersion: '2017-05-25',
-  // },
-
-  //   config.sms = {
-  //     aliSignName: process.env.ALI_SIGN_NAME,
-  //     nationalCode: process.env.ALI_NATIONAL_CODE,
-  //     internationalCode: process.env.ALI_INTERNATIONAL_CODE,
-  // },
-  
-  /*
-  config.cluster = {
-    listen: {
-      path: '',
-      port: 8002,
-      hostname: '0.0.0.0',
-    }
-  };*/
+  // use for cookie sign key, should change to your own and keep security
+  config.keys = appInfo.name + '_1546846389359_709'
 
   // add your config here
   config.mongoose = {
     //本地环境
     client: {
-      url: 'mongodb://localhost:27017/test_mongodb',
+      url: 'mongodb://root:lulab1005@144.24.84.85:27017/',
       options: {
         useNewUrlParser: true,
-        // useCreateIndex: false,
-        // reconnecttries:false,
         useUnifiedTopology: true
       },
     }
@@ -112,14 +63,7 @@ module.exports = appInfo => {
         useUnifiedTopology: true
       },
     }*/
-  }
-  // add your user config here
-  const userConfig = {
-    // myAppName: 'egg',
-};
 
-return {
-    ...config,
-    ...userConfig,
-};
+  }
+  return config
 }

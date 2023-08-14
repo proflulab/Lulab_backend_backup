@@ -8,10 +8,22 @@ const resolvers = {
         // Resolver function for the ReToken query
         reToken (root, { token }, ctx) {
             // Call the reToken function with the provided token
-            return ctx.connector.reToken.reToken(token)
+            return reToken(token)
             // Return the response
         },
     },
 };
 
 module.exports = resolvers;
+// module.exports = {
+//     Query: {
+//         // Resolver function for the ReToken query
+//         reToken (root, { token }, ctx) {
+//             // Call the reToken function with the provided token
+//             return ctx.connector.reToken.reToken(token)
+//             // Return the response
+//         },
+//     },
+// };
+
+

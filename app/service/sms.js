@@ -2,7 +2,6 @@
 
 const Service = require('egg').Service;
 const Core = require('@alicloud/pop-core');
-const AWS = require('aws-sdk');
 
 // 配置阿里云短信服务的 AccessKeyID 和 AccessKeySecret
 // const accessKeyId = '';
@@ -108,38 +107,38 @@ class SmsService extends Service {
     }
     
     async resendCode(email) {
-      const {ctx} = this;
-      try {
-        const user = await ctx.model.User.findOne({ email });
+      // const {ctx} = this;
+      // try {
+      //   const user = await ctx.model.User.findOne({ email });
 
-        if (!user) {
-          return {
-            success: false,
-            message: '用户不存在',
-          };
-        }
+      //   if (!user) {
+      //     return {
+      //       success: false,
+      //       message: '用户不存在',
+      //     };
+      //   }
 
-        // 调用发送验证码的逻辑，这里假设你有一个 sendVerificationCode 函数
-        await sendVerificationCode(user.email);
+      //   // 调用发送验证码的逻辑，这里假设你有一个 sendVerificationCode 函数
+      //   await sendVerificationCode(user.email);
 
         return {
           success: true,
           message: '验证码已重新发送',
         };
-      } catch (error) {
-        return {
-          success: false,
-          message: '无法重新发送验证码',
-        };
-      }
-    }
+    //   } catch (error) {
+    //     return {
+    //       success: false,
+    //       message: '无法重新发送验证码',
+    //     };
+    //   }
+    // }
   }
     
     // 生成随机验证码的函数示例
     // function generateRandomCode() {
     //   return Math.floor(100000 + Math.random() * 900000).toString();
     // }
-    
+}
 
 
 module.exports = SmsService;

@@ -44,61 +44,78 @@ async verifyCode(inputCode, storedCode) {
     }
   }
 
-    async sendResetPasswordCode(mobile) {
-        try {
-            const result = await this.sendSMS(mobile);
-            if (result.sid) {
-                const code = this.ctx.helper.rand(6);
-              // 将验证码存储到 Redis 缓存中，设置过期时间为 5 分钟（单位为秒）
-                await this.app.redis.setex(code, 300, result.sid);
-              return {
-                success: true,
-                message: '验证码发送成功'
-              };
-            } else {
-              return {
-                success: false,
-                message: '验证码发送失败'
-              };
-            }
-          } catch (err) {
-            return {
-              success: false,
-              message: '验证码发送失败'
-            };
-            // 在实际应用中，你可能还需要处理其他错误情况
-          }
-        }
+   async sendResetPasswordCode(code){
+
+    return{
+      success: true,
+      message: "验证码发送成功",
+    }
+  }
+    // async sendResetPasswordCode(mobile) {
+    //     try {
+    //         const result = await this.sendSMS(mobile);
+    //         if (result.sid) {
+    //             const code = this.ctx.helper.rand(6);
+    //           // 将验证码存储到 Redis 缓存中，设置过期时间为 5 分钟（单位为秒）
+    //             await this.app.redis.setex(code, 300, result.sid);
+    //           return {
+    //             success: true,
+    //             message: '验证码发送成功'
+    //           };
+    //         } else {
+    //           return {
+    //             success: false,
+    //             message: '验证码发送失败'
+    //           };
+    //         }
+    //       } catch (err) {
+    //         return {
+    //           success: false,
+    //           message: '验证码发送失败'
+    //         };
+    //         // 在实际应用中，你可能还需要处理其他错误情况
+    //       }
+    //     }
         
-        async verifyResetPasswordCode(inputCode) {
-            try {
-              const storedSid = await this.app.redis.get(inputCode, storedSid); // 获取存储的 Twilio 发送消息的 sid
-              if (storedSid) {
-                const isValidCode = await this.verifyCode(inputCode, storedSid);
-                if (isValidCode) {
-                  return {
-                    success: true,
-                    message: '验证码验证成功'
-                  };
-                } else {
-                  return {
-                    success: false,
-                    message: '验证码验证失败'
-                  };
-                }
-              } else {
-                return {
-                  success: false,
-                  message: '验证码不存在'
-                };
-              }
-            } catch (error) {
-              return {
-                success: false,
-                message: '无法验证验证码'
-              };
-            }
-          }
+    async verifyResetPasswordCode(code){
+    const {ctx} = this;
+    if(!code){
+
+    }
+    return{
+      success: true,
+      message: "验证成功"
+    }
+  }
+        // async verifyResetPasswordCode(inputCode) {
+        //     try {
+        //       const storedSid = await this.app.redis.get(inputCode, storedSid); // 获取存储的 Twilio 发送消息的 sid
+        //       if (storedSid) {
+        //         const isValidCode = await this.verifyCode(inputCode, storedSid);
+        //         if (isValidCode) {
+        //           return {
+        //             success: true,
+        //             message: '验证码验证成功'
+        //           };
+        //         } else {
+        //           return {
+        //             success: false,
+        //             message: '验证码验证失败'
+        //           };
+        //         }
+        //       } else {
+        //         return {
+        //           success: false,
+        //           message: '验证码不存在'
+        //         };
+        //       }
+        //     } catch (error) {
+        //       return {
+        //         success: false,
+        //         message: '无法验证验证码'
+        //       };
+        //     }
+        //   }
 
           /**
      * 验证码发送

@@ -16,20 +16,32 @@
 
 // module.exports = { reToken };
 
-const DataLoader= require('dataloader')
+// const DataLoader= require('dataloader')
 
 
-class LaunchConnector {
-    constructor(ctx) {
-        this.ctx = ctx;
-        this.loader = new DataLoader(
-            ids => this.fetch(ids)
-        );
-    }
-	async reToken(token) {
-        const { ctx } = this;
-        return await ctx.service.jwt.reToken(token);
-    }
-	}
+const reToken = async (token) => {
+    // Mock implementation to return a new access token and refresh token
+    const newAccessToken = "NEW_ACCESS_TOKEN";
+    const newRefreshToken = "NEW_REFRESH_TOKEN";
 
-module.exports = LaunchConnector;
+    return {
+        token: newAccessToken,
+        refresh_token: newRefreshToken,
+    };
+};
+
+module.exports = { reToken };
+// class LaunchConnector {
+//     constructor(ctx) {
+//         this.ctx = ctx;
+//         this.loader = new DataLoader(
+//             ids => this.fetch(ids)
+//         );
+//     }
+// 	async reToken(token) {
+//         const { ctx } = this;
+//         return await ctx.service.jwt.reToken(token);
+//     }
+// 	}
+
+// module.exports = LaunchConnector;

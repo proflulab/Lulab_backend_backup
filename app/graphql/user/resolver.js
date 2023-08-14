@@ -11,14 +11,14 @@ module.exports = {
     
     Query: {
         userInfo(root, { }, ctx) {
-          return ctx.connector.user.userInfo();
-            // const userService = new UserService(ctx);
-            // return userService.userInfo(); 
+          // return ctx.connector.user.userInfo();
+            const userService = new UserService(ctx);
+            return userService.userInfo(); 
           },
           accountCancellation(root, { args }, ctx) {
-            return ctx.connector.user.accountCancellation(args);
-            // const accountCancellationService = new UserService(ctx);
-            // return accountCancellationService.accountCancellation(mobile);
+            // return ctx.connector.user.accountCancellation(args);
+            const accountCancellationService = new UserService(ctx);
+            return accountCancellationService.accountCancellation(args);
           },
     //     async userAdmin(root, {
     //         id
@@ -48,9 +48,9 @@ module.exports = {
     },
     Mutation: {
         changeUserInfo(root, {name, sex, dsc, email }, ctx) {
-            return ctx.connector.user.changeUserInfo(name, sex, dsc, email)
-            // const userService = new UserService(ctx);
-            // return userService.changeUserInfo(args);
+            // return ctx.connector.user.changeUserInfo(name, sex, dsc, email)
+            const userService = new UserService(ctx);
+            return userService.changeUserInfo(name, sex, dsc, email);
           },
     //     userUpdate(root, {
     //         userInput
