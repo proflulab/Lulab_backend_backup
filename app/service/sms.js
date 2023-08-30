@@ -1,7 +1,7 @@
 'use strict';
 
 const Service = require('egg').Service;
-const Core = require('@alicloud/pop-core');
+// const Core = require('@alicloud/pop-core');
 
 // 配置阿里云短信服务的 AccessKeyID 和 AccessKeySecret
 // const accessKeyId = '';

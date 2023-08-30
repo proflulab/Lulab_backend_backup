@@ -1,7 +1,7 @@
 'use strict';
 
 const Service = require('egg').Service;
-const Helper = require('../extend/helper');
+// const Helper = require('../extend/helper');
 
 class UserService extends Service {
 

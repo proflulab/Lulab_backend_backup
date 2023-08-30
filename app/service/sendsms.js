@@ -35,14 +35,14 @@ async sendSMS(mobile, code, area) {
 }
 
 //验证发送过来的验证码
-async verifyCode(inputCode, storedCode) {
-    try {
-      // 在这里编写验证逻辑，比如与数据库中存储的验证码进行比对
-      return inputCode === storedCode;
-    } catch (error) {
-      throw new Error('验证码验证失败');
-    }
-  }
+// async verifyCode(inputCode, storedCode) {
+//     try {
+//       // 在这里编写验证逻辑，比如与数据库中存储的验证码进行比对
+//       return inputCode === storedCode;
+//     } catch (error) {
+//       throw new Error('验证码验证失败');
+//     }
+//   }
 
    async sendResetPasswordCode(code){
 
