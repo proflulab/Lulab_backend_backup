@@ -1,20 +1,29 @@
 version: '3'
 services:
-  nodejs-app:
+  lulab-nodejs-app:
     build:
       context: .   # 指定Dockerfile所在的目录
     ports:
-      - "3000:3000"  # 映射Node.js应用程序的端口
+      - "3000:3000" 
+      - "9000:9000"
+      - # 映射Node.js应用程序的端口
     links:
       - mongo  # 连接到名为mongo的MongoDB容器
       - redis  # 连接到名为redis的Redis容器
 
   mongo:
-    image: mongo
+    image: mongo:latest
     ports:
-      - "27017:27017"  # 映射MongoDB的端口
+      - "27018:27018"  # 映射MongoDB的端口
+    volumes:
+      - D:\Tangteam\Lulab_backend:data/db # 挂载本地目录以保存 MongoDB 数据
 
   redis:
-    image: redis
+    image: redis:latest
     ports:
-      - "6379:6379"  # 映射Redis的端口
+      - "6378:6378"  # 映射Redis的端口
+    volumes:
+      - D:\Tangteam\Lulab_backend:/etc/redis/redis.conf
+volumes:
+  - mongo:
+  - redis:

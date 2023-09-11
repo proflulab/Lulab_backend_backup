@@ -11,7 +11,7 @@ module.exports = {
             // Fetch order information using the connector function
             return ctx.connector.pay.orderInfo();
         },
-        orderDrtail: (root, { orderID }, ctx) => {
+        orderDetail: (root, { orderID }, ctx) => {
             return ctx.connector.pay.orderDetail(orderID);
         }
     }

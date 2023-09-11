@@ -23,7 +23,7 @@ type Query {
   goodInfo: GoodInfo!
   refund(orderid: String! ,reason: Int! , description:String!): RefundResponse!
   orderInfo: OrderInfo!
-  orderDrtail(orderID:String!): OrderDetail!
+  orderDetail(orderID:String!): OrderDetail!
 
   #verifySend & verifyCheck(mobile)
   verifySend(mobile: String!, area: String!): verifySendmobile!

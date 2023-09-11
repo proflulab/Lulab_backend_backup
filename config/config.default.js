@@ -39,19 +39,35 @@ module.exports = appInfo => {
     middleware: ['graphql']
   }
 
+   // bcrypt: {
+    //   saltRounds: 10 // default 10
+    // },
+    // config.redis = {
+    //   client: {
+    //     port: 6379,          // Redis port
+    //     host: '127.0.0.1',   // Redis host
+    //     password: '',
+    //     db: 0,
+    //   },
+    // },
+    // config.twilio = {
+    //   accountSid: '',
+    //   authToken: '',
+    // }
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1546846389359_709'
 
   // add your config here
-  config.mongoose = {
-    //本地环境
-    client: {
-      url: 'mongodb://root:lulab1005@144.24.84.85:27017/',
-      options: {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      },
-    }
+  // config.mongoose = {
+  //   //本地环境
+  //   client: {
+  //     url: 'mongodb://root:lulab1005@144.24.84.85:27017/',
+  //     options: {
+  //       useNewUrlParser: true,
+  //       useUnifiedTopology: true
+  //     },
+  //   }
     //服务器环境
     /*client: {
       url: 'mongodb://127.0.0.1:27017/admin',
@@ -64,6 +80,6 @@ module.exports = appInfo => {
       },
     }*/
 
-  }
+  // }
   return config
 }
