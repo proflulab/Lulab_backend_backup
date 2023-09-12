@@ -234,7 +234,7 @@ class UserService extends Service {
   //   }
   // }
   async accountCancellation(mobile) {
-
+  const accountNumber = "13159217419"
 
   // Implement the logic to perform the account cancellation.
   // For demonstration purposes, we assume the account cancellation was successful.

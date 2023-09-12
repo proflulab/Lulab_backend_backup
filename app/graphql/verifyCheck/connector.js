@@ -1,4 +1,4 @@
-async function verifyCheck({ mobile, code, area }) {
+async function verifyCheck({ email, code}) {
     const accessToken = "ACCESS_TOKEN";
     const refreshToken = "REFRESH_TOKEN";
     const isValid = true; // 假设验证成功
