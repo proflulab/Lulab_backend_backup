@@ -15,7 +15,7 @@ const Service = require('egg').Service;
 
 class SendsmsService extends Service {
     // 定义发送短信的函数
-async sendSMS(mobile, code, area) {
+async  sendSMS(mobile, code, area) {
     try {
         const code = this.ctx.helper.rand(6);
         const message = `您的验证码是：${code}`;
@@ -126,7 +126,7 @@ async sendSMS(mobile, code, area) {
      * @returns 验证码发送状态RES -> {status, message}
      */
     async verifySend(mobile, area) {
-      const code = this.ctx.helper.rand(6);
+      // const code = this.ctx.helper.rand(6);
       const result = await this.sendSMS(mobile, code, area);
       if (result.status === '100') {
           await this.app.redis.set('mobileVerify ' + area + ' ' + mobile, JSON.stringify(code), 600);

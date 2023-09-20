@@ -1,8 +1,13 @@
 'use strict';
+const DataLoader= require('dataloader')
+
 
 class LaunchConnector {
     constructor(ctx) {
         this.ctx = ctx;
+        this.loader = new DataLoader(
+            ids => this.fetch(ids)
+        );
     }
 
     /**

@@ -18,10 +18,10 @@ exports.cors = {
   package: 'egg-cors'
 }
 
-// exports.mongoose = {
-//   enable: true,
-//   package: 'egg-mongoose',
-// };
+exports.mongoose = {
+  enable: true,
+  package: 'egg-mongoose',
+};
 
 exports.jwt = {
   enable: true,
