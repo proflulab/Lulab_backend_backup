@@ -11,7 +11,7 @@ type User {
   name: String
   imageUrl: String
   sex: String
-  mobile: String
+  mobile: String!
   email: String
   description: String
 }

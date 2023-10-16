@@ -2,38 +2,39 @@
 
 // had enabled by egg
 // exports.static = true;
-
-exports.validate = {
+module.exports = {
+validate: {
   enable: true,
   package: 'egg-validate'
-}
+},
 
-exports.graphql = {
+graphql: {
   enable: true,
   package: 'egg-graphql'
-}
+},
 
-exports.cors = {
+cors: {
   enable: true,
   package: 'egg-cors'
-}
+},
 
-exports.mongoose = {
+mongoose: {
   enable: true,
   package: 'egg-mongoose',
-};
+},
 
-exports.jwt = {
+jwt:{
   enable: true,
   package: "egg-jwt"
-};
+},
 
-exports.bcrypt = {
+bcrypt: {
   enable: true,
   package: 'egg-bcrypt'
-};
+},
 
-// exports.redis = {
+// redis: {
 //   enable: true,
 //   package: 'egg-redis',
-// };
+// },
+}

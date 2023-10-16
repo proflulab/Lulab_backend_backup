@@ -6,10 +6,11 @@ type Mutation {
   adminUserLogout: ID
 
 # password
-  passwordLogin(area: Int!,mobile: String!,password: Int!): LoginResponse!
+  passwordLogin(area: Int!,mobile: String!,password: String!): LoginResponse!
   resetPassword(newPassword: Int!): ResetPassword!
   
 # user
+  createAccount(name: String! password: String! email: String! mobile: String!): CreateAccount!
   changeUserInfo(name: String, sex: String, dsc: String, email: String): ChangeUserInfo!
 
 # sendCode(mailbox)

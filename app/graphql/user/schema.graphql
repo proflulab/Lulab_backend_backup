@@ -59,3 +59,24 @@ type ResetPasswordResponse {
 input UserLoginPayload {
   jscode: String
 }
+
+type CreateAccount {
+  success: String!
+  message: String!
+  token: String!
+  data: AddUser
+}
+
+type AddUser {
+  name: String!
+  password: String!
+  email: String!
+  mobile: String!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  password: String!
+}
+

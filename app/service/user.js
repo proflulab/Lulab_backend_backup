@@ -1,7 +1,12 @@
 'use strict';
 
 const Service = require('egg').Service;
-// const Helper = require('../extend/helper');
+const Helper = require('../extend/helper');
+const JwtService = require('../service/jwt')
+// const CacheService = require('../service/cache')
+// const AuthService = require('../service/jwt');
+// const  UserModel = require('../model/user')
+
 
 class UserService extends Service {
 
@@ -12,38 +17,51 @@ class UserService extends Service {
    * @param {Int} area 
    * @returns 
    */
-  // async loginVerify(mobile, area) {
-  //   const { ctx, app } = this;
-  //   // 注册判断是否存在
-  //   const account = '' + area + '#' + mobile;
-  //   const corr = await ctx.model.User.findOne({ mobile: account });
-  //   console.log("我创建了：", account)
-  //   if (!corr) {
-  //     console.log("我进来了")
-  //     const course = new ctx.model.User({
-  //       mobile: account,
-  //       password: Helper.encrypt(Helper.genRandomPwd()),
-  //       imageUrl: 'http://qn3.proflu.cn/default.jpg',
-  //     });
-  //     const result = await course.save();
-  //     console.log(result);
+  async createAccount(name, password, email, mobile) {
+    const { ctx } = this;
+    // 注册判断是否存在
+    const corr = await ctx.model.User.findOne({
+      $or: [
+        { email: email },
+        { name: name },
+        { mobile: mobile },
+    ],
+    });
+    console.log(corr)
+    if(!corr) {
+      console.log("用户注册成功")
+      console.log("用户信息：", corr)
+      const course = await ctx.model.User.create({
+        name: name,
+        password: password,
+        email: email,
+        mobile: mobile,
+      });
+      const result = await course.save();
+      console.log(course);
 
-  //     ctx.body = '注册成功';
-  //     const Token = await ctx.service.jwt.awardToken(result._id); //前端存本地
-  //     // token 存储至Redis
-  //     await ctx.service.cache.set(result._id, Token.token, 7200);
-  //     // 将生成的Token返回给前端
-  //     return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: result };
-  //   }
-  //   console.log("该用户名已注册")
-  //   ctx.body = '该用户名已注册';
-  //   // 生成Token
-  //   const Token = await ctx.service.jwt.awardToken(corr._id);
-  //   // token 存储至Redis
-  //   await ctx.service.cache.set(corr._id, Token.token, 7200);
-  //   // 将生成的Token返回给前端
-  //   return { status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
-  // }
+      const authService = new JwtService();
+      const Token = authService.generateToken(result._id);
+      // const Token = await this.userInit(result._id); //前端存本地
+      // token 存储至Redis
+      // await ctx.service.cache.set(result._id, Token.token, 7200);
+      // 将生成的Token返回给前端
+      ctx.body = '注册成功';
+      console.log('注册成功')
+      return { success: true, message: '注册成功',token: Token.token , data: result };
+    } 
+    ctx.body = '该用户已注册'
+    console.log("该用户已注册")
+    const authService = new JwtService();
+    const Token = authService.generateToken(corr._id);
+    return { success: false, message: '已使用此邮箱注册账号!',token: Token.token ,data: corr };
+    // 生成Token
+    // const Token = await ctx.service.jwt.awardToken(corr._id);
+    // token 存储至Redis
+    // await ctx.service.cache.set(corr._id, Token.token, 7200);
+    // 将生成的Token返回给前端
+    //{ status: '100', msg: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
+  }
 
   async logOut(token) {
     // const { ctx } = this;
@@ -67,44 +85,56 @@ class UserService extends Service {
    * 
    */
   async passwordLogin(mobile, area, password) {
-  //   const { ctx } = this;
-  //   const account = '' + area + '#' + mobile;
-  //   const corr = await ctx.model.User.findOne({ mobile: account });
-  //   // 用户是否存在
-  //   if (!corr) {
-  //     ctx.body = '用户名错误';
-  //     return { status: '200', msg: '用户名错误' };
-  //   } else {
-  //     if (Helper.compare(password, corr.password)) {
-  //       // 生成Token
-  //       const Token = await ctx.service.jwt.awardToken(corr._id);
-  //       // token 存储至Redis
-  //       await ctx.service.cache.set(corr._id, Token.token, 7200);
-  //       // const user = await ctx.model.User.findOne({ account });
-  //       // 将生成的Token返回给前端
-  //       console.log(corr);
-  //       return { success: true, message: '登陆成功', token: Token.token, refresh_token: Token.refresh_token, data: corr };
-  //     }
-  //     ctx.body = '密码错误,请重新输入!';
-  //     return { success: false, message: '密码错误,请重新输入' };
-  //   }
-  // }
-    const user = {
-      name: 'John Doe',
-      imageUrl: 'https://example.com/john-doe.jpg',
-      sex: 'Male',
-      mobile: '12340761995',
-      email: 'john.doe@example.com',
-      description: 'A user from the demo.',
-    };
-        return {
-          success: true,
-          message: 'Login successful',
-          token: 'generated-token',
-          reToken: 'refresh-token',
-          data: user,
-        }
-      }
+    const { ctx } = this;
+    const account = mobile;
+    const corr = await ctx.model.User.findOne({mobile: account})
+    console.log(corr)
+    console.log(password)
+    console.log(mobile)
+    console.log(corr._id)
+    // console.log(corr.password)
+    // 用户是否存在
+    if (!corr) {
+      ctx.body = '用户信息错误！'
+      console.log("用户信息错误")
+      return { success: false, message: '用户信息错误！请重新输入' };
+    } else {
+      if (Helper.compare(password, corr.password)) {
+
+        // 生成Token
+        const authService = new JwtService();
+        const Token = authService.generateToken(corr._id);
+        // const Token = new JwtService()
+        //   Token.awardToken(corr.mobile);
+        // token 存储至Redis
+        // const intoredis = new CacheService()
+        // intoredis.set(corr._id, Token.token, 7200);
+        // const user = await ctx.model.User.findOne({ account });
+        // 将生成的Token返回给前端
+        console.log(corr);
+        return { success: true, message: '登陆成功', token: Token, data: corr };
+      } 
+      ctx.body = '密码错误,请重新输入!';
+      console.log('密码错误,请重新输入!')
+      return { success: false, message: '密码错误,请重新输入' };
+    }
+  }
+    // const user = {
+    //   name: 'John Doe',
+    //   imageUrl: 'https://example.com/john-doe.jpg',
+    //   sex: 'Male',
+    //   mobile: '12340761995',
+    //   email: 'john.doe@example.com',
+    //   description: 'A user from the demo.',
+    // };
+    //     return {
+    //       success: true,
+    //       message: 'Login successful',
+    //       token: 'generated-token',
+    //       reToken: 'refresh-token',
+    //       data: user,
+    //     }
+    //   }
   // 重置密码
   async resetPassword(args) {
   //   const { ctx } = this;
@@ -175,18 +205,23 @@ class UserService extends Service {
   //   }
   // }
   async userInfo() {
+    const { ctx } = this;
+    const token = ctx.header.authorization;
+    const secret = new AuthService();
+    const Token = secret.getUserIdFromToken(token)
+    return ctx.model.User.findOne({ _id: secret })
     // 实现从数据源获取用户信息的逻辑。
     // 出于演示目的，我们假设一个预定义的用户对象。
     // 在实际情况中，你需要替换这里的逻辑，从数据库或外部 API 获取用户信息。
-    const user = {
-      name: 'John Doe',
-      imageUrl: 'https://example.com/john-doe.jpg',
-      sex: 'Male',
-      dsc: '来自演示的用户。',
-      email: 'john.doe@example.com',
-    };
+    // const user = {
+    //   name: 'John Doe',
+    //   imageUrl: 'https://example.com/john-doe.jpg',
+    //   sex: 'Male',
+    //   dsc: '来自演示的用户。',
+    //   email: 'john.doe@example.com',
+    // };
 
-    return user;
+    // return user;
   }
 
   async changeUserInfo({ name, sex, dsc, email }) {
@@ -290,13 +325,15 @@ class UserService extends Service {
   async userInit(_id) {
     const { ctx } = this;
     // 生成Token
-    const Token = await ctx.service.jwt.awardToken(_id);
+    const Token = app.jwt.sign({
+      exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60) // token 有效期为 24 小时
+    }, app.config.jwt.secret);
     // token 存储至Redis
-    await ctx.service.cache.set(_id, Token.token, 1000);
+    // await ctx.service.cache.set(_id, Token.token, 1000);
     // 将生成的Token返回给前端
+    console.log(Token)
     return Token;
   }
-
 }
 
 module.exports = UserService;

@@ -3,16 +3,11 @@ type Information {
 	tag: String
 	title: String
 	content: String
-	introduction:String
-	img: String
 	author: String
 	authorAccount: String
 	releaseDate: String
-	htmltext: String
-	mdtext:String
-	adv:String
-	href:String
 	addTime : String
     updateTime :String
+    img: String
 }
 

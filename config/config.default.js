@@ -23,7 +23,7 @@ module.exports = appInfo => {
 
     security: {
       csrf: {
-        ignore: () => true
+        enable: false,
       }
     },
     jwt: {
@@ -33,15 +33,19 @@ module.exports = appInfo => {
       origin: '*',
       allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     },
-    proxyworker: {
-      port: 10086
+    // proxyworker: {
+    //   port: 10086
+    // },
+    validate: {
+      // convert: false,
+      // validateRoot: false,
     },
-    middleware: ['graphql']
+    middleware: ['graphql', 'auth']
   }
 
-   // bcrypt: {
-    //   saltRounds: 10 // default 10
-    // },
+   config.bcrypt = {
+      saltRounds: 10 // default 10
+    },
     // config.redis = {
     //   client: {
     //     port: 6379,          // Redis port
@@ -62,9 +66,8 @@ module.exports = appInfo => {
   config.mongoose = {
     //本地环境
     client: {
-      url: 'mongodb://localhost:27017/test-mongodb',
+      url: 'mongodb://localhost:27017/test_mongodb',
       options: {
-        useNewUrlParser: true,
         useUnifiedTopology: true
       },
     }
@@ -74,8 +77,6 @@ module.exports = appInfo => {
       options: {
         user: 'opsAdmin',
         pass: 'newpassword',
-        useNewUrlParser: true,
-        useCreateIndex: true,
         useUnifiedTopology: true
       },
     }*/

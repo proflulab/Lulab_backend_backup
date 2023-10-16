@@ -3,9 +3,9 @@ const UserService = require('../../service/user');
 
 module.exports = {
     Mutation: {
-        passwordLogin: async (_, { input }, ctx) => {
+        passwordLogin(_, {mobile, area, password}, ctx) {
             const passwordLoginService = new UserService(ctx);
-            return passwordLoginService.passwordLogin(input);
+            return passwordLoginService.passwordLogin(mobile, area, password);
         },
         // passwordLogin(root, { mobile, area, password }, ctx) {
         //     return ctx.connector.passwordLogin.passwordLogin(mobile, area, password);

@@ -10,7 +10,6 @@ const twilio = require('twilio');
       const AuthToken = 'AUTHTOKEN'
 const client = twilio(ACcountSid, AuthToken);
 
-
 const Service = require('egg').Service;
 
 class SendsmsService extends Service {
@@ -29,7 +28,7 @@ async  sendSMS(mobile, code, area) {
         console.log('短信发送成功：', sendmessage.sid);
         return sendmessage;
     } catch (error) {
-        console.error('短信发送失败：', error);
+        console.log('短信发送失败：', error);
         throw error;
     }
 }
