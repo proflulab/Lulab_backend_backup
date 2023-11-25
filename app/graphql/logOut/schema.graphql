@@ -1,5 +1,0 @@
-
-type LogOutResponse {
-    status: String!
-    msg: String!
-}

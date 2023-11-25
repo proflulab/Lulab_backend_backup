@@ -1,71 +1,52 @@
 {
-  "name": "egg-graphql",
+  "name": "createToken",
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "egg": {
+    "declarations": true
+  },
   "dependencies": {
-    "@alicloud/pop-core": "^1.7.13",
-    "@google-cloud/dialogflow": "^4.7.0",
-    "alipay-mobile": "^4.0.2",
-    "aws-sdk": "^2.1323.0",
-    "axios": "^1.4.0",
-    "bcrypt": "^5.1.0",
-    "bcryptjs": "^2.4.3",
-    "cheerio": "^1.0.0-rc.10",
-    "crypto": "^1.0.1",
-    "dataloader": "^2.1.0",
-    "dayjs": "^1.11.9",
+    "bcrypt": "^5.1.1",
+    "dataloader": "^2.2.2",
+    "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
-    "egg": "^2.2.1",
+    "egg": "^3",
     "egg-bcrypt": "^1.1.0",
-    "egg-core": "^5.3.1",
-    "egg-cors": "^2.1.2",
-    "egg-graphql": "^2.3.0",
-    "egg-jsonp": "^2.0.0",
+    "egg-graphql": "^2.8.0",
     "egg-jwt": "^3.1.7",
-    "egg-mongoose": "^3.3.1",
+    "egg-mongoose": "^4.0.1",
     "egg-redis": "^2.5.0",
-    "egg-scripts": "^2.5.0",
-    "egg-sequelize": "^4.3.0",
-    "egg-validate": "^2.0.2",
-    "graphql": "^16.7.1",
-    "iconv-lite": "^0.6.3",
-    "lodash": "^4.17.11",
-    "moment": "^2.29.4",
-    "mongodb": "^5.7.0",
-    "mysql2": "^1.6.4",
-    "nodemailer": "^6.8.0",
-    "superagent": "^8.0.9",
-    "twilio": "^4.14.1"
+    "egg-scripts": "^2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.7",
+    "twilio": "^4.19.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@babel/helper-compilation-targets": "^7.22.9",
-    "autod": "^3.0.1",
-    "autod-egg": "^1.0.0",
-    "egg-bin": "^4.3.5",
-    "egg-ci": "^1.8.0",
-    "egg-mock": "^3.14.0",
-    "eslint": "^4.11.0",
-    "eslint-config-egg": "^6.0.0",
-    "webstorm-disable-index": "^1.2.0"
+    "egg-bin": "^5",
+    "egg-ci": "^2",
+    "egg-mock": "^5",
+    "eslint": "^8",
+    "eslint-config-egg": "^12"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-egg-graphql",
-    "stop": "egg-scripts stop --title=egg-server-egg-graphql",
+    "start": "egg-scripts start --daemon --title=egg-server-createToken",
+    "stop": "egg-scripts stop --title=egg-server-createToken",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "ci": "npm run lint && npm run cov"
   },
   "ci": {
-    "version": "8"
+    "version": "16, 18",
+    "type": "github"
   },
   "repository": {
     "type": "git",

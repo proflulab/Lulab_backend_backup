@@ -1,37 +1,35 @@
-'use strict';
-
-// const ResolverHelper = require("../common/resolverHelper");
-const UserService = require("../../service/user")
-
-
 module.exports = {
-    
     Query: {
         userInfo(root, { }, ctx) {
-          // return ctx.connector.user.userInfo();
-            const userService = new UserService(ctx);
-            return userService.userInfo(); 
-          },
-
-          accountCancellation(root, { mobile }, ctx) {
-            return ctx.connector.user.accountCancellation(args);
-          //   const accountCancellationService = new UserService(ctx);
-          //   return accountCancellationService.accountCancellation(mobile);
-          },
+            return ctx.connector.user.userInfo();
+        },
+        logOut(root, { }, ctx) {
+            return ctx.connector.user.logOut();
+        },
+        accountCancellation(root ,{mobile, area}, ctx) {
+            return ctx.connector.user.accountCancellation(mobile, area);
+        }
     },
-    Mutation: {
-        createAccount(root, {name, password, email, mobile }, ctx) {
-          // console.log(name, password, email)
-          // return ctx.body =  {name, password, email }
-          // return ctx.connector.user.createAccount(name, password, email);
-          const userService = new UserService(ctx);
-          return userService.createAccount(name, password, email, mobile);
-          },
 
-        changeUserInfo(root, {name, sex, dsc, email }, ctx) {
+    Mutation: {
+        createAccount(root, {mobile , area ,password, email}, ctx) {
+            return ctx.connector.passwordLogin.createAccount(mobile, area, password, email);
+        },
+        passwordLogin(root, {area ,mobile ,password}, ctx) {
+            return ctx.connector.user.passwordLogin(area ,mobile ,password)
+        },
+        sendResetPasswordCode(root, { mobile, area }, ctx) {
+            return ctx.connector.user.sendResetPasswordCode(mobile, area);
+        },
+        verifyResetPasswordCode(root, {mobile, area ,code}, ctx) {
+            return ctx.connector.user.verifyResetPasswordCode(mobile ,area ,code);
+        },
+        resetPassword(root, {mobile, area, password}, ctx) {
+            return ctx.connector.user.resetPassword(mobile, area, password);
+        },
+        changeUserInfo(root, { name, sex, dsc, email }, ctx) {
             return ctx.connector.user.changeUserInfo(name, sex, dsc, email)
-          //   const userService = new UserService(ctx);
-          //   return userService.changeUserInfo(name, sex, dsc, email);
-          },
+        },
+        
     }
 }

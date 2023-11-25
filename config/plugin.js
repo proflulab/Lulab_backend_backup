@@ -1,40 +1,33 @@
-'use strict'
+'use strict';
 
-// had enabled by egg
-// exports.static = true;
+/** @type Egg.EggPlugin */
 module.exports = {
-validate: {
-  enable: true,
-  package: 'egg-validate'
-},
+  // had enabled by egg
+  // static: {
+  //   enable: true,
+  // }
+  mongoose: {
+    enable: true,
+    package: 'egg-mongoose',
+  },
 
-graphql: {
-  enable: true,
-  package: 'egg-graphql'
-},
+  graphql: {
+    enable: true,
+    package: 'egg-graphql',
+  },
 
-cors: {
-  enable: true,
-  package: 'egg-cors'
-},
+  jwt: {
+    enable: true,
+    package: "egg-jwt"
+  },
 
-mongoose: {
-  enable: true,
-  package: 'egg-mongoose',
-},
+  bcrypt: {
+    enable: true,
+    package: 'egg-bcrypt'
+  },
 
-jwt:{
-  enable: true,
-  package: "egg-jwt"
-},
-
-bcrypt: {
-  enable: true,
-  package: 'egg-bcrypt'
-},
-
-// redis: {
-//   enable: true,
-//   package: 'egg-redis',
-// },
-}
+  redis: {
+    enable: true,
+    package: 'egg-redis',
+  }
+};

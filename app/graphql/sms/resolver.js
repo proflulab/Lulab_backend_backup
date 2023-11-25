@@ -9,5 +9,16 @@ module.exports = {
             return ctx.connector.sms.verifyCheck(mobile, area, code);
         }
     },
+    Mutation: {
+        sendEmail(root, {email}, ctx) {
+            return ctx.connector.sms.sendEmail(email);
+        },
+        checkEmail(root, {email, code}, ctx) {
+            return ctx.connector.sms.checkEmail(email, code);
+        },
+        resendCode(root, {email}, ctx) {
+            return ctx.connector.sms.resendCode(email);
+        }
+    }
 
 };

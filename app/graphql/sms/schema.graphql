@@ -1,12 +1,12 @@
 # user
-type verifySendmobile {
-  success: String,
-  message: String,
+type Res {
+  status: String!
+  msg: String!
 }
 
 type verifyCheckmobile {
-  status: String
-  msg: String
+  status: String!
+  msg: String!
   token: String
   reToken: String
   data: Userdata
@@ -20,5 +20,28 @@ type Userdata {
   email: String
   description: String
 }
+
+
+
+type EmailResponse {
+  success: Boolean!
+  message: String!
+}
+
+type verifyCheckemail {
+  success: Boolean!
+  message: String!
+  token: String
+  reToken: String
+  data: Userdata
+}
+
+type ReSendCode {
+  success: Boolean!
+  message: String!
+}
+
+
+
 
 

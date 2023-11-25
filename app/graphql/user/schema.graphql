@@ -1,82 +1,71 @@
-type UserCredential {
-	clientType: String
-	openId: String
-	unionId: String
-	accessToken: String
-	sessionKey: String # wechat only
+type Login {
+    success: Boolean!
+    message: String!
+    token: String
+    retoken: String
+    data: User
 }
 
-enum OnboardingStatus {
-	DEFAULT
-	VERIFIED
-	ONBOARDED
-}
-
-
-type othor {
-    userName: String
-    sex: String
-	wechat:String
-	dsc: String
-}
-
-
-type Video {
-	videoUrl:String
-	title:String
-	desc:String
-	author:String
-	releaseTime:String
-	coverUrl:String
-	#desc: String # wechat only
+type User {
+    name: String
+    password: String
+    mobile: String
 }
 
 type UserInfo {
   name: String
   imageUrl: String
-  sex: String
+  sex: Int
+  wechat: String
   dsc: String
   email: String
-}
-
-type ChangeUserInfo {
-  name: String
-  imageUrl: String
-  sex: String
-  dsc: String
-  email: String
-}
-
-type AccountCancellationResponse {
-  status: String!
-  msg: String!
-}
-
-type ResetPasswordResponse {
-  success: Boolean!
-  message: String!
-}
-input UserLoginPayload {
-  jscode: String
 }
 
 type CreateAccount {
-  success: String!
-  message: String!
-  token: String!
-  data: AddUser
+    status: String!
+    msg: String!
+    token: String
+    retoken: String
+    data: Account
 }
 
-type AddUser {
-  name: String!
-  password: String!
-  email: String!
-  mobile: String!
+type Account {
+    name: String
+    password: String
+    email: String
+    mobile: String
 }
 
-input CreateUserInput {
-  name: String!
-  email: String!
-  password: String!
+type Logout {
+    status: String!
+    msg: String!
 }
 
+type ChangeUser {
+  name: String
+  imageUrl: String
+  sex: Int
+  wechat: String
+  dsc: String
+}
+
+type AccountCancellation {
+    status: String!
+    msg: String!
+}
+
+type SendResetPassword {
+    success: Boolean!
+    message: String!
+}
+
+
+type VerifyResetPassword {
+    success: Boolean!
+    message: String!
+}
+
+type ResetPassword {
+    success: Boolean!
+    message: String!
+}
