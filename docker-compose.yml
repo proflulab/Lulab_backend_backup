@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  # Node.js 应用服务
+  nodejs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - my-network
+
+  # MongoDB 服务
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - my-network
+
+  # Redis 服务
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  mongodb-data:
