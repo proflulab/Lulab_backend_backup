@@ -59,7 +59,7 @@ class UserConnector {
   async changeUserInfo(name, sex, dsc, email) {
     const { ctx } = this;
     const token = ctx.request.header.authorization;
-    const secret = await ctx.service.jwt.getUserIdFromToken(token.split(" ")[1]);
+    const secret = await ctx.service.jwt.getUserIdFromToken(token);
     await ctx.model.User.updateOne({ _id: secret._id }, { name, sex, dsc, email })
     return await ctx.model.User.findOne({ _id: secret._id })
 }

@@ -42,18 +42,23 @@ module.exports = appInfo => {
       saltRounds: 10 // default 10
     }
 
+    config.cors = {
+      origin: '*', // 跨任何域
+      allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS', // 被允许的请求方式
+    };
+
     config.redis = {
       client: {
         port: 6379,          // Redis port
         host: '127.0.0.1',   // Redis host
-        password: 'auth',
+        password: '',
         db: 0,
       },
     }
 
   config.mongoose = {
     client: {
-      url: 'mongodb://localhost:27017/admin',
+      url: 'mongodb://127.0.0.1:27017/admin',
       options: {},
     },
   };

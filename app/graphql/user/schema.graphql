@@ -43,10 +43,9 @@ type Logout {
 
 type ChangeUser {
   name: String
-  imageUrl: String
   sex: Int
-  wechat: String
   dsc: String
+  email: String
 }
 
 type AccountCancellation {

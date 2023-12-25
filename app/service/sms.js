@@ -6,13 +6,10 @@ const twilio = require('twilio');
 const nodemailer = require('nodemailer');
 const Helper = require('../extend/helper.js');
 require('dotenv').config();
-// console.log(process.env)
 // 创建 Twilio 客户端实例
-// const { accountSid, authToken } = app.config.twilio; // 这里直接解构出 accountSid 和 authToken
       const ACcountSid = process.env.TWILIO_ACCOUNT_SID;
       const AuthToken = process.env.TWILIO_AUTH_TOKEN;
-      // console.log('TWILIO_ACCOUNT_SID:', ACcountSid);
-      // console.log('TWILIO_AUTH_TOKEN:', AuthToken);
+
 const client = twilio(ACcountSid, AuthToken);
 
 const Service = require('egg').Service;

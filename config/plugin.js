@@ -26,6 +26,11 @@ module.exports = {
     package: 'egg-bcrypt'
   },
 
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  },
+
   redis: {
     enable: true,
     package: 'egg-redis',

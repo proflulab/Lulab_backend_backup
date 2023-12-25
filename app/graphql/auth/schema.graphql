@@ -1,6 +1,6 @@
 type Token  {
-  token: String,
-  refresh_token: String,
+  token: String
+  refresh_token: String
 }
 
 

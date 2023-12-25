@@ -6,11 +6,11 @@ module.exports = (options, app) => {
         
         // 将 Token 添加到请求头
         if (token) {
-          const decoded = ctx.service.jwt.verifyToken(token);
+          const decoded = await ctx.service.jwt.verifyToken(token);
           if (decoded) {
             // Token 有效，将用户信息添加到请求上下文
             ctx.state.user = decoded;
-            const userId = ctx.service.jwt.getUserIdFromToken(token);
+            const userId = await ctx.service.jwt.getUserIdFromToken(token);
             console.log(userId);
           } else {
             // Token 无效，可以根据需要执行适当的操作

@@ -57,7 +57,7 @@ class JwtService extends Service {
     if (!userId) {
         return false;
     }
-    const token = await this.generateToken(userId.userid, this.app.config.jwt.secret, this.app.config.jwt.expire);
+    const token = await this.createToken(userId.userid, this.app.config.jwt.secret, this.app.config.jwt.expire);
     return {
         token,  
         refresh_token: refreshToken,
