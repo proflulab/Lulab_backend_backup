@@ -32,7 +32,6 @@ async function initUserData(User) {
     try {
         // 查询数据库
         const doc = User.find({});
-
         if (!doc.length) {
             new User({
                 title: '理论课程',
@@ -46,22 +45,21 @@ async function initUserData(User) {
                 sort: 1,
                 category_id: '63c4d7e691dc5226f0a9fe83',
             }).save();
-
+        } 
+        if (!doc.length) {
+            new User({
+                title: '大咖会谈',
+                classTags: '',
+                author: '俞敏洪',
+                authorTags: '',
+                description: '',
+                onlineTime: '',
+                addTime: Date.now(),
+                updateTime: Date.now(),
+                sort: 2,
+                category_id: '6402f65fff361fe1b9006d87',
+            }).save();
             console.log('-------------创建主课成功--------------');
-            if (!doc.length) {
-                new User({
-                    title: '大咖会谈',
-                    classTags: '',
-                    author: '俞敏洪',
-                    authorTags: '',
-                    description: '',
-                    onlineTime: '',
-                    addTime: Date.now(),
-                    updateTime: Date.now(),
-                    sort: 2,
-                    category_id: '6402f65fff361fe1b9006d87',
-                }).save();
-            }
         } else {
             console.log('创建用户失败');
         }

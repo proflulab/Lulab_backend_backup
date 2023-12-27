@@ -21,13 +21,12 @@ async function initUserData(User) {
     try {
         // 查询数据库
         const doc = User.find({});
-
         if (!doc.length) {
             new User({
                 title: '理论课程',
                 sort: 1,
             }).save();
-            console.log('-------------创建分类成功--------------');
+        }
             if (!doc.length) {
                 new User({
                     title: '大咖会谈',
@@ -57,8 +56,8 @@ async function initUserData(User) {
                     title: '领导力课程',
                     sort: 6,
                 }).save();
-            }
-        } else {
+                console.log('-------------创建分类成功--------------');
+            } else {
             console.log('创建用户失败');
         }
     } catch (err) {

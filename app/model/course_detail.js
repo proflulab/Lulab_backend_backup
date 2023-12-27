@@ -27,7 +27,6 @@ async function initUserData(User) {
     try {
         // 查询数据库
         const doc = User.find({});
-
         if (!doc.length) {
             new User({
                 title: '人工智能讨论会.mp4',
