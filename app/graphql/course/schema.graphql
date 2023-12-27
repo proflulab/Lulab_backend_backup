@@ -2,3 +2,27 @@ type Category {
   _id:String,
   title: String,
 }
+
+type CourseDetail {
+  _id: String,
+  title: String,
+  classTags: String,
+  imageUrl: String,
+  author: String,
+  authorTags: String,
+  description: String,
+  onlineTime: String,
+  addTime: String,
+  updateTime: String,
+}
+
+type Link {
+  link: String,
+}
+
+type Catalogue{
+  _id: String
+  title: String
+  duration: String
+  free: Boolean
+}
