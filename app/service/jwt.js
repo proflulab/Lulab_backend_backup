@@ -18,18 +18,17 @@ class JwtService extends Service {
     }, secret);
 }
 
-
+//生成token, refresh_token
   async generateToken(userId) {
     const config = this.app.config.jwt;
      return {
       token: await this.createToken(userId, config.secret, config.expire),
       refresh_token: await this.createToken(userId, config.refresh_secret, config.refresh_expire),
      }
-    //this.app.jwt.sign({ userId: userId }, this.app.config.jwt.secret, { expiresIn: 60 * 60 })
   }
 
   // 验证 Token
-  async verifyToken(token, secret) {
+  async verifyToken(token, isRefresh = false) {
     if (!token) {
         this.ctx.response.body = {
             error: 'Fail to auth request due to exception: ',
@@ -38,19 +37,27 @@ class JwtService extends Service {
         return false;
         // throw new AuthException();
     }
+    const secret = isRefresh ? this.app.config.jwt.refresh_secret : this.app.config.jwt.secret;
     try {
-      const decoded = this.app.jwt.verify(token, secret);
-        // 验证令牌是否已过期
-      const currentTime = Math.floor(Date.now() / 1000);
-      if (decoded.exp && currentTime > decoded.exp) {
-        return null; // 令牌已过期
-      }
-
-      return decoded;
-    } catch (err) {
-      return null;
+        await this.app.jwt.verify(token, secret);
+    } catch (e) {
+        if (e.message === 'jwt expired' && !isRefresh) {
+            this.ctx.response.body = {
+                error: 'Fail to auth request due to exception: ' + e,
+                code: 100,
+            };
+            return false;
+            // throw new AuthException('令牌过期', 10003);
+        }
+        this.ctx.response.body = {
+            error: 'Fail to auth request due to exception: ' + e,
+            code: 100,
+        };
+        return false;
+        // throw new AuthException();
     }
-  }
+    return true;
+}
 
   async refreshToken(refreshToken) {
     const userId = await this.getUserIdFromToken(refreshToken, true);
@@ -65,8 +72,8 @@ class JwtService extends Service {
 }
 
   // 从 Token 中获取用户ID
-  getUserIdFromToken(token, secret) {
-    const result = this.verifyToken(token, secret);
+  getUserIdFromToken(token, isRefresh = false) {
+    const result = this.verifyToken(token, isRefresh);
     if (!result) {
       return false;
   }
