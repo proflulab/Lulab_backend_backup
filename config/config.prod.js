@@ -46,7 +46,7 @@ module.exports = appInfo => {
     config.redis = {
       client: {
         port: 6379,          // Redis port
-        host: '127.0.0.1',   // Redis host
+        host: '192.168.235.128',   // Redis host
         password: '',
         db: 0,
       },
@@ -54,7 +54,7 @@ module.exports = appInfo => {
 
   config.mongoose = {
     client: {
-      url: process.env.MONGOOSE_URL_LOCAL,
+      url: process.env.MONGOOSE_URL_PROD,
       options: {},
     },
   };

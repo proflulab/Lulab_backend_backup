@@ -1,5 +1,5 @@
 {
-  "name": "Lulab_backend",
+  "name": "lulab_backend",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -8,23 +8,25 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "dataloader": "^2.2.2",
     "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
     "egg": "^3",
-    "egg-bcrypt": "^1.1.0",
     "egg-cors": "^3.0.0",
     "egg-graphql": "^2.8.0",
     "egg-jwt": "^3.1.7",
-    "egg-mongoose": "^4.0.1",
+    "egg-mongoose": "latest",
     "egg-redis": "^2.5.0",
     "egg-scripts": "^2",
+    "jsonwebtoken": "^9.0.2",
     "mongodb": "^5.0.0",
     "nodemailer": "^6.9.7",
     "twilio": "^4.19.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "egg-bin": "^5",
     "egg-ci": "^2",
     "egg-mock": "^5",
@@ -35,9 +37,9 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-Lulab_backend",
-    "stop": "egg-scripts stop --title=egg-server-Lulab_backend",
-    "dev": "egg-bin dev",
+    "start": "cross-env EGG_SERVER_ENV=prod egg-scripts start --daemon --title=egg-server-lulab_backend",
+    "stop": "egg-scripts stop --title=egg-server-lulab_backend",
+    "dev": "cross-env EGG_SERVER_ENV=local egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

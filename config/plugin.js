@@ -21,11 +21,6 @@ module.exports = {
     package: "egg-jwt"
   },
 
-  bcrypt: {
-    enable: true,
-    package: 'egg-bcrypt'
-  },
-
   cors: {
     enable: true,
     package: 'egg-cors',
