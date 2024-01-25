@@ -1,5 +1,5 @@
 'use strict';
-
+//abcabcabc
 class LaunchConnector {
     constructor(ctx) {
         this.ctx = ctx;
@@ -7,8 +7,8 @@ class LaunchConnector {
 
     /**
      * 发送验证码
-     * @param {String} mobile 
-     * @param {Int} area 
+     * @param {String} mobile
+     * @param {Int} area
      * @returns 验证码发送状态RES -> {status, message}
      */
     async verifySend(mobile, area) {
