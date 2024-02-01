@@ -54,10 +54,11 @@ module.exports = appInfo => {
 
   config.mongoose = {
     client: {
-      url: process.env.MONGOOSE_URL_LOCAL,
+      url: process.env.MONGO_URL || 'mongodb://47.99.174.23:27017',
       options: {},
     },
   };
+
 
   // add your user config here
   const userConfig = {

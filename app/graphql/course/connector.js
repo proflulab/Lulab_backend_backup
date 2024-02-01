@@ -13,8 +13,12 @@ class LaunchConnector {
      */
     async category() {
         const { ctx, app } = this;
-        const cors = await ctx.model.CourseCategory.find({}, { title: 1 }).sort({ sort: 1 });
-        return cors;
+        return ctx.model.CourseCategory.find({}, { title: 1 })
+          .sort({ sort: 1 });
+        // return {
+        //     _id: "658d67f183748b286a079ed0",
+        //     title: "理论课程",
+        // };
     }
 
     /**
@@ -45,7 +49,7 @@ class LaunchConnector {
                     $limit: limit,
                 },
             ]);
-    
+
             console.log(JSON.stringify(cors));
             return cors;
         } catch (err) {
@@ -59,8 +63,8 @@ class LaunchConnector {
 
     /**
      * 大课下的小课目录
-     * @param {String} course_id 
-     * @returns 
+     * @param {String} course_id
+     * @returns
      */
     async courseCatalogue(course_id) {
         try {
@@ -68,7 +72,7 @@ class LaunchConnector {
             { course_id: new ObjectId(course_id) },
             { title: 1, duration: 1, free: 1 }
           ).sort({ sort: 1 });
-      
+
           console.log(JSON.stringify(catalogue));
           return catalogue;
         } catch (err) {
@@ -82,8 +86,8 @@ class LaunchConnector {
 
     /**
      * 从七牛云查询小课的播放链接
-     * @param {String} detail_id 小课id 
-     * @returns 
+     * @param {String} detail_id 小课id
+     * @returns
      */
     async courseLink(detail_id) {
         return {
